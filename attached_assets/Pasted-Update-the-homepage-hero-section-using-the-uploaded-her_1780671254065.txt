@@ -1,0 +1,116 @@
+Update the homepage hero section using the uploaded hero image as the background image.
+
+Important:
+Do NOT embed any text into the image.
+The uploaded image must be used only as a visual background.
+All text, logo, CTA buttons, icons and language-specific copy must be rendered as HTML/CSS overlay content.
+
+Hero image:
+Use the uploaded wide Geneva evening / theatre / lake hero image as the desktop hero background.
+
+Design requirements:
+- Full-width hero
+- Premium KulturTonight look
+- Dark burgundy / navy overlay on the left side for text readability
+- Subtle black gradient overlay across the whole image
+- Keep the people and theatre visible on the right side
+- Keep the lake / Geneva atmosphere visible on the left/middle
+- Use existing KulturTonight logo asset in the hero
+- Use gold gradient CTA buttons
+- Use ivory / warm white text
+- Use existing KulturTonight icons where appropriate
+- Mobile-first responsive behaviour
+- On mobile, crop the image so the couple/theatre remains visible but the text remains readable
+
+Desktop hero layout:
+Left side content:
+- KulturTonight logo
+- small eyebrow text
+- main headline
+- subheadline
+- primary CTA button
+- secondary CTA button
+- category icons row
+
+Right side or lower-right:
+- 3 value points with existing gold line icons:
+  1. Curated events
+  2. Exceptional venues
+  3. Shared cultural moments
+
+English copy:
+
+Eyebrow:
+Geneva Cultural Discovery
+
+Headline:
+Culture brings people together
+
+Subheadline:
+Discover curated cultural experiences in Geneva — from theatre and concerts to exceptional venues and unforgettable evenings.
+
+Primary CTA:
+Discover Events
+
+Secondary CTA:
+Join Early Access
+
+Category icons:
+Theatre
+Concerts
+Exhibitions
+Dance
+
+Value points:
+Curated events
+Exceptional venues
+Shared cultural moments
+
+French copy:
+
+Eyebrow:
+Guide culturel de Genève
+
+Headline:
+La culture nous rapproche
+
+Subheadline:
+Découvrez des expériences culturelles sélectionnées à Genève — théâtre, concerts, lieux d’exception et soirées inoubliables.
+
+Primary CTA:
+Découvrir les événements
+
+Secondary CTA:
+Rejoindre l’accès anticipé
+
+Category icons:
+Théâtre
+Concerts
+Expositions
+Danse
+
+Value points:
+Événements sélectionnés
+Lieux d’exception
+Moments culturels partagés
+
+Technical requirements:
+- Use Next.js Image or optimized background handling where appropriate
+- Put the image under /public/assets/hero/geneva-evening-theatre.webp or similar
+- Add a CSS gradient overlay for readability
+- Do not hardcode image dimensions in a way that breaks mobile
+- Ensure hero text is readable at all screen sizes
+- Add alt text or aria-label where appropriate
+- Keep the hero reusable as a component, for example Hero.tsx
+- Use props or locale-based content so the same hero component works for EN and FR
+
+Mobile requirements:
+- Hero minimum height: around 760px on mobile
+- Text should appear in the upper/middle section with enough contrast
+- CTA buttons should stack vertically on small screens
+- Category icons can wrap or become a 2x2 grid
+- Avoid placing text over the faces of the people
+- Add a stronger left/top dark overlay on mobile if needed
+
+Do not change the rest of the site structure.
+Only replace/refine the homepage hero and make sure both English and French versions use the correct localized copy.

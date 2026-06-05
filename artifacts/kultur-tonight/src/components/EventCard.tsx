@@ -4,41 +4,49 @@ import { motion } from "framer-motion";
 import { Calendar, Clock, MapPin, Ticket } from "lucide-react";
 import { detectLocale, localizeCategory } from "@/lib/i18n";
 
-const categoryGradients: Record<string, string> = {
-  theatre:  "from-[#2D0714] via-[#1A0510] to-[#080C18]",
-  opera:    "from-[#2D0714] via-[#1A0510] to-[#080C18]",
-  concerts: "from-[#0D1424] via-[#0a1535] to-[#080C18]",
-  jazz:     "from-[#0a1a10] via-[#071510] to-[#080C18]",
-  family:   "from-[#0a1524] via-[#0d1a2e] to-[#080C18]",
-  dance:    "from-[#180a28] via-[#120720] to-[#080C18]",
-  classical:"from-[#1a1000] via-[#120c00] to-[#080C18]",
+/* ─── Unsplash photos by category ─────────────────────────────────────── */
+const categoryPhotos: Record<string, string> = {
+  theatre:
+    "https://images.unsplash.com/photo-1503095396549-807759245b35?q=70&w=640&auto=format&fit=crop",
+  opera:
+    "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=70&w=640&auto=format&fit=crop",
+  concerts:
+    "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=70&w=640&auto=format&fit=crop",
+  jazz:
+    "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=70&w=640&auto=format&fit=crop",
+  family:
+    "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=70&w=640&auto=format&fit=crop",
+  dance:
+    "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=70&w=640&auto=format&fit=crop",
+  classical:
+    "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=70&w=640&auto=format&fit=crop",
 };
 
-const categoryImages: Record<string, string> = {
-  theatre:  "https://images.unsplash.com/photo-1503095396549-807759245b35?q=60&w=600&auto=format&fit=crop",
-  opera:    "https://images.unsplash.com/photo-1507676184212-d0330a151f96?q=60&w=600&auto=format&fit=crop",
-  concerts: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=60&w=600&auto=format&fit=crop",
-  jazz:     "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=60&w=600&auto=format&fit=crop",
-  family:   "https://images.unsplash.com/photo-1597075095500-0c8b87b593fb?q=60&w=600&auto=format&fit=crop",
-  dance:    "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=60&w=600&auto=format&fit=crop",
-  classical:"https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=60&w=600&auto=format&fit=crop",
+/* ─── Gradient overlays per category ─────────────────────────────────── */
+const categoryOverlay: Record<string, string> = {
+  theatre:  "from-[#2D0714]/90 via-[#1A0510]/60 to-transparent",
+  opera:    "from-[#2D0714]/90 via-[#1A0510]/60 to-transparent",
+  concerts: "from-[#080C18]/90 via-[#0a1535]/60 to-transparent",
+  jazz:     "from-[#080C18]/90 via-[#0a1a10]/60 to-transparent",
+  family:   "from-[#080C18]/90 via-[#0a1524]/60 to-transparent",
+  dance:    "from-[#180a28]/90 via-[#120720]/60 to-transparent",
+  classical:"from-[#1a1000]/90 via-[#120c00]/60 to-transparent",
 };
 
-const getCategoryGradient = (category: string): string => {
+function getPhoto(category: string): string {
   const key = category.toLowerCase();
-  for (const [k, v] of Object.entries(categoryGradients)) {
-    if (key.includes(k)) return v;
-  }
-  return "from-[#0D1424] to-[#080C18]";
-};
-
-const getCategoryImage = (category: string): string | undefined => {
+  return (
+    Object.entries(categoryPhotos).find(([k]) => key.includes(k))?.[1] ??
+    categoryPhotos.concerts
+  );
+}
+function getOverlay(category: string): string {
   const key = category.toLowerCase();
-  for (const [k, v] of Object.entries(categoryImages)) {
-    if (key.includes(k)) return v;
-  }
-  return undefined;
-};
+  return (
+    Object.entries(categoryOverlay).find(([k]) => key.includes(k))?.[1] ??
+    categoryOverlay.concerts
+  );
+}
 
 export function EventCard({ event }: { event: Event }) {
   const [location] = useLocation();
@@ -49,100 +57,123 @@ export function EventCard({ event }: { event: Event }) {
       ? `/fr/geneve/evenements/${event.slug}`
       : `/en/geneva/events/${event.slug}`;
 
-  const ticketsLabel = locale === "fr" ? "Billets" : "Tickets";
-  const gradient = getCategoryGradient(event.category);
-  const photo = getCategoryImage(event.category);
-  const displayCategory = localizeCategory(event.category, locale);
+  const city          = locale === "fr" ? "Genève" : "Geneva";
+  const ticketsLabel  = locale === "fr" ? "Billets" : "Tickets";
+  const displayCat    = localizeCategory(event.category, locale);
+  const photo         = getPhoto(event.category);
+  const overlay       = getOverlay(event.category);
+
+  const altText =
+    locale === "fr"
+      ? `${event.title} — ${displayCat} au ${event.venue.name}, Genève`
+      : `${event.title} — ${displayCat} at ${event.venue.name}, Geneva`;
 
   return (
-    <Link
-      href={eventPath}
-      className="group block h-full"
-      data-testid={`link-event-${event.slug}`}
-    >
+    <Link href={eventPath} className="group block h-full" data-testid={`link-event-${event.slug}`}>
       <motion.div
         whileHover={{ y: -4 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="bg-card border border-card-border h-full overflow-hidden flex flex-col relative"
       >
-        {/* Image / visual area */}
-        <div className="aspect-[3/4] w-full relative overflow-hidden bg-muted flex-shrink-0">
-          {photo && (
-            <img
-              src={photo}
-              alt={`${event.title} — ${displayCategory} at ${event.venue.name}`}
-              className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-500"
-              loading="lazy"
-            />
-          )}
-          <div className={`absolute inset-0 bg-gradient-to-b ${gradient} ${photo ? "opacity-70" : ""}`} />
-          <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+        {/* ── Image / visual area ─────────────────────────────────────── */}
+        <div className="aspect-[3/4] w-full relative overflow-hidden flex-shrink-0">
+          <img
+            src={photo}
+            alt={altText}
+            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-[1.03] transition-all duration-700"
+            loading="lazy"
+            decoding="async"
+          />
+          {/* gradient bottom-to-top */}
+          <div className={`absolute inset-0 bg-gradient-to-t ${overlay}`} />
+          {/* subtle vignette */}
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
 
-          {/* Category badge */}
-          <div className="absolute top-4 left-4 z-10">
-            <span className="text-[9px] font-sans uppercase tracking-[0.25em] text-primary bg-[#080C18]/80 backdrop-blur-sm border border-primary/20 px-3 py-1.5">
-              {displayCategory}
+          {/* Category tag — top left */}
+          <div className="absolute top-3.5 left-3.5 z-10">
+            <span className="inline-flex items-center gap-1 text-[9px] font-sans uppercase tracking-[0.22em] text-primary bg-[#080C18]/80 backdrop-blur-sm border border-primary/25 px-2.5 py-1.5 leading-none">
+              {displayCat}
             </span>
           </div>
 
-          {/* Price chip */}
-          <div className="absolute bottom-4 right-4 z-10 flex items-center gap-1.5 bg-[#080C18]/80 backdrop-blur-sm px-2 py-1 border border-primary/20">
-            <Ticket size={10} className="text-primary flex-shrink-0" aria-hidden="true" />
-            <span className="text-sm font-sans text-primary font-medium">{event.price}</span>
+          {/* Date badge — top right (Calendar icon) */}
+          <div className="absolute top-3.5 right-3.5 z-10">
+            <span className="inline-flex items-center gap-1.5 text-[9px] font-sans uppercase tracking-[0.15em] text-foreground/90 bg-[#080C18]/80 backdrop-blur-sm border border-border/50 px-2.5 py-1.5 leading-none">
+              <Calendar size={9} className="text-primary flex-shrink-0" aria-hidden="true" />
+              {event.date}
+            </span>
           </div>
 
-          {/* Date chip */}
-          <div className="absolute bottom-4 left-4 z-10 flex items-center gap-1.5 bg-[#080C18]/80 backdrop-blur-sm px-2 py-1 border border-border">
-            <Calendar size={10} className="text-foreground/60 flex-shrink-0" aria-hidden="true" />
-            <span className="text-[10px] font-sans uppercase tracking-wider text-foreground/80">{event.date}</span>
+          {/* Price chip — bottom right */}
+          <div className="absolute bottom-3.5 right-3.5 z-10">
+            <span className="inline-flex items-center gap-1.5 bg-[#080C18]/85 backdrop-blur-sm border border-primary/20 px-2.5 py-1.5">
+              <Ticket size={9} className="text-primary flex-shrink-0" aria-hidden="true" />
+              <span className="text-[10px] font-sans text-primary font-semibold leading-none">{event.price}</span>
+            </span>
+          </div>
+
+          {/* Time — bottom left */}
+          <div className="absolute bottom-3.5 left-3.5 z-10">
+            <span className="inline-flex items-center gap-1.5 bg-[#080C18]/80 backdrop-blur-sm border border-border/40 px-2.5 py-1.5">
+              <Clock size={9} className="text-foreground/60 flex-shrink-0" aria-hidden="true" />
+              <span className="text-[10px] font-sans uppercase tracking-wider text-foreground/80 leading-none">{event.time}</span>
+            </span>
           </div>
 
           {/* Decorative gold arc */}
           <svg
-            className="absolute top-0 right-0 w-24 h-24 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
-            viewBox="0 0 100 100"
+            className="absolute top-0 right-0 w-20 h-20 opacity-[0.08] group-hover:opacity-[0.16] transition-opacity duration-500 pointer-events-none"
+            viewBox="0 0 80 80"
             fill="none"
             aria-hidden="true"
           >
-            <path d="M100 0 Q60 40 100 100" stroke="url(#goldArcEC)" strokeWidth="1" />
+            <path d="M80 0 Q48 32 80 80" stroke="url(#evGold)" strokeWidth="1" />
             <defs>
-              <linearGradient id="goldArcEC" x1="0" y1="0" x2="1" y2="1">
-                <stop stopColor="#B8861F" />
-                <stop offset="1" stopColor="#F5C842" />
+              <linearGradient id="evGold" x1="0" y1="0" x2="1" y2="1">
+                <stop stopColor="#B8861F" /><stop offset="1" stopColor="#F5C842" />
               </linearGradient>
             </defs>
           </svg>
         </div>
 
-        {/* Content */}
-        <div className="p-5 flex flex-col flex-grow">
-          {/* Time row */}
-          <div className="flex items-center gap-1.5 text-[9px] text-muted-foreground mb-3 font-sans uppercase tracking-widest">
-            <Clock size={10} aria-hidden="true" />
-            <span>{event.time}</span>
-          </div>
-
-          <h3 className="font-serif text-lg text-foreground font-medium mb-2 line-clamp-2 leading-snug group-hover:text-primary transition-colors duration-300">
+        {/* ── Content area ─────────────────────────────────────────────── */}
+        <div className="p-4 flex flex-col flex-grow">
+          {/* Title */}
+          <h3 className="font-serif text-[17px] text-foreground font-medium mb-2 line-clamp-2 leading-snug group-hover:text-primary transition-colors duration-300">
             {event.title}
           </h3>
 
+          {/* Short description */}
           <p className="text-xs text-muted-foreground line-clamp-2 mb-4 flex-grow leading-relaxed font-sans">
             {event.shortDescription}
           </p>
 
-          {/* Footer row */}
-          <div className="mt-auto border-t border-border/40 pt-4 flex items-center justify-between gap-2">
-            <div className="flex items-center gap-1.5 min-w-0">
-              <MapPin size={10} className="text-muted-foreground flex-shrink-0" aria-hidden="true" />
-              <span className="text-[10px] text-muted-foreground uppercase tracking-wider truncate font-sans">
-                {event.venue.name}
+          {/* Footer row — venue + city + CTA */}
+          <div className="mt-auto border-t border-border/30 pt-3.5 space-y-2">
+            <div className="flex items-start gap-1.5">
+              <MapPin size={10} className="text-muted-foreground/70 flex-shrink-0 mt-[3px]" aria-hidden="true" />
+              <div className="min-w-0">
+                <span className="block text-[10px] text-muted-foreground uppercase tracking-wider truncate font-sans leading-tight">
+                  {event.venue.name}
+                </span>
+                <span className="block text-[9px] text-muted-foreground/50 uppercase tracking-widest font-sans leading-tight mt-0.5">
+                  {city}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="w-5 h-[1px] bg-primary/30 group-hover:w-8 transition-all duration-300" />
+              <span className="text-[10px] text-primary uppercase tracking-widest font-sans flex items-center gap-1 group-hover:gap-2 transition-all duration-300">
+                {ticketsLabel}
+                <span className="text-sm leading-none">→</span>
               </span>
             </div>
-            <span className="text-primary text-xs uppercase tracking-widest font-sans group-hover:translate-x-1 transition-transform duration-300 flex items-center gap-1 whitespace-nowrap flex-shrink-0">
-              {ticketsLabel} <span className="text-base leading-none">→</span>
-            </span>
           </div>
         </div>
+
+        {/* Bottom gold line on hover */}
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gold-gradient opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </motion.div>
     </Link>
   );
