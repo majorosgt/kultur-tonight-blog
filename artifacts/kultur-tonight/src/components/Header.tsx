@@ -3,26 +3,41 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
+import { detectLocale, switchLocale } from "@/lib/i18n";
 
 export function Header() {
   const [location] = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const locale = detectLocale(location);
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { label: "Geneva", href: "/en/geneva" },
-    { label: "Events", href: "/en/geneva/events" },
-    { label: "Venues", href: "/en/geneva/venues" },
-    { label: "Blog", href: "/en/blog" },
-  ];
+  const navLinks =
+    locale === "fr"
+      ? [
+          { label: "Genève",      href: "/fr/geneve" },
+          { label: "Événements",  href: "/fr/geneve/evenements" },
+          { label: "Lieux",       href: "/fr/geneve/lieux" },
+          { label: "Blog",        href: "/fr/blog" },
+        ]
+      : [
+          { label: "Geneva",  href: "/en/geneva" },
+          { label: "Events",  href: "/en/geneva/events" },
+          { label: "Venues",  href: "/en/geneva/venues" },
+          { label: "Blog",    href: "/en/blog" },
+        ];
+
+  const earlyAccessLabel = locale === "fr" ? "Accès Anticipé" : "Early Access";
+  const joinLabel        = locale === "fr" ? "Rejoindre l'Accès Anticipé" : "Join Early Access";
+
+  const enPath = switchLocale(location, "en");
+  const frPath = switchLocale(location, "fr");
 
   return (
     <header
@@ -34,7 +49,11 @@ export function Header() {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/en" className="flex items-center gap-3 group relative" aria-label="KulturTonight — home">
+        <Link
+          href={locale === "fr" ? "/fr" : "/en"}
+          className="flex items-center gap-3 group relative"
+          aria-label="KulturTonight — home"
+        >
           <img
             src="/assets/logo-mark.svg"
             alt="KulturTonight theater arch mark"
@@ -49,7 +68,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -64,15 +83,42 @@ export function Header() {
               }`} />
             </Link>
           ))}
-          <div className="w-px h-4 bg-border mx-2" />
-          <Link href="/en" className="text-xs font-sans tracking-widest uppercase text-foreground hover:text-primary transition-colors">
-            EN
-          </Link>
+
+          {/* Divider */}
+          <div className="w-px h-4 bg-border mx-1" />
+
+          {/* Language switcher */}
+          <div className="flex items-center gap-1 text-xs font-sans tracking-widest uppercase" aria-label="Language switcher">
+            <Link
+              href={enPath}
+              className={`px-1.5 py-0.5 transition-colors duration-200 ${
+                locale === "en"
+                  ? "text-primary border-b border-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+              aria-current={locale === "en" ? "true" : undefined}
+            >
+              EN
+            </Link>
+            <span className="text-border/70">|</span>
+            <Link
+              href={frPath}
+              className={`px-1.5 py-0.5 transition-colors duration-200 ${
+                locale === "fr"
+                  ? "text-primary border-b border-primary"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+              aria-current={locale === "fr" ? "true" : undefined}
+            >
+              FR
+            </Link>
+          </div>
+
           <Button
             className="bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-sans font-medium tracking-widest uppercase text-xs px-6 py-5 relative overflow-hidden group"
             data-testid="button-early-access-header"
           >
-            <span className="relative z-10">Early Access</span>
+            <span className="relative z-10">{earlyAccessLabel}</span>
           </Button>
         </nav>
 
@@ -108,6 +154,25 @@ export function Header() {
               <span className="font-serif text-lg font-bold text-foreground">KulturTonight</span>
             </div>
 
+            {/* Mobile language switcher */}
+            <div className="absolute top-7 right-16 flex items-center gap-2 text-xs font-sans tracking-widest uppercase">
+              <Link
+                href={enPath}
+                onClick={() => setMobileMenuOpen(false)}
+                className={locale === "en" ? "text-primary" : "text-muted-foreground"}
+              >
+                EN
+              </Link>
+              <span className="text-border/70">|</span>
+              <Link
+                href={frPath}
+                onClick={() => setMobileMenuOpen(false)}
+                className={locale === "fr" ? "text-primary" : "text-muted-foreground"}
+              >
+                FR
+              </Link>
+            </div>
+
             <div className="flex flex-col gap-6 w-full max-w-sm mx-auto">
               {navLinks.map((link, i) => (
                 <motion.div
@@ -135,7 +200,7 @@ export function Header() {
                 className="pt-8"
               >
                 <Button className="w-full bg-gold-gradient text-black border-none rounded-none font-serif text-xl h-14">
-                  Join Early Access
+                  {joinLabel}
                 </Button>
               </motion.div>
             </div>

@@ -1,9 +1,15 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "wouter";
+import { detectLocale } from "@/lib/i18n";
 
 export function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
+  const [location] = useLocation();
+  const locale = detectLocale(location);
+
+  const label = locale === "fr" ? "Rejoindre l'Accès Anticipé" : "Join Early Access";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,7 +19,6 @@ export function MobileStickyCTA() {
       const pastThreshold = window.scrollY > 400;
       setIsVisible(pastThreshold && !nearBottom);
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -35,7 +40,7 @@ export function MobileStickyCTA() {
             }}
             data-testid="button-mobile-sticky-cta"
           >
-            Join Early Access
+            {label}
           </Button>
         </motion.div>
       )}

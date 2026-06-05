@@ -6,16 +6,18 @@ interface SEOConfig {
   ogTitle: string;
   ogDescription: string;
   canonical?: string;
-  jsonLd?: Record<string, any>;
+  /** hreflang alternate links — [{lang: "en", url: "..."}, ...] */
+  alternates?: Array<{ lang: string; url: string }>;
+  jsonLd?: Record<string, unknown>;
 }
 
-export function useSEO({ title, description, ogTitle, ogDescription, canonical, jsonLd }: SEOConfig) {
+export function useSEO({ title, description, ogTitle, ogDescription, canonical, alternates, jsonLd }: SEOConfig) {
   useEffect(() => {
     document.title = title;
-    
+
     const setMeta = (name: string, content: string, isProperty = false) => {
       const attr = isProperty ? "property" : "name";
-      let el = document.querySelector(`meta[${attr}="${name}"]`);
+      let el = document.querySelector<HTMLMetaElement>(`meta[${attr}="${name}"]`);
       if (!el) {
         el = document.createElement("meta");
         el.setAttribute(attr, name);
@@ -31,13 +33,29 @@ export function useSEO({ title, description, ogTitle, ogDescription, canonical, 
     setMeta("twitter:description", ogDescription);
 
     if (canonical) {
-      let link = document.querySelector(`link[rel="canonical"]`);
+      let link = document.querySelector<HTMLLinkElement>(`link[rel="canonical"]`);
       if (!link) {
         link = document.createElement("link");
         link.setAttribute("rel", "canonical");
         document.head.appendChild(link);
       }
       link.setAttribute("href", canonical);
+    }
+
+    // Inject hreflang alternates
+    const injectedAlts: HTMLLinkElement[] = [];
+    if (alternates) {
+      // Remove any previously injected alternates
+      document.querySelectorAll<HTMLLinkElement>(`link[rel="alternate"][data-dyn="1"]`).forEach((el) => el.remove());
+      for (const alt of alternates) {
+        const el = document.createElement("link");
+        el.setAttribute("rel", "alternate");
+        el.setAttribute("hreflang", alt.lang);
+        el.setAttribute("href", alt.url);
+        el.setAttribute("data-dyn", "1");
+        document.head.appendChild(el);
+        injectedAlts.push(el);
+      }
     }
 
     if (jsonLd) {
@@ -52,11 +70,11 @@ export function useSEO({ title, description, ogTitle, ogDescription, canonical, 
     }
 
     return () => {
-      // Cleanup json-ld to avoid duplicate scripts when navigating
       const script = document.querySelector(`script[id="dynamic-json-ld"]`);
       if (script) script.remove();
+      injectedAlts.forEach((el) => el.remove());
     };
-  }, [title, description, ogTitle, ogDescription, canonical, jsonLd]);
+  }, [title, description, ogTitle, ogDescription, canonical, alternates, jsonLd]);
 }
 
 export function buildCanonical(path: string) {

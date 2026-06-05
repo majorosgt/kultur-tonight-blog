@@ -1,26 +1,27 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Event } from "../content/events";
 import { motion } from "framer-motion";
 import { Calendar, Clock, MapPin, Ticket } from "lucide-react";
+import { detectLocale, localizeCategory } from "@/lib/i18n";
 
 const categoryGradients: Record<string, string> = {
-  theatre: "from-[#2D0714] via-[#1A0510] to-[#080C18]",
-  opera: "from-[#2D0714] via-[#1A0510] to-[#080C18]",
+  theatre:  "from-[#2D0714] via-[#1A0510] to-[#080C18]",
+  opera:    "from-[#2D0714] via-[#1A0510] to-[#080C18]",
   concerts: "from-[#0D1424] via-[#0a1535] to-[#080C18]",
-  jazz: "from-[#0a1a10] via-[#071510] to-[#080C18]",
-  family: "from-[#0a1524] via-[#0d1a2e] to-[#080C18]",
-  dance: "from-[#180a28] via-[#120720] to-[#080C18]",
-  classical: "from-[#1a1000] via-[#120c00] to-[#080C18]",
+  jazz:     "from-[#0a1a10] via-[#071510] to-[#080C18]",
+  family:   "from-[#0a1524] via-[#0d1a2e] to-[#080C18]",
+  dance:    "from-[#180a28] via-[#120720] to-[#080C18]",
+  classical:"from-[#1a1000] via-[#120c00] to-[#080C18]",
 };
 
 const categoryImages: Record<string, string> = {
-  theatre: "https://images.unsplash.com/photo-1503095396549-807759245b35?q=60&w=600&auto=format&fit=crop",
-  opera: "https://images.unsplash.com/photo-1507676184212-d0330a151f96?q=60&w=600&auto=format&fit=crop",
+  theatre:  "https://images.unsplash.com/photo-1503095396549-807759245b35?q=60&w=600&auto=format&fit=crop",
+  opera:    "https://images.unsplash.com/photo-1507676184212-d0330a151f96?q=60&w=600&auto=format&fit=crop",
   concerts: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=60&w=600&auto=format&fit=crop",
-  jazz: "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=60&w=600&auto=format&fit=crop",
-  family: "https://images.unsplash.com/photo-1597075095500-0c8b87b593fb?q=60&w=600&auto=format&fit=crop",
-  dance: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=60&w=600&auto=format&fit=crop",
-  classical: "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=60&w=600&auto=format&fit=crop",
+  jazz:     "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=60&w=600&auto=format&fit=crop",
+  family:   "https://images.unsplash.com/photo-1597075095500-0c8b87b593fb?q=60&w=600&auto=format&fit=crop",
+  dance:    "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=60&w=600&auto=format&fit=crop",
+  classical:"https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=60&w=600&auto=format&fit=crop",
 };
 
 const getCategoryGradient = (category: string): string => {
@@ -40,12 +41,22 @@ const getCategoryImage = (category: string): string | undefined => {
 };
 
 export function EventCard({ event }: { event: Event }) {
+  const [location] = useLocation();
+  const locale = detectLocale(location);
+
+  const eventPath =
+    locale === "fr"
+      ? `/fr/geneve/evenements/${event.slug}`
+      : `/en/geneva/events/${event.slug}`;
+
+  const ticketsLabel = locale === "fr" ? "Billets" : "Tickets";
   const gradient = getCategoryGradient(event.category);
   const photo = getCategoryImage(event.category);
+  const displayCategory = localizeCategory(event.category, locale);
 
   return (
     <Link
-      href={`/en/geneva/events/${event.slug}`}
+      href={eventPath}
       className="group block h-full"
       data-testid={`link-event-${event.slug}`}
     >
@@ -54,12 +65,12 @@ export function EventCard({ event }: { event: Event }) {
         transition={{ duration: 0.4, ease: "easeOut" }}
         className="bg-card border border-card-border h-full overflow-hidden flex flex-col relative"
       >
-        {/* Image / visual area — portrait ratio */}
+        {/* Image / visual area */}
         <div className="aspect-[3/4] w-full relative overflow-hidden bg-muted flex-shrink-0">
           {photo && (
             <img
               src={photo}
-              alt={`${event.title} — ${event.category} event at ${event.venue.name}`}
+              alt={`${event.title} — ${displayCategory} at ${event.venue.name}`}
               className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-50 transition-opacity duration-500"
               loading="lazy"
             />
@@ -70,7 +81,7 @@ export function EventCard({ event }: { event: Event }) {
           {/* Category badge */}
           <div className="absolute top-4 left-4 z-10">
             <span className="text-[9px] font-sans uppercase tracking-[0.25em] text-primary bg-[#080C18]/80 backdrop-blur-sm border border-primary/20 px-3 py-1.5">
-              {event.category}
+              {displayCategory}
             </span>
           </div>
 
@@ -128,7 +139,7 @@ export function EventCard({ event }: { event: Event }) {
               </span>
             </div>
             <span className="text-primary text-xs uppercase tracking-widest font-sans group-hover:translate-x-1 transition-transform duration-300 flex items-center gap-1 whitespace-nowrap flex-shrink-0">
-              Tickets <span className="text-base leading-none">→</span>
+              {ticketsLabel} <span className="text-base leading-none">→</span>
             </span>
           </div>
         </div>
