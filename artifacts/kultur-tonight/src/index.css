@@ -43,49 +43,49 @@
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
 
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
 }
 
 :root {
   /* Default to dark theme */
-  --background: #0F1729; /* Dark Navy */
-  --foreground: #F5F0E8; /* Ivory/Warm White */
-  --border: rgba(245, 240, 232, 0.1);
-  --input: rgba(245, 240, 232, 0.1);
-  --ring: #DFA946; /* Goldish */
+  --background: #080C18; /* Deep blacks and navies */
+  --foreground: #F0EAE0; /* Ivory */
+  --border: rgba(232, 184, 75, 0.12); /* Gold border */
+  --input: rgba(232, 184, 75, 0.12);
+  --ring: #E8B84B;
 
-  --card: rgba(15, 23, 41, 0.6);
-  --card-foreground: #F5F0E8;
-  --card-border: rgba(201, 151, 43, 0.2); /* Subtle Gold */
+  --card: #111828;
+  --card-foreground: #F0EAE0;
+  --card-border: rgba(232, 184, 75, 0.12);
 
-  --popover: #0F1729;
-  --popover-foreground: #F5F0E8;
-  --popover-border: rgba(201, 151, 43, 0.2);
+  --popover: #0D1424;
+  --popover-foreground: #F0EAE0;
+  --popover-border: rgba(232, 184, 75, 0.12);
 
-  --primary: #DFA946; /* Mid Gold */
-  --primary-foreground: #000000;
+  --primary: #E8B84B;
+  --primary-foreground: #080C18;
   --primary-border: transparent;
 
-  --secondary: #3B0A1E; /* Deep Burgundy */
-  --secondary-foreground: #F5F0E8;
-  --secondary-border: rgba(201, 151, 43, 0.3);
+  --secondary: #2D0714; /* Deep burgundy */
+  --secondary-foreground: #F0EAE0;
+  --secondary-border: rgba(232, 184, 75, 0.12);
 
-  --muted: rgba(245, 240, 232, 0.1);
-  --muted-foreground: rgba(245, 240, 232, 0.6);
+  --muted: rgba(240, 234, 224, 0.1);
+  --muted-foreground: #A09385; /* Muted ivory */
   --muted-border: transparent;
 
-  --accent: rgba(201, 151, 43, 0.1);
-  --accent-foreground: #F0C761;
-  --accent-border: rgba(201, 151, 43, 0.5);
+  --accent: #1A0510; /* Darker burgundy for CTAs */
+  --accent-foreground: #E8B84B;
+  --accent-border: rgba(232, 184, 75, 0.3);
 
   --destructive: #8A1A2B;
-  --destructive-foreground: #F5F0E8;
+  --destructive-foreground: #F0EAE0;
   --destructive-border: transparent;
 
-  --radius: 0.5rem;
+  --radius: 0rem;
 }
 
 .dark {
@@ -100,9 +100,6 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
     background-color: var(--background);
-    background-image: radial-gradient(circle at 100% 0%, #3B0A1E 0%, transparent 40%),
-                      radial-gradient(circle at 0% 100%, #151d33 0%, transparent 40%);
-    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -111,11 +108,11 @@
 }
 
 .bg-gold-gradient {
-  background: linear-gradient(135deg, #C9972B, #F0C761);
+  background: linear-gradient(135deg, #B8861F, #E8B84B, #F5C842);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #C9972B, #F0C761);
+  background: linear-gradient(135deg, #B8861F, #E8B84B, #F5C842);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -125,7 +122,29 @@
   transition: all 0.3s ease-in-out;
 }
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(201, 151, 43, 0.2);
-  border-color: rgba(201, 151, 43, 0.5);
-  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(232, 184, 75, 0.15);
+  border-color: rgba(232, 184, 75, 0.4);
+}
+
+.glass-card {
+  background: rgba(13, 20, 36, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 184, 75, 0.12);
+}
+
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -10px rgba(232, 184, 75, 0.2);
+  border-color: rgba(232, 184, 75, 0.3);
+}
+
+.noise-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  z-index: 10;
 }

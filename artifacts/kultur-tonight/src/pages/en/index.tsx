@@ -16,11 +16,11 @@ import { guides } from "@/content/guides";
 
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
 };
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 export default function EnHomePage() {
@@ -48,6 +48,7 @@ export default function EnHomePage() {
           secondaryCtaHref="/en/geneva"
         />
 
+        {/* Featured Events */}
         <section className="py-24 bg-background" data-testid="featured-events">
           <div className="container mx-auto px-4 md:px-6">
             <SectionHeading
@@ -58,8 +59,8 @@ export default function EnHomePage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+              viewport={{ once: true, margin: "-60px" }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
             >
               {featuredEvents.map((event) => (
                 <motion.div key={event.slug} variants={itemVariants} data-testid={`card-event-${event.slug}`}>
@@ -70,13 +71,16 @@ export default function EnHomePage() {
           </div>
         </section>
 
+        {/* CTA 1 — after events */}
         <CTASection
-          title="Never Miss a Masterpiece"
-          subtitle="KulturTonight connects you with last-minute seats to Geneva's most coveted performances — often just hours before the curtain rises."
+          variant="hero"
+          title="The curtain rises in two hours. Are you in?"
+          subtitle="KulturTonight surfaces last-minute seats to Geneva's most coveted performances — often just hours before the curtain rises. Never miss a masterpiece again."
           primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#newsletter" }}
+          secondaryCta={{ text: "Browse Tonight's Events", href: "/en/geneva/events" }}
         />
 
+        {/* Featured Venues */}
         <section className="py-24 bg-background" data-testid="featured-venues">
           <div className="container mx-auto px-4 md:px-6">
             <SectionHeading
@@ -87,8 +91,8 @@ export default function EnHomePage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+              viewport={{ once: true, margin: "-60px" }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-5"
             >
               {featuredVenues.map((venue) => (
                 <motion.div key={venue.slug} variants={itemVariants} data-testid={`card-venue-${venue.slug}`}>
@@ -99,7 +103,16 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        <section className="py-24 border-t border-border/30" data-testid="featured-guides">
+        {/* CTA 2 — after venues */}
+        <CTASection
+          variant="mid"
+          title="Every Friday morning, 1,200 culturally curious Genevans open this email."
+          subtitle="The weekly Geneva Culture Guide — the finest events, described with the care they deserve. For those who live culture, not just consume it."
+          primaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
+        />
+
+        {/* Featured Guides */}
+        <section className="py-24 bg-background" data-testid="featured-guides">
           <div className="container mx-auto px-4 md:px-6">
             <SectionHeading
               title="Geneva Cultural Guides"
@@ -109,8 +122,8 @@ export default function EnHomePage() {
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+              viewport={{ once: true, margin: "-60px" }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
             >
               {guides.map((guide) => (
                 <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
@@ -121,10 +134,22 @@ export default function EnHomePage() {
           </div>
         </section>
 
+        {/* Newsletter signups */}
         <div id="newsletter">
           <NewsletterSignup variant="early-access" />
+        </div>
+        <div id="weekly-guide">
           <NewsletterSignup variant="weekly-guide" />
         </div>
+
+        {/* CTA 3 — footer-cta before Footer */}
+        <CTASection
+          variant="footer-cta"
+          title="Geneva's most sought-after evenings, reserved for those who knew first."
+          subtitle="Become a KulturTonight insider. Exclusive early access to last-minute tickets, curated weekly guides, and a front-row seat to the city's finest cultural moments."
+          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
+          secondaryCta={{ text: "Explore Geneva", href: "/en/geneva" }}
+        />
       </main>
       <Footer />
       <MobileStickyCTA />

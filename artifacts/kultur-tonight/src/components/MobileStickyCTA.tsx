@@ -3,37 +3,38 @@ import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function MobileStickyCTA() {
-  const [isVisible, setIsVisible] = useState(true);
-  
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      // Hide if near bottom to not overlap footer
       const scrollPosition = window.scrollY + window.innerHeight;
       const documentHeight = document.body.offsetHeight;
-      const threshold = 300; // pixels from bottom
-      
-      if (documentHeight - scrollPosition < threshold) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
+      const nearBottom = documentHeight - scrollPosition < 320;
+      const pastThreshold = window.scrollY > 400;
+      setIsVisible(pastThreshold && !nearBottom);
     };
-    
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ y: 100 }}
-          animate={{ y: 0 }}
-          exit={{ y: 100 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-4 bg-background/90 backdrop-blur-md border-t border-border shadow-[0_-10px_40px_rgba(0,0,0,0.5)]"
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0 }}
+          transition={{ type: "spring", stiffness: 260, damping: 24 }}
+          className="md:hidden fixed bottom-0 left-0 right-0 z-40 px-4 pb-6 pt-3 bg-gradient-to-t from-[#080C18] to-transparent pointer-events-none"
         >
-          <Button className="w-full bg-gold-gradient text-black font-serif font-bold text-lg h-14 rounded-none border-none">
+          <Button
+            className="w-full bg-gold-gradient text-black font-serif text-base font-bold h-14 rounded-none border-none pointer-events-auto shadow-[0_-8px_30px_rgba(232,184,75,0.15)]"
+            onClick={() => {
+              document.getElementById("newsletter")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            data-testid="button-mobile-sticky-cta"
+          >
             Join Early Access
           </Button>
         </motion.div>

@@ -1,5 +1,4 @@
 import { Link } from "wouter";
-import { ChevronRight } from "lucide-react";
 import { useEffect } from "react";
 
 interface BreadcrumbItem {
@@ -8,7 +7,6 @@ interface BreadcrumbItem {
 }
 
 export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
-  // Generate JSON-LD BreadcrumbList
   useEffect(() => {
     const jsonLd = {
       "@context": "https://schema.org",
@@ -17,10 +15,10 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
         "@type": "ListItem",
         "position": index + 1,
         "name": item.label,
-        "item": item.href ? `https://kulturtonight.com${item.href}` : undefined
-      }))
+        "item": item.href ? `https://kulturtonight.com${item.href}` : undefined,
+      })),
     };
-    
+
     let script = document.querySelector(`script[id="breadcrumb-json-ld"]`);
     if (!script) {
       script = document.createElement("script");
@@ -29,7 +27,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
       document.head.appendChild(script);
     }
     script.textContent = JSON.stringify(jsonLd);
-    
+
     return () => {
       if (script) script.remove();
     };
@@ -37,24 +35,25 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
 
   return (
     <nav aria-label="Breadcrumb" className="py-4">
-      <ol className="flex items-center space-x-2 text-xs text-muted-foreground font-sans tracking-wide">
+      <ol className="flex items-center flex-wrap gap-x-2 text-[10px] font-sans uppercase tracking-widest text-muted-foreground">
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
-          
+
           return (
-            <li key={item.label} className="flex items-center">
+            <li key={item.label} className="flex items-center gap-x-2">
               {item.href && !isLast ? (
-                <Link href={item.href} className="hover:text-primary transition-colors">
+                <Link
+                  href={item.href}
+                  className="hover:text-primary transition-colors duration-200"
+                >
                   {item.label}
                 </Link>
               ) : (
-                <span className={isLast ? "text-foreground" : ""}>
-                  {item.label}
-                </span>
+                <span className={isLast ? "text-foreground/80" : ""}>{item.label}</span>
               )}
-              
+
               {!isLast && (
-                <ChevronRight className="w-3 h-3 mx-2 opacity-50" />
+                <span className="text-primary/40 text-xs">›</span>
               )}
             </li>
           );
