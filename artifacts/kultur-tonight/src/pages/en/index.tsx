@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
+import { HomeHero } from "@/components/HomeHero";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { EventCard } from "@/components/EventCard";
@@ -39,14 +39,7 @@ export default function EnHomePage() {
     <>
       <Header />
       <main>
-        <Hero
-          title="Geneva's Cultural Scene, Curated"
-          subtitle="Discover exceptional theatre, concerts, and last-minute tickets to Geneva's most sought-after performances."
-          ctaText="Join KulturTonight Early Access"
-          ctaHref="#newsletter"
-          secondaryCtaText="Explore Geneva Events"
-          secondaryCtaHref="/en/geneva"
-        />
+        <HomeHero />
 
         {/* Featured Events */}
         <section className="py-24 bg-background" data-testid="featured-events">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
+import { HomeHero } from "@/components/HomeHero";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { EventCard } from "@/components/EventCard";
@@ -41,15 +41,7 @@ export default function FrHomePage() {
     <>
       <Header />
       <main>
-        <Hero
-          title="La Scène Culturelle Genevoise, Curatée"
-          subtitle="Découvrez des spectacles de théâtre, concerts exceptionnels et billets de dernière minute pour les représentations les plus convoitées de Genève."
-          ctaText="Rejoindre l'accès anticipé KulturTonight"
-          ctaHref="#newsletter"
-          secondaryCtaText="Explorer les événements genevois"
-          secondaryCtaHref="/fr/geneve"
-          imageAlt="Intérieur d'une grande salle de concert dorée avec une architecture somptueuse"
-        />
+        <HomeHero />
 
         {/* Featured Events */}
         <section className="py-24 bg-background" data-testid="featured-events">
