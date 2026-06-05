@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none" role="img" aria-label="KulturTonight logo">
+  <defs>
+    <linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#B8861F"/>
+      <stop offset="0.5" stop-color="#E8B84B"/>
+      <stop offset="1" stop-color="#F5C842"/>
+    </linearGradient>
+  </defs>
+  <!-- Theater proscenium arch icon -->
+  <path d="M5 44 L5 26 C5 16.6 12.6 9 22 9 C31.4 9 39 16.6 39 26 L39 44" stroke="url(#gold2)" stroke-width="1.6" fill="none" stroke-linecap="square"/>
+  <line x1="2" y1="44" x2="42" y2="44" stroke="url(#gold2)" stroke-width="1.6" stroke-linecap="square"/>
+  <path d="M22 22 L23 25 L26.2 25 L23.6 26.9 L24.6 29.9 L22 28.1 L19.4 29.9 L20.4 26.9 L17.8 25 L21 25 Z" fill="url(#gold2)"/>
+  <!-- Wordmark text -->
+  <text x="52" y="34" font-family="'Playfair Display', 'Georgia', serif" font-size="22" font-weight="600" letter-spacing="0.5" fill="#F0EAE0">KulturTonight</text>
+</svg>

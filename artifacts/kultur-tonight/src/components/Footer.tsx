@@ -8,14 +8,21 @@ export function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gold-gradient opacity-20" />
 
       <div className="container mx-auto px-4 md:px-6 pt-16 pb-10">
-        {/* Wordmark + tagline */}
+        {/* Logo + tagline */}
         <div className="mb-14 pb-12 border-b border-border/40">
-          <Link href="/en" className="inline-block mb-3 group">
+          <Link href="/en" className="inline-flex items-center gap-4 mb-3 group" aria-label="KulturTonight — home">
+            <img
+              src="/assets/logo-mark.svg"
+              alt="KulturTonight theater arch mark"
+              width={36}
+              height={36}
+              className="flex-shrink-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+            />
             <span className="font-serif text-3xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors duration-300">
               KulturTonight
             </span>
           </Link>
-          <p className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground font-sans mt-1">
+          <p className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground font-sans mt-1 ml-[52px]">
             Geneva's cultural compass
           </p>
         </div>
@@ -102,8 +109,8 @@ export function Footer() {
             {/* Social */}
             <div className="flex gap-3">
               {[
-                { Icon: Instagram, label: "Instagram" },
-                { Icon: Facebook, label: "Facebook" },
+                { Icon: Instagram, label: "KulturTonight on Instagram" },
+                { Icon: Facebook, label: "KulturTonight on Facebook" },
               ].map(({ Icon, label }) => (
                 <a
                   key={label}

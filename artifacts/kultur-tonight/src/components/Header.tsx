@@ -33,11 +33,19 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/en" className="flex items-center gap-2 group relative">
-          <span className="font-serif text-2xl font-bold tracking-tight text-foreground transition-colors relative z-10">
+        {/* Logo */}
+        <Link href="/en" className="flex items-center gap-3 group relative" aria-label="KulturTonight — home">
+          <img
+            src="/assets/logo-mark.svg"
+            alt="KulturTonight theater arch mark"
+            width={28}
+            height={28}
+            className="flex-shrink-0 transition-opacity duration-300 group-hover:opacity-80"
+          />
+          <span className="font-serif text-xl font-bold tracking-tight text-foreground transition-colors relative z-10">
             KulturTonight
           </span>
-          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold-gradient transition-all duration-300 group-hover:w-full"></span>
+          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold-gradient transition-all duration-300 group-hover:w-full" />
         </Link>
 
         {/* Desktop Nav */}
@@ -53,16 +61,18 @@ export function Header() {
               {link.label}
               <span className={`absolute bottom-0 left-0 h-[1px] bg-gold-gradient transition-all duration-300 ${
                 location.startsWith(link.href) ? "w-full" : "w-0 group-hover:w-full"
-              }`}></span>
+              }`} />
             </Link>
           ))}
-          <div className="w-px h-4 bg-border mx-2"></div>
+          <div className="w-px h-4 bg-border mx-2" />
           <Link href="/en" className="text-xs font-sans tracking-widest uppercase text-foreground hover:text-primary transition-colors">
             EN
           </Link>
-          <Button className="bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-sans font-medium tracking-widest uppercase text-xs px-6 py-5 relative overflow-hidden group">
+          <Button
+            className="bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-sans font-medium tracking-widest uppercase text-xs px-6 py-5 relative overflow-hidden group"
+            data-testid="button-early-access-header"
+          >
             <span className="relative z-10">Early Access</span>
-            <div className="absolute inset-0 -translate-x-full bg-white/20 skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
           </Button>
         </nav>
 
@@ -70,7 +80,8 @@ export function Header() {
         <button
           className="md:hidden text-foreground p-2 z-50 relative"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+          data-testid="button-mobile-menu-toggle"
         >
           {mobileMenuOpen ? <X size={28} className="text-primary" /> : <Menu size={28} />}
         </button>
@@ -86,6 +97,17 @@ export function Header() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-[#080C18]/95 backdrop-blur-2xl z-40 md:hidden flex flex-col justify-center px-8"
           >
+            {/* Mobile logo */}
+            <div className="absolute top-6 left-8 flex items-center gap-3">
+              <img
+                src="/assets/logo-mark.svg"
+                alt="KulturTonight theater arch mark"
+                width={24}
+                height={24}
+              />
+              <span className="font-serif text-lg font-bold text-foreground">KulturTonight</span>
+            </div>
+
             <div className="flex flex-col gap-6 w-full max-w-sm mx-auto">
               {navLinks.map((link, i) => (
                 <motion.div
@@ -105,7 +127,7 @@ export function Header() {
                   </Link>
                 </motion.div>
               ))}
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
