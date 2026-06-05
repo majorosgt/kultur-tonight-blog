@@ -107,7 +107,7 @@ export function HomeHero() {
 
   return (
     <section
-      className="relative w-full overflow-hidden bg-[#080C18]"
+      className="relative w-full overflow-hidden bg-[#0C2340]"
       style={{ minHeight: "100dvh" }}
       aria-label={locale === "fr" ? "Section héro" : "Hero section"}
     >
@@ -121,24 +121,42 @@ export function HomeHero() {
         style={{ objectPosition: "65% center" }}
       />
 
-      {/* Desktop gradient — heavy left, transparent right-center */}
+      {/* Desktop gradient — navy left, transparent right */}
       <div
         className="absolute inset-0 hidden md:block"
         style={{
           background:
-            "linear-gradient(to right, rgba(8,12,24,0.97) 0%, rgba(8,12,24,0.88) 30%, rgba(8,12,24,0.60) 55%, rgba(8,12,24,0.18) 75%, rgba(8,12,24,0.10) 100%)",
+            "linear-gradient(90deg, rgba(12,35,64,0.88) 0%, rgba(27,54,93,0.68) 38%, rgba(12,35,64,0.18) 72%, rgba(12,35,64,0.05) 100%)",
         }}
       />
-      {/* Mobile gradient — dark overall */}
+      {/* Mobile gradient — navy top + bottom */}
       <div
         className="absolute inset-0 md:hidden"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(8,12,24,0.90) 0%, rgba(8,12,24,0.75) 50%, rgba(8,12,24,0.95) 100%)",
+            "linear-gradient(to bottom, rgba(12,35,64,0.85) 0%, rgba(12,35,64,0.55) 50%, rgba(18,18,18,0.80) 100%)",
         }}
       />
       {/* Universal bottom fade to blend with next section */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#080C18] to-transparent" />
+      <div
+        className="absolute bottom-0 left-0 right-0 h-48"
+        style={{
+          background: "linear-gradient(0deg, rgba(18,18,18,0.52) 0%, rgba(18,18,18,0) 45%)",
+        }}
+      />
+      {/* Subtle gold glow behind CTA area */}
+      <div
+        className="absolute hidden md:block pointer-events-none"
+        style={{
+          left: "0%",
+          top: "52%",
+          width: "52%",
+          height: "260px",
+          background:
+            "radial-gradient(ellipse at 30% 60%, rgba(225,197,112,0.10) 0%, rgba(201,147,39,0.06) 40%, transparent 70%)",
+          filter: "blur(24px)",
+        }}
+      />
       {/* Noise texture */}
       <div className="noise-overlay" />
 
@@ -162,7 +180,7 @@ export function HomeHero() {
               height={28}
               className="flex-shrink-0 opacity-90"
             />
-            <span className="text-[10px] uppercase tracking-[0.3em] text-primary font-sans">
+            <span className="text-[10px] uppercase tracking-[0.3em] font-sans" style={{ color: "#E1C570" }}>
               {c.eyebrow}
             </span>
           </motion.div>
@@ -180,10 +198,30 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.9, ease: "easeOut" }}
-            className="font-serif text-[clamp(2.6rem,6vw,5rem)] text-foreground font-medium leading-[1.08] tracking-tight mb-6"
+            className="font-serif text-[clamp(2.6rem,6vw,5rem)] font-medium leading-[1.08] tracking-tight mb-6"
+            style={{ color: "#F8F5F0" }}
           >
             {lines.map((line, i) => (
-              <span key={i} className="block">{line}</span>
+              <span key={i} className="block">
+                {i === 0 ? (
+                  <>
+                    {line.split(" ").map((word, wi, arr) =>
+                      wi === arr.length - 1 ? (
+                        <span
+                          key={wi}
+                          className="text-gold-gradient"
+                        >
+                          {word}
+                        </span>
+                      ) : (
+                        <span key={wi}>{word} </span>
+                      )
+                    )}
+                  </>
+                ) : (
+                  line
+                )}
+              </span>
             ))}
           </motion.h1>
 
@@ -192,7 +230,8 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-base md:text-lg text-muted-foreground font-serif leading-relaxed max-w-lg mb-10"
+            className="text-base md:text-lg font-serif leading-relaxed max-w-lg mb-10"
+            style={{ color: "rgba(248,245,240,0.78)" }}
           >
             {c.sub}
           </motion.p>
@@ -202,20 +241,38 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45, duration: 0.7 }}
-            className="flex flex-col sm:flex-row gap-4 mb-10"
+            className="relative flex flex-col sm:flex-row gap-4 mb-10"
           >
+            {/* Subtle gold glow behind the buttons */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 20% 50%, rgba(225,197,112,0.12) 0%, rgba(201,147,39,0.07) 50%, transparent 75%)",
+                filter: "blur(16px)",
+              }}
+            />
             <Link
               href={c.primaryCta.href}
-              className="inline-flex items-center justify-center h-13 px-8 bg-gold-gradient text-black font-sans uppercase tracking-widest text-[11px] hover:opacity-90 transition-opacity duration-200 relative overflow-hidden"
-              style={{ height: "52px" }}
+              className="relative inline-flex items-center justify-center px-8 font-sans uppercase tracking-widest text-[11px] hover:opacity-90 transition-opacity duration-200 overflow-hidden"
+              style={{
+                height: "52px",
+                background:
+                  "linear-gradient(91.54deg, rgba(201,147,39,0.8) -14.78%, #E1C570 52.55%, rgba(201,163,39,0.8) 80.74%, rgba(201,134,39,0.8) 114.58%)",
+                color: "#121212",
+              }}
               data-testid="button-hero-primary-cta"
             >
               {c.primaryCta.text}
             </Link>
             <Link
               href={c.secondary.href}
-              className="inline-flex items-center justify-center h-13 px-8 border border-primary/50 text-primary font-sans uppercase tracking-widest text-[11px] hover:bg-primary/10 transition-colors duration-200 backdrop-blur-sm"
-              style={{ height: "52px" }}
+              className="relative inline-flex items-center justify-center px-8 font-sans uppercase tracking-widest text-[11px] hover:bg-white/5 transition-colors duration-200 backdrop-blur-sm"
+              style={{
+                height: "52px",
+                border: "1px solid #E1C570",
+                color: "#F8F5F0",
+              }}
               data-testid="button-hero-secondary-cta"
             >
               {c.secondary.text}
@@ -232,9 +289,22 @@ export function HomeHero() {
             {c.categories.map((cat) => (
               <span
                 key={cat}
-                className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.18em] text-foreground/70 border border-border/50 px-3 py-2 font-sans backdrop-blur-sm bg-[#080C18]/30 hover:border-primary/40 hover:text-primary transition-colors duration-200 cursor-default"
+                className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.18em] font-sans backdrop-blur-sm transition-colors duration-200 cursor-default px-3 py-2"
+                style={{
+                  color: "rgba(248,245,240,0.65)",
+                  border: "1px solid rgba(225,197,112,0.25)",
+                  background: "rgba(27,54,93,0.30)",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.color = "#E1C570";
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(225,197,112,0.55)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.color = "rgba(248,245,240,0.65)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(225,197,112,0.25)";
+                }}
               >
-                <span className="text-primary/70">
+                <span style={{ color: "rgba(225,197,112,0.70)" }}>
                   {categoryIcons[cat] ?? <MaskIcon />}
                 </span>
                 {cat}
