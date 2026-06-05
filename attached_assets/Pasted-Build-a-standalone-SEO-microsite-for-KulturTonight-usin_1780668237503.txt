@@ -1,0 +1,163 @@
+Build a standalone SEO microsite for KulturTonight using Next.js App Router, React and Tailwind CSS.
+
+Important context:
+The main KulturTonight website uses Next.js, React, Tailwind, Prisma and Brevo. This microsite should be built in a way that can later be migrated into the main KulturTonight codebase.
+
+Project goal:
+Create a high-converting Geneva-focused cultural discovery and city guide microsite for KulturTonight.
+
+Brand:
+KulturTonight is a premium cultural discovery and last-minute ticket platform.
+The design should feel elegant, premium, cultural and modern.
+
+Visual direction:
+- deep burgundy and dark navy backgrounds
+- warm gold gradient accents
+- ivory / warm white text
+- elegant event and venue cards
+- premium theatre/culture aesthetic
+- mobile-first design
+- strong CTA sections
+- clean typography
+
+Main conversion goal:
+Email signup / early access.
+
+Primary CTA:
+"Join KulturTonight Early Access"
+
+Secondary CTA:
+"Get the weekly Geneva Culture Guide"
+
+Use placeholder newsletter form markup for now. It should be easy to replace later with a Brevo form or Brevo API integration.
+
+Build the following URL structure:
+
+/en
+/en/geneva
+/en/geneva/things-to-do-this-weekend
+/en/geneva/theatre
+/en/geneva/concerts
+/en/geneva/family-events
+/en/geneva/venues
+/en/geneva/venues/[slug]
+/en/geneva/events
+/en/geneva/events/[slug]
+/en/blog
+/en/blog/[slug]
+
+Use local TypeScript content files or JSON files for:
+- guides
+- venues
+- events
+
+Create these reusable components:
+- Header
+- Footer
+- Hero
+- CTASection
+- NewsletterSignup
+- EventCard
+- VenueCard
+- GuideCard
+- CategoryNav
+- Breadcrumbs
+- SectionHeading
+- MobileStickyCTA
+
+Create sample content:
+- 5 guide articles
+- 5 Geneva venues
+- 8 Geneva events
+
+Content themes:
+- Things to do in Geneva this weekend
+- Best theatres in Geneva
+- Best concerts in Geneva
+- Family-friendly cultural activities in Geneva
+- Geneva cultural guide
+- Last-minute theatre tickets in Geneva
+- Cultural events in Geneva
+
+Every page must include:
+- SEO title
+- meta description
+- Open Graph title and description
+- clean URL slugs
+- internal links
+- breadcrumbs
+- mobile responsive layout
+- CTA sections
+- newsletter signup section
+
+Add SEO features:
+- sitemap.xml
+- robots.txt
+- JSON-LD schema for Article pages
+- JSON-LD schema for Event pages
+- JSON-LD schema for Venue / LocalBusiness pages where appropriate
+
+Do not add:
+- payments
+- user accounts
+- login
+- complex backend
+- Prisma database
+- Supabase
+- authentication
+
+Keep it simple, clean and easy to migrate later into an existing Next.js App Router project.
+
+Preferred structure:
+
+app/
+  en/
+    page.tsx
+    geneva/
+      page.tsx
+      things-to-do-this-weekend/
+        page.tsx
+      theatre/
+        page.tsx
+      concerts/
+        page.tsx
+      family-events/
+        page.tsx
+      venues/
+        page.tsx
+        [slug]/
+          page.tsx
+      events/
+        page.tsx
+        [slug]/
+          page.tsx
+    blog/
+      page.tsx
+      [slug]/
+        page.tsx
+
+components/
+  Header.tsx
+  Footer.tsx
+  Hero.tsx
+  CTASection.tsx
+  NewsletterSignup.tsx
+  EventCard.tsx
+  VenueCard.tsx
+  GuideCard.tsx
+  CategoryNav.tsx
+  Breadcrumbs.tsx
+  MobileStickyCTA.tsx
+
+content/
+  guides.ts
+  venues.ts
+  events.ts
+
+lib/
+  seo.ts
+  schema.ts
+
+Use TypeScript.
+Use Tailwind CSS.
+Make the site production-quality and visually polished.
