@@ -10,7 +10,7 @@ import { VenueCard } from "@/components/VenueCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
-import { venues } from "@/content/venues";
+import { venues } from "../../content/venues";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -75,9 +75,9 @@ export default function EnHomePage() {
     canonical: "https://kulturtonight.com/en",
   });
 
-  const featuredVenues = FEATURED_VENUE_SLUGS
-    .map((slug) => venues.find((v) => v.slug === slug))
-    .filter(Boolean) as typeof venues;
+  const featuredVenues = venues.filter(v =>
+    ['victoria-hall', 'grand-theatre-de-geneve', 'batiment-des-forces-motrices'].includes(v.slug)
+  );
 
   return (
     <>

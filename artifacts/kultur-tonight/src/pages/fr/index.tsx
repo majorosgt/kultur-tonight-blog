@@ -11,7 +11,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
-import { venuesFr } from "@/content/venues.fr";
+import { venuesFr } from "../../content/venues.fr";
 
 const containerVariants = {
   hidden:  { opacity: 0 },
@@ -77,9 +77,9 @@ export default function FrHomePage() {
     alternates: buildAlternatesFr("/fr"),
   });
 
-  const featuredVenues = FEATURED_VENUE_SLUGS
-    .map((slug) => venuesFr.find((v) => v.slug === slug))
-    .filter(Boolean) as typeof venuesFr;
+  const featuredVenues = venuesFr.filter(v =>
+    ['victoria-hall', 'grand-theatre-de-geneve', 'batiment-des-forces-motrices'].includes(v.slug)
+  );
 
   return (
     <>
