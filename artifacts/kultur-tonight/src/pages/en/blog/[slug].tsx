@@ -143,8 +143,8 @@ export default function BlogDetailPage() {
         <CTASection
           title="Culture, Delivered Weekly"
           subtitle="Join KulturTonight and receive our curated Geneva Culture Guide every Thursday — the best events, articles, and last-minute tickets."
-          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#newsletter" }}
+          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">

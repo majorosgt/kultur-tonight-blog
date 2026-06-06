@@ -69,7 +69,7 @@ export default function EnHomePage() {
           variant="hero"
           title="The curtain rises in two hours. Are you in?"
           subtitle="KulturTonight surfaces last-minute seats to Geneva's most coveted performances — often just hours before the curtain rises. Never miss a masterpiece again."
-          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
+          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
           secondaryCta={{ text: "Browse Tonight's Events", href: "/en/geneva/events" }}
         />
 
@@ -127,10 +127,7 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        {/* Newsletter signups */}
-        <div id="newsletter">
-          <NewsletterSignup variant="early-access" />
-        </div>
+        {/* Newsletter signup */}
         <div id="weekly-guide">
           <NewsletterSignup variant="weekly-guide" />
         </div>
@@ -139,8 +136,8 @@ export default function EnHomePage() {
         <CTASection
           variant="footer-cta"
           title="Geneva's most sought-after evenings, reserved for those who knew first."
-          subtitle="Become a KulturTonight insider. Exclusive early access to last-minute tickets, curated weekly guides, and a front-row seat to the city's finest cultural moments."
-          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
+          subtitle="A curated selection of theatre, concerts, exhibitions and last-minute cultural experiences — delivered to your inbox every week."
+          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
           secondaryCta={{ text: "Explore Geneva", href: "/en/geneva" }}
         />
       </main>

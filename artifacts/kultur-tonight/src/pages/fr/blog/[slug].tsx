@@ -145,8 +145,8 @@ export default function FrBlogDetailPage() {
         <CTASection
           title="La Culture, Livrée Chaque Semaine"
           subtitle="Rejoignez KulturTonight et recevez notre guide culturel genevois chaque jeudi — les meilleurs événements, articles et billets de dernière minute."
-          primaryCta={{ text: "Rejoindre l'accès anticipé KulturTonight", href: "#newsletter" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#newsletter" }}
+          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">

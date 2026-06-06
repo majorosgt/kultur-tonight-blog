@@ -111,9 +111,9 @@ export default function EventsListPage() {
 
         <CTASection
           title="Never Miss a Cultural Event"
-          subtitle="Join KulturTonight Early Access and receive last-minute ticket alerts for Geneva's finest cultural events."
-          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#newsletter" }}
+          subtitle="Get the Weekly Guide and receive last-minute ticket alerts for Geneva's finest cultural events."
+          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">

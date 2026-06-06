@@ -1,0 +1,77 @@
+Please consolidate all CTA messaging across the site.
+
+Right now there are too many different CTA messages:
+- Join Early Access
+- Join KulturTonight Early Access
+- Get the Weekly Geneva Culture Guide
+- Get the Weekly Guide
+
+We need a cleaner, unified CTA system.
+
+Use only these two CTA types across the microsite:
+
+1. Event discovery CTA
+EN: Explore Events
+FR: Explorer les événements
+
+2. Newsletter signup CTA
+EN: Get the Weekly Guide
+FR: Recevoir le guide hebdomadaire
+
+Make the following changes:
+
+1. Mobile sticky CTA
+Replace:
+"Join Early Access"
+with:
+"Get the Weekly Guide"
+
+French:
+"Recevoir le guide hebdomadaire"
+
+2. Header CTA
+Use:
+EN: Get the Weekly Guide
+FR: Recevoir le guide hebdomadaire
+
+3. Desktop CTA / newsletter section
+Remove "Join KulturTonight Early Access".
+
+Replace the current dual CTA logic with a cleaner structure.
+
+Preferred version:
+- primary CTA in that section: Get the Weekly Guide
+- secondary CTA: Explore Events
+
+If this is a newsletter-focused section, structure it like this:
+
+Section heading:
+EN: Get the Weekly Geneva Culture Guide
+FR: Recevez le guide culturel hebdomadaire de Genève
+
+Supporting text:
+EN: A curated selection of theatre, concerts, exhibitions and last-minute cultural experiences — delivered to your inbox every week.
+FR: Une sélection de théâtres, concerts, expositions et expériences culturelles de dernière minute — envoyée chaque semaine dans votre boîte mail.
+
+Primary button:
+EN: Get the Weekly Guide
+FR: Recevoir le guide hebdomadaire
+
+Secondary button or text link:
+EN: Explore Events
+FR: Explorer les événements
+
+4. Remove "Early Access" wording from the microsite UI if possible.
+This microsite should focus on:
+- discovering events
+- signing up for the weekly cultural guide
+
+Keep CTA copy consistent across:
+- hero
+- header
+- sticky mobile CTA
+- newsletter section
+- footer CTA if any
+
+Do not change the site structure.
+Only unify the CTA messaging and labels.

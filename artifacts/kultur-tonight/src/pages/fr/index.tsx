@@ -70,7 +70,7 @@ export default function FrHomePage() {
           variant="hero"
           title="Le rideau se lève dans deux heures. Vous venez ?"
           subtitle="KulturTonight révèle les places de dernière minute pour les spectacles les plus convoités de Genève — souvent quelques heures seulement avant le lever de rideau. Ne manquez plus jamais un chef-d'œuvre."
-          primaryCta={{ text: "Rejoindre l'accès anticipé KulturTonight", href: "#newsletter" }}
+          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
           secondaryCta={{ text: "Les événements de ce soir", href: "/fr/geneve/evenements" }}
         />
 
@@ -127,9 +127,7 @@ export default function FrHomePage() {
           </div>
         </section>
 
-        <div id="newsletter">
-          <NewsletterSignup variant="early-access" />
-        </div>
+        {/* Newsletter signup */}
         <div id="weekly-guide">
           <NewsletterSignup variant="weekly-guide" />
         </div>
@@ -137,8 +135,8 @@ export default function FrHomePage() {
         <CTASection
           variant="footer-cta"
           title="Les soirées les plus convoitées de Genève, réservées à ceux qui savaient en premier."
-          subtitle="Devenez un initié KulturTonight. Accès anticipé exclusif aux billets de dernière minute, guides hebdomadaires curatés et une place au premier rang des plus beaux moments culturels de la ville."
-          primaryCta={{ text: "Rejoindre l'accès anticipé KulturTonight", href: "#newsletter" }}
+          subtitle="Une sélection de théâtres, concerts, expositions et expériences culturelles de dernière minute — envoyée chaque semaine dans votre boîte mail."
+          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
           secondaryCta={{ text: "Explorer Genève", href: "/fr/geneve" }}
         />
       </main>

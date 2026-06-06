@@ -91,8 +91,8 @@ export default function FrConcertsPage() {
         <CTASection
           title="Ne manquez plus aucun concert"
           subtitle="Rejoignez KulturTonight et recevez en premier les alertes billets pour les concerts les plus attendus de Genève."
-          primaryCta={{ text: "Rejoindre l'accès anticipé KulturTonight", href: "#newsletter" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#newsletter" }}
+          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">

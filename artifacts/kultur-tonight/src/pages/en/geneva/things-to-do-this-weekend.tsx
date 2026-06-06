@@ -88,9 +88,9 @@ export default function ThingsToDoPage() {
 
         <CTASection
           title="Don't Miss a Single Show"
-          subtitle="Join KulturTonight Early Access and receive curated last-minute tickets every weekend."
-          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#newsletter" }}
+          subtitle="Get the Weekly Guide and receive curated last-minute tickets every weekend."
+          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">

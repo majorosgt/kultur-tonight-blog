@@ -59,12 +59,12 @@ export function Footer() {
     ? [
         { label: "À propos",      href: "#" },
         { label: "Contact",       href: "#" },
-        { label: "Accès anticipé",href: "#newsletter" },
+        { label: "Guide hebdomadaire", href: "#weekly-guide" },
       ]
     : [
         { label: "About",         href: "#" },
         { label: "Contact",       href: "#" },
-        { label: "Early Access",  href: "#newsletter" },
+        { label: "Weekly Guide",  href: "#weekly-guide" },
       ];
 
   const igLabel = isFr ? "KulturTonight sur Instagram" : "KulturTonight on Instagram";

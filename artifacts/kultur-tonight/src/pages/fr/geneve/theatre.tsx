@@ -89,12 +89,12 @@ export default function FrTheatrePage() {
         <CTASection
           title="Billets de Théâtre de Dernière Minute"
           subtitle="Rejoignez KulturTonight et ne manquez jamais un spectacle à Genève."
-          primaryCta={{ text: "Rejoindre l'accès anticipé KulturTonight", href: "#newsletter" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#newsletter" }}
+          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">
-          <NewsletterSignup variant="early-access" />
+          <NewsletterSignup variant="weekly-guide" />
         </div>
       </main>
       <Footer />

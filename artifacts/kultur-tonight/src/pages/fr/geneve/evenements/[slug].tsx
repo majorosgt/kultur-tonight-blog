@@ -118,7 +118,7 @@ export default function FrEventDetailPage() {
                   className="bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-serif tracking-wide px-8 h-14"
                   data-testid="button-get-tickets"
                 >
-                  Rejoindre l'accès anticipé pour les billets
+                  Recevoir le guide hebdomadaire
                 </Button>
                 <Link
                   href="/fr/geneve/evenements"
@@ -152,13 +152,13 @@ export default function FrEventDetailPage() {
 
         <CTASection
           title="Billets de Dernière Minute"
-          subtitle="Rejoignez l'accès anticipé KulturTonight et ne manquez plus jamais un événement culturel à Genève."
-          primaryCta={{ text: "Rejoindre l'accès anticipé KulturTonight", href: "#newsletter" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#newsletter" }}
+          subtitle="Découvrez les meilleurs événements culturels et billets de dernière minute à Genève, livrés chaque semaine."
+          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">
-          <NewsletterSignup variant="early-access" />
+          <NewsletterSignup variant="weekly-guide" />
         </div>
       </main>
       <Footer />

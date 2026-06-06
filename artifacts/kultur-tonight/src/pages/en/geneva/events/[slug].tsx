@@ -116,7 +116,7 @@ export default function EventDetailPage() {
                   className="bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-serif tracking-wide px-8 h-14"
                   data-testid="button-get-tickets"
                 >
-                  Join Early Access for Tickets
+                  Get the Weekly Guide
                 </Button>
                 <Link
                   href="/en/geneva/events"
@@ -150,13 +150,13 @@ export default function EventDetailPage() {
 
         <CTASection
           title="Secure Last-Minute Tickets"
-          subtitle="Join KulturTonight Early Access and never miss a cultural event in Geneva again."
-          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#newsletter" }}
+          subtitle="Get the Weekly Guide and never miss a cultural event in Geneva again."
+          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">
-          <NewsletterSignup variant="early-access" />
+          <NewsletterSignup variant="weekly-guide" />
         </div>
       </main>
       <Footer />

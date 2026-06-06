@@ -1,0 +1,71 @@
+Remove all "Early Access" wording from the microsite.
+
+The goal of this microsite is:
+1. drive visitors to the main KulturTonight event discovery experience
+2. collect newsletter signups for the weekly Geneva cultural guide
+3. use the same company database / newsletter list as the main KulturTonight website
+
+Unify the CTA system as follows:
+
+English:
+Primary event CTA:
+Explore Events
+
+Newsletter CTA:
+Get the Weekly Guide
+
+Newsletter section headline:
+Get the Weekly Geneva Culture Guide
+
+Newsletter supporting text:
+A curated selection of theatre, concerts, exhibitions and last-minute cultural experiences — delivered to your inbox every week.
+
+French:
+Primary event CTA:
+Explorer les événements
+
+Newsletter CTA:
+Recevoir le guide hebdomadaire
+
+Newsletter section headline:
+Recevez le guide culturel hebdomadaire de Genève
+
+Newsletter supporting text:
+Une sélection de théâtres, concerts, expositions et expériences culturelles de dernière minute — envoyée chaque semaine dans votre boîte mail.
+
+Make these changes everywhere:
+- header CTA
+- hero secondary CTA
+- mobile sticky CTA
+- newsletter sections
+- footer CTAs
+- any repeated conversion blocks
+
+Replace:
+Join Early Access
+Join KulturTonight Early Access
+Early Access
+
+with:
+Get the Weekly Guide
+or the appropriate French equivalent.
+
+CTA behavior:
+- Explore Events should link or scroll to the events section.
+- Get the Weekly Guide should link or scroll to the newsletter signup section.
+
+Newsletter form data model:
+Prepare the signup form so it can later submit to the same database/newsletter list as the main KulturTonight website.
+
+The form should be able to send these hidden/source fields:
+- source: seo_microsite
+- campaign: weekly_geneva_guide
+- city: geneva
+- language: en or fr
+- signup_page: current page URL
+
+Do not build a complex backend now.
+Use placeholder form handling if needed, but structure the form clearly for later Brevo/database integration.
+
+Keep the site structure unchanged.
+Only update CTA wording, newsletter positioning and form metadata structure.

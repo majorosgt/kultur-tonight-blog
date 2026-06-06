@@ -50,7 +50,7 @@ export default function FrGenevePage() {
         <Hero
           title="Découvrir la Genève Culturelle"
           subtitle="Du Grand Théâtre aux clubs de jazz intimistes — l'âme artistique de Genève, à portée de main."
-          ctaText="Rejoindre l'accès anticipé KulturTonight"
+          ctaText="Recevoir le guide hebdomadaire"
           ctaHref="#newsletter"
           secondaryCtaText="Tous les événements"
           secondaryCtaHref="/fr/geneve/evenements"
@@ -91,9 +91,9 @@ export default function FrGenevePage() {
         </section>
 
         <CTASection
-          title="Accès Anticipé aux Billets"
+          title="Guide Culturel Hebdomadaire"
           subtitle="Rejoignez KulturTonight et recevez en premier les alertes billets de dernière minute pour les meilleurs spectacles de Genève."
-          primaryCta={{ text: "Rejoindre l'accès anticipé KulturTonight", href: "#newsletter" }}
+          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
           secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
         />
 
@@ -120,7 +120,7 @@ export default function FrGenevePage() {
         </section>
 
         <div id="newsletter">
-          <NewsletterSignup variant="early-access" />
+          <NewsletterSignup variant="weekly-guide" />
         </div>
         <div id="weekly-guide">
           <NewsletterSignup variant="weekly-guide" />

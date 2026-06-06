@@ -39,7 +39,7 @@ export default function GenevaPage() {
         <Hero
           title="Discover Cultural Geneva"
           subtitle="From the Grand Théâtre to intimate jazz clubs — Geneva's artistic soul, at your fingertips."
-          ctaText="Join KulturTonight Early Access"
+          ctaText="Get the Weekly Guide"
           ctaHref="#newsletter"
           secondaryCtaText="Browse All Events"
           secondaryCtaHref="/en/geneva/events"
@@ -111,9 +111,9 @@ export default function GenevaPage() {
 
         <CTASection
           title="Your Cultural Guide to Geneva"
-          subtitle="Join KulturTonight Early Access and be the first to discover last-minute tickets to the city's most sought-after performances."
-          primaryCta={{ text: "Join KulturTonight Early Access", href: "#newsletter" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#newsletter" }}
+          subtitle="Get the Weekly Guide and be the first to discover last-minute tickets to the city's most sought-after performances."
+          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
         />
 
         <div id="newsletter">

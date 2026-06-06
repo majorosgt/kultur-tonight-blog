@@ -9,7 +9,7 @@ export function MobileStickyCTA() {
   const [location] = useLocation();
   const locale = detectLocale(location);
 
-  const label = locale === "fr" ? "Rejoindre l'Accès Anticipé" : "Join Early Access";
+  const label = locale === "fr" ? "Recevoir le guide hebdomadaire" : "Get the Weekly Guide";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +36,7 @@ export function MobileStickyCTA() {
           <Button
             className="w-full bg-gold-gradient text-black font-serif text-base font-bold h-14 rounded-none border-none pointer-events-auto shadow-[0_-8px_30px_rgba(232,184,75,0.15)]"
             onClick={() => {
-              document.getElementById("newsletter")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("weekly-guide")?.scrollIntoView({ behavior: "smooth" });
             }}
             data-testid="button-mobile-sticky-cta"
           >
