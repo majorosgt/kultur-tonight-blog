@@ -6,11 +6,11 @@ import { detectLocale } from "@/lib/i18n";
 /* ─── Locale content ──────────────────────────────────────────────────── */
 const copy = {
   en: {
-    eyebrow:    "Geneva Cultural Discovery",
-    headline:   "Culture brings\npeople together",
-    sub:        "Discover curated cultural experiences in Geneva — from theatre and concerts to exceptional venues and unforgettable evenings.",
-    primaryCta: { text: "Discover Events",       href: "/en/geneva/events" },
-    secondary:  { text: "Join Early Access",      href: "#newsletter" },
+    eyebrow:    "Geneva Culture Guide",
+    headline:   "Your next cultural\nnight out starts here",
+    sub:        "Discover Geneva's best theatre, concerts, exhibitions and last-minute cultural experiences.",
+    primaryCta: { text: "Explore Events",        href: "/en/geneva/events" },
+    secondary:  { text: "Get the Weekly Guide",  href: "#weekly-guide" },
     categories: ["Theatre", "Concerts", "Exhibitions", "Dance"],
     valuePoints:[
       { title: "Curated events",             desc: "Handpicked by Geneva insiders" },
@@ -21,10 +21,10 @@ const copy = {
   },
   fr: {
     eyebrow:    "Guide culturel de Genève",
-    headline:   "La culture nous\nrapproche",
-    sub:        "Découvrez des expériences culturelles sélectionnées à Genève — théâtre, concerts, lieux d'exception et soirées inoubliables.",
-    primaryCta: { text: "Découvrir les événements",         href: "/fr/geneve/evenements" },
-    secondary:  { text: "Rejoindre l'accès anticipé",       href: "#newsletter" },
+    headline:   "Votre prochaine soirée\nculturelle commence ici",
+    sub:        "Découvrez les meilleurs théâtres, concerts, expositions et expériences culturelles de dernière minute à Genève.",
+    primaryCta: { text: "Explorer les événements",             href: "/fr/geneve/evenements" },
+    secondary:  { text: "Recevoir le guide hebdomadaire",      href: "#weekly-guide" },
     categories: ["Théâtre", "Concerts", "Expositions", "Danse"],
     valuePoints:[
       { title: "Événements sélectionnés",     desc: "Choisis par des initiés genevois" },
