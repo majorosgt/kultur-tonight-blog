@@ -48,24 +48,36 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        {/* Logo */}
-        <Link
-          href={locale === "fr" ? "/fr" : "/en"}
-          className="flex items-center gap-3 group relative"
-          aria-label="KulturTonight — home"
-        >
-          <img
-            src="/assets/logo-mark.svg"
-            alt="KulturTonight theater arch mark"
-            width={28}
-            height={28}
-            className="flex-shrink-0 transition-opacity duration-300 group-hover:opacity-80"
-          />
-          <span className="font-serif text-xl font-bold tracking-tight text-foreground transition-colors relative z-10">
-            KulturTonight
+        {/* Logo + descriptor */}
+        <div className="flex items-center gap-4">
+          <Link
+            href={locale === "fr" ? "/fr" : "/en"}
+            className="flex items-center gap-3 group relative"
+            aria-label="KulturTonight — home"
+          >
+            <img
+              src="/assets/logo-mark.svg"
+              alt="KulturTonight theater arch mark"
+              width={28}
+              height={28}
+              className="flex-shrink-0 transition-opacity duration-300 group-hover:opacity-80"
+            />
+            <span className="font-serif text-xl font-bold tracking-tight text-foreground transition-colors relative z-10">
+              KulturTonight
+            </span>
+            <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold-gradient transition-all duration-300 group-hover:w-full" />
+          </Link>
+          {/* Descriptor — hidden on mobile */}
+          <span className="hidden lg:flex items-center gap-3">
+            <span className="w-px h-4 bg-border/60" aria-hidden="true" />
+            <span
+              className="text-[11px] uppercase tracking-[0.22em] font-sans"
+              style={{ color: "#E1C570", opacity: 0.85 }}
+            >
+              {locale === "fr" ? "Guide culturel de Genève" : "Geneva Culture Guide"}
+            </span>
           </span>
-          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold-gradient transition-all duration-300 group-hover:w-full" />
-        </Link>
+        </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">

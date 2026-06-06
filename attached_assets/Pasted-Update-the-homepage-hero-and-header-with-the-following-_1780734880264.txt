@@ -1,0 +1,86 @@
+Update the homepage hero and header with the following exact decisions.
+
+1. Remove the right-side hero value blocks completely.
+
+Remove these blocks from the hero:
+- Curated events
+- Exceptional venues
+- Shared cultural moments
+
+Do not place any marketing/value text on the right side of the hero image.
+Keep the right side visually clean so the couple, theatre and Geneva evening atmosphere remain visible.
+
+2. Keep the header descriptor, but reposition it.
+
+Remove "Geneva Cultural Discovery" from its current position above the logo.
+
+Replace it with:
+Geneva Culture Guide
+
+Place "Geneva Culture Guide" to the right of the KulturTonight logo, on the same horizontal line.
+
+Header layout:
+- left side: KulturTonight logo + small descriptor "Geneva Culture Guide"
+- center/right: navigation links
+- right: language switcher
+- far right: CTA button
+
+Styling for "Geneva Culture Guide":
+- small secondary descriptor
+- horizontally aligned with the logo
+- not above the logo
+- not more prominent than the logo
+- elegant letter spacing
+- color: #E1C570 or a subtle ivory/gold tone
+- font size around 12–14px on desktop
+- uppercase or small caps is acceptable
+- hide or simplify on mobile if space is limited
+
+3. Keep the hero copy as:
+
+Eyebrow:
+Geneva Culture Guide
+
+Headline:
+Your next cultural night out starts here
+
+Subheadline:
+Discover Geneva’s best theatre, concerts, exhibitions and last-minute cultural experiences.
+
+Primary CTA:
+Explore Events
+
+Secondary CTA:
+Get the Weekly Guide
+
+4. French version:
+
+Eyebrow:
+Guide culturel de Genève
+
+Headline:
+Votre prochaine soirée culturelle commence ici
+
+Subheadline:
+Découvrez les meilleurs théâtres, concerts, expositions et expériences culturelles de dernière minute à Genève.
+
+Primary CTA:
+Explorer les événements
+
+Secondary CTA:
+Recevoir le guide hebdomadaire
+
+5. CTA behavior:
+- Primary CTA should scroll or link to the events section.
+- Secondary CTA should scroll or link to the newsletter signup section.
+
+6. Keep the hero:
+- clean
+- premium
+- less cluttered
+- not too dark
+- navy/gold/ivory branded
+- visually focused on the hero image and main message
+
+Do not change the overall site structure.
+Only update the header and hero layout.

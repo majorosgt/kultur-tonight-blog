@@ -161,10 +161,10 @@ export function HomeHero() {
       <div className="noise-overlay" />
 
       {/* ── Content grid ────────────────────────────────────────────── */}
-      <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center md:items-stretch min-h-[100dvh] py-28 md:py-0 gap-10 md:gap-0">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 flex flex-col items-start justify-center min-h-[100dvh] py-28">
 
-        {/* ── Left column ─────────────────────────────────────────── */}
-        <div className="w-full md:w-[55%] flex flex-col justify-center md:pr-12 lg:pr-20">
+        {/* ── Content column ──────────────────────────────────────── */}
+        <div className="w-full max-w-2xl flex flex-col justify-center">
 
           {/* Logo mark + eyebrow */}
           <motion.div
@@ -309,36 +309,6 @@ export function HomeHero() {
                 </span>
                 {cat}
               </span>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* ── Right column — value points ──────────────────────────── */}
-        <div className="w-full md:w-[45%] flex flex-col justify-end md:justify-center md:items-end md:pl-8 lg:pl-16 pb-0 md:pb-16">
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.7, duration: 0.9, ease: "easeOut" }}
-            className="flex flex-col gap-6 md:max-w-[280px] w-full"
-          >
-            {c.valuePoints.map((vp, i) => (
-              <motion.div
-                key={vp.title}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.75 + i * 0.15, duration: 0.6 }}
-                className="flex items-start gap-4"
-              >
-                <GoldArch />
-                <div>
-                  <p className="font-serif text-[15px] text-foreground font-medium leading-snug mb-0.5">
-                    {vp.title}
-                  </p>
-                  <p className="text-[11px] text-muted-foreground font-sans leading-relaxed">
-                    {vp.desc}
-                  </p>
-                </div>
-              </motion.div>
             ))}
           </motion.div>
         </div>
