@@ -7,29 +7,23 @@ interface Props {
 }
 
 const STORAGE_KEY = "kt_popup_dismissed";
-const EXPIRY_DAYS = 30;
+const EXPIRY_MS = 30 * 24 * 60 * 60 * 1000;
 
 function isDismissed(): boolean {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return false;
-    const { expiry } = JSON.parse(raw);
-    if (Date.now() > expiry) {
-      localStorage.removeItem(STORAGE_KEY);
-      return false;
-    }
-    return true;
+    const val = localStorage.getItem(STORAGE_KEY);
+    if (!val) return false;
+    const ts = Number(val);
+    if (isNaN(ts)) return false;
+    return Date.now() - ts < EXPIRY_MS;
   } catch {
     return false;
   }
 }
 
-function dismiss() {
+function setDismissed() {
   try {
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ expiry: Date.now() + EXPIRY_DAYS * 24 * 60 * 60 * 1000 })
-    );
+    localStorage.setItem(STORAGE_KEY, Date.now().toString());
   } catch {}
 }
 
@@ -71,7 +65,7 @@ export function NewsletterPopup({ lang }: Props) {
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
         if (timerRef.current) clearTimeout(timerRef.current);
-        setVisible(true);
+        if (!isDismissed()) setVisible(true);
       }
     };
 
@@ -84,15 +78,15 @@ export function NewsletterPopup({ lang }: Props) {
   }, []);
 
   function close() {
-    dismiss();
+    setDismissed();
     setVisible(false);
   }
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitted(true);
+    setDismissed();
     setTimeout(() => {
-      dismiss();
       setVisible(false);
     }, 2500);
   }

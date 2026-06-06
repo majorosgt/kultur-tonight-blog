@@ -31,6 +31,7 @@ const directionBoxes = [
     cta: "Voir les événements ce soir →",
     href: "https://kulturtonight.ch/en/geneva/events/",
     external: true,
+    gradient: "linear-gradient(135deg, #1a0a02 0%, #3d1f00 100%)",
   },
   {
     icon: Mail,
@@ -40,6 +41,7 @@ const directionBoxes = [
     cta: "Recevoir le guide hebdomadaire →",
     href: "#weekly-guide",
     external: false,
+    gradient: "linear-gradient(135deg, #020a1a 0%, #003d3d 100%)",
   },
   {
     icon: BookOpen,
@@ -49,6 +51,7 @@ const directionBoxes = [
     cta: "Lire le blog →",
     href: "https://blog.kulturtonight.ch/en/geneva/",
     external: true,
+    gradient: "linear-gradient(135deg, #020a02 0%, #0d3d1a 100%)",
   },
   {
     icon: MapPin,
@@ -58,6 +61,7 @@ const directionBoxes = [
     cta: "Explorer les lieux →",
     href: "/fr/geneve/lieux/",
     external: false,
+    gradient: "linear-gradient(135deg, #0a0214 0%, #1f003d 100%)",
   },
 ];
 
@@ -82,43 +86,88 @@ export default function FrHomePage() {
         <HomeHero />
 
         {/* Direction Boxes */}
-        <section className="py-20 bg-background" data-testid="direction-boxes">
+        <section className="bg-background" style={{ padding: "80px 0" }} data-testid="direction-boxes">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-2xl mb-12">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
+            <div className="text-center" style={{ marginBottom: "48px" }}>
+              <h2
+                className="text-foreground"
+                style={{
+                  fontFamily: "'Cormorant Garamond', serif",
+                  fontSize: "clamp(28px, 4vw, 42px)",
+                  fontWeight: 400,
+                  lineHeight: 1.2,
+                  marginBottom: "20px",
+                }}
+              >
                 Où voulez-vous aller ce soir ?
               </h2>
+              <div style={{ width: "60px", height: "2px", background: "#E1C570", margin: "0 auto" }} />
             </div>
             <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4"
+              className="grid grid-cols-2 lg:grid-cols-4"
+              style={{ gap: "1px" }}
             >
               {directionBoxes.map((box) => {
                 const Icon = box.icon;
-                const inner = (
+                const card = (
                   <div
-                    className="group h-full flex flex-col gap-4 p-6 bg-card rounded-sm transition-colors hover:bg-muted cursor-pointer"
-                    style={{ borderTop: "2px solid #E1C570" }}
+                    className="group relative overflow-hidden flex flex-col transition-all duration-300 hover:[filter:brightness(1.15)] cursor-pointer h-full"
+                    style={{
+                      minHeight: "clamp(280px, 30vw, 380px)",
+                      backgroundColor: "#080C18",
+                      borderTop: "3px solid #E1C570",
+                      borderLeft: "1px solid rgba(255,255,255,0.06)",
+                      borderRight: "1px solid rgba(255,255,255,0.06)",
+                      borderBottom: "1px solid rgba(255,255,255,0.06)",
+                    }}
                   >
-                    <Icon size={22} style={{ color: "#E1C570" }} />
-                    <p
-                      className="text-xs font-semibold tracking-widest uppercase"
-                      style={{ color: "#E1C570" }}
+                    {/* Gradient image area with icon */}
+                    <div
+                      className="relative flex items-center justify-center flex-shrink-0"
+                      style={{ height: "180px", background: box.gradient }}
                     >
-                      {box.label}
-                    </p>
-                    <h3 className="font-serif text-lg font-bold text-foreground leading-snug">
-                      {box.headline}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                      {box.description}
-                    </p>
-                    <span className="text-sm font-medium text-foreground group-hover:underline">
-                      {box.cta}
-                    </span>
+                      <Icon size={48} style={{ color: "#E1C570", opacity: 0.8 }} />
+                    </div>
+
+                    {/* Content area */}
+                    <div className="flex flex-col flex-grow" style={{ padding: "20px" }}>
+                      <p style={{ color: "#E1C570", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", fontWeight: 600, fontFamily: "Inter, sans-serif" }}>
+                        {box.label}
+                      </p>
+                      <h3
+                        style={{
+                          fontFamily: "'Cormorant Garamond', serif",
+                          fontSize: "clamp(20px, 2vw, 28px)",
+                          color: "white",
+                          fontWeight: 400,
+                          lineHeight: 1.2,
+                          marginTop: "12px",
+                          marginBottom: "12px",
+                        }}
+                      >
+                        {box.headline}
+                      </h3>
+                      <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)", lineHeight: 1.6, flexGrow: 1, fontFamily: "Inter, sans-serif" }}>
+                        {box.description}
+                      </p>
+                      <div style={{ marginTop: "auto", paddingTop: "16px" }}>
+                        <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: "16px" }}>
+                          <span style={{ color: "#E1C570", fontSize: "13px", textTransform: "uppercase", letterSpacing: "2px", fontFamily: "Inter, sans-serif" }}>
+                            {box.cta}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Hover gold left border */}
+                    <div
+                      className="absolute left-0 top-0 bottom-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ width: "3px", backgroundColor: "#E1C570" }}
+                    />
                   </div>
                 );
 
@@ -126,15 +175,15 @@ export default function FrHomePage() {
                   <motion.div key={box.label} variants={itemVariants}>
                     {box.external ? (
                       <a href={box.href} target="_blank" rel="noopener noreferrer" className="block h-full">
-                        {inner}
+                        {card}
                       </a>
                     ) : box.href.startsWith("#") ? (
                       <a href={box.href} className="block h-full">
-                        {inner}
+                        {card}
                       </a>
                     ) : (
                       <Link href={box.href} className="block h-full">
-                        {inner}
+                        {card}
                       </Link>
                     )}
                   </motion.div>

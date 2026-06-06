@@ -25,7 +25,7 @@ export const venues: Venue[] = [
     capacity: 1500,
     description: "Geneva's premier opera house, presenting world-class opera, ballet, and dance.",
     longDescription: "Standing at the heart of Place Neuve since 1879, the Grand Théâtre de Genève is Switzerland's most important opera house. Home to its own ensemble, it produces world-class opera, ballet, and contemporary dance with a programme that balances the canonical repertoire with bold new commissions. The building itself — neo-baroque, gold and crimson inside — is an event before the curtain rises.",
-    image: '/assets/venues/grand-theatre.jpg',
+    image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80',
     website: 'https://www.gtg.ch',
     categories: ['opera', 'ballet', 'dance', 'theatre'],
     featured: true
@@ -40,7 +40,7 @@ export const venues: Venue[] = [
     capacity: 1600,
     description: 'Home of the Orchestre de la Suisse Romande, celebrated globally for its magnificent acoustics.',
     longDescription: "Built in 1894 and gifted to the city by a British diplomat, Victoria Hall is one of Europe's finest concert halls — celebrated as much for its breathtaking neo-baroque interior as for its extraordinary acoustics. It is the permanent home of the Orchestre de la Suisse Romande, and its stage has welcomed the greatest names in classical music for over a century. An evening here is not just a concert — it is Geneva at its most refined.",
-    image: '/assets/venues/victoria-hall.jpg',
+    image: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80',
     website: 'https://www.ville-geneve.ch/victoria-hall',
     categories: ['classical', 'concerts'],
     featured: true
@@ -85,7 +85,7 @@ export const venues: Venue[] = [
     capacity: 600,
     description: 'A magnificent 19th-century industrial building with exceptional acoustics and a unique atmosphere.',
     longDescription: "Few concert venues in Europe have the atmosphere of the Bâtiment des Forces Motrices. Built in 1886 as a hydraulic pumping station, its soaring iron-and-glass interior was repurposed as a performance space in the 1990s — and the transformation is extraordinary. The acoustics are exceptional, the sight lines intimate despite the scale, and the sense of occasion is unlike anywhere else in Geneva. Opera, chamber music, and experimental performance all find a natural home here.",
-    image: '/assets/venues/bfm.jpg',
+    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80',
     website: 'https://www.bfm.ch',
     categories: ['opera', 'classical', 'contemporary'],
     featured: true

@@ -31,6 +31,7 @@ const typePhotos: Record<string, string> = {
 };
 
 function getVenuePhoto(venue: Venue): string {
+  if (venue.image && venue.image.startsWith("http")) return venue.image;
   return (
     venuePhotos[venue.slug] ??
     typePhotos[venue.type] ??

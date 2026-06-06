@@ -1,0 +1,36 @@
+Please fix the following 3 issues:
+
+## 1. POPUP FIX
+The popup is appearing every time even after being closed. Fix the localStorage logic in artifacts/kultur-tonight/src/components/NewsletterPopup.tsx:
+
+- On close (X button click) AND on "No thanks" click: immediately set localStorage item 'kt_popup_dismissed' = current timestamp as string
+- On component mount: check if 'kt_popup_dismissed' exists in localStorage. If it exists and is less than 30 days old, do NOT show the popup ever. If it does not exist, apply the 10 second delay then show.
+- On successful email submit: also set the same localStorage key
+- Test the logic: if I close the popup and refresh the page, it must NOT appear again for 30 days
+
+## 2. DIRECTION BOXES - REDESIGN TO MATCH VENUE CARD STYLE
+The 4 direction boxes need to visually match the VenueCard component style shown on the page. Look at the existing VenueCard component at artifacts/kultur-tonight/src/components/VenueCard.tsx and apply the same visual language to the direction boxes:
+
+- Same card dimensions and proportions as VenueCard
+- Same dark background color
+- Same gold border treatment
+- Same typography sizing and spacing
+- Same hover effect
+- Minimum height: 320px
+- The top half of each box should have a large background image or gradient that fills the space like VenueCard's image area
+- Use these background gradients for each box image area (full width, height 180px):
+  - TONIGHT: linear-gradient(135deg, #1a0a02 0%, #3d1f00 100%)
+  - WEEKLY GUIDE: linear-gradient(135deg, #020a1a 0%, #003d3d 100%)
+  - EDITORIAL: linear-gradient(135deg, #020a02 0%, #0d3d1a 100%)
+  - VENUES: linear-gradient(135deg, #0a0214 0%, #1f003d 100%)
+- Add the lucide-react icon centered in the gradient area, size 48px, gold color, opacity 0.8
+- Bottom half: label, headline, description, CTA link — same padding and style as VenueCard text area
+
+## 3. VENUE IMAGES
+The venue cards are showing generic placeholder images. Update artifacts/kultur-tonight/src/content/venues.ts to use better Unsplash image URLs for the 3 featured venues:
+
+- grand-theatre-de-geneve: image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80'
+- victoria-hall: image: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80'
+- batiment-des-forces-motrices: image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80'
+
+Do not change anything else.
