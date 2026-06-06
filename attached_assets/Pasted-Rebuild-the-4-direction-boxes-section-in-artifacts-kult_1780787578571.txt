@@ -1,0 +1,54 @@
+Rebuild the 4 direction boxes section in artifacts/kultur-tonight/src/pages/en/index.tsx with the following visual changes. Do not change the content, links, or labels — only the styling.
+
+CURRENT PROBLEM: The boxes are too small and flat. They need to be taller, more impactful, and feel like editorial destination cards — not navigation buttons.
+
+NEW STYLING REQUIREMENTS:
+
+1. LAYOUT
+- Desktop: 4 columns, full width
+- Mobile: 2x2 grid
+- Section padding: 80px top and bottom
+- Gap between boxes: 1px (tight, almost seamless)
+
+2. BOX SIZE
+- Minimum height: 380px on desktop, 280px on mobile
+- Full height flex column with content pushed to bottom
+- No fixed width — each box takes equal column width
+
+3. BOX BACKGROUND
+Use a different dark background image or gradient for each box:
+- Box 1 TONIGHT: background-image linear-gradient from rgba(20,10,5,0.95) to rgba(40,20,5,0.85) — warm dark brown
+- Box 2 WEEKLY GUIDE: background-image linear-gradient from rgba(5,10,20,0.95) to rgba(5,20,35,0.85) — cool dark blue
+- Box 3 EDITORIAL: background-image linear-gradient from rgba(10,15,10,0.95) to rgba(15,25,15,0.85) — very dark green
+- Box 4 VENUES: background-image linear-gradient from rgba(15,10,20,0.95) to rgba(25,15,35,0.85) — very dark purple
+
+4. BOX INNER LAYOUT (flex column, space-between)
+TOP section:
+- Icon: 32px, gold color, margin-bottom 24px
+- Category label: 11px, gold, uppercase, letter-spacing 3px
+- Headline: Cormorant Garamond, 32px desktop / 24px mobile, white, font-weight 400, line-height 1.2, margin-top 12px
+- Description: Inter, 14px, rgba(255,255,255,0.6), margin-top 12px, line-height 1.6
+
+BOTTOM section (margin-top auto):
+- Divider line: 1px solid rgba(255,255,255,0.15), margin-bottom 20px
+- CTA text: Inter, 13px, gold color, uppercase, letter-spacing 2px
+- Arrow: → after text, same color
+
+5. HOVER STATE
+- Slight brightness increase: filter brightness(1.15)
+- Gold left border appears: border-left 3px solid [gold token]
+- Transition: all 0.3s ease
+- Cursor: pointer
+
+6. SECTION HEADING
+- "Where would you like to go tonight?" 
+- Cormorant Garamond, 42px desktop / 28px mobile
+- White, centered
+- Margin-bottom 48px
+- Gold decorative line underneath (2px, 60px wide, centered)
+
+7. GOLD TOP BORDER on each box
+- 3px solid gold color token at the very top of each box
+- Full width of the box
+
+Do not change any other section on the homepage. Do not change Header, Footer, or any other component.

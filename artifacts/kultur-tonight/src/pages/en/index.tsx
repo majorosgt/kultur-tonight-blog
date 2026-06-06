@@ -21,12 +21,6 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const FEATURED_VENUE_SLUGS = [
-  "victoria-hall",
-  "grand-theatre-de-geneve",
-  "batiment-des-forces-motrices",
-];
-
 const directionBoxes = [
   {
     icon: Ticket,
