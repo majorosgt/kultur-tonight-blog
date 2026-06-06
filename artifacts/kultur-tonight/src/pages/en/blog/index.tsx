@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
@@ -19,6 +20,17 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+const categories = [
+  { slug: "guides",       label: "Evergreen Guides",        desc: "Timeless cultural guides to Geneva's arts scene." },
+  { slug: "venues",       label: "Venue Spotlights",        desc: "Deep dives into Geneva's most iconic cultural venues." },
+  { slug: "this-week",    label: "This Week in Geneva",     desc: "The best cultural events happening this week." },
+  { slug: "this-weekend", label: "This Weekend",            desc: "A curated weekend programme for the culturally curious." },
+  { slug: "events",       label: "Event Features",          desc: "Long-reads on standout performances and exhibitions." },
+  { slug: "seasonal",     label: "Seasonal Guides",         desc: "What to see and do in Geneva, season by season." },
+  { slug: "culture",      label: "Culture & Context",       desc: "Essays on Geneva's artistic identity and cultural life." },
+  { slug: "family",       label: "Family Culture",          desc: "Cultural experiences designed for families in Geneva." },
+];
+
 export default function BlogPage() {
   useSEO({
     title: "Geneva Cultural Blog & Guides | KulturTonight",
@@ -27,6 +39,8 @@ export default function BlogPage() {
     ogDescription: "Expert cultural guides for Geneva — discover the city's artistic soul through our editorial content.",
     canonical: "https://kulturtonight.com/en/blog",
   });
+
+  const featured = guides.slice(0, 3);
 
   return (
     <>
@@ -50,8 +64,27 @@ export default function BlogPage() {
             </p>
           </div>
 
+          {/* Category hub */}
+          <SectionHeading title="Browse by Category" subtitle="Eight editorial sections, one cultural city." />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+            {categories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/en/blog/geneva/${cat.slug}`}
+                className="group block p-6 border border-border/40 hover:border-primary/50 transition-colors duration-300"
+              >
+                <div className="w-6 h-[1px] bg-gold-gradient mb-4 group-hover:w-10 transition-all duration-300" />
+                <p className="font-serif text-lg text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                  {cat.label}
+                </p>
+                <p className="text-sm text-muted-foreground font-sans leading-relaxed">{cat.desc}</p>
+              </Link>
+            ))}
+          </div>
+
+          {/* Featured articles */}
           <SectionHeading
-            title="Cultural Guides"
+            title="Featured Guides"
             subtitle={`${guides.length} essential reads for the culturally curious Genevan.`}
           />
 
@@ -61,7 +94,7 @@ export default function BlogPage() {
             animate="visible"
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
           >
-            {guides.map((guide) => (
+            {featured.map((guide) => (
               <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
                 <GuideCard guide={guide} />
               </motion.div>
@@ -76,9 +109,7 @@ export default function BlogPage() {
           secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
         />
 
-        <div id="newsletter">
-          <NewsletterSignup variant="weekly-guide" />
-        </div>
+        <NewsletterSignup variant="weekly-guide" />
       </main>
       <Footer />
       <MobileStickyCTA />

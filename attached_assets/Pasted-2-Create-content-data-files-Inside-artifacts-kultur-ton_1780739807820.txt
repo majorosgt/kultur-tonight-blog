@@ -1,0 +1,54 @@
+2. Create content data files
+Inside artifacts/kultur-tonight/src/content/ create these files following the exact same TypeScript pattern as the existing guides.ts and venues.ts:
+blog-guides.ts          → 3 sample evergreen guide articles
+blog-guides.fr.ts       → French versions
+blog-venues.ts          → 3 sample venue spotlight articles
+blog-venues.fr.ts       → French versions
+blog-this-week.ts       → 2 sample weekly curated lists
+blog-this-week.fr.ts    → French versions
+blog-events.ts          → 2 sample event articles
+blog-events.fr.ts       → French versions
+blog-seasonal.ts        → 1 sample seasonal article
+blog-seasonal.fr.ts     → French version
+blog-culture.ts         → 1 sample culture article
+blog-culture.fr.ts      → French version
+blog-family.ts          → 1 sample family article
+blog-family.fr.ts       → French version
+Each article must have these fields:
+typescript{
+  slug: string
+  title: string
+  subtitle: string
+  category: 'guides' | 'venues' | 'this-week' | 'this-weekend' | 'events' | 'seasonal' | 'culture' | 'family'
+  city: 'geneva'
+  lang: 'en' | 'fr'
+  date: string                    // ISO format: "2026-06-06"
+  readTime: number                // minutes
+  image: string                   // use existing assets or placeholder
+  body: string                    // 2-3 paragraphs of sample content in KulturTonight voice
+  ctaText: string                 // e.g. "See tonight's events in Geneva →"
+  ctaUrl: string                  // links to kulturtonight.ch/en/geneva/
+}
+
+3. Modify Header.tsx
+Add the following to the existing header — do not remove anything:
+City selector next to the logo:
+
+Shows current city: Geneva ▾
+Dropdown options: Geneva, Zurich (disabled, "Coming soon"), Lausanne (disabled, "Coming soon")
+Selecting a city updates the URL prefix from /en/blog/geneva/ to /en/blog/zurich/ etc.
+Style: same gold/dark aesthetic as existing header
+
+Blog navigation items (only show when on a /blog/ route):
+
+Guides → /en/blog/geneva/guides/
+Venues → /en/blog/geneva/venues/
+This Week → /en/blog/geneva/this-week/
+Seasonal → /en/blog/geneva/seasonal/
+Culture → /en/blog/geneva/culture/
+
+Persistent CTA button (always visible, right side of header):
+
+Text: Tonight's Events →
+Links to: https://kulturtonight.ch/en/geneva/
+Style: solid gold button, same as existing CTA buttons

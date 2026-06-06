@@ -1,25 +1,13 @@
-import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { GuideCard } from "@/components/GuideCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
-import { guidesFr } from "@/content/guides.fr";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.12 } },
-};
-const itemVariants = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
 
 const categories = [
   { slug: "guides",         label: "Guides Culturels",          desc: "Des guides intemporels sur la scène artistique genevoise." },
@@ -32,17 +20,13 @@ const categories = [
   { slug: "famille",        label: "Culture en Famille",        desc: "Des expériences culturelles pensées pour les familles genevoises." },
 ];
 
-export default function FrBlogPage() {
+export default function FrBlogGenevePage() {
   useSEO({
-    title: "Blog Culturel de Genève | Guides & Articles | KulturTonight",
-    description: "Guides culturels approfondis sur Genève — théâtre, concerts, sorties en famille et plus. Écrits par des passionnés de culture.",
-    ogTitle: "KulturTonight Blog | Guides Culturels Genève",
-    ogDescription: "Guides experts sur la culture genevoise — découvrez l'âme artistique de la ville à travers notre contenu éditorial.",
-    canonical: "https://kulturtonight.com/fr/blog",
-    alternates: buildAlternatesFr("/fr/blog"),
+    title: "Blog Genève — Guides Culturels & Articles | KulturTonight",
+    description: "Le hub éditorial complet de KulturTonight pour Genève — guides intemporels, portraits de lieux, sélections hebdomadaires, contenus saisonniers et essais culturels.",
+    canonical: "https://kulturtonight.com/fr/blog/geneve",
+    alternates: buildAlternatesFr("/fr/blog/geneve"),
   });
-
-  const featured = guidesFr.slice(0, 3);
 
   return (
     <>
@@ -52,22 +36,23 @@ export default function FrBlogPage() {
           <Breadcrumbs
             items={[
               { label: "KulturTonight", href: "/fr" },
-              { label: "Blog" },
+              { label: "Blog", href: "/fr/blog" },
+              { label: "Genève" },
             ]}
           />
 
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Blog Culturel de Genève
+              Éditorial Genève
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Guides approfondis, essais éditoriaux et chroniques culturelles signés par les plus grands passionnés des arts genevois.
+              Tout ce que nous écrivons sur la vie culturelle genevoise — guides intemporels, portraits de lieux, sélections de la semaine et bilans saisonniers.
             </p>
           </div>
 
-          {/* Category hub */}
-          <SectionHeading title="Rubriques Éditoriales" subtitle="Huit sections, une seule ville culturelle." />
+          <SectionHeading title="Rubriques Éditoriales" subtitle="Parcourez les huit sections de contenu." />
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
             {categories.map((cat) => (
               <Link
@@ -83,34 +68,14 @@ export default function FrBlogPage() {
               </Link>
             ))}
           </div>
-
-          {/* Featured articles */}
-          <SectionHeading
-            title="Guides à la Une"
-            subtitle={`${guidesFr.length} lectures essentielles pour le curieux de culture genevois.`}
-          />
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
-          >
-            {featured.map((guide) => (
-              <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
-                <GuideCard guide={guide} />
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
 
         <CTASection
           title="La Culture, Curatée Chaque Semaine"
-          subtitle="Une sélection de théâtres, concerts, expositions et expériences culturelles de dernière minute — envoyée chaque semaine dans votre boîte mail."
+          subtitle="Notre équipe éditoriale sélectionne les meilleurs événements et moments culturels genevois chaque jeudi."
           primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
           secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
         />
-
         <NewsletterSignup variant="weekly-guide" />
       </main>
       <Footer />
