@@ -1,12 +1,9 @@
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, MapPin, ExternalLink } from "lucide-react";
+import { Menu, X, ChevronDown, MapPin } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { detectLocale, switchLocale } from "@/lib/i18n";
-
-const TONIGHT_URL = "https://kulturtonight.ch/en/geneva/";
-const TONIGHT_URL_FR = "https://kulturtonight.ch/fr/geneve/";
 
 export function Header() {
   const [location] = useLocation();
@@ -17,7 +14,13 @@ export function Header() {
 
   const locale = detectLocale(location);
   const isOnBlog = location.includes("/blog/");
-  const tonightUrl = locale === "fr" ? TONIGHT_URL_FR : TONIGHT_URL;
+
+  const scrollToNewsletter = () => {
+    const el = document.getElementById("weekly-guide");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -41,13 +44,13 @@ export function Header() {
           { label: "Genève",      href: "/fr/geneve" },
           { label: "Événements",  href: "/fr/geneve/evenements" },
           { label: "Lieux",       href: "/fr/geneve/lieux" },
-          { label: "Blog",        href: "/fr/blog" },
+          { label: "Blog",        href: "/fr/blog/geneve" },
         ]
       : [
           { label: "Geneva",  href: "/en/geneva" },
           { label: "Events",  href: "/en/geneva/events" },
           { label: "Venues",  href: "/en/geneva/venues" },
-          { label: "Blog",    href: "/en/blog" },
+          { label: "Blog",    href: "/en/blog/geneva" },
         ];
 
   const blogNavLinks =
@@ -70,6 +73,10 @@ export function Header() {
   const earlyAccessLabel = locale === "fr" ? "Recevoir le guide" : "Get the Weekly Guide";
   const joinLabel        = locale === "fr" ? "Recevoir le guide hebdomadaire" : "Get the Weekly Guide";
   const tonightLabel     = locale === "fr" ? "Ce soir →" : "Tonight's Events →";
+  const tonightHref      = locale === "fr" ? "/fr/geneve/evenements" : "/en/geneva/events";
+  const blogHref         = locale === "fr" ? "/fr/blog/geneve" : "/en/blog/geneva";
+  const cityHref         = locale === "fr" ? "/fr/geneve" : "/en/geneva";
+  const cultureGuideLabel = locale === "fr" ? "Guide culturel de Genève" : "Geneva Culture Guide";
 
   const enPath = switchLocale(location, "en");
   const frPath = switchLocale(location, "fr");
@@ -126,13 +133,14 @@ export function Header() {
                   transition={{ duration: 0.15 }}
                   className="absolute top-full left-0 mt-1 w-44 bg-[#080C18]/95 backdrop-blur-xl border border-border/50 shadow-xl z-50"
                 >
-                  <button
-                    className="w-full flex items-center gap-2 px-4 py-2.5 text-xs font-sans tracking-widest uppercase text-primary border-b border-border/30"
+                  <Link
+                    href={cityHref}
                     onClick={() => setCityDropdownOpen(false)}
+                    className="w-full flex items-center gap-2 px-4 py-2.5 text-xs font-sans tracking-widest uppercase text-primary border-b border-border/30 hover:bg-white/5 transition-colors"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-gold-gradient inline-block" />
                     Geneva
-                  </button>
+                  </Link>
                   <button
                     disabled
                     className="w-full flex items-center justify-between gap-2 px-4 py-2.5 text-xs font-sans tracking-widest uppercase text-muted-foreground/40 cursor-not-allowed"
@@ -152,15 +160,16 @@ export function Header() {
             </AnimatePresence>
           </div>
 
-          {/* Descriptor — hidden on mobile */}
+          {/* Descriptor — hidden on mobile, links to blog/geneva */}
           <span className="hidden xl:flex items-center gap-3">
             <span className="w-px h-4 bg-border/60" aria-hidden="true" />
-            <span
-              className="text-[11px] uppercase tracking-[0.22em] font-sans"
+            <Link
+              href={blogHref}
+              className="text-[11px] uppercase tracking-[0.22em] font-sans hover:opacity-100 transition-opacity"
               style={{ color: "#E1C570", opacity: 0.85 }}
             >
-              {locale === "fr" ? "Guide culturel de Genève" : "Geneva Culture Guide"}
-            </span>
+              {cultureGuideLabel}
+            </Link>
           </span>
         </div>
 
@@ -211,20 +220,18 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Tonight's Events — always visible external link */}
-          <a
-            href={tonightUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* Tonight's Events — internal events page */}
+          <Link
+            href={tonightHref}
             className="flex items-center gap-1.5 text-xs font-sans tracking-widest uppercase font-medium px-4 py-2 bg-gold-gradient text-black hover:opacity-90 transition-opacity"
             data-testid="button-tonight-events"
           >
             {tonightLabel}
-            <ExternalLink className="w-3 h-3" />
-          </a>
+          </Link>
 
-          {/* Weekly guide CTA */}
+          {/* Weekly guide CTA — scrolls to newsletter */}
           <Button
+            onClick={scrollToNewsletter}
             className="bg-transparent text-foreground border border-border/60 hover:border-primary/60 hover:text-primary rounded-none font-sans font-medium tracking-widest uppercase text-xs px-4 py-5"
             data-testid="button-early-access-header"
           >
@@ -348,17 +355,20 @@ export function Header() {
                 transition={{ delay: 0.5 }}
                 className="pt-4 flex flex-col gap-3"
               >
-                <a
-                  href={tonightUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={tonightHref}
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full bg-gold-gradient text-black font-sans text-sm font-medium tracking-widest uppercase h-12"
                 >
                   {tonightLabel}
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
-                <Button className="w-full bg-transparent text-foreground border border-border/60 rounded-none font-serif text-lg h-12">
+                </Link>
+                <Button
+                  className="w-full bg-transparent text-foreground border border-border/60 rounded-none font-serif text-lg h-12"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setTimeout(scrollToNewsletter, 300);
+                  }}
+                >
                   {joinLabel}
                 </Button>
               </motion.div>

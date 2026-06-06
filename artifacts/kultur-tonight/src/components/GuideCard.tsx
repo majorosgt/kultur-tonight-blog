@@ -38,8 +38,8 @@ export function GuideCard({ guide }: { guide: Guide }) {
 
   const guidePath =
     locale === "fr"
-      ? `/fr/blog/${guide.slug}`
-      : `/en/blog/${guide.slug}`;
+      ? `/fr/blog/geneve/guides/${guide.slug}`
+      : `/en/blog/geneva/guides/${guide.slug}`;
 
   const readLabel   = locale === "fr" ? "Lire le guide" : "Read guide";
   const byLabel     = locale === "fr" ? "KulturTonight" : "KulturTonight";

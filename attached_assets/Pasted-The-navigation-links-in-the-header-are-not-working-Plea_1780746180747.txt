@@ -1,0 +1,39 @@
+The navigation links in the header are not working. Please fix the routing so all menu items navigate to the correct pages.
+Header links that need to work:
+GENEVA (city selector)     → /en/geneva/
+GENEVA CULTURE GUIDE       → /en/blog/geneva/
+GENEVA                     → /en/geneva/
+EVENTS                     → /en/geneva/events/
+VENUES                     → /en/geneva/venues/
+BLOG                       → /en/blog/geneva/
+EN / FR                    → language switcher, same page in other language
+TONIGHT'S EVENTS →         → /en/geneva/events/
+GET THE WEEKLY GUIDE       → scrolls to newsletter signup section on current page
+Footer links that need to work:
+Theatre                    → /en/geneva/theatre/
+Concerts                   → /en/geneva/concerts/
+Family Events              → /en/geneva/family-events/
+All Venues                 → /en/geneva/venues/
+All Events                 → /en/geneva/events/
+Geneva Guide               → /en/blog/geneva/
+Culture Blog               → /en/blog/geneva/culture/
+City Guides                → /en/blog/geneva/guides/
+About                      → /en/about/
+Contact                    → /en/contact/
+Weekly Guide               → scrolls to newsletter signup
+Event cards — TICKETS → button:
+Each event card TICKETS → link should go to the external partner URL
+stored in the event data (events.ts field: ticketUrl or externalUrl)
+If no external URL exists, open the event detail page: /en/geneva/events/[slug]
+Blog Guide cards — READ GUIDE → button:
+Each guide card should link to: /en/blog/geneva/guides/[slug]
+Venue cards — EXPLORE VENUE → button:
+Each venue card should link to: /en/geneva/venues/[slug]
+Important:
+
+Use React Router <Link> components, not <a href> tags
+All internal navigation must use client-side routing (no page reload)
+If a destination page does not exist yet, create a minimal placeholder page with the correct URL that shows the page title and a "Coming soon" message in the KulturTonight dark/gold style
+Do not change any existing styles or layout
+
+When done, confirm which links are now working and which pages are placeholders.

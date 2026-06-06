@@ -37,38 +37,38 @@ export function Footer() {
     ? [
         { label: "Tous les lieux",      href: "/fr/geneve/lieux" },
         { label: "Tous les événements", href: "/fr/geneve/evenements" },
-        { label: "Guide de Genève",     href: "/fr/geneve" },
+        { label: "Guide de Genève",     href: "/fr/blog/geneve" },
       ]
     : [
         { label: "All Venues",   href: "/en/geneva/venues" },
         { label: "All Events",   href: "/en/geneva/events" },
-        { label: "Geneva Guide", href: "/en/geneva" },
+        { label: "Geneva Guide", href: "/en/blog/geneva" },
       ];
 
   const col3Links = isFr
     ? [
-        { label: "Blog culturel", href: "/fr/blog" },
-        { label: "Guides ville",  href: "/fr/blog" },
+        { label: "Blog culturel", href: "/fr/blog/geneve/culture" },
+        { label: "Guides ville",  href: "/fr/blog/geneve/guides" },
       ]
     : [
-        { label: "Culture Blog",  href: "/en/blog" },
-        { label: "City Guides",   href: "/en/blog" },
+        { label: "Culture Blog",  href: "/en/blog/geneva/culture" },
+        { label: "City Guides",   href: "/en/blog/geneva/guides" },
       ];
 
-  const col4Links = isFr
-    ? [
-        { label: "À propos",      href: "#" },
-        { label: "Contact",       href: "#" },
-        { label: "Guide hebdomadaire", href: "#weekly-guide" },
-      ]
-    : [
-        { label: "About",         href: "#" },
-        { label: "Contact",       href: "#" },
-        { label: "Weekly Guide",  href: "#weekly-guide" },
-      ];
+  const aboutHref   = isFr ? "/fr/a-propos" : "/en/about";
+  const contactHref = isFr ? "/fr/contact"  : "/en/contact";
+  const aboutLabel  = isFr ? "À propos"     : "About";
+  const weeklyLabel = isFr ? "Guide hebdomadaire" : "Weekly Guide";
 
   const igLabel = isFr ? "KulturTonight sur Instagram" : "KulturTonight on Instagram";
   const fbLabel = isFr ? "KulturTonight sur Facebook"  : "KulturTonight on Facebook";
+
+  const scrollToNewsletter = () => {
+    const el = document.getElementById("weekly-guide");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <footer className="bg-[#050810] relative">
@@ -126,16 +126,30 @@ export function Footer() {
               {col4Heading}
             </h4>
             <ul className="space-y-3 mb-6">
-              {col4Links.map((l) => (
-                <li key={l.label}>
-                  <a
-                    href={l.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link
+                  href={aboutHref}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans"
+                >
+                  {aboutLabel}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={contactHref}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <button
+                  onClick={scrollToNewsletter}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans text-left"
+                >
+                  {weeklyLabel}
+                </button>
+              </li>
             </ul>
             {/* Social icons */}
             <div className="flex gap-3">

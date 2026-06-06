@@ -32,6 +32,8 @@ const SEGMENTS: Array<{ en: string; fr: string; dynamic?: boolean }> = [
   { en: "/en/blog/geneva",                      fr: "/fr/blog/geneve" },
   { en: "/en/blog/",                            fr: "/fr/blog/",                       dynamic: true },
   { en: "/en/blog",                             fr: "/fr/blog" },
+  { en: "/en/about",                            fr: "/fr/a-propos" },
+  { en: "/en/contact",                          fr: "/fr/contact" },
   { en: "/en",                                  fr: "/fr" },
 ];
 

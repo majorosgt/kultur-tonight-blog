@@ -70,6 +70,12 @@ import FrBlogGenevaCultureDetailPage from "@/pages/fr/blog/geneve/culture/[slug]
 import FrBlogGenevaFamillePage from "@/pages/fr/blog/geneve/famille/index";
 import FrBlogGenevaFamilleDetailPage from "@/pages/fr/blog/geneve/famille/[slug]";
 
+// Utility pages
+import EnAboutPage from "@/pages/en/about";
+import EnContactPage from "@/pages/en/contact";
+import FrAboutPage from "@/pages/fr/a-propos";
+import FrContactPage from "@/pages/fr/contact";
+
 const queryClient = new QueryClient();
 
 function Router() {
@@ -112,6 +118,8 @@ function Router() {
       <Route path="/en/blog/geneva" component={BlogGenevaPage} />
       <Route path="/en/blog/:slug" component={BlogDetailPage} />
       <Route path="/en/blog" component={BlogPage} />
+      <Route path="/en/about" component={EnAboutPage} />
+      <Route path="/en/contact" component={EnContactPage} />
 
       {/* ── French routes ── */}
       <Route path="/fr" component={FrHomePage} />
@@ -145,6 +153,8 @@ function Router() {
       <Route path="/fr/blog/geneve" component={FrBlogGenevePage} />
       <Route path="/fr/blog/:slug" component={FrBlogDetailPage} />
       <Route path="/fr/blog" component={FrBlogPage} />
+      <Route path="/fr/a-propos" component={FrAboutPage} />
+      <Route path="/fr/contact" component={FrContactPage} />
 
       <Route component={NotFound} />
     </Switch>
