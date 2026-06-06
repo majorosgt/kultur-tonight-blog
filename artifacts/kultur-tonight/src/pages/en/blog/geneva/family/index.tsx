@@ -3,23 +3,20 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { GuideCard } from "@/components/GuideCard";
+import { BlogCard } from "@/components/BlogCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
-import { guides } from "@/content/guides";
+import { blogFamily } from "@/content/blog-family";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
 const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
-const familyGuides = guides.filter((g) => g.category?.toLowerCase().includes("family") || g.category?.toLowerCase().includes("children") || g.category?.toLowerCase().includes("kids"));
-const displayGuides = familyGuides.length > 0 ? familyGuides : guides.slice(0, 6);
-
 export default function BlogGenevaFamilyPage() {
   useSEO({
-    title: "Family Culture in Geneva — Events & Activities for Families | KulturTonight",
-    description: "The best cultural experiences for families in Geneva — child-friendly theatre, concerts, museum visits, and family-oriented cultural events.",
+    title: "Family Cultural Activities in Geneva | KulturTonight",
+    description: "The best family-friendly cultural activities in Geneva — theatre, concerts, museum visits, and cultural experiences for children and parents to enjoy together.",
     canonical: "https://kulturtonight.com/en/blog/geneva/family",
   });
 
@@ -33,21 +30,24 @@ export default function BlogGenevaFamilyPage() {
               { label: "KulturTonight", href: "/en" },
               { label: "Blog", href: "/en/blog" },
               { label: "Geneva", href: "/en/blog/geneva" },
-              { label: "Family Culture" },
+              { label: "Family" },
             ]}
           />
 
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Family Culture in Geneva
+              Family Cultural Activities
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Cultural experiences designed for families — introducing children to theatre, music, and the arts through Geneva's world-class institutions.
+              Geneva's cultural institutions offer extraordinary experiences for younger audiences. Our family guides help you find the right event for every age.
             </p>
           </div>
 
-          <SectionHeading title="Family Guides" subtitle="The best cultural experiences for families in Geneva." />
+          <SectionHeading
+            title="For Families"
+            subtitle={`${blogFamily.length} guides to Geneva's best family cultural experiences.`}
+          />
 
           <motion.div
             variants={containerVariants}
@@ -55,19 +55,19 @@ export default function BlogGenevaFamilyPage() {
             animate="visible"
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
           >
-            {displayGuides.map((guide) => (
-              <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
-                <GuideCard guide={guide} />
+            {blogFamily.map((article) => (
+              <motion.div key={article.slug} variants={itemVariants} data-testid={`card-blog-${article.slug}`}>
+                <BlogCard article={article} href={`/en/blog/geneva/family/${article.slug}`} />
               </motion.div>
             ))}
           </motion.div>
         </div>
 
         <CTASection
-          title="Family Cultural Events, Every Week"
-          subtitle="Subscribe to the Weekly Guide and never miss a family-friendly cultural event in Geneva."
+          title="Culture for the Whole Family"
+          subtitle="Subscribe to the Weekly Guide for family-friendly cultural picks every Thursday."
           primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Tonight's Events →", href: "https://kulturtonight.ch/en/geneva/" }}
         />
         <NewsletterSignup variant="weekly-guide" />
       </main>

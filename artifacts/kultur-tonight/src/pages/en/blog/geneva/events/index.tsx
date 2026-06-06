@@ -3,23 +3,20 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { GuideCard } from "@/components/GuideCard";
+import { BlogCard } from "@/components/BlogCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
-import { guides } from "@/content/guides";
+import { blogEvents } from "@/content/blog-events";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
 const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
-const eventGuides = guides.filter((g) => g.category?.toLowerCase().includes("event") || g.category?.toLowerCase().includes("concert") || g.category?.toLowerCase().includes("theatre"));
-const displayGuides = eventGuides.length > 0 ? eventGuides : guides.slice(0, 6);
-
 export default function BlogGenevaEventArticlesPage() {
   useSEO({
-    title: "Featured Event Articles — Geneva Cultural Events | KulturTonight",
-    description: "Long-reads and features on standout performances, exhibitions, and cultural events in Geneva — written by the KulturTonight editorial team.",
+    title: "Geneva Cultural Events — In-Depth Coverage | KulturTonight",
+    description: "In-depth coverage of Geneva's most significant cultural events — premieres, festivals, and landmark evenings at the Grand Théâtre, Victoria Hall, and beyond.",
     canonical: "https://kulturtonight.com/en/blog/geneva/events",
   });
 
@@ -33,21 +30,24 @@ export default function BlogGenevaEventArticlesPage() {
               { label: "KulturTonight", href: "/en" },
               { label: "Blog", href: "/en/blog" },
               { label: "Geneva", href: "/en/blog/geneva" },
-              { label: "Event Features" },
+              { label: "Events" },
             ]}
           />
 
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Event Features
+              Cultural Events in Geneva
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Long-reads and in-depth features on the performances, exhibitions, and cultural events that define Geneva's artistic calendar.
+              In-depth coverage of premieres, festivals, and landmark cultural moments in Geneva — everything you need to know before you go.
             </p>
           </div>
 
-          <SectionHeading title="Featured Articles" subtitle="In-depth editorial on Geneva's standout cultural moments." />
+          <SectionHeading
+            title="Event Coverage"
+            subtitle={`${blogEvents.length} articles on Geneva's most significant cultural events.`}
+          />
 
           <motion.div
             variants={containerVariants}
@@ -55,19 +55,19 @@ export default function BlogGenevaEventArticlesPage() {
             animate="visible"
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
           >
-            {displayGuides.map((guide) => (
-              <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
-                <GuideCard guide={guide} />
+            {blogEvents.map((article) => (
+              <motion.div key={article.slug} variants={itemVariants} data-testid={`card-blog-${article.slug}`}>
+                <BlogCard article={article} href={`/en/blog/geneva/events/${article.slug}`} />
               </motion.div>
             ))}
           </motion.div>
         </div>
 
         <CTASection
-          title="Never Miss a Cultural Moment"
-          subtitle="Subscribe to the Weekly Guide for the best event features and editorial picks, every Thursday."
+          title="Stay Ahead of Geneva's Cultural Calendar"
+          subtitle="Subscribe to the Weekly Guide and never miss a significant cultural event in Geneva."
           primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Tonight's Events →", href: "https://kulturtonight.ch/en/geneva/" }}
         />
         <NewsletterSignup variant="weekly-guide" />
       </main>

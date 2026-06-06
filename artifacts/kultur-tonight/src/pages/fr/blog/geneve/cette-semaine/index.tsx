@@ -1,16 +1,23 @@
+import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { BlogCard } from "@/components/BlogCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
+import { blogThisWeekFr } from "@/content/blog-this-week.fr";
+
+const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
+const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 export default function FrBlogGenEvaCetteSemainePage() {
   useSEO({
-    title: "Cette Semaine à Genève — Événements Culturels | KulturTonight",
-    description: "Les meilleurs événements culturels de la semaine à Genève — sélectionnés par l'équipe éditoriale de KulturTonight.",
+    title: "Que Faire à Genève Cette Semaine — Sélection Culturelle | KulturTonight",
+    description: "Le meilleur du théâtre, de l'opéra, des concerts et des événements culturels à Genève cette semaine. Sélection hebdomadaire par l'équipe éditoriale de KulturTonight.",
     canonical: "https://kulturtonight.com/fr/blog/geneve/cette-semaine",
     alternates: buildAlternatesFr("/fr/blog/geneve/cette-semaine"),
   });
@@ -28,22 +35,41 @@ export default function FrBlogGenEvaCetteSemainePage() {
               { label: "Cette Semaine" },
             ]}
           />
+
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">Cette Semaine à Genève</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">Les coups de cœur de l'équipe KulturTonight pour les événements culturels les plus marquants de la semaine à Genève — théâtre, concerts, expositions et plus.</p>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
+              Cette Semaine à Genève
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Les sélections de nos éditeurs pour les expériences culturelles les plus captivantes à Genève cette semaine — théâtre, opéra, jazz et plus encore.
+            </p>
           </div>
-          <div className="max-w-2xl py-16 border-t border-border/30">
-            <div className="w-6 h-[1px] bg-gold-gradient mb-6" />
-            <p className="font-serif text-xl text-foreground mb-3">Sélections hebdomadaires à venir.</p>
-            <p className="text-muted-foreground font-sans">Abonnez-vous au guide hebdomadaire et recevez notre sélection directement dans votre boîte mail chaque jeudi.</p>
-          </div>
+
+          <SectionHeading
+            title="Sélection de la Semaine"
+            subtitle={`${blogThisWeekFr.length} expériences culturelles incontournables cette semaine.`}
+          />
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
+          >
+            {blogThisWeekFr.map((article) => (
+              <motion.div key={article.slug} variants={itemVariants} data-testid={`card-blog-${article.slug}`}>
+                <BlogCard article={article} href={`/fr/blog/geneve/cette-semaine/${article.slug}`} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
+
         <CTASection
-          title="Ne Manquez Aucun Moment Culturel"
-          subtitle="Nos éditeurs sélectionnent les meilleurs événements de Genève chaque semaine. Recevez-les chaque jeudi."
+          title="Ne Manquez Plus Aucune Soirée"
+          subtitle="Abonnez-vous au guide hebdomadaire et recevez les meilleures sorties culturelles de Genève chaque jeudi."
           primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Événements ce soir →", href: "https://kulturtonight.ch/fr/geneve/" }}
         />
         <NewsletterSignup variant="weekly-guide" />
       </main>

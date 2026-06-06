@@ -3,24 +3,21 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { GuideCard } from "@/components/GuideCard";
+import { BlogCard } from "@/components/BlogCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
-import { guidesFr } from "@/content/guides.fr";
+import { blogEventsFr } from "@/content/blog-events.fr";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
 const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
-const eventGuides = guidesFr.filter((g) => g.category?.toLowerCase().includes("event") || g.category?.toLowerCase().includes("concert") || g.category?.toLowerCase().includes("théâtre") || g.category?.toLowerCase().includes("theatre"));
-const displayGuides = eventGuides.length > 0 ? eventGuides : guidesFr.slice(0, 6);
-
 export default function FrBlogGenevaEvenementsPage() {
   useSEO({
-    title: "Articles Événements — Spectacles & Expositions à Genève | KulturTonight",
-    description: "Grands reportages et articles de fond sur les spectacles, expositions et événements culturels marquants à Genève.",
+    title: "Événements Culturels à Genève — Couverture Approfondie | KulturTonight",
+    description: "Couverture approfondie des événements culturels les plus significatifs de Genève — premières, festivals et soirées marquantes au Grand Théâtre, Victoria Hall et au-delà.",
     canonical: "https://kulturtonight.com/fr/blog/geneve/evenements",
     alternates: buildAlternatesFr("/fr/blog/geneve/evenements"),
   });
@@ -35,28 +32,44 @@ export default function FrBlogGenevaEvenementsPage() {
               { label: "KulturTonight", href: "/fr" },
               { label: "Blog", href: "/fr/blog" },
               { label: "Genève", href: "/fr/blog/geneve" },
-              { label: "Articles Événements" },
+              { label: "Événements" },
             ]}
           />
+
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">Articles Événements</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">Grands reportages et articles de fond sur les spectacles, expositions et événements culturels qui marquent le calendrier artistique genevois.</p>
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
+              Événements Culturels à Genève
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              Couverture approfondie des premières, festivals et moments culturels marquants à Genève — tout ce qu'il faut savoir avant d'y aller.
+            </p>
           </div>
-          <SectionHeading title="Articles à la Une" subtitle="Éditorial approfondi sur les moments culturels forts de Genève." />
-          <motion.div variants={containerVariants} initial="hidden" animate="visible" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
-            {displayGuides.map((guide) => (
-              <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
-                <GuideCard guide={guide} />
+
+          <SectionHeading
+            title="Couverture Événementielle"
+            subtitle={`${blogEventsFr.length} articles sur les événements culturels les plus significatifs de Genève.`}
+          />
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
+          >
+            {blogEventsFr.map((article) => (
+              <motion.div key={article.slug} variants={itemVariants} data-testid={`card-blog-${article.slug}`}>
+                <BlogCard article={article} href={`/fr/blog/geneve/evenements/${article.slug}`} />
               </motion.div>
             ))}
           </motion.div>
         </div>
+
         <CTASection
-          title="Ne Manquez Aucun Moment Culturel"
-          subtitle="Abonnez-vous au guide hebdomadaire pour les meilleurs articles et sélections événements chaque jeudi."
+          title="Restez en Avance sur l'Agenda Culturel Genevois"
+          subtitle="Abonnez-vous au guide hebdomadaire et ne manquez plus aucun événement culturel significatif à Genève."
           primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Événements ce soir →", href: "https://kulturtonight.ch/fr/geneve/" }}
         />
         <NewsletterSignup variant="weekly-guide" />
       </main>

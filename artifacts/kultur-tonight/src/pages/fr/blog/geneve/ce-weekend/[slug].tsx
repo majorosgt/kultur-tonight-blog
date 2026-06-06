@@ -1,52 +1,69 @@
 import { useParams, Link } from "wouter";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CTASection } from "@/components/CTASection";
-import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { BlogArticleLayout } from "@/components/BlogArticleLayout";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
+import { blogArticleSchema } from "@/lib/schema";
 import { buildAlternatesFr } from "@/lib/i18n";
+import { blogThisWeekendFr } from "@/content/blog-this-weekend.fr";
 
 export default function FrBlogGenevaCeWeekendDetailPage() {
   const { slug } = useParams<{ slug: string }>();
+  const article = blogThisWeekendFr.find((a) => a.slug === slug);
+
+  if (!article) {
+    return (
+      <>
+        <Header />
+        <main className="pt-32 min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-3xl font-serif text-foreground mb-4">Article introuvable</h1>
+            <Link href="/fr/blog/geneve/ce-weekend" className="text-primary hover:underline">
+              Retour à Ce Week-end
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
 
   useSEO({
-    title: `Weekend à Genève — ${slug} | KulturTonight`,
-    description: "Un programme culturel curatée pour le weekend à Genève.",
-    canonical: `https://kulturtonight.com/fr/blog/geneve/ce-weekend/${slug}`,
-    alternates: buildAlternatesFr(`/fr/blog/geneve/ce-weekend/${slug}`),
+    title: article.seoTitle,
+    description: article.seoDescription,
+    ogTitle: article.ogTitle,
+    ogDescription: article.ogDescription,
+    canonical: `https://kulturtonight.com/fr/blog/geneve/ce-weekend/${article.slug}`,
+    noindex: true,
+    alternates: buildAlternatesFr(`/fr/blog/geneve/ce-weekend/${article.slug}`),
+    jsonLd: blogArticleSchema(article, `/fr/blog/geneve/ce-weekend/${article.slug}`),
   });
+
+  const related = blogThisWeekendFr.filter((a) => a.slug !== article.slug).slice(0, 3);
 
   return (
     <>
       <Header />
-      <main className="pt-24">
-        <div className="container mx-auto px-4 md:px-6 py-8">
-          <Breadcrumbs
-            items={[
-              { label: "KulturTonight", href: "/fr" },
-              { label: "Blog", href: "/fr/blog" },
-              { label: "Genève", href: "/fr/blog/geneve" },
-              { label: "Ce Weekend", href: "/fr/blog/geneve/ce-weekend" },
-              { label: slug ?? "" },
-            ]}
-          />
-          <div className="max-w-3xl mt-8 mb-16">
-            <div className="w-12 h-1 bg-gold-gradient mb-6" />
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6 capitalize">{slug?.replace(/-/g, " ")}</h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">Cette édition du weekend n'est pas encore disponible. Abonnez-vous pour recevoir les prochaines éditions.</p>
-          </div>
-          <Link href="/fr/blog/geneve/ce-weekend" className="text-sm text-primary hover:underline underline-offset-4">← Retour à Ce Weekend</Link>
-        </div>
-        <CTASection
-          title="Planifiez le Weekend Culturel Parfait"
-          subtitle="Chaque jeudi, nous envoyons un programme de weekend curatée avec les meilleurs événements à Genève."
-          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
-        />
-        <NewsletterSignup variant="weekly-guide" />
-      </main>
+      <BlogArticleLayout
+        article={article}
+        breadcrumbs={[
+          { label: "KulturTonight", href: "/fr" },
+          { label: "Blog", href: "/fr/blog" },
+          { label: "Genève", href: "/fr/blog/geneve" },
+          { label: "Ce Week-end", href: "/fr/blog/geneve/ce-weekend" },
+          { label: article.title },
+        ]}
+        categoryLabel="Ce Week-end"
+        backHref="/fr/blog/geneve/ce-weekend"
+        backLabel="Retour à Ce Week-end"
+        related={related}
+        relatedHref={(s) => `/fr/blog/geneve/ce-weekend/${s}`}
+        relatedTitle="Plus de Sélections Week-end"
+        relatedSubtitle="D'autres meilleures expériences culturelles pour votre week-end genevois."
+        ctaTitle="Découvrez Genève ce Soir"
+        ctaSubtitle="Trouvez les meilleurs événements culturels à Genève en ce moment."
+      />
       <Footer />
       <MobileStickyCTA />
     </>

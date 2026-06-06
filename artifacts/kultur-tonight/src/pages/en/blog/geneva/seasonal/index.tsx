@@ -1,15 +1,22 @@
+import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { BlogCard } from "@/components/BlogCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
+import { blogSeasonal } from "@/content/blog-seasonal";
+
+const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
+const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 export default function BlogGenevaSeasonalPage() {
   useSEO({
     title: "Seasonal Cultural Guides for Geneva | KulturTonight",
-    description: "What to see and do in Geneva, season by season — the best cultural events, festivals, and experiences throughout the year.",
+    description: "What to see and do in Geneva, season by season — the best cultural events, festivals, and experiences at the Grand Théâtre, Victoria Hall, and throughout the year.",
     canonical: "https://kulturtonight.com/en/blog/geneva/seasonal",
   });
 
@@ -37,20 +44,30 @@ export default function BlogGenevaSeasonalPage() {
             </p>
           </div>
 
-          <div className="max-w-2xl py-16 border-t border-border/30">
-            <div className="w-6 h-[1px] bg-gold-gradient mb-6" />
-            <p className="font-serif text-xl text-foreground mb-3">Seasonal content coming soon.</p>
-            <p className="text-muted-foreground font-sans">
-              Subscribe to the Weekly Guide and be the first to receive our seasonal cultural round-ups.
-            </p>
-          </div>
+          <SectionHeading
+            title="By Season"
+            subtitle={`${blogSeasonal.length} seasonal guides to Geneva's cultural year.`}
+          />
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
+          >
+            {blogSeasonal.map((article) => (
+              <motion.div key={article.slug} variants={itemVariants} data-testid={`card-blog-${article.slug}`}>
+                <BlogCard article={article} href={`/en/blog/geneva/seasonal/${article.slug}`} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
         <CTASection
           title="Stay Ahead of the Season"
           subtitle="Our seasonal guides help you plan the best cultural experiences in Geneva throughout the year."
           primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Tonight's Events →", href: "https://kulturtonight.ch/en/geneva/" }}
         />
         <NewsletterSignup variant="weekly-guide" />
       </main>

@@ -1,15 +1,22 @@
+import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { BlogCard } from "@/components/BlogCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
+import { blogThisWeek } from "@/content/blog-this-week";
+
+const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
+const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 export default function BlogGenevaThisWeekPage() {
   useSEO({
-    title: "This Week in Geneva — Cultural Events & Picks | KulturTonight",
-    description: "The best cultural events, performances, and exhibitions happening in Geneva this week — curated by the KulturTonight editorial team.",
+    title: "What's On in Geneva This Week — Cultural Picks | KulturTonight",
+    description: "The best theatre, opera, concerts, and cultural events in Geneva this week. Updated weekly by the KulturTonight editorial team.",
     canonical: "https://kulturtonight.com/en/blog/geneva/this-week",
   });
 
@@ -33,24 +40,34 @@ export default function BlogGenevaThisWeekPage() {
               This Week in Geneva
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              The KulturTonight team's picks for the most compelling cultural events happening in Geneva this week — theatre, concerts, exhibitions, and more.
+              Our editors' picks for the most compelling cultural experiences in Geneva this week — theatre, opera, jazz, and more.
             </p>
           </div>
 
-          <div className="max-w-2xl py-16 border-t border-border/30">
-            <div className="w-6 h-[1px] bg-gold-gradient mb-6" />
-            <p className="font-serif text-xl text-foreground mb-3">Weekly picks coming soon.</p>
-            <p className="text-muted-foreground font-sans">
-              Subscribe to the Weekly Guide and receive our curated selection directly in your inbox every Thursday.
-            </p>
-          </div>
+          <SectionHeading
+            title="This Week's Picks"
+            subtitle={`${blogThisWeek.length} essential cultural experiences not to miss.`}
+          />
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
+          >
+            {blogThisWeek.map((article) => (
+              <motion.div key={article.slug} variants={itemVariants} data-testid={`card-blog-${article.slug}`}>
+                <BlogCard article={article} href={`/en/blog/geneva/this-week/${article.slug}`} />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
 
         <CTASection
-          title="Never Miss a Cultural Moment"
-          subtitle="Our editors curate the best events in Geneva every week. Get it in your inbox every Thursday."
+          title="Never Miss a Night Out"
+          subtitle="Subscribe to the Weekly Guide and get Geneva's best cultural picks delivered every Thursday."
           primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
+          secondaryCta={{ text: "Tonight's Events →", href: "https://kulturtonight.ch/en/geneva/" }}
         />
         <NewsletterSignup variant="weekly-guide" />
       </main>

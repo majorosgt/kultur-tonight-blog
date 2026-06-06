@@ -1,6 +1,7 @@
 import { Guide } from "../content/guides";
 import { Event } from "../content/events";
 import { Venue } from "../content/venues";
+import type { BlogArticle } from "../content/blog-guides";
 import { buildCanonical } from "./seo";
 
 export function articleSchema(guide: Guide) {
@@ -29,13 +30,40 @@ export function articleSchema(guide: Guide) {
   };
 }
 
+export function blogArticleSchema(article: BlogArticle, canonicalPath: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.seoTitle,
+    "description": article.seoDescription,
+    "datePublished": article.date,
+    "inLanguage": article.lang === "fr" ? "fr-CH" : "en-GB",
+    "author": {
+      "@type": "Organization",
+      "name": "KulturTonight"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "KulturTonight",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kulturtonight.com/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": buildCanonical(canonicalPath)
+    }
+  };
+}
+
 export function eventSchema(event: Event) {
   return {
     "@context": "https://schema.org",
     "@type": "Event",
     "name": event.title,
     "description": event.description,
-    "startDate": new Date().toISOString(), // In a real app, map event.date to a real date string
+    "startDate": new Date().toISOString(),
     "location": {
       "@type": "Place",
       "name": event.venue.name,
