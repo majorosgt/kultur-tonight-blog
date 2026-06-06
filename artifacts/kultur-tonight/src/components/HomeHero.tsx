@@ -166,30 +166,11 @@ export function HomeHero() {
         {/* ── Content column ──────────────────────────────────────── */}
         <div className="w-full max-w-2xl flex flex-col justify-center">
 
-          {/* Logo mark + eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex items-center gap-3 mb-6"
-          >
-            <img
-              src="/assets/logo-mark.svg"
-              alt="KulturTonight"
-              width={28}
-              height={28}
-              className="flex-shrink-0 opacity-90"
-            />
-            <span className="text-[10px] uppercase tracking-[0.3em] font-sans" style={{ color: "#E1C570" }}>
-              {c.eyebrow}
-            </span>
-          </motion.div>
-
           {/* Gold divider */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ delay: 0.3, duration: 0.9, ease: "easeOut" }}
+            transition={{ delay: 0.1, duration: 0.9, ease: "easeOut" }}
             className="w-14 h-[1px] bg-gold-gradient origin-left mb-8"
           />
 
@@ -201,28 +182,23 @@ export function HomeHero() {
             className="font-serif text-[clamp(2.6rem,6vw,5rem)] font-medium leading-[1.08] tracking-tight mb-6"
             style={{ color: "#F8F5F0" }}
           >
-            {lines.map((line, i) => (
-              <span key={i} className="block">
-                {i === 0 ? (
-                  <>
-                    {line.split(" ").map((word, wi, arr) =>
-                      wi === arr.length - 1 ? (
-                        <span
-                          key={wi}
-                          className="text-gold-gradient"
-                        >
-                          {word}
-                        </span>
-                      ) : (
-                        <span key={wi}>{word} </span>
-                      )
-                    )}
-                  </>
-                ) : (
-                  line
-                )}
-              </span>
-            ))}
+            {lines.map((line, i) => {
+              const words = line.split(" ");
+              return (
+                <span key={i} className="block">
+                  {words.map((word, wi) => {
+                    const isGold =
+                      (i === 0 && wi === words.length - 1) ||
+                      (i === 1 && wi === 0);
+                    return isGold ? (
+                      <span key={wi} className="text-gold-gradient">{word}</span>
+                    ) : (
+                      <span key={wi}>{wi > 0 ? " " : ""}{word}{i === 0 || wi < words.length - 1 ? " " : ""}</span>
+                    );
+                  })}
+                </span>
+              );
+            })}
           </motion.h1>
 
           {/* Subheadline */}

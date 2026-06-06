@@ -1,0 +1,92 @@
+Refine the homepage hero and header with the following exact changes.
+
+1. HERO HEADLINE EMPHASIS
+In the hero headline:
+"Your next cultural night out starts here"
+
+Make both words:
+- "cultural"
+- "night"
+
+use the same gold styling / highlight effect.
+
+Requirements:
+- both words should have the same visual treatment
+- use the KulturTonight gold gradient or equivalent gold highlight effect
+- keep the rest of the headline in ivory / warm white
+- the highlighted words should feel elegant and premium, not flashy
+- keep the typography balanced and readable
+
+2. HEADER CTA
+Replace the current header CTA text:
+"Early Access"
+
+with:
+"Get the Weekly Guide"
+
+Requirements:
+- keep the CTA button style premium and brand-consistent
+- use the existing gold button style
+- make sure the button text fits well on desktop and mobile
+- if needed, slightly reduce horizontal padding so the text fits better
+
+3. GENEVA CULTURE GUIDE DISPLAY
+"Geneva Culture Guide" is currently not displaying well and feels duplicated.
+
+Update it like this:
+- keep "Geneva Culture Guide" only once in the header, to the right of the KulturTonight logo
+- remove the duplicate "Geneva Culture Guide" eyebrow from the hero section
+- the hero should start directly with the headline, without repeating the same phrase again
+
+Header treatment for "Geneva Culture Guide":
+- place it horizontally aligned with the logo
+- smaller than the logo
+- elegant letter spacing
+- subtle premium styling
+- use a gold or soft gold text color
+- vertically aligned nicely with the logo
+- do not let it float too far away from the logo
+- it should read like a descriptor, not like a separate heading
+
+Recommended styling:
+- font size around 12–14px on desktop
+- medium letter spacing
+- color: #E1C570 or a subtle gold tone
+- on mobile, hide it if space is too tight
+
+4. HERO CONTENT
+Use this hero copy:
+
+Headline:
+Your next cultural night out starts here
+
+Subheadline:
+Discover Geneva’s best theatre, concerts, exhibitions and last-minute cultural experiences.
+
+Primary CTA:
+Explore Events
+
+Secondary CTA:
+Get the Weekly Guide
+
+French version:
+
+Headline:
+Votre prochaine soirée culturelle commence ici
+
+Subheadline:
+Découvrez les meilleurs théâtres, concerts, expositions et expériences culturelles de dernière minute à Genève.
+
+Primary CTA:
+Explorer les événements
+
+Secondary CTA:
+Recevoir le guide hebdomadaire
+
+5. GENERAL CLEANUP
+- keep the hero clean and uncluttered
+- no extra right-side value text blocks
+- keep the people and theatre clearly visible
+- maintain the premium navy / gold / ivory KulturTonight look
+- keep all text editable in code
+- do not embed text into the image

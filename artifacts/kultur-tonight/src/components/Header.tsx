@@ -33,8 +33,8 @@ export function Header() {
           { label: "Blog",    href: "/en/blog" },
         ];
 
-  const earlyAccessLabel = locale === "fr" ? "Accès Anticipé" : "Early Access";
-  const joinLabel        = locale === "fr" ? "Rejoindre l'Accès Anticipé" : "Join Early Access";
+  const earlyAccessLabel = locale === "fr" ? "Recevoir le guide" : "Get the Weekly Guide";
+  const joinLabel        = locale === "fr" ? "Recevoir le guide hebdomadaire" : "Get the Weekly Guide";
 
   const enPath = switchLocale(location, "en");
   const frPath = switchLocale(location, "fr");
