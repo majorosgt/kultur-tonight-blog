@@ -1,19 +1,17 @@
 import { motion } from "framer-motion";
+import { Link } from "wouter";
+import { Ticket, Mail, BookOpen, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HomeHero } from "@/components/HomeHero";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { EventCard } from "@/components/EventCard";
 import { VenueCard } from "@/components/VenueCard";
-import { GuideCard } from "@/components/GuideCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
-import { eventsFr } from "@/content/events.fr";
 import { venuesFr } from "@/content/venues.fr";
-import { guidesFr } from "@/content/guides.fr";
 
 const containerVariants = {
   hidden:  { opacity: 0 },
@@ -23,6 +21,51 @@ const itemVariants = {
   hidden:  { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
+
+const FEATURED_VENUE_SLUGS = [
+  "victoria-hall",
+  "grand-theatre-de-geneve",
+  "batiment-des-forces-motrices",
+];
+
+const directionBoxes = [
+  {
+    icon: Ticket,
+    label: "CE SOIR",
+    headline: "Ce soir à Genève",
+    description: "Opéra, jazz, théâtre — dernières places à 21h00",
+    cta: "Voir les événements ce soir →",
+    href: "https://kulturtonight.ch/en/geneva/events/",
+    external: true,
+  },
+  {
+    icon: Mail,
+    label: "GUIDE HEBDOMADAIRE",
+    headline: "La Sélection du Vendredi",
+    description: "La meilleure semaine culturelle genevoise, chaque vendredi matin",
+    cta: "Recevoir le guide hebdomadaire →",
+    href: "#weekly-guide",
+    external: false,
+  },
+  {
+    icon: BookOpen,
+    label: "ÉDITORIAL",
+    headline: "Guides Culturels Genève",
+    description: "Portraits de lieux, guides de la ville et sélections hebdomadaires",
+    cta: "Lire le blog →",
+    href: "https://blog.kulturtonight.ch/en/geneva/",
+    external: true,
+  },
+  {
+    icon: MapPin,
+    label: "LIEUX",
+    headline: "Les Scènes Iconiques de Genève",
+    description: "Du Victoria Hall à l'AMR Jazz Club — les lieux qui définissent la ville",
+    cta: "Explorer les lieux →",
+    href: "/fr/geneve/lieux/",
+    external: false,
+  },
+];
 
 export default function FrHomePage() {
   useSEO({
@@ -34,8 +77,9 @@ export default function FrHomePage() {
     alternates: buildAlternatesFr("/fr"),
   });
 
-  const featuredEvents = eventsFr.slice(0, 4);
-  const featuredVenues = venuesFr.slice(0, 3);
+  const featuredVenues = FEATURED_VENUE_SLUGS
+    .map((slug) => venuesFr.find((v) => v.slug === slug))
+    .filter(Boolean) as typeof venuesFr;
 
   return (
     <>
@@ -43,29 +87,70 @@ export default function FrHomePage() {
       <main>
         <HomeHero />
 
-        {/* Featured Events */}
-        <section className="py-24 bg-background" data-testid="featured-events">
+        {/* Direction Boxes */}
+        <section className="py-20 bg-background" data-testid="direction-boxes">
           <div className="container mx-auto px-4 md:px-6">
-            <SectionHeading
-              title="Ce Week-end à Genève"
-              subtitle="Les événements culturels les plus attendus en ce moment — de l'opéra au jazz intime."
-            />
+            <div className="max-w-2xl mb-12">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
+                Où voulez-vous aller ce soir ?
+              </h2>
+            </div>
             <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+              className="grid grid-cols-2 lg:grid-cols-4 gap-4"
             >
-              {featuredEvents.map((event) => (
-                <motion.div key={event.slug} variants={itemVariants} data-testid={`card-event-${event.slug}`}>
-                  <EventCard event={event} />
-                </motion.div>
-              ))}
+              {directionBoxes.map((box) => {
+                const Icon = box.icon;
+                const inner = (
+                  <div
+                    className="group h-full flex flex-col gap-4 p-6 bg-card rounded-sm transition-colors hover:bg-muted cursor-pointer"
+                    style={{ borderTop: "2px solid #E1C570" }}
+                  >
+                    <Icon size={22} style={{ color: "#E1C570" }} />
+                    <p
+                      className="text-xs font-semibold tracking-widest uppercase"
+                      style={{ color: "#E1C570" }}
+                    >
+                      {box.label}
+                    </p>
+                    <h3 className="font-serif text-lg font-bold text-foreground leading-snug">
+                      {box.headline}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                      {box.description}
+                    </p>
+                    <span className="text-sm font-medium text-foreground group-hover:underline">
+                      {box.cta}
+                    </span>
+                  </div>
+                );
+
+                return (
+                  <motion.div key={box.label} variants={itemVariants}>
+                    {box.external ? (
+                      <a href={box.href} target="_blank" rel="noopener noreferrer" className="block h-full">
+                        {inner}
+                      </a>
+                    ) : box.href.startsWith("#") ? (
+                      <a href={box.href} className="block h-full">
+                        {inner}
+                      </a>
+                    ) : (
+                      <Link href={box.href} className="block h-full">
+                        {inner}
+                      </Link>
+                    )}
+                  </motion.div>
+                );
+              })}
             </motion.div>
           </div>
         </section>
 
+        {/* CTA — rideau */}
         <CTASection
           variant="hero"
           title="Le rideau se lève dans deux heures. Vous venez ?"
@@ -97,6 +182,7 @@ export default function FrHomePage() {
           </div>
         </section>
 
+        {/* CTA — newsletter tease */}
         <CTASection
           variant="mid"
           title="Chaque vendredi matin, 1 200 Genevois passionnés de culture ouvrent cet e-mail."
@@ -104,41 +190,10 @@ export default function FrHomePage() {
           primaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
         />
 
-        {/* Featured Guides */}
-        <section className="py-24 bg-background" data-testid="featured-guides">
-          <div className="container mx-auto px-4 md:px-6">
-            <SectionHeading
-              title="Guides Culturels de Genève"
-              subtitle="Des guides approfondis pour vous aider à découvrir la riche tapisserie artistique de la ville."
-            />
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-60px" }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-            >
-              {guidesFr.map((guide) => (
-                <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
-                  <GuideCard guide={guide} />
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </section>
-
         {/* Newsletter signup */}
         <div id="weekly-guide">
           <NewsletterSignup variant="weekly-guide" />
         </div>
-
-        <CTASection
-          variant="footer-cta"
-          title="Les soirées les plus convoitées de Genève, réservées à ceux qui savaient en premier."
-          subtitle="Une sélection de théâtres, concerts, expositions et expériences culturelles de dernière minute — envoyée chaque semaine dans votre boîte mail."
-          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Explorer Genève", href: "/fr/geneve" }}
-        />
       </main>
       <Footer />
       <MobileStickyCTA />

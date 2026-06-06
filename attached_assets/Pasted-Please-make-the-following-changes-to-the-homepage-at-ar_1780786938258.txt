@@ -1,0 +1,135 @@
+Please make the following changes to the homepage at artifacts/kultur-tonight/src/pages/en/index.tsx and the French version at artifacts/kultur-tonight/src/pages/fr/index.tsx:
+
+---
+
+## 1. HOMEPAGE STRUCTURE
+
+Rebuild the homepage with exactly this section order. Do not add anything else:
+
+1. HERO (existing — keep as is)
+2. 4 DIRECTION BOXES (new — see below)
+3. "The curtain rises in two hours. Are you in?" (existing — keep as is)
+4. Geneva's Iconic Venues (existing — but show only these 3 venues: Victoria Hall, Grand Théâtre de Genève, Bâtiment des Forces Motrices — filter by slug: 'victoria-hall', 'grand-theatre-de-geneve', 'batiment-des-forces-motrices')
+5. "Every Friday morning, 1,200 culturally curious Genevans open this email." (existing — keep as is)
+6. "Get the Weekly Geneva Culture Guide" with email form (existing — keep as is)
+7. FOOTER (existing — keep as is)
+
+Remove from homepage: event cards section, all other venue cards, duplicate newsletter sections, blog guide cards section.
+
+---
+
+## 2. 4 DIRECTION BOXES
+
+Add a new section between the Hero and "The curtain rises" section with this heading:
+EN: "Where would you like to go tonight?"
+FR: "Où voulez-vous aller ce soir ?"
+
+Create 4 new direction box cards in a 2x2 grid on mobile, 4 columns on desktop. Each box has:
+- A background color using the existing dark theme tokens
+- A gold top border (2px, existing gold color token)
+- An icon (use lucide-react icons)
+- A category label in gold uppercase spaced letters
+- A headline
+- A one-line description
+- A CTA link
+
+Box 1 — TONIGHT:
+- Icon: Ticket
+- Label: TONIGHT
+- Headline EN: "Tonight in Geneva"
+- Headline FR: "Ce soir à Genève"
+- Description EN: "Opera, jazz, theatre — last seats released at 21:00"
+- Description FR: "Opéra, jazz, théâtre — dernières places à 21h00"
+- CTA EN: "Browse tonight's events →"
+- CTA FR: "Voir les événements ce soir →"
+- Link: https://kulturtonight.ch/en/geneva/events/
+
+Box 2 — WEEKLY GUIDE:
+- Icon: Mail
+- Label: WEEKLY GUIDE
+- Headline EN: "The Friday Edit"
+- Headline FR: "La Sélection du Vendredi"
+- Description EN: "Geneva's finest cultural week, curated every Friday morning"
+- Description FR: "La meilleure semaine culturelle genevoise, chaque vendredi matin"
+- CTA EN: "Get the weekly guide →"
+- CTA FR: "Recevoir le guide hebdomadaire →"
+- Link: scrolls to newsletter signup section on same page (use anchor #newsletter)
+
+Box 3 — BLOG:
+- Icon: BookOpen
+- Label: EDITORIAL
+- Headline EN: "Geneva Cultural Guides"
+- Headline FR: "Guides Culturels Genève"
+- Description EN: "Venue spotlights, city guides, and weekly picks"
+- Description FR: "Portraits de lieux, guides de la ville et sélections hebdomadaires"
+- CTA EN: "Read the blog →"
+- CTA FR: "Lire le blog →"
+- Link: https://blog.kulturtonight.ch/en/geneva/
+
+Box 4 — VENUES:
+- Icon: MapPin
+- Label: VENUES
+- Headline EN: "Geneva's Iconic Stages"
+- Headline FR: "Les Scènes Iconiques de Genève"
+- Description EN: "From Victoria Hall to the AMR Jazz Club — the spaces that define the city"
+- Description FR: "Du Victoria Hall à l'AMR Jazz Club — les lieux qui définissent la ville"
+- CTA EN: "Explore venues →"
+- CTA FR: "Explorer les lieux →"
+- Link: /en/geneva/venues/
+
+---
+
+## 3. POPUP
+
+Create a new component at artifacts/kultur-tonight/src/components/NewsletterPopup.tsx with these requirements:
+
+TRIGGER: appears after 10 seconds on desktop AND mobile. On desktop also triggers on exit-intent (when mouse moves toward top of browser). Once dismissed or subscribed, store in localStorage key 'kt_popup_dismissed' with 30-day expiry. Never show again within 30 days.
+
+BACKGROUND: Use the image at /assets/hero/geneva-evening-theatre.png as background with a dark overlay (rgba 0,0,0,0.75). If this image does not exist, use a solid dark background with the existing dark color token.
+
+ACTUAL BACKGROUND IMAGE: Upload the image provided by the user (a singer in a gold dress on a dark stage with red curtains) and save it as /assets/popup/kt-popup-bg.jpg — use this as the popup background image.
+
+DESIGN:
+- Centered modal, max-width 480px
+- Dark overlay behind modal (rgba 0,0,0,0.6)
+- Close button (X) top right corner
+- Gold top border (4px)
+- Cormorant Garamond for headline, Inter for body
+
+CONTENT EN:
+- Headline: "The best cultural evenings — delivered free, every week."
+- Subtext: "Join 1,200 Geneva culture lovers. The finest events, described with the care they deserve."
+- Input placeholder: "Your email address"
+- Button: "GET THE WEEKLY GUIDE"
+- Dismiss link: "No thanks"
+- Fine print: "No spam. Just culture. Unsubscribe at any time."
+
+CONTENT FR:
+- Headline: "Les meilleures soirées culturelles — gratuitement, chaque semaine."
+- Subtext: "Rejoignez 1 200 amateurs de culture à Genève. Les meilleurs événements, décrits avec soin."
+- Input placeholder: "Votre adresse e-mail"
+- Button: "RECEVOIR LE GUIDE"
+- Dismiss link: "Non merci"
+- Fine print: "Pas de spam. Juste de la culture. Désinscription à tout moment."
+
+FORM BEHAVIOUR: On submit, show a success message EN: "You're in. See you Friday." FR: "C'est noté. À vendredi." Do not actually submit to any endpoint yet — just show the success state.
+
+---
+
+## 4. INTEGRATE POPUP
+
+In artifacts/kultur-tonight/src/App.tsx, import and render NewsletterPopup so it appears on all pages. Pass the current language (en/fr) as a prop.
+
+---
+
+## 5. DO NOT CHANGE
+
+- Header component
+- Footer component
+- VenueCard component
+- EventCard component
+- Any existing page other than the homepage
+- Any existing styles or color tokens
+- Fonts
+
+When done, confirm all changes made and show the updated homepage section order.

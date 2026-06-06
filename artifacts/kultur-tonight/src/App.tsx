@@ -1,7 +1,8 @@
-import { Switch, Route, Router as WouterRouter, Redirect } from "wouter";
+import { Switch, Route, Router as WouterRouter, Redirect, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { NewsletterPopup } from "@/components/NewsletterPopup";
 import NotFound from "@/pages/not-found";
 
 // English pages
@@ -78,86 +79,95 @@ import FrContactPage from "@/pages/fr/contact";
 
 const queryClient = new QueryClient();
 
+function PopupWrapper() {
+  const [location] = useLocation();
+  const lang: "en" | "fr" = location.startsWith("/fr") ? "fr" : "en";
+  return <NewsletterPopup lang={lang} />;
+}
+
 function Router() {
   return (
-    <Switch>
-      {/* Root redirect */}
-      <Route path="/">
-        <Redirect to="/en" />
-      </Route>
+    <>
+      <Switch>
+        {/* Root redirect */}
+        <Route path="/">
+          <Redirect to="/en" />
+        </Route>
 
-      {/* ── English routes ── */}
-      <Route path="/en" component={EnHomePage} />
-      <Route path="/en/geneva" component={GenevaPage} />
-      <Route path="/en/geneva/things-to-do-this-weekend" component={ThingsToDoPage} />
-      <Route path="/en/geneva/theatre" component={TheatrePage} />
-      <Route path="/en/geneva/concerts" component={ConcertsPage} />
-      <Route path="/en/geneva/family-events" component={FamilyEventsPage} />
-      <Route path="/en/geneva/venues" component={VenuesListPage} />
-      <Route path="/en/geneva/venues/:slug" component={VenueDetailPage} />
-      <Route path="/en/geneva/events" component={EventsListPage} />
-      <Route path="/en/geneva/events/:slug" component={EventDetailPage} />
+        {/* ── English routes ── */}
+        <Route path="/en" component={EnHomePage} />
+        <Route path="/en/geneva" component={GenevaPage} />
+        <Route path="/en/geneva/things-to-do-this-weekend" component={ThingsToDoPage} />
+        <Route path="/en/geneva/theatre" component={TheatrePage} />
+        <Route path="/en/geneva/concerts" component={ConcertsPage} />
+        <Route path="/en/geneva/family-events" component={FamilyEventsPage} />
+        <Route path="/en/geneva/venues" component={VenuesListPage} />
+        <Route path="/en/geneva/venues/:slug" component={VenueDetailPage} />
+        <Route path="/en/geneva/events" component={EventsListPage} />
+        <Route path="/en/geneva/events/:slug" component={EventDetailPage} />
 
-      {/* English blog — specific routes before wildcard */}
-      <Route path="/en/blog/geneva/guides/:slug" component={BlogGenevaGuidesDetailPage} />
-      <Route path="/en/blog/geneva/guides" component={BlogGenevaGuidesPage} />
-      <Route path="/en/blog/geneva/venues/:slug" component={BlogGenevaVenuesDetailPage} />
-      <Route path="/en/blog/geneva/venues" component={BlogGenevaVenuesPage} />
-      <Route path="/en/blog/geneva/this-week/:slug" component={BlogGenevaThisWeekDetailPage} />
-      <Route path="/en/blog/geneva/this-week" component={BlogGenevaThisWeekPage} />
-      <Route path="/en/blog/geneva/this-weekend/:slug" component={BlogGenevaThisWeekendDetailPage} />
-      <Route path="/en/blog/geneva/this-weekend" component={BlogGenevaThisWeekendPage} />
-      <Route path="/en/blog/geneva/events/:slug" component={BlogGenevaEventArticleDetailPage} />
-      <Route path="/en/blog/geneva/events" component={BlogGenevaEventArticlesPage} />
-      <Route path="/en/blog/geneva/seasonal/:slug" component={BlogGenevaSeasonalDetailPage} />
-      <Route path="/en/blog/geneva/seasonal" component={BlogGenevaSeasonalPage} />
-      <Route path="/en/blog/geneva/culture/:slug" component={BlogGenevaCultureDetailPage} />
-      <Route path="/en/blog/geneva/culture" component={BlogGenevaCulturePage} />
-      <Route path="/en/blog/geneva/family/:slug" component={BlogGenevaFamilyDetailPage} />
-      <Route path="/en/blog/geneva/family" component={BlogGenevaFamilyPage} />
-      <Route path="/en/blog/geneva" component={BlogGenevaPage} />
-      <Route path="/en/blog/:slug" component={BlogDetailPage} />
-      <Route path="/en/blog" component={BlogPage} />
-      <Route path="/en/about" component={EnAboutPage} />
-      <Route path="/en/contact" component={EnContactPage} />
+        {/* English blog — specific routes before wildcard */}
+        <Route path="/en/blog/geneva/guides/:slug" component={BlogGenevaGuidesDetailPage} />
+        <Route path="/en/blog/geneva/guides" component={BlogGenevaGuidesPage} />
+        <Route path="/en/blog/geneva/venues/:slug" component={BlogGenevaVenuesDetailPage} />
+        <Route path="/en/blog/geneva/venues" component={BlogGenevaVenuesPage} />
+        <Route path="/en/blog/geneva/this-week/:slug" component={BlogGenevaThisWeekDetailPage} />
+        <Route path="/en/blog/geneva/this-week" component={BlogGenevaThisWeekPage} />
+        <Route path="/en/blog/geneva/this-weekend/:slug" component={BlogGenevaThisWeekendDetailPage} />
+        <Route path="/en/blog/geneva/this-weekend" component={BlogGenevaThisWeekendPage} />
+        <Route path="/en/blog/geneva/events/:slug" component={BlogGenevaEventArticleDetailPage} />
+        <Route path="/en/blog/geneva/events" component={BlogGenevaEventArticlesPage} />
+        <Route path="/en/blog/geneva/seasonal/:slug" component={BlogGenevaSeasonalDetailPage} />
+        <Route path="/en/blog/geneva/seasonal" component={BlogGenevaSeasonalPage} />
+        <Route path="/en/blog/geneva/culture/:slug" component={BlogGenevaCultureDetailPage} />
+        <Route path="/en/blog/geneva/culture" component={BlogGenevaCulturePage} />
+        <Route path="/en/blog/geneva/family/:slug" component={BlogGenevaFamilyDetailPage} />
+        <Route path="/en/blog/geneva/family" component={BlogGenevaFamilyPage} />
+        <Route path="/en/blog/geneva" component={BlogGenevaPage} />
+        <Route path="/en/blog/:slug" component={BlogDetailPage} />
+        <Route path="/en/blog" component={BlogPage} />
+        <Route path="/en/about" component={EnAboutPage} />
+        <Route path="/en/contact" component={EnContactPage} />
 
-      {/* ── French routes ── */}
-      <Route path="/fr" component={FrHomePage} />
-      <Route path="/fr/geneve" component={FrGenevePage} />
-      <Route path="/fr/geneve/que-faire-ce-weekend" component={FrThingsToDoPage} />
-      <Route path="/fr/geneve/theatre" component={FrTheatrePage} />
-      <Route path="/fr/geneve/concerts" component={FrConcertsPage} />
-      <Route path="/fr/geneve/sorties-en-famille" component={FrFamilyEventsPage} />
-      <Route path="/fr/geneve/lieux" component={FrVenuesListPage} />
-      <Route path="/fr/geneve/lieux/:slug" component={FrVenueDetailPage} />
-      <Route path="/fr/geneve/evenements" component={FrEventsListPage} />
-      <Route path="/fr/geneve/evenements/:slug" component={FrEventDetailPage} />
+        {/* ── French routes ── */}
+        <Route path="/fr" component={FrHomePage} />
+        <Route path="/fr/geneve" component={FrGenevePage} />
+        <Route path="/fr/geneve/que-faire-ce-weekend" component={FrThingsToDoPage} />
+        <Route path="/fr/geneve/theatre" component={FrTheatrePage} />
+        <Route path="/fr/geneve/concerts" component={FrConcertsPage} />
+        <Route path="/fr/geneve/sorties-en-famille" component={FrFamilyEventsPage} />
+        <Route path="/fr/geneve/lieux" component={FrVenuesListPage} />
+        <Route path="/fr/geneve/lieux/:slug" component={FrVenueDetailPage} />
+        <Route path="/fr/geneve/evenements" component={FrEventsListPage} />
+        <Route path="/fr/geneve/evenements/:slug" component={FrEventDetailPage} />
 
-      {/* French blog — specific routes before wildcard */}
-      <Route path="/fr/blog/geneve/guides/:slug" component={FrBlogGenevaGuidesDetailPage} />
-      <Route path="/fr/blog/geneve/guides" component={FrBlogGenevaGuidesPage} />
-      <Route path="/fr/blog/geneve/lieux/:slug" component={FrBlogGenevaLieuxDetailPage} />
-      <Route path="/fr/blog/geneve/lieux" component={FrBlogGenevaLieuxPage} />
-      <Route path="/fr/blog/geneve/cette-semaine/:slug" component={FrBlogGenevaCetteSemaineDetailPage} />
-      <Route path="/fr/blog/geneve/cette-semaine" component={FrBlogGenEvaCetteSemainePage} />
-      <Route path="/fr/blog/geneve/ce-weekend/:slug" component={FrBlogGenevaCeWeekendDetailPage} />
-      <Route path="/fr/blog/geneve/ce-weekend" component={FrBlogGenevaCeWeekendPage} />
-      <Route path="/fr/blog/geneve/evenements/:slug" component={FrBlogGenevaEvenementsDetailPage} />
-      <Route path="/fr/blog/geneve/evenements" component={FrBlogGenevaEvenementsPage} />
-      <Route path="/fr/blog/geneve/saisonnier/:slug" component={FrBlogGenevaSaisonnierDetailPage} />
-      <Route path="/fr/blog/geneve/saisonnier" component={FrBlogGenevaSaisonnierPage} />
-      <Route path="/fr/blog/geneve/culture/:slug" component={FrBlogGenevaCultureDetailPage} />
-      <Route path="/fr/blog/geneve/culture" component={FrBlogGenevaCulturePage} />
-      <Route path="/fr/blog/geneve/famille/:slug" component={FrBlogGenevaFamilleDetailPage} />
-      <Route path="/fr/blog/geneve/famille" component={FrBlogGenevaFamillePage} />
-      <Route path="/fr/blog/geneve" component={FrBlogGenevePage} />
-      <Route path="/fr/blog/:slug" component={FrBlogDetailPage} />
-      <Route path="/fr/blog" component={FrBlogPage} />
-      <Route path="/fr/a-propos" component={FrAboutPage} />
-      <Route path="/fr/contact" component={FrContactPage} />
+        {/* French blog — specific routes before wildcard */}
+        <Route path="/fr/blog/geneve/guides/:slug" component={FrBlogGenevaGuidesDetailPage} />
+        <Route path="/fr/blog/geneve/guides" component={FrBlogGenevaGuidesPage} />
+        <Route path="/fr/blog/geneve/lieux/:slug" component={FrBlogGenevaLieuxDetailPage} />
+        <Route path="/fr/blog/geneve/lieux" component={FrBlogGenevaLieuxPage} />
+        <Route path="/fr/blog/geneve/cette-semaine/:slug" component={FrBlogGenevaCetteSemaineDetailPage} />
+        <Route path="/fr/blog/geneve/cette-semaine" component={FrBlogGenEvaCetteSemainePage} />
+        <Route path="/fr/blog/geneve/ce-weekend/:slug" component={FrBlogGenevaCeWeekendDetailPage} />
+        <Route path="/fr/blog/geneve/ce-weekend" component={FrBlogGenevaCeWeekendPage} />
+        <Route path="/fr/blog/geneve/evenements/:slug" component={FrBlogGenevaEvenementsDetailPage} />
+        <Route path="/fr/blog/geneve/evenements" component={FrBlogGenevaEvenementsPage} />
+        <Route path="/fr/blog/geneve/saisonnier/:slug" component={FrBlogGenevaSaisonnierDetailPage} />
+        <Route path="/fr/blog/geneve/saisonnier" component={FrBlogGenevaSaisonnierPage} />
+        <Route path="/fr/blog/geneve/culture/:slug" component={FrBlogGenevaCultureDetailPage} />
+        <Route path="/fr/blog/geneve/culture" component={FrBlogGenevaCulturePage} />
+        <Route path="/fr/blog/geneve/famille/:slug" component={FrBlogGenevaFamilleDetailPage} />
+        <Route path="/fr/blog/geneve/famille" component={FrBlogGenevaFamillePage} />
+        <Route path="/fr/blog/geneve" component={FrBlogGenevePage} />
+        <Route path="/fr/blog/:slug" component={FrBlogDetailPage} />
+        <Route path="/fr/blog" component={FrBlogPage} />
+        <Route path="/fr/a-propos" component={FrAboutPage} />
+        <Route path="/fr/contact" component={FrContactPage} />
 
-      <Route component={NotFound} />
-    </Switch>
+        <Route component={NotFound} />
+      </Switch>
+      <PopupWrapper />
+    </>
   );
 }
 
