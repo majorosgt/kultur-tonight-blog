@@ -117,7 +117,7 @@ export default function FrHomePage() {
                   <div
                     className="group relative overflow-hidden flex flex-col transition-all duration-300 hover:[filter:brightness(1.15)] cursor-pointer h-full"
                     style={{
-                      minHeight: "clamp(280px, 30vw, 380px)",
+                      minHeight: "380px",
                       backgroundColor: "#080C18",
                       borderTop: "3px solid #E1C570",
                       borderLeft: "1px solid rgba(255,255,255,0.06)",
@@ -128,35 +128,35 @@ export default function FrHomePage() {
                     {/* Gradient image area with icon */}
                     <div
                       className="relative flex items-center justify-center flex-shrink-0"
-                      style={{ height: "180px", background: box.gradient }}
+                      style={{ height: "220px", background: box.gradient }}
                     >
                       <Icon size={48} style={{ color: "#E1C570", opacity: 0.8 }} />
                     </div>
 
                     {/* Content area */}
-                    <div className="flex flex-col flex-grow" style={{ padding: "20px" }}>
-                      <p style={{ color: "#E1C570", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", fontWeight: 600, fontFamily: "Inter, sans-serif" }}>
+                    <div className="flex flex-col flex-grow" style={{ padding: "28px" }}>
+                      <p style={{ color: "#E1C570", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", fontWeight: 600, fontFamily: "Inter, sans-serif", marginBottom: "10px" }}>
                         {box.label}
                       </p>
                       <h3
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
-                          fontSize: "clamp(20px, 2vw, 28px)",
+                          fontSize: "28px",
                           color: "white",
                           fontWeight: 400,
                           lineHeight: 1.2,
-                          marginTop: "12px",
+                          marginTop: "0",
                           marginBottom: "12px",
                         }}
                       >
                         {box.headline}
                       </h3>
-                      <p style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)", lineHeight: 1.6, flexGrow: 1, fontFamily: "Inter, sans-serif" }}>
+                      <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.7)", lineHeight: 1.6, flexGrow: 1, fontFamily: "Inter, sans-serif" }}>
                         {box.description}
                       </p>
-                      <div style={{ marginTop: "auto", paddingTop: "16px" }}>
+                      <div style={{ marginTop: "20px" }}>
                         <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: "16px" }}>
-                          <span style={{ color: "#E1C570", fontSize: "13px", textTransform: "uppercase", letterSpacing: "2px", fontFamily: "Inter, sans-serif" }}>
+                          <span style={{ color: "#E1C570", fontSize: "12px", textTransform: "uppercase", letterSpacing: "2px", fontFamily: "Inter, sans-serif" }}>
                             {box.cta}
                           </span>
                         </div>
