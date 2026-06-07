@@ -1,13 +1,15 @@
+import type { CSSProperties } from "react";
 import { motion } from "framer-motion";
 
 interface SectionHeadingProps {
   title: string;
   subtitle?: string;
+  subtitleStyle?: CSSProperties;
   accent?: boolean;
   centered?: boolean;
 }
 
-export function SectionHeading({ title, subtitle, accent = true, centered = false }: SectionHeadingProps) {
+export function SectionHeading({ title, subtitle, subtitleStyle, accent = true, centered = false }: SectionHeadingProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -26,7 +28,7 @@ export function SectionHeading({ title, subtitle, accent = true, centered = fals
         {title}
       </h2>
       {subtitle && (
-        <p className="text-muted-foreground font-sans text-base md:text-lg leading-relaxed max-w-xl">
+        <p className="text-muted-foreground font-sans text-base md:text-lg leading-relaxed max-w-xl" style={subtitleStyle}>
           {subtitle}
         </p>
       )}

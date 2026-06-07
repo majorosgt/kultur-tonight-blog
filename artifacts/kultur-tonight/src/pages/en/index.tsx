@@ -214,6 +214,7 @@ export default function EnHomePage() {
               <SectionHeading
                 title="Geneva's Iconic Venues"
                 subtitle="From a 19th-century concert hall to intimate jazz clubs — the spaces that define Geneva's cultural identity."
+                subtitleStyle={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center', whiteSpace: 'normal' }}
                 centered
               />
             </div>

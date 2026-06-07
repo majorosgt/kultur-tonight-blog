@@ -216,6 +216,7 @@ export default function FrHomePage() {
               <SectionHeading
                 title="Les Lieux Emblématiques de Genève"
                 subtitle="D'une salle de concert du XIXe siècle aux clubs de jazz intimistes — les lieux qui définissent l'identité culturelle de Genève."
+                subtitleStyle={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center', whiteSpace: 'normal' }}
                 centered
               />
             </div>
