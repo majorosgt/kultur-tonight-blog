@@ -1,0 +1,45 @@
+# KulturTonight
+
+> KulturTonight is a bilingual (English/French) cultural events guide for Geneva, Switzerland. It lists theatre, opera, classical music, jazz, dance, and other live performances, with detailed venue profiles, editorial guides, and a blog covering the Geneva cultural scene.
+
+Canonical domain: https://kulturtonight.ch
+Supported languages: English (en), French (fr)
+Sitemap: https://kulturtonight.ch/sitemap.xml
+
+## Main sections
+
+- https://kulturtonight.ch/en — English homepage
+- https://kulturtonight.ch/fr — French homepage (page d'accueil)
+
+## Events
+
+- https://kulturtonight.ch/en/geneva/events — Upcoming events in Geneva (English)
+- https://kulturtonight.ch/fr/geneve/evenements — Événements à venir à Genève (français)
+
+## Venues
+
+- https://kulturtonight.ch/en/geneva/venues — All venues in Geneva (English)
+- https://kulturtonight.ch/fr/geneve/lieux — Tous les lieux à Genève (français)
+
+Notable venues covered:
+- https://kulturtonight.ch/en/geneva/venues/grand-theatre-de-geneve
+- https://kulturtonight.ch/en/geneva/venues/victoria-hall
+- https://kulturtonight.ch/en/geneva/venues/theatre-du-leman
+- https://kulturtonight.ch/en/geneva/venues/comedie-de-geneve
+- https://kulturtonight.ch/en/geneva/venues/batiment-des-forces-motrices
+- https://kulturtonight.ch/en/geneva/venues/theatre-de-carouge
+- https://kulturtonight.ch/en/geneva/venues/amr-jazz-club
+
+## Blog & guides
+
+- https://kulturtonight.ch/en/blog/geneva — Blog hub (English)
+- https://kulturtonight.ch/fr/blog/geneve — Blog hub (français)
+- https://kulturtonight.ch/en/blog/geneva/guides — Editorial guides (English)
+- https://kulturtonight.ch/fr/blog/geneve/guides — Guides éditoriaux (français)
+
+Selected guides:
+- https://kulturtonight.ch/en/blog/geneva/guides/things-to-do-geneva-this-weekend
+- https://kulturtonight.ch/en/blog/geneva/guides/best-theatres-geneva
+- https://kulturtonight.ch/en/blog/geneva/guides/how-to-get-cheap-theatre-tickets-geneva
+- https://kulturtonight.ch/en/blog/geneva/guides/classical-music-geneva-complete-guide
+- https://kulturtonight.ch/en/blog/geneva/guides/geneva-jazz-scene-complete-guide
