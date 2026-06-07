@@ -185,7 +185,7 @@ export default function VenueDetailPage() {
         <CTASection
           title={`Last-minute seats at ${venue.name} — released at 21:00 for KulturTonight members.`}
           subtitle=""
-          primaryCta={{ text: "See tonight's availability →", href: "https://kulturtonight.ch/en/geneva/events/" }}
+          primaryCta={{ text: "See tonight's availability →", href: "https://kulturtonight.ch/en/geneva/events/", target: "_blank", rel: "noopener noreferrer" }}
         />
 
         <div id="newsletter">

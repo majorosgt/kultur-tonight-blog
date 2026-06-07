@@ -185,7 +185,7 @@ export default function FrVenueDetailPage() {
         <CTASection
           title={`Des places de dernière minute à ${venue.name} — disponibles à 21h00 pour les membres KulturTonight.`}
           subtitle=""
-          primaryCta={{ text: "Voir les disponibilités ce soir →", href: "https://kulturtonight.ch/fr/geneve/evenements/" }}
+          primaryCta={{ text: "Voir les disponibilités ce soir →", href: "https://kulturtonight.ch/fr/geneve/evenements/", target: "_blank", rel: "noopener noreferrer" }}
         />
 
         <div id="newsletter">

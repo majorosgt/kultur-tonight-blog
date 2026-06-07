@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm --filter @workspace/kultur-tonight run build",
+  "outputDirectory": "artifacts/kultur-tonight/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "env": {
+    "BASE_PATH": "/"
+  }
+}
