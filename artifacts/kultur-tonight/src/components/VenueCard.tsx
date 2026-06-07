@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Venue } from "../content/venues";
 import { motion } from "framer-motion";
-import { MapPin, Users } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { detectLocale } from "@/lib/i18n";
 
 /* ─── Venue-specific Unsplash photos ───────────────────────────────────── */
@@ -66,7 +66,6 @@ export function VenueCard({ venue }: { venue: Venue }) {
 
   const city         = locale === "fr" ? "Genève, Suisse" : "Geneva, Switzerland";
   const exploreLabel = locale === "fr" ? "Explorer le lieu" : "Explore venue";
-  const seatsLabel   = locale === "fr" ? "Places" : "Seats";
 
   const photo   = getVenuePhoto(venue);
   const altText = locale === "fr"
@@ -74,7 +73,7 @@ export function VenueCard({ venue }: { venue: Venue }) {
     : (venueAltEn[venue.slug] ?? `${venue.name} — cultural venue in Geneva`);
 
   return (
-    <Link href={venuePath} className="group block h-full" data-testid={`link-venue-${venue.slug}`}>
+    <Link href={venuePath} className="group block h-full" data-testid={`link-venue-${venue.slug}`} onClick={() => window.scrollTo(0, 0)}>
       <motion.div
         whileHover={{ y: -3 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
@@ -97,16 +96,6 @@ export function VenueCard({ venue }: { venue: Venue }) {
           <div className="absolute bottom-3 left-3 z-10">
             <span className="inline-flex text-[9px] font-sans uppercase tracking-[0.22em] text-primary/90 bg-[#080C18]/80 backdrop-blur-sm border border-primary/20 px-2.5 py-1.5 leading-none">
               {venue.type.replace(/-/g, " ")}
-            </span>
-          </div>
-
-          {/* Capacity chip — bottom right */}
-          <div className="absolute bottom-3 right-3 z-10">
-            <span className="inline-flex items-center gap-1.5 bg-[#080C18]/80 backdrop-blur-sm border border-border/40 px-2.5 py-1.5">
-              <Users size={9} className="text-muted-foreground/70 flex-shrink-0" aria-hidden="true" />
-              <span className="text-[9px] font-sans text-muted-foreground/90 uppercase tracking-wider leading-none">
-                {Number(venue.capacity).toLocaleString()}
-              </span>
             </span>
           </div>
 
@@ -151,12 +140,7 @@ export function VenueCard({ venue }: { venue: Venue }) {
 
           {/* Footer */}
           <div className="border-t border-border/30 pt-3.5 flex items-center justify-between mt-auto">
-            <div className="flex items-center gap-1.5">
-              <div className="w-4 h-[1px] bg-primary/30 group-hover:w-7 transition-all duration-300" />
-              <span className="text-[9px] text-muted-foreground/50 uppercase tracking-widest font-sans">
-                {seatsLabel} {Number(venue.capacity).toLocaleString()}
-              </span>
-            </div>
+            <div className="w-4 h-[1px] bg-primary/30 group-hover:w-7 transition-all duration-300" />
             <span className="text-[10px] text-primary uppercase tracking-widest font-sans flex items-center gap-1.5 group-hover:gap-2.5 transition-all duration-300">
               {exploreLabel}
               <span className="text-sm leading-none">→</span>

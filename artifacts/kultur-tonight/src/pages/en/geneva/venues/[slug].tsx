@@ -26,7 +26,7 @@ export default function VenueDetailPage() {
         <main className="pt-32 min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl font-serif text-foreground mb-4">Venue Not Found</h1>
-            <Link href="/en/geneva/venues" className="text-primary hover:underline">
+            <Link href="/en/geneva/venues" className="text-primary hover:underline" onClick={() => window.scrollTo(0, 0)}>
               Back to all venues
             </Link>
           </div>
@@ -176,6 +176,7 @@ export default function VenueDetailPage() {
             href="/en/geneva/venues"
             className="text-sm text-primary hover:underline underline-offset-4"
             data-testid="link-back-venues"
+            onClick={() => window.scrollTo(0, 0)}
           >
             ← Back to all venues
           </Link>

@@ -239,6 +239,7 @@ export default function FrHomePage() {
               <Link
                 href="/fr/geneve/lieux/"
                 style={{ color: "#E1C570", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 Explorer tous les lieux genevois →
               </Link>

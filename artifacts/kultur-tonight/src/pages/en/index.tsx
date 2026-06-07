@@ -237,6 +237,7 @@ export default function EnHomePage() {
               <Link
                 href="/en/geneva/venues/"
                 style={{ color: "#E1C570", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}
+                onClick={() => window.scrollTo(0, 0)}
               >
                 Explore all Geneva venues →
               </Link>
