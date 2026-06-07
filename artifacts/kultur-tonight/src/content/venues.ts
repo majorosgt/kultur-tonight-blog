@@ -25,7 +25,7 @@ export const venues: Venue[] = [
     capacity: 1500,
     description: "Geneva's premier opera house, presenting world-class opera, ballet, and dance.",
     longDescription: "Standing at the heart of Place Neuve since 1879, the Grand Théâtre de Genève is Switzerland's most important opera house. Home to its own ensemble, it produces world-class opera, ballet, and contemporary dance with a programme that balances the canonical repertoire with bold new commissions. The building itself — neo-baroque, gold and crimson inside — is an event before the curtain rises.",
-    image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1580809361436-42a7ec204889?w=800&q=80',
     website: 'https://www.gtg.ch',
     categories: ['opera', 'ballet', 'dance', 'theatre'],
     featured: true
@@ -85,7 +85,7 @@ export const venues: Venue[] = [
     capacity: 600,
     description: 'A magnificent 19th-century industrial building with exceptional acoustics and a unique atmosphere.',
     longDescription: "Few concert venues in Europe have the atmosphere of the Bâtiment des Forces Motrices. Built in 1886 as a hydraulic pumping station, its soaring iron-and-glass interior was repurposed as a performance space in the 1990s — and the transformation is extraordinary. The acoustics are exceptional, the sight lines intimate despite the scale, and the sense of occasion is unlike anywhere else in Geneva. Opera, chamber music, and experimental performance all find a natural home here.",
-    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&q=80',
     website: 'https://www.bfm.ch',
     categories: ['opera', 'classical', 'contemporary'],
     featured: true

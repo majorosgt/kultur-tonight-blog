@@ -208,11 +208,13 @@ export default function EnHomePage() {
         {/* Featured Venues */}
         <section className="bg-background" style={{ paddingTop: "100px", paddingBottom: "96px" }} data-testid="featured-venues">
           <div className="container mx-auto px-4 md:px-6">
-            <SectionHeading
-              title="Geneva's Iconic Venues"
-              subtitle="From a 19th-century concert hall to intimate jazz clubs — the spaces that define Geneva's cultural identity."
-              centered
-            />
+            <div className="venues-heading-wrap">
+              <SectionHeading
+                title="Geneva's Iconic Venues"
+                subtitle="From a 19th-century concert hall to intimate jazz clubs — the spaces that define Geneva's cultural identity."
+                centered
+              />
+            </div>
             <motion.div
               variants={containerVariants}
               initial="hidden"

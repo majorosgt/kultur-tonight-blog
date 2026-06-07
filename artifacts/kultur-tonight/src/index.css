@@ -149,6 +149,14 @@
   z-index: 10;
 }
 
+/* Featured venues section heading — subtitle max-width override */
+.venues-heading-wrap p {
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
 /* Homepage compact venue cards — hide metadata without modifying VenueCard */
 .compact-venue [class~="bottom-3"][class~="right-3"] { display: none !important; }
 .compact-venue [class~="mb-3"] { display: none !important; }
