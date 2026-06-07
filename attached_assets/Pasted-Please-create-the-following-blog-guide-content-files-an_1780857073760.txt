@@ -1,3 +1,8 @@
+Please create the following blog guide content files and pages. Create all files exactly as specified.
+
+## STEP 1: Create content file
+Create artifacts/kultur-tonight/src/content/blog-guides.ts with the following content:
+
 export interface BlogGuide {
   slug: string
   title: string
@@ -9,18 +14,11 @@ export interface BlogGuide {
   readTime: number
   image: string
   body: string
-  metaTitle?: string
-  metaDescription?: string
-  seoTitle: string
-  seoDescription: string
-  ogTitle: string
-  ogDescription: string
+  metaTitle: string
+  metaDescription: string
   ctaText: string
   ctaUrl: string
 }
-
-// Schema.ts imports BlogArticle — keep this alias for compatibility
-export type BlogArticle = BlogGuide
 
 export const blogGuides: BlogGuide[] = [
   {
@@ -35,15 +33,11 @@ export const blogGuides: BlogGuide[] = [
     image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80',
     metaTitle: 'Best Theatres in Geneva — The Insider Guide | KulturTonight',
     metaDescription: 'From the Grand Théâtre to Le Galpon — a curated guide to Geneva\'s finest theatrical venues, written by cultural insiders who know them well.',
-    seoTitle: 'Best Theatres in Geneva — The Insider Guide | KulturTonight',
-    seoDescription: 'From the Grand Théâtre to Le Galpon — a curated guide to Geneva\'s finest theatrical venues, written by cultural insiders who know them well.',
-    ogTitle: 'Best Theatres in Geneva | KulturTonight',
-    ogDescription: 'A curated guide to Geneva\'s finest theatrical venues, written by cultural insiders.',
     ctaText: 'See tonight\'s theatre events in Geneva →',
     ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
     body: `Geneva is not the first city that comes to mind when people talk about European theatre. Paris, London, Berlin — these are the names that dominate the conversation. But spend a season attending theatre in Geneva and you begin to understand that this small city on the lake has something those larger capitals sometimes lack: a theatre culture that is serious without being self-important, adventurous without being inaccessible, and deeply rooted in the conviction that live performance matters.
 
-The city's theatrical landscape is unusually rich for its size. Geneva has around 200,000 inhabitants — less than a single arrondissement of Paris — yet it sustains a Grand Théâtre, a major contemporary theatre, a beloved neighbourhood institution, an experimental laboratory, and dozens of smaller companies, all operating at a high level simultaneously. Understanding why requires understanding Geneva itself: a city of diplomats, NGO workers, financiers, and academics who arrive from across the world and bring their cultural expectations with them.
+The city's theatrical landscape is unusually rich for its size. Geneva has around 200,000 inhabitants — less than a single arrondissement of Paris — yet it sustains a Grand Théâtre, a major contemporary theatre, a beloved neighbourhood institution, an experimental laboratory, and dozens of smaller companies, all operating at a high level simultaneously. Understanding why requires understanding Geneva itself: a city of diplomats, NGO workers, financiers, and academics who arrived from everywhere and brought their cultural expectations with them.
 
 ## Grand Théâtre de Genève — The Heart of It All
 
@@ -59,13 +53,13 @@ The building itself rewards a visit even before the curtain rises. Arrive early,
 
 If the Grand Théâtre is Geneva's operatic establishment, the Comédie de Genève is its theatrical conscience. Located in a beautifully restored early 20th-century building in Plainpalais, the Comédie has spent decades producing work that is intellectually rigorous, formally adventurous, and deeply connected to the broader European theatre conversation.
 
-The programming favours contemporary dramaturgy — new writing, new forms, work that refuses to sit quietly in its seat and wait for the interval. Co-productions with the Schaubühne Berlin, the Théâtre de la Ville in Paris, and major Belgian institutions mean that Geneva audiences regularly see work that is simultaneously opening in three other European cities. The Comédie is not for everyone, and it does not pretend to be. But for those who want theatre that asks something of its audience, it is essential.
+The programming favours contemporary dramaturgy — new writing, new forms, work that refuses to sit quietly in its seat and wait for the interval. Co-productions with the Schaubühne Berlin, the Théâtre de la Ville in Paris, and major Belgian institutions mean that Geneva audiences regularly see work that is simultaneously opening in three other European cities. The Comédie is not for everyone, and it does not pretend to be. But for those who want theatre that asks something of them, it is essential.
 
 A practical note: the Comédie's productions often sell out quickly, particularly when the work has already been seen in Paris or Berlin and word of mouth has preceded it to Geneva. Book early, or watch for last-minute availability.
 
 ## Théâtre de Carouge — The Soul of the Neighbourhood
 
-Cross the border from Geneva proper into Carouge — that small, self-possessed former Sardinian city with wider streets, better cafés, and a distinct sense of not quite being Swiss — and you find the Théâtre de Carouge on the Rue Ancienne. Founded in 1958, it is one of the oldest continuously operating theatres in French-speaking Switzerland, and it has earned its longevity through a programming philosophy that is deceptively simple: the best plays, the best productions, for an audience that deserves to be taken seriously.
+Cross the border from Geneva proper into Carouge — that small, self-possessed former Sardinian city with wider streets, better cafés, and a distinct sense of not quite being Swiss — and you find the Théâtre de Carouge on the Rue Ancienne. Founded in 1958, it is one of the oldest continuously operating theatres in French-speaking Switzerland, and it has earned its longevity through a programming philosophy that is deceptively simple: the best plays, the best productions, for audiences treated as adults.
 
 The 300-seat house is intimate enough that the performance comes to you — there is nowhere to hide, for the actors or the audience, and the best evenings here have a quality of shared attention that larger venues rarely achieve. The theatre has a loyal, multigenerational audience — people who have been coming for decades and have opinions about every production — which gives it a warmth that is entirely its own.
 
@@ -105,10 +99,6 @@ Last-minute access: KulturTonight members receive early access to unsold seats a
     image: 'https://images.unsplash.com/photo-1580809361436-42a7ec204889?w=1200&q=80',
     metaTitle: 'How to Get Cheap Theatre Tickets in Geneva | KulturTonight',
     metaDescription: 'Last-minute tickets, student discounts, and early access — everything you need to attend Geneva\'s best cultural events without paying full price.',
-    seoTitle: 'How to Get Cheap Theatre Tickets in Geneva | KulturTonight',
-    seoDescription: 'Last-minute tickets, student discounts, and early access — everything you need to attend Geneva\'s best cultural events without paying full price.',
-    ogTitle: 'How to Get Cheap Theatre Tickets in Geneva | KulturTonight',
-    ogDescription: 'Last-minute tickets, student discounts, and early access in Geneva\'s cultural scene.',
     ctaText: 'Access tonight\'s last-minute seats at –50% →',
     ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
     body: `Geneva has a reputation — not entirely undeserved — for being expensive. A coffee costs what lunch costs elsewhere. A taxi from the airport requires a moment of preparation. And a night at the opera, at full price, can feel like a significant commitment.
@@ -175,10 +165,6 @@ Members receive a nightly notification at 21:00 with that evening's available se
     image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1200&q=80',
     metaTitle: 'Classical Music in Geneva — A Complete Guide | KulturTonight',
     metaDescription: 'Victoria Hall, the OSR, and Geneva\'s finest concert halls — a complete guide to classical music in one of Europe\'s most musical cities.',
-    seoTitle: 'Classical Music in Geneva — A Complete Guide | KulturTonight',
-    seoDescription: 'Victoria Hall, the OSR, and Geneva\'s finest concert halls — a complete guide to classical music in one of Europe\'s most musical cities.',
-    ogTitle: 'Classical Music in Geneva — A Complete Guide | KulturTonight',
-    ogDescription: 'Victoria Hall, the OSR, and the venues that make Geneva one of Europe\'s great classical music cities.',
     ctaText: 'See tonight\'s classical music events in Geneva →',
     ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
     body: `There is a moment, about twenty minutes into an Orchestre de la Suisse Romande concert at Victoria Hall, when Geneva stops being a city of banks and international organisations and becomes something else entirely — a place where the accumulated weight of a century of musical tradition is present in the room, audible in the way the orchestra breathes together, visible in the way the audience listens. It is one of the great cultural experiences Switzerland offers, and it is available to anyone who knows to look for it.
@@ -239,10 +225,6 @@ The Grand Théâtre also hosts recitals by the leading voices of its current sea
     image: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1200&q=80',
     metaTitle: 'Geneva Jazz Scene — A Complete Guide | KulturTonight',
     metaDescription: 'The AMR Jazz Club, the festival circuit, and why Geneva is one of Europe\'s finest jazz cities — everything you need to know.',
-    seoTitle: 'Geneva Jazz Scene — A Complete Guide | KulturTonight',
-    seoDescription: 'The AMR Jazz Club, the festival circuit, and why Geneva is one of Europe\'s finest jazz cities — everything you need to know.',
-    ogTitle: 'Geneva Jazz Scene — A Complete Guide | KulturTonight',
-    ogDescription: 'From the AMR Jazz Club to the festival circuit — why Geneva is one of Europe\'s great jazz cities.',
     ctaText: 'See tonight\'s jazz events in Geneva →',
     ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
     body: `Geneva's reputation as a jazz city is one of Europe's better-kept cultural secrets. The city that the world associates with banking, diplomacy, and the Red Cross has been, since the early 1970s, one of the continent's most serious incubators of improvised music — a place where jazz is not background noise for expensive cocktails but a genuine art form with its own institutions, its own education system, and its own deeply knowledgeable audience.
@@ -305,10 +287,6 @@ The musicians who have come through the AMR's education programme and establishe
     image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=1200&q=80',
     metaTitle: 'Things to Do in Geneva This Weekend — Cultural Guide | KulturTonight',
     metaDescription: 'The best cultural events in Geneva this weekend — theatre, opera, jazz, and concerts, curated by KulturTonight\'s editorial team.',
-    seoTitle: 'Things to Do in Geneva This Weekend — Cultural Guide | KulturTonight',
-    seoDescription: 'The best cultural events in Geneva this weekend — theatre, opera, jazz, and concerts, curated by KulturTonight\'s editorial team.',
-    ogTitle: 'Things to Do in Geneva This Weekend | KulturTonight',
-    ogDescription: 'Hidden gems and premier performances — a curated guide to the best cultural experiences in Geneva right now.',
     ctaText: 'See all weekend events in Geneva →',
     ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
     body: `Geneva rewards those who know where to look on a weekend. The city's cultural calendar is dense enough that a well-planned forty-eight hours can move from a Friday evening jazz concert at the AMR to a Saturday afternoon museum visit to a Saturday night opera at the Grand Théâtre without feeling rushed — just pleasantly, continuously engaged with a city that takes culture seriously.
@@ -360,3 +338,44 @@ The key to a Geneva cultural weekend is flexibility combined with some advance p
 KulturTonight members receive nightly notifications at 21:00 with available last-minute seats across all Geneva venues at –50%. For a weekend visit, joining before you arrive and checking the Friday notification as soon as you land is the most reliable way to access Geneva's cultural life spontaneously and at the best possible price.`
   }
 ]
+
+## STEP 2: Create the blog guides list page
+Create artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/index.tsx with this structure:
+
+- Import blogGuides from content/blog-guides.ts
+- Page title: "Geneva Cultural Guides"
+- Subtitle: "In-depth guides to Geneva's cultural scene — written by insiders, for those who care about quality."
+- Display all guides as a grid of BlogCard components (or GuideCard if BlogCard does not exist yet)
+- Each card links to /en/blog/geneva/guides/[slug]
+- SEO: meta title "Geneva Cultural Guides | KulturTonight Blog", meta description "In-depth guides to theatre, classical music, jazz, and cultural life in Geneva — written by cultural insiders."
+- Use existing page layout, header, footer
+
+## STEP 3: Create the individual guide article page
+Create artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/[slug].tsx with this structure:
+
+- Import blogGuides from content/blog-guides.ts
+- Find guide by slug from URL params
+- If not found: show 404 message
+- Layout:
+  * Hero image (full width, height 400px, object-fit cover, with dark gradient overlay at bottom)
+  * Category badge (GUIDE) + read time
+  * H1: guide title (Cormorant Garamond, large)
+  * Subtitle (Inter, muted)
+  * Date
+  * Body text rendered as formatted text — split by double newline into paragraphs, render ## headings as h2 elements with gold color and Cormorant Garamond font
+  * CTA block at bottom: guide.ctaText linking to guide.ctaUrl — use existing CTASection component or inline gold button
+  * NewsletterSignup component at very bottom
+- SEO: use guide.metaTitle and guide.metaDescription
+- Use existing Header and Footer components
+
+## STEP 4: Update App.tsx routing
+Add these routes to App.tsx:
+- /en/blog/geneva/guides — BlogGenevaGuidesPage
+- /en/blog/geneva/guides/:slug — BlogGenevaGuideArticlePage
+
+## STEP 5: Update blog geneva index
+In artifacts/kultur-tonight/src/pages/en/blog/geneva/index.tsx, import blogGuides and display the first 3 guides as featured cards with a "See all guides →" link to /en/blog/geneva/guides/
+
+Do not create French versions in this prompt — EN only for now.
+Do not change any existing files other than App.tsx and the blog geneva index.
+When done, confirm all files created and routes added.

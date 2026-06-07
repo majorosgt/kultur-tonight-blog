@@ -3,10 +3,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { GuideCard } from "@/components/GuideCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
+import { blogGuides } from "@/content/blog-guides";
 
 const categories = [
   { slug: "guides",       label: "Evergreen Guides",    desc: "Timeless cultural guides to Geneva's arts scene." },
@@ -18,6 +20,8 @@ const categories = [
   { slug: "culture",      label: "Culture & Context",   desc: "Essays on Geneva's artistic identity and cultural life." },
   { slug: "family",       label: "Family Culture",      desc: "Cultural experiences designed for families in Geneva." },
 ];
+
+const featuredGuides = blogGuides.slice(0, 3);
 
 export default function BlogGenevaPage() {
   useSEO({
@@ -47,6 +51,29 @@ export default function BlogGenevaPage() {
             <p className="text-xl text-muted-foreground leading-relaxed">
               Everything we write about Geneva's cultural life — from timeless guides and venue portraits to weekly picks and seasonal round-ups.
             </p>
+          </div>
+
+          {/* Featured guides */}
+          <div className="mb-20">
+            <div className="flex items-end justify-between mb-8">
+              <SectionHeading
+                title="Featured Guides"
+                subtitle="In-depth reading for the culturally curious."
+              />
+              <Link
+                href="/en/blog/geneva/guides"
+                className="text-sm text-primary hover:underline underline-offset-4 font-sans whitespace-nowrap ml-4"
+              >
+                See all guides →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+              {featuredGuides.map((guide) => (
+                <div key={guide.slug} data-testid={`card-guide-${guide.slug}`}>
+                  <GuideCard guide={guide} />
+                </div>
+              ))}
+            </div>
           </div>
 
           <SectionHeading title="Editorial Sections" subtitle="Browse all eight content categories." />

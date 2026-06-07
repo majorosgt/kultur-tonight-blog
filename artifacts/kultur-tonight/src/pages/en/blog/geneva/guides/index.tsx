@@ -8,15 +8,15 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
-import { guides } from "@/content/guides";
+import { blogGuides } from "@/content/blog-guides";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
 const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
 
 export default function BlogGenevaGuidesPage() {
   useSEO({
-    title: "Evergreen Cultural Guides for Geneva | KulturTonight",
-    description: "Timeless cultural guides to Geneva's theatres, concert halls, galleries, and arts institutions. Essential reading before your next cultural night out.",
+    title: "Geneva Cultural Guides | KulturTonight Blog",
+    description: "In-depth guides to theatre, classical music, jazz, and cultural life in Geneva — written by cultural insiders.",
     canonical: "https://kulturtonight.com/en/blog/geneva/guides",
   });
 
@@ -37,16 +37,16 @@ export default function BlogGenevaGuidesPage() {
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Evergreen Cultural Guides
+              Geneva Cultural Guides
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Timeless guides to Geneva's cultural landscape — written to be as relevant next season as they are today.
+              In-depth guides to Geneva's cultural scene — written by insiders, for those who care about quality.
             </p>
           </div>
 
           <SectionHeading
             title="All Guides"
-            subtitle={`${guides.length} essential reads for the culturally curious.`}
+            subtitle={`${blogGuides.length} essential reads for the culturally curious.`}
           />
 
           <motion.div
@@ -55,7 +55,7 @@ export default function BlogGenevaGuidesPage() {
             animate="visible"
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-16"
           >
-            {guides.map((guide) => (
+            {blogGuides.map((guide) => (
               <motion.div key={guide.slug} variants={itemVariants} data-testid={`card-guide-${guide.slug}`}>
                 <GuideCard guide={guide} />
               </motion.div>
