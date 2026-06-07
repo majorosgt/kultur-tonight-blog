@@ -1,3 +1,7 @@
+Please create the following file exactly as specified. Do not change any other file.
+
+Create artifacts/kultur-tonight/src/content/blog-guides.fr.ts with the following content:
+
 import { BlogGuide } from './blog-guides'
 
 export const blogGuidesFr: BlogGuide[] = [
@@ -13,10 +17,6 @@ export const blogGuidesFr: BlogGuide[] = [
     image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80',
     metaTitle: 'Les meilleurs théâtres de Genève — Guide insider | KulturTonight',
     metaDescription: 'Du Grand Théâtre au Galpon — un guide des meilleures scènes genevoises, écrit par des amateurs de culture qui les connaissent de l\'intérieur.',
-    seoTitle: 'Les meilleurs théâtres de Genève — Guide insider | KulturTonight',
-    seoDescription: 'Du Grand Théâtre au Galpon — un guide des meilleures scènes genevoises, écrit par des amateurs de culture qui les connaissent de l\'intérieur.',
-    ogTitle: 'Les meilleurs théâtres de Genève — Guide insider | KulturTonight',
-    ogDescription: 'Du Grand Théâtre au Galpon — un guide des meilleures scènes genevoises, écrit par des amateurs de culture qui les connaissent de l\'intérieur.',
     ctaText: 'Voir les spectacles de théâtre ce soir à Genève →',
     ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
     body: `Genève n\'est pas la première ville qui vient à l\'esprit quand on parle de théâtre européen. Paris, Londres, Berlin — ce sont ces noms qui dominent la conversation. Pourtant, passer une saison à fréquenter les scènes genevoises, c\'est découvrir quelque chose que ces grandes capitales n\'ont pas toujours : un théâtre sérieux sans se prendre au sérieux, aventureux sans être inaccessible, ancré dans la conviction que le spectacle vivant compte vraiment.
@@ -81,10 +81,6 @@ Accès de dernière minute : les membres KulturTonight reçoivent chaque soir à
     image: 'https://images.unsplash.com/photo-1580809361436-42a7ec204889?w=1200&q=80',
     metaTitle: 'Billets pas chers à Genève — Guide complet | KulturTonight',
     metaDescription: 'Dernière minute, tarifs étudiants, abonnements — tout ce qu\'il faut savoir pour profiter de la culture genevoise à petit prix.',
-    seoTitle: 'Billets pas chers à Genève — Guide complet | KulturTonight',
-    seoDescription: 'Dernière minute, tarifs étudiants, abonnements — tout ce qu\'il faut savoir pour profiter de la culture genevoise à petit prix.',
-    ogTitle: 'Billets pas chers à Genève — Guide complet | KulturTonight',
-    ogDescription: 'Dernière minute, tarifs étudiants, abonnements — tout ce qu\'il faut savoir pour profiter de la culture genevoise à petit prix.',
     ctaText: 'Accéder aux places de dernière minute à –50% →',
     ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
     body: `Genève a une réputation — pas tout à fait imméritée — d\'être une ville chère. Un café coûte ce que coûte un déjeuner ailleurs. Un taxi depuis l\'aéroport demande un moment de préparation mentale. Et une soirée à l\'opéra, au plein tarif, peut sembler un engagement significatif.
@@ -151,10 +147,6 @@ Les membres reçoivent chaque soir à 21h00 une notification avec les places dis
     image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1200&q=80',
     metaTitle: 'Musique classique à Genève — Guide complet | KulturTonight',
     metaDescription: 'Victoria Hall, l\'OSR et les meilleures salles de concert de Genève — le guide complet de la musique classique dans l\'une des grandes villes musicales d\'Europe.',
-    seoTitle: 'Musique classique à Genève — Guide complet | KulturTonight',
-    seoDescription: 'Victoria Hall, l\'OSR et les meilleures salles de concert de Genève — le guide complet de la musique classique dans l\'une des grandes villes musicales d\'Europe.',
-    ogTitle: 'Musique classique à Genève — Guide complet | KulturTonight',
-    ogDescription: 'Victoria Hall, l\'OSR et les meilleures salles de concert de Genève — le guide complet de la musique classique dans l\'une des grandes villes musicales d\'Europe.',
     ctaText: 'Voir les concerts de musique classique ce soir à Genève →',
     ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
     body: `Il y a un moment, environ vingt minutes après le début d\'un concert de l\'Orchestre de la Suisse Romande au Victoria Hall, où Genève cesse d\'être une ville de banques et d\'organisations internationales pour devenir autre chose — un endroit où le poids accumulé d\'un siècle de tradition musicale est présent dans la salle, audible dans la façon dont l\'orchestre respire ensemble, visible dans la façon dont le public écoute. C\'est l\'une des grandes expériences culturelles que la Suisse offre, et elle est accessible à quiconque sait où la chercher.
@@ -213,10 +205,6 @@ Le Grand Théâtre accueille également des récitals des grandes voix de sa sai
     image: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1200&q=80',
     metaTitle: 'Scène jazz à Genève — Guide complet | KulturTonight',
     metaDescription: 'L\'AMR Jazz Club, le circuit des festivals, et pourquoi Genève est l\'une des grandes villes jazz d\'Europe — tout ce qu\'il faut savoir.',
-    seoTitle: 'Scène jazz à Genève — Guide complet | KulturTonight',
-    seoDescription: 'L\'AMR Jazz Club, le circuit des festivals, et pourquoi Genève est l\'une des grandes villes jazz d\'Europe — tout ce qu\'il faut savoir.',
-    ogTitle: 'Scène jazz à Genève — Guide complet | KulturTonight',
-    ogDescription: 'L\'AMR Jazz Club, le circuit des festivals, et pourquoi Genève est l\'une des grandes villes jazz d\'Europe — tout ce qu\'il faut savoir.',
     ctaText: 'Voir les concerts de jazz ce soir à Genève →',
     ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
     body: `La réputation de Genève comme ville de jazz est l\'un des secrets culturels les mieux gardés d\'Europe. La ville que le monde associe à la banque, à la diplomatie et à la Croix-Rouge est, depuis le début des années 1970, l\'un des incubateurs les plus sérieux du continent pour la musique improvisée — un endroit où le jazz n\'est pas une musique de fond pour cocktails onéreux, mais un art à part entière avec ses propres institutions, son propre système d\'enseignement et son propre public profondément informé.
@@ -277,10 +265,6 @@ Les musiciens qui sont passés par le programme d\'enseignement de l\'AMR et se 
     image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=1200&q=80',
     metaTitle: 'Que faire à Genève ce week-end — Guide culturel | KulturTonight',
     metaDescription: 'Les meilleures sorties culturelles à Genève ce week-end — théâtre, opéra, jazz et concerts, sélectionnés par l\'équipe éditoriale de KulturTonight.',
-    seoTitle: 'Que faire à Genève ce week-end — Guide culturel | KulturTonight',
-    seoDescription: 'Les meilleures sorties culturelles à Genève ce week-end — théâtre, opéra, jazz et concerts, sélectionnés par l\'équipe éditoriale de KulturTonight.',
-    ogTitle: 'Que faire à Genève ce week-end — Guide culturel | KulturTonight',
-    ogDescription: 'Les meilleures sorties culturelles à Genève ce week-end — théâtre, opéra, jazz et concerts, sélectionnés par l\'équipe éditoriale de KulturTonight.',
     ctaText: 'Voir tous les événements du week-end à Genève →',
     ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
     body: `Genève récompense ceux qui savent où chercher un week-end. Le calendrier culturel de la ville est assez dense pour qu\'un vendredi soir jazz à l\'AMR puisse être suivi d\'une visite de musée le samedi après-midi et d\'un opéra au Grand Théâtre le soir, sans se sentir pressé — juste agréablement, continuellement en contact avec une ville qui prend la culture au sérieux.
@@ -332,3 +316,24 @@ La clé d\'un week-end culturel à Genève est la flexibilité combinée à un p
 Les membres KulturTonight reçoivent chaque soir à 21h00 des notifications avec les places disponibles de dernière minute dans toutes les salles genevoises à –50%. Pour un week-end à Genève, s\'inscrire avant d\'arriver et consulter la notification du vendredi dès l\'atterrissage est la façon la plus fiable d\'accéder à la vie culturelle genevoise spontanément et au meilleur prix possible.`
   }
 ]
+
+Also create the French blog guides pages:
+
+Create artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/index.tsx:
+- Import blogGuidesFr from content/blog-guides.fr.ts
+- Page title: "Guides Culturels Genève"
+- Subtitle: "Des guides approfondis sur la scène culturelle genevoise — écrits par des initiés, pour ceux qui exigent la qualité."
+- Display all guides as cards linking to /fr/blog/geneve/guides/[slug]
+- SEO: meta title "Guides Culturels Genève | KulturTonight Blog", meta description "Guides approfondis sur le théâtre, la musique classique, le jazz et la vie culturelle à Genève — par des amateurs de culture."
+
+Create artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/[slug].tsx:
+- Import blogGuidesFr from content/blog-guides.fr.ts
+- Same structure as EN version
+- All labels in French: "GUIDE", date format French, CTA in French
+- Find guide by matching slug
+
+Update App.tsx to add these routes:
+- /fr/blog/geneve/guides — FrBlogGenevaGuidesPage
+- /fr/blog/geneve/guides/:slug — FrBlogGenevaGuideArticlePage
+
+Do not change any other file.
