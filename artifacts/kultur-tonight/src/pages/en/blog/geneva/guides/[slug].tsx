@@ -89,6 +89,9 @@ export default function BlogGenevaGuidesDetailPage() {
     "classical-music-geneva-complete-guide": "musique-classique-geneve-guide",
     "geneva-jazz-scene-complete-guide": "scene-jazz-geneve-guide",
     "things-to-do-geneva-this-weekend": "que-faire-geneve-ce-weekend",
+    "best-opera-in-geneva": "meilleur-opera-geneve",
+    "best-live-music-venues-geneva": "meilleures-salles-musique-live-geneve",
+    "family-cultural-events-geneva": "sorties-culturelles-famille-geneve",
   };
   const frSlug = enToFrSlug[slug] ?? slug;
 

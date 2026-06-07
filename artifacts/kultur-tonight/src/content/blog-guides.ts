@@ -358,5 +358,224 @@ Sunday afternoon concerts — chamber music at the Salle Centrale de la Madelein
 The key to a Geneva cultural weekend is flexibility combined with some advance planning. Book the Saturday evening performance in advance — popular productions sell out. Leave the Friday and Sunday programming open for spontaneous decisions based on what is available.
 
 KulturTonight members receive nightly notifications at 21:00 with available last-minute seats across all Geneva venues at –50%. For a weekend visit, joining before you arrive and checking the Friday notification as soon as you land is the most reliable way to access Geneva's cultural life spontaneously and at the best possible price.`
+  },
+  {
+    slug: 'best-opera-in-geneva',
+    title: 'Best Opera in Geneva',
+    subtitle: 'A guide to Geneva\'s operatic life — from the Grand Théâtre to intimate chamber opera.',
+    category: 'guides',
+    city: 'geneva',
+    lang: 'en',
+    date: '2026-06-07',
+    readTime: 6,
+    image: 'https://images.unsplash.com/photo-1580809361436-42a7ec204889?w=1200&q=80',
+    metaTitle: 'Best Opera in Geneva — The Complete Guide | KulturTonight',
+    metaDescription: 'From the Grand Théâtre de Genève to intimate chamber productions — everything you need to know about opera in Geneva, one of Europe\'s great operatic cities.',
+    seoTitle: 'Best Opera in Geneva — The Complete Guide | KulturTonight',
+    seoDescription: 'From the Grand Théâtre de Genève to intimate chamber productions — everything you need to know about opera in Geneva, one of Europe\'s great operatic cities.',
+    ogTitle: 'Best Opera in Geneva — The Complete Guide | KulturTonight',
+    ogDescription: 'From the Grand Théâtre de Genève to intimate chamber productions — everything you need to know about opera in Geneva, one of Europe\'s great operatic cities.',
+    ctaText: 'See tonight\'s opera events in Geneva →',
+    ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
+    body: `Geneva is not a city that apologises for its operatic ambitions. Since 1879, the Grand Théâtre de Genève has been one of Europe\'s serious opera houses — not one of the largest, not one of the most famous outside specialist circles, but one of the most consistently excellent. In a city of 200,000 people, sustaining a house of this quality requires both institutional commitment and an audience that shows up. Geneva has both.
+
+What makes Geneva interesting as an opera city is not just the Grand Théâtre. It is the ecosystem around it: the Bâtiment des Forces Motrices offering intimate semi-staged productions in one of the continent\'s most atmospheric spaces, the occasional chamber opera productions at smaller venues, and a population of music professionals — conductors, singers, répétiteurs, agents — who have settled in the city and raise the level of everything around them.
+
+## Grand Théâtre de Genève — The Heart of It All
+
+The Grand Théâtre is where Geneva\'s operatic life is centred, and it earns that centrality. The house has been producing opera since 1879, survived a devastating fire in 1951, and emerged from reconstruction with a physical beauty and an institutional ambition that have only grown since. The neo-baroque auditorium — gold leaf, crimson velvet, a chandelier of considerable magnificence — creates an occasion before a note is played.
+
+The programming in recent seasons has been distinguished by a willingness to take risks that comparable houses of similar size often avoid. New commissions, unusual repertoire choices, and production concepts that have attracted critical attention from across Europe sit alongside the canonical works that sustain any opera house\'s audience. The balance is not always perfect, but the ambition is consistent.
+
+The Grand Théâtre\'s orchestra is the Orchestre de la Suisse Romande — one of Europe\'s great orchestras — which means that the pit is never a weak link. Hearing the OSR in the opera house, responding to singers, is a different experience from the concert hall, and one that Geneva audiences are fortunate to have regularly.
+
+**What to expect:** A full season of eight to ten major productions running from September to June. The house balances Italian, German, and French repertoire with a particular strength in French opera — the tradition that Geneva\'s cultural geography makes natural. Productions are staged at a high level with international casts; the house has strong relationships with major opera houses elsewhere in Europe and benefits from co-productions that bring production resources beyond what a house of this size could generate independently.
+
+**Booking:** Popular productions and opening nights sell out well in advance. The box office opens 90 minutes before curtain. KulturTonight members access unsold seats at –50%, released nightly at 21:00 — the most reliable way to attend spontaneously.
+
+## Bâtiment des Forces Motrices — Opera in an Industrial Cathedral
+
+The BFM is the secondary venue for opera in Geneva and in some ways the more extraordinary one. The converted 19th-century hydraulic pumping station has acoustics that are purely accidental — shaped by the building\'s volume and hard surfaces rather than any acoustic engineering — and they suit certain opera repertoire extraordinarily well.
+
+The BFM hosts semi-staged and concert performances of opera in partnership with the Grand Théâtre, and occasional independent productions. The intimacy of the space — 600 seats maximum, with the singers close enough to make theatrical communication direct and unmediated — creates a quality of experience that the larger house cannot replicate. For chamber opera, for baroque repertoire, for any work where the relationship between singer and audience is the essential thing, the BFM is among the finest venues in Europe.
+
+**What to expect:** A smaller number of opera events per season than the Grand Théâtre, but consistently chosen for their suitability to the space. The BFM programmes opera selectively, which means every production here has been thought about carefully.
+
+## Understanding Geneva\'s Operatic Repertoire
+
+Geneva\'s opera programming reflects its cultural geography. The city sits at the intersection of German, French, and Italian cultural influence, and the Grand Théâtre\'s repertoire reflects this — Verdi and Puccini for the Italian tradition, Mozart and Strauss for the German, Berlioz and Massenet for the French. The French repertoire in particular is programmed with a seriousness that reflects Geneva\'s position as the capital of French-speaking Switzerland.
+
+Contemporary opera is taken seriously in Geneva. The Grand Théâtre commissions new works and co-produces premieres with partner houses. This is not universal among opera houses of comparable size, and it gives Geneva\'s operatic life a vitality that purely repertoire-based programming cannot provide.
+
+## Practical Guide to Opera in Geneva
+
+**Season:** September to June. The Grand Théâtre typically opens its season in September with a major production, with new productions following roughly every four to six weeks.
+
+**Language:** All operas are performed in their original language with French surtitles. English surtitles are available for some productions — check when booking.
+
+**Prices:** Full-price tickets range from moderate to expensive depending on production and seat location. Student pricing is available at both the Grand Théâtre and BFM. KulturTonight members access last-minute seats at –50% — the most cost-effective way to attend regularly.
+
+**Dress:** Geneva opera audiences dress up more than most European cities. Smart dress is appropriate; formal is welcome but not required. The occasion feels different when you make an effort, and Geneva audiences understand this.
+
+**Getting there:** The Grand Théâtre is on Place Neuve, central Geneva. Tram lines 12 and 17 stop directly outside. The BFM is near Plainpalais, easily reached by tram.`
+  },
+  {
+    slug: 'best-live-music-venues-geneva',
+    title: 'Best Live Music Venues in Geneva',
+    subtitle: 'From Victoria Hall\'s legendary acoustics to the AMR\'s intimate jazz club — where to hear live music in Geneva.',
+    category: 'guides',
+    city: 'geneva',
+    lang: 'en',
+    date: '2026-06-07',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1200&q=80',
+    metaTitle: 'Best Live Music Venues in Geneva | KulturTonight',
+    metaDescription: 'Victoria Hall, AMR Jazz Club, Alhambra and more — a complete guide to the best live music venues in Geneva for every taste and budget.',
+    seoTitle: 'Best Live Music Venues in Geneva | KulturTonight',
+    seoDescription: 'Victoria Hall, AMR Jazz Club, Alhambra and more — a complete guide to the best live music venues in Geneva for every taste and budget.',
+    ogTitle: 'Best Live Music Venues in Geneva | KulturTonight',
+    ogDescription: 'Victoria Hall, AMR Jazz Club, Alhambra and more — a complete guide to the best live music venues in Geneva for every taste and budget.',
+    ctaText: 'See tonight\'s live music events in Geneva →',
+    ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
+    body: `Geneva punches above its weight as a live music city. For a population of 200,000, the range and quality of venues is remarkable — from a 19th-century concert hall with world-class acoustics to an intimate jazz club that has been running without commercial compromise for over fifty years, from a Moorish-inspired mid-size hall that hosts international touring acts to an industrial conversion that makes orchestral music bloom in ways that purpose-built venues rarely manage.
+
+The reason is partly historical — Geneva has always attracted musicians, and the institutions that serve them have accumulated over generations. It is partly geographical — the city\'s position between Paris, Zurich, and Milan makes it a natural stop on European touring circuits. And it is partly a matter of audience: Geneva has a disproportionate concentration of people who care seriously about music, and those people sustain venues that a purely commercial calculation would not support.
+
+## Victoria Hall — The Gold Standard
+
+Any guide to live music in Geneva begins with Victoria Hall, because it is one of the finest concert halls in Europe. Built in 1894 and gifted to the city by a British diplomat, it is the permanent home of the Orchestre de la Suisse Romande — and the acoustic is simply extraordinary. Warm, balanced, and precise in ways that modern halls spend hundreds of millions of euros trying to replicate, Victoria Hall makes orchestral music sound the way it should.
+
+The OSR\'s programming covers the full repertoire, with particular strength in French and Russian music. Guest conductors and soloists of the highest level appear throughout the season. The hall also hosts chamber recitals, solo piano concerts, and occasional ensemble performances outside the OSR season.
+
+**Best for:** Classical orchestral music, chamber recitals, solo piano. Anyone who cares about acoustic music should attend at least one concert here.
+**Capacity:** 1,600
+**Season:** September to June
+
+## AMR Jazz Club — Where Improvised Music Lives
+
+The AMR Jazz Club on the Rue des Alpes is Geneva\'s most important small music venue — and one of the most important jazz clubs in Europe. Founded in 1973 by a collective of musicians committed to improvised music without commercial compromise, it has been running on those same principles for over fifty years.
+
+The room holds about 200 people, which is exactly right for the music it presents. Jazz needs proximity — an audience close enough to be implicated in the performance, to feel the decisions being made in real time. The AMR provides that proximity every night of the week, with programming that spans bebop, free jazz, world music, and electroacoustic performance.
+
+What makes the AMR exceptional is not just the concerts but the community around them. The education programme has produced successive generations of Geneva-based improvisers. The annual AMR Festival in May is one of the finest jazz events in the region. And the entirely musician-run, non-commercial ethos means that the programming reflects genuine artistic values rather than box office calculation.
+
+**Best for:** Jazz in all its forms, improvised music, world music. The AMR is essential for anyone serious about these genres.
+**Capacity:** ~200
+**Season:** Year-round, with concerts most nights
+
+## Alhambra — The Democratic Stage
+
+The Alhambra occupies a sweet spot in Geneva\'s music ecosystem: large enough to attract major touring acts who might otherwise skip the city between Paris and Zurich, intimate enough that no seat feels far from the stage. At 900 capacity, it is Geneva\'s primary mid-size concert venue, and it programmes across genres in a way that reflects the full diversity of the city\'s musical appetite.
+
+Built in the early 20th century in a Moorish-inspired style — the building\'s decorative interior is among the most distinctive in Switzerland — the Alhambra has been hosting popular music for over a century. The current programming runs from world music and African artists to rock, pop, chanson française, and occasional jazz and classical crossover events.
+
+**Best for:** Touring acts across genres, world music, rock, pop, chanson. The Alhambra is where Geneva goes for the music that is not served by the classical venues.
+**Capacity:** 900
+**Season:** Year-round
+
+## Bâtiment des Forces Motrices — The Atmospheric Alternative
+
+The BFM is Geneva\'s most atmospheric music venue — a converted 19th-century hydraulic pumping station whose soaring iron-and-glass interior produces acoustics that are entirely accidental and entirely extraordinary. The building was a working pumping station until 1977; it became a performance space in 1994.
+
+The BFM programmes classical music, chamber concerts, opera, and experimental performance. It is particularly suited to music that benefits from a large acoustic — orchestral chamber music, early music performed with period instruments, electroacoustic work where the space itself becomes part of the composition. Events here are chosen carefully, and attending a BFM concert is almost always a memorable experience regardless of the programme.
+
+**Best for:** Chamber music, early music, experimental performance, any music that benefits from an extraordinary acoustic environment.
+**Capacity:** ~600
+**Season:** Events throughout the year, concentrated in autumn and spring
+
+## Salle Centrale de la Madeleine — Chamber Music at Its Finest
+
+The Salle Centrale, tucked behind the Place de la Madeleine in the old town, is Geneva\'s finest intimate music venue. At 300 seats, it is the right size for the music it presents: string quartets, piano recitals, song cycles, and chamber ensembles where every nuance is audible and the relationship between performer and audience is direct.
+
+The hall has been hosting concerts continuously since the late 19th century, and the acoustic warmth it has accumulated — or perhaps simply the quality of attention it encourages — is remarkable. Artists who perform here are musicians who care about the quality of listening, and Geneva\'s chamber music audience is among the most attentive in Europe.
+
+**Best for:** String quartets, solo recitals, lieder and mélodie, chamber ensembles. Essential for serious chamber music lovers.
+**Capacity:** ~300
+**Season:** Concentrated in autumn and spring
+
+## How to Choose Where to Go
+
+The right venue depends entirely on what you want to hear:
+
+- **Orchestral classical music:** Victoria Hall, without question
+- **Opera:** Grand Théâtre de Genève
+- **Jazz and improvised music:** AMR Jazz Club
+- **International touring acts:** Alhambra
+- **Chamber music and recitals:** Salle Centrale de la Madeleine
+- **Atmospheric and experimental:** Bâtiment des Forces Motrices
+
+For spontaneous evenings, KulturTonight members receive access to unsold seats across all Geneva venues at –50%, released nightly at 21:00. The selection changes every evening — one night it might be remaining seats at Victoria Hall for a sold-out OSR concert, another it might be a last-minute jazz evening at the AMR. For those who want to experience Geneva\'s music scene without planning weeks in advance, this is the most reliable approach.`
+  },
+  {
+    slug: 'family-cultural-events-geneva',
+    title: 'Family Cultural Events in Geneva',
+    subtitle: 'Inspiring art, theatre, and performances for families — Geneva\'s best cultural experiences for children and parents alike.',
+    category: 'guides',
+    city: 'geneva',
+    lang: 'en',
+    date: '2026-06-07',
+    readTime: 5,
+    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=1200&q=80',
+    metaTitle: 'Family Cultural Events in Geneva — Complete Guide | KulturTonight',
+    metaDescription: 'Theatre, music, museums and festivals for families in Geneva — a complete guide to cultural experiences that inspire children and satisfy adults.',
+    seoTitle: 'Family Cultural Events in Geneva — Complete Guide | KulturTonight',
+    seoDescription: 'Theatre, music, museums and festivals for families in Geneva — a complete guide to cultural experiences that inspire children and satisfy adults.',
+    ogTitle: 'Family Cultural Events in Geneva — Complete Guide | KulturTonight',
+    ogDescription: 'Theatre, music, museums and festivals for families in Geneva — a complete guide to cultural experiences that inspire children and satisfy adults.',
+    ctaText: 'See family events in Geneva this weekend →',
+    ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
+    body: `Geneva is an unusually good city for families who care about culture. The institutions are serious — this is not a city that produces watered-down children\'s programming as an afterthought — and the range of what is available, from dedicated children\'s theatre to family concerts at Victoria Hall to museum programmes designed by people who understand how children learn, is genuinely impressive.
+
+The underlying reason is the same as for Geneva\'s cultural life generally: a city with a large, internationally educated population that expects quality and is willing to sustain institutions that provide it. Children\'s cultural programming in Geneva is not a charity case; it is a sector that serious institutions invest in seriously.
+
+## Théâtre Am Stram Gram — The Essential Starting Point
+
+Théâtre Am Stram Gram, on the Route de Frontenex in the Champel neighbourhood, is Geneva\'s dedicated children\'s and family theatre — and one of the finest in the French-speaking world. The name comes from a French counting rhyme, and the theatre has the playful seriousness that name implies: programmes designed for children from toddlers to teenagers, produced with the same craft and ambition that the city\'s adult theatre institutions apply to their work.
+
+The productions range from adaptations of classic children\'s literature to original commissions, from puppet theatre and physical performance to full theatrical productions that treat young audiences as the intelligent, demanding spectators they are. The theatre also runs education programmes connecting schools to live performance.
+
+Am Stram Gram understands something that not all children\'s theatres grasp: the best family theatre is not theatre that talks down to children but theatre that takes them seriously. The result is productions that children genuinely engage with and that adults find worth attending on their own terms.
+
+**Practical:** Route de Frontenex 56, Champel. Productions for various age groups — check the website for age recommendations. Booking in advance is strongly recommended; popular productions sell out quickly, particularly at weekends.
+
+## Victoria Hall — Family Concerts with the OSR
+
+The Orchestre de la Suisse Romande runs a dedicated family concert series at Victoria Hall — concerts specifically designed to introduce children to orchestral music without condescension or compromise. These are not simplified versions of adult concerts; they are carefully crafted events that use the full resources of a world-class orchestra to create an experience that is accessible to young listeners and genuinely musical.
+
+The family concerts typically involve a narrator or presenter who contextualises the music without over-explaining it, programme notes written for younger readers, and repertoire chosen for its immediate appeal and accessibility. The acoustic of Victoria Hall — one of the finest in Europe — means that children hear orchestral music the way it should sound, not through a PA system in a school gymnasium.
+
+**Practical:** Check the OSR website for the family concert series schedule. Advance booking essential. Children under a certain age may be admitted free or at reduced price — check current policy when booking.
+
+## Geneva\'s Museums — Cultural Education Done Well
+
+Geneva has an unusually strong museum offer for families, and several institutions have invested seriously in making their collections accessible to younger visitors.
+
+**Musée d\'Histoire Naturelle:** One of the largest natural history museums in Switzerland, with collections that range from dinosaur skeletons to live animals to geological specimens. The permanent collection is free, making this one of Geneva\'s best value cultural experiences for families.
+
+**Musée d\'Art et d\'Histoire:** Geneva\'s primary encyclopedic museum runs regular family workshops and guided tours designed for children. The collections span prehistory to the 20th century, and the building itself — a grand Beaux-Arts palace on the Rue Charles-Galland — is an experience.
+
+**CERN Visitor Centre:** Not a museum in the traditional sense, but one of the most extraordinary cultural and educational experiences available in the Geneva region. The European Organisation for Nuclear Research offers public tours and a visitor centre that explains particle physics in genuinely engaging terms. Recommended for families with older children — roughly 12 and above — with an interest in science.
+
+**Musée Ariana:** The Swiss Museum of Ceramics and Glass, housed in a beautiful neo-Renaissance building in the Ariana park near the UN. Particularly suited to families who want a quieter, less crowded museum experience.
+
+## Outdoor and Seasonal Events
+
+Geneva\'s cultural calendar includes significant outdoor and seasonal programming that is particularly suited to families.
+
+**Fêtes de Genève:** The city\'s annual summer festival in late July and early August includes fireworks, concerts, funfair attractions, and cultural events spread across several days. Free to attend, enormous in scale, and one of the great Geneva summer experiences for families.
+
+**Christmas Markets:** Geneva\'s Christmas markets, concentrated around the Place de la Fusterie and the Place du Rhône, include cultural programming alongside the commercial stalls — concerts, performances, and events that make the festive season genuinely cultural rather than purely commercial.
+
+**Open-air cinema:** Several outdoor cinema events during summer, including screenings in parks and public spaces. Family programming is typically included.
+
+## Practical Tips for Families
+
+**Booking:** Geneva\'s family cultural events — particularly at Am Stram Gram and the OSR family concerts — sell out quickly, especially for weekend performances. Book as soon as programming is announced, typically a season in advance.
+
+**Transport:** Geneva\'s public transport is excellent and free for children under 6 on the TPG network. The city is compact enough that most cultural venues are easily reachable by tram.
+
+**Timing:** The Geneva cultural season for families runs September to June for theatre and classical music. Summer is quieter institutionally but rich in outdoor events.
+
+**Last-minute access:** KulturTonight members receive access to unsold seats across Geneva venues at –50%, released nightly at 21:00. For family events with availability, this is the most cost-effective way to attend spontaneously.`
   }
 ]

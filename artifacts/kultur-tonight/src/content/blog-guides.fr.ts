@@ -330,5 +330,220 @@ Les concerts du dimanche après-midi — musique de chambre à la Salle Centrale
 La clé d\'un week-end culturel à Genève est la flexibilité combinée à un peu de planification à l\'avance. Réservez la représentation du samedi soir à l\'avance — les productions populaires affichent complet. Laissez la programmation du vendredi et du dimanche ouverte pour des décisions spontanées en fonction de ce qui est disponible.
 
 Les membres KulturTonight reçoivent chaque soir à 21h00 des notifications avec les places disponibles de dernière minute dans toutes les salles genevoises à –50%. Pour un week-end à Genève, s\'inscrire avant d\'arriver et consulter la notification du vendredi dès l\'atterrissage est la façon la plus fiable d\'accéder à la vie culturelle genevoise spontanément et au meilleur prix possible.`
+  },
+  {
+    slug: 'meilleur-opera-geneve',
+    title: 'L\'opéra à Genève — Le guide complet',
+    subtitle: 'Du Grand Théâtre aux productions de chambre intimistes — tout ce qu\'il faut savoir sur l\'opéra à Genève.',
+    category: 'guides',
+    city: 'geneva',
+    lang: 'fr',
+    date: '2026-06-07',
+    readTime: 6,
+    image: 'https://images.unsplash.com/photo-1580809361436-42a7ec204889?w=1200&q=80',
+    metaTitle: 'L\'opéra à Genève — Guide complet | KulturTonight',
+    metaDescription: 'Du Grand Théâtre de Genève aux productions intimistes au BFM — tout ce qu\'il faut savoir sur l\'opéra à Genève, l\'une des grandes villes lyriques d\'Europe.',
+    seoTitle: 'L\'opéra à Genève — Guide complet | KulturTonight',
+    seoDescription: 'Du Grand Théâtre de Genève aux productions intimistes au BFM — tout ce qu\'il faut savoir sur l\'opéra à Genève, l\'une des grandes villes lyriques d\'Europe.',
+    ogTitle: 'L\'opéra à Genève — Guide complet | KulturTonight',
+    ogDescription: 'Du Grand Théâtre de Genève aux productions intimistes au BFM — tout ce qu\'il faut savoir sur l\'opéra à Genève, l\'une des grandes villes lyriques d\'Europe.',
+    ctaText: 'Voir les spectacles d\'opéra ce soir à Genève →',
+    ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
+    body: `Genève ne s\'excuse pas de ses ambitions lyriques. Depuis 1879, le Grand Théâtre de Genève est l\'une des grandes maisons d\'opéra d\'Europe — pas la plus grande, pas la plus célèbre en dehors des cercles spécialisés, mais l\'une des plus constamment excellentes. Dans une ville de 200 000 habitants, entretenir une maison de cette qualité demande à la fois un engagement institutionnel et un public qui répond présent. Genève a les deux.
+
+Ce qui rend Genève intéressante comme ville lyrique, ce n\'est pas seulement le Grand Théâtre. C\'est l\'écosystème qui l\'entoure : le Bâtiment des Forces Motrices qui offre des productions semi-scéniques intimes dans l\'un des espaces les plus atmosphériques du continent, les productions d\'opéra de chambre dans de plus petites salles, et une population de professionnels de la musique — chefs d\'orchestre, chanteurs, répétiteurs, agents — qui se sont installés dans la ville et élèvent le niveau de tout ce qui les entoure.
+
+## Grand Théâtre de Genève — Le centre de tout
+
+Le Grand Théâtre est là où se concentre la vie lyrique genevoise, et il mérite cette centralité. La maison produit de l\'opéra depuis 1879, a survécu à un incendie dévastateur en 1951, et a émergé de sa reconstruction avec une beauté physique et une ambition institutionnelle qui n\'ont cessé de croître depuis. L\'auditorium néo-baroque — feuilles d\'or, velours cramoisi, un lustre d\'une certaine magnificence — crée une occasion avant même qu\'une note soit jouée.
+
+La programmation des dernières saisons s\'est distinguée par une volonté de prendre des risques que des maisons comparables de taille similaire évitent souvent. Des commandes nouvelles, des choix de répertoire inhabituels et des concepts de production qui ont attiré l\'attention de la critique à travers l\'Europe côtoient les œuvres canoniques qui constituent le fonds de toute maison d\'opéra. L\'équilibre n\'est pas toujours parfait, mais l\'ambition est constante.
+
+L\'orchestre du Grand Théâtre est l\'Orchestre de la Suisse Romande — l\'un des grands orchestres d\'Europe — ce qui signifie que la fosse n\'est jamais le maillon faible. Entendre l\'OSR dans la maison d\'opéra, en dialogue avec les chanteurs, est une expérience différente de la salle de concert, et une chance que le public genevois a régulièrement.
+
+**À quoi s\'attendre :** Une saison complète de huit à dix grandes productions de septembre à juin. La maison équilibre le répertoire italien, allemand et français avec une force particulière dans l\'opéra français — la tradition que la géographie culturelle de Genève rend naturelle. Les productions sont montées à un niveau élevé avec des distributions internationales.
+
+**Réservation :** Les productions populaires et les premières affichent complet bien à l\'avance. Le guichet ouvre 90 minutes avant le rideau. Les membres KulturTonight accèdent aux places non vendues à –50%, publiées chaque soir à 21h00.
+
+## Bâtiment des Forces Motrices — L\'opéra dans une cathédrale industrielle
+
+Le BFM est la salle secondaire pour l\'opéra à Genève et, à certains égards, la plus extraordinaire. L\'ancienne station de pompage hydraulique du XIXe siècle a une acoustique entièrement accidentelle — façonnée par le volume du bâtiment et ses surfaces dures plutôt que par une quelconque ingénierie acoustique — et elle convient extraordinairement bien à certains répertoires lyriques.
+
+Le BFM accueille des productions semi-scéniques et des concerts d\'opéra en partenariat avec le Grand Théâtre. L\'intimité de l\'espace — 600 places maximum, avec les chanteurs assez proches pour rendre la communication théâtrale directe et non médiatisée — crée une qualité d\'expérience que la grande maison ne peut pas reproduire. Pour l\'opéra de chambre, pour le répertoire baroque, pour toute œuvre où la relation entre chanteur et public est l\'essentiel, le BFM est parmi les meilleures salles d\'Europe.
+
+## Comprendre le répertoire lyrique genevois
+
+La programmation lyrique de Genève reflète sa géographie culturelle. La ville est à l\'intersection des influences culturelles allemande, française et italienne, et le répertoire du Grand Théâtre le reflète — Verdi et Puccini pour la tradition italienne, Mozart et Strauss pour l\'allemande, Berlioz et Massenet pour la française. Le répertoire français en particulier est programmé avec un sérieux qui reflète la position de Genève comme capitale de la Suisse romande.
+
+L\'opéra contemporain est pris au sérieux à Genève. Le Grand Théâtre commande de nouvelles œuvres et coproduit des créations mondiales avec des maisons partenaires. Ce n\'est pas universel parmi les maisons d\'opéra de taille comparable, et cela donne à la vie lyrique genevoise une vitalité qu\'une programmation purement répertoire ne peut pas offrir.
+
+## Guide pratique de l\'opéra à Genève
+
+**Saison :** De septembre à juin. Le Grand Théâtre ouvre généralement sa saison en septembre avec une grande production, de nouvelles productions suivant environ toutes les quatre à six semaines.
+
+**Langue :** Tous les opéras sont donnés dans leur langue originale avec des surtitres français. Des surtitres anglais sont disponibles pour certaines productions — vérifiez lors de la réservation.
+
+**Tarifs :** Les billets plein tarif varient du modéré à l\'élevé selon la production et l\'emplacement. Des tarifs étudiants sont disponibles au Grand Théâtre et au BFM. Les membres KulturTonight accèdent aux places de dernière minute à –50% — la façon la plus économique d\'assister régulièrement.
+
+**Tenue vestimentaire :** Le public genevois s\'habille davantage que dans la plupart des villes européennes pour l\'opéra. Une tenue soignée est appropriée ; la tenue formelle est bienvenue mais pas exigée. L\'occasion se vit différemment quand on fait un effort, et le public genevois le comprend.
+
+**Comment y aller :** Le Grand Théâtre est sur la Place Neuve, au centre de Genève. Les lignes de tram 12 et 17 s\'arrêtent directement devant. Le BFM est près de Plainpalais, facilement accessible en tram.`
+  },
+  {
+    slug: 'meilleures-salles-musique-live-geneve',
+    title: 'Les meilleures salles de musique live à Genève',
+    subtitle: 'De l\'acoustique légendaire du Victoria Hall au club de jazz intimiste de l\'AMR — où écouter de la musique live à Genève.',
+    category: 'guides',
+    city: 'geneva',
+    lang: 'fr',
+    date: '2026-06-07',
+    readTime: 7,
+    image: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=1200&q=80',
+    metaTitle: 'Meilleures salles de musique live à Genève | KulturTonight',
+    metaDescription: 'Victoria Hall, AMR Jazz Club, Alhambra et plus encore — le guide complet des meilleures salles de musique live à Genève pour tous les goûts et tous les budgets.',
+    seoTitle: 'Meilleures salles de musique live à Genève | KulturTonight',
+    seoDescription: 'Victoria Hall, AMR Jazz Club, Alhambra et plus encore — le guide complet des meilleures salles de musique live à Genève pour tous les goûts et tous les budgets.',
+    ogTitle: 'Meilleures salles de musique live à Genève | KulturTonight',
+    ogDescription: 'Victoria Hall, AMR Jazz Club, Alhambra et plus encore — le guide complet des meilleures salles de musique live à Genève pour tous les goûts et tous les budgets.',
+    ctaText: 'Voir les concerts ce soir à Genève →',
+    ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
+    body: `Genève joue dans une catégorie au-dessus de sa taille pour la musique live. Pour une population de 200 000 habitants, la diversité et la qualité des salles sont remarquables — d\'une salle de concert du XIXe siècle à l\'acoustique mondialement reconnue à un club de jazz intimiste qui tourne sans compromis commercial depuis plus de cinquante ans, d\'une salle de taille moyenne aux influences mauresques qui accueille les tournées internationales à une ancienne usine reconvertie qui fait s\'épanouir la musique orchestrale d\'une façon que les salles construites à cet effet reproduisent rarement.
+
+La raison est en partie historique — Genève a toujours attiré les musiciens, et les institutions qui les servent se sont accumulées au fil des générations. En partie géographique — la position de la ville entre Paris, Zurich et Milan en fait une étape naturelle sur les circuits de tournée européens. Et en partie une question de public : Genève a une concentration disproportionnée de gens qui se soucient sérieusement de musique, et ces gens soutiennent des salles qu\'un calcul purement commercial ne soutiendrait pas.
+
+## Victoria Hall — L\'étalon-or
+
+Tout guide de la musique live à Genève commence par le Victoria Hall, parce que c\'est l\'une des meilleures salles de concert d\'Europe. Construit en 1894 et offert à la ville par un diplomate britannique, c\'est le foyer permanent de l\'Orchestre de la Suisse Romande — et l\'acoustique est tout simplement extraordinaire. Chaude, équilibrée et précise d\'une façon que les salles modernes dépensent des centaines de millions d\'euros à tenter de reproduire, le Victoria Hall fait sonner la musique orchestrale comme elle devrait sonner.
+
+La programmation de l\'OSR couvre tout le répertoire, avec une force particulière dans la musique française et russe. Des chefs d\'orchestre et des solistes du plus haut niveau se produisent tout au long de la saison. La salle accueille également des récitals de chambre, des concerts de piano solo et des formations d\'ensemble en dehors de la saison OSR.
+
+**Idéal pour :** La musique orchestrale classique, les récitals de chambre, le piano solo. Quiconque se soucie de la musique acoustique devrait assister à au moins un concert ici.
+**Capacité :** 1 600
+**Saison :** Septembre à juin
+
+## AMR Jazz Club — Là où vit la musique improvisée
+
+L\'AMR Jazz Club rue des Alpes est la salle de musique de petite taille la plus importante de Genève — et l\'un des clubs de jazz les plus importants d\'Europe. Fondé en 1973 par un collectif de musiciens engagés dans la musique improvisée sans compromis commercial, il tourne sur ces mêmes principes depuis plus de cinquante ans.
+
+La salle accueille environ 200 personnes, ce qui est exactement juste pour la musique qu\'elle présente. Le jazz a besoin de proximité — un public assez proche pour être impliqué dans la performance, pour sentir les décisions prises en temps réel. L\'AMR offre cette proximité chaque soir de la semaine, avec une programmation qui va du bebop au jazz libre en passant par la world music et la performance électroacoustique.
+
+Ce qui rend l\'AMR exceptionnel, ce n\'est pas seulement les concerts mais la communauté qui les entoure. Le programme d\'enseignement a produit des générations successives d\'improvisateurs genevois. Le Festival AMR annuel en mai est l\'un des meilleurs événements jazz de la région. Et l\'éthique entièrement gérée par des musiciens et non commerciale signifie que la programmation reflète de vraies valeurs artistiques plutôt que le calcul de la billetterie.
+
+**Idéal pour :** Le jazz sous toutes ses formes, la musique improvisée, la world music. L\'AMR est incontournable pour quiconque est sérieux dans ces genres.
+**Capacité :** ~200
+**Saison :** Toute l\'année, avec des concerts presque tous les soirs
+
+## Alhambra — La scène démocratique
+
+L\'Alhambra occupe une position privilégiée dans l\'écosystème musical genevois : assez grande pour attirer des artistes en tournée qui passeraient sinon par-dessus Genève entre Paris et Zurich, assez intime pour qu\'aucune place ne se sente éloignée de la scène. Avec 900 places, c\'est la principale salle de concert de taille moyenne de Genève, et elle programme dans tous les genres d\'une façon qui reflète la pleine diversité des goûts musicaux de la ville.
+
+Construit au début du XXe siècle dans un style d\'inspiration mauresque — l\'intérieur décoratif du bâtiment est parmi les plus distinctifs de Suisse — l\'Alhambra accueille de la musique populaire depuis plus d\'un siècle. La programmation actuelle va de la world music et des artistes africains au rock, à la pop, à la chanson française et aux événements jazz et classique en croisement.
+
+**Idéal pour :** Les artistes en tournée dans tous les genres, la world music, le rock, la pop, la chanson. L\'Alhambra est là où Genève va pour la musique que les salles classiques ne servent pas.
+**Capacité :** 900
+**Saison :** Toute l\'année
+
+## Bâtiment des Forces Motrices — L\'alternative atmosphérique
+
+Le BFM est la salle de musique la plus atmosphérique de Genève — une ancienne station de pompage hydraulique du XIXe siècle dont le grand intérieur de fer et de verre produit une acoustique entièrement accidentelle et entièrement extraordinaire. Le bâtiment était une station de pompage en activité jusqu\'en 1977 ; il est devenu un espace de spectacle en 1994.
+
+Le BFM programme de la musique classique, des concerts de chambre, de l\'opéra et de la performance expérimentale. Il convient particulièrement à la musique qui bénéficie d\'une grande acoustique — musique de chambre orchestrale, musique ancienne interprétée avec des instruments d\'époque, travail électroacoustique où l\'espace lui-même devient partie intégrante de la composition.
+
+**Idéal pour :** La musique de chambre, la musique ancienne, la performance expérimentale, toute musique qui bénéficie d\'un environnement acoustique extraordinaire.
+**Capacité :** ~600
+**Saison :** Des événements tout au long de l\'année, concentrés en automne et au printemps
+
+## Salle Centrale de la Madeleine — La musique de chambre dans toute sa splendeur
+
+La Salle Centrale, nichée derrière la Place de la Madeleine dans la vieille ville, est la meilleure salle de musique intimiste de Genève. Avec 300 places, elle est la bonne taille pour la musique qu\'elle présente : quatuors à cordes, récitals de piano, cycles de mélodies et ensembles de chambre où chaque nuance est audible et la relation entre interprète et public est directe.
+
+**Idéal pour :** Les quatuors à cordes, les récitals solo, le lied et la mélodie, les ensembles de chambre. Incontournable pour les amateurs sérieux de musique de chambre.
+**Capacité :** ~300
+**Saison :** Concentrée en automne et au printemps
+
+## Comment choisir où aller
+
+La bonne salle dépend entièrement de ce que vous voulez entendre :
+
+- **Musique classique orchestrale :** Victoria Hall, sans question
+- **Opéra :** Grand Théâtre de Genève
+- **Jazz et musique improvisée :** AMR Jazz Club
+- **Artistes internationaux en tournée :** Alhambra
+- **Musique de chambre et récitals :** Salle Centrale de la Madeleine
+- **Atmosphérique et expérimental :** Bâtiment des Forces Motrices
+
+Pour les soirées spontanées, les membres KulturTonight reçoivent chaque soir à 21h00 un accès aux places non vendues dans toutes les salles genevoises à –50%. La sélection change chaque soir — un soir ce seront des places restantes au Victoria Hall pour un concert OSR complet, un autre une soirée jazz de dernière minute à l\'AMR. Pour ceux qui veulent vivre la scène musicale genevoise sans planifier des semaines à l\'avance, c\'est l\'approche la plus fiable.`
+  },
+  {
+    slug: 'sorties-culturelles-famille-geneve',
+    title: 'Sorties culturelles en famille à Genève',
+    subtitle: 'Théâtre, musique et musées — les meilleures expériences culturelles pour les familles à Genève.',
+    category: 'guides',
+    city: 'geneva',
+    lang: 'fr',
+    date: '2026-06-07',
+    readTime: 5,
+    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=1200&q=80',
+    metaTitle: 'Sorties culturelles en famille à Genève — Guide complet | KulturTonight',
+    metaDescription: 'Théâtre, concerts, musées et festivals pour les familles à Genève — un guide complet des expériences culturelles qui inspirent les enfants et satisfont les adultes.',
+    seoTitle: 'Sorties culturelles en famille à Genève — Guide complet | KulturTonight',
+    seoDescription: 'Théâtre, concerts, musées et festivals pour les familles à Genève — un guide complet des expériences culturelles qui inspirent les enfants et satisfont les adultes.',
+    ogTitle: 'Sorties culturelles en famille à Genève — Guide complet | KulturTonight',
+    ogDescription: 'Théâtre, concerts, musées et festivals pour les familles à Genève — un guide complet des expériences culturelles qui inspirent les enfants et satisfont les adultes.',
+    ctaText: 'Voir les événements famille à Genève ce week-end →',
+    ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
+    body: `Genève est une ville étonnamment bien dotée pour les familles qui se soucient de culture. Les institutions sont sérieuses — ce n\'est pas une ville qui produit une programmation pour enfants au rabais en guise d\'après-pensée — et la diversité de ce qui est disponible, du théâtre jeunesse dédié aux concerts famille au Victoria Hall en passant par des programmes muséaux conçus par des gens qui comprennent comment les enfants apprennent, est véritablement impressionnante.
+
+La raison sous-jacente est la même que pour la vie culturelle genevoise en général : une ville avec une population largement éduquée à l\'international qui exige de la qualité et est prête à soutenir les institutions qui la fournissent. La programmation culturelle jeunesse à Genève n\'est pas une œuvre de bienfaisance ; c\'est un secteur dans lequel les institutions sérieuses investissent sérieusement.
+
+## Théâtre Am Stram Gram — Le point de départ incontournable
+
+Le Théâtre Am Stram Gram, sur la Route de Frontenex dans le quartier de Champel, est le théâtre jeunesse et famille dédié de Genève — et l\'un des meilleurs du monde francophone. Le nom vient d\'une comptine française, et le théâtre a le sérieux joueur que ce nom implique : des programmes conçus pour les enfants de la petite enfance à l\'adolescence, produits avec le même soin et la même ambition que les institutions théâtrales adultes de la ville appliquent à leur travail.
+
+Les productions vont des adaptations de classiques de la littérature enfantine aux commandes originales, du théâtre de marionnettes et de la performance physique aux productions théâtrales complètes qui traitent les jeunes spectateurs comme les spectateurs intelligents et exigeants qu\'ils sont. Le théâtre gère également des programmes pédagogiques reliant les écoles au spectacle vivant.
+
+Am Stram Gram a compris quelque chose que tous les théâtres jeunesse ne saisissent pas : le meilleur théâtre famille n\'est pas un théâtre qui parle aux enfants de haut, mais un théâtre qui les prend au sérieux. Le résultat, ce sont des productions auxquelles les enfants s\'engagent vraiment et que les adultes trouvent dignes d\'être vues pour elles-mêmes.
+
+**Pratique :** Route de Frontenex 56, Champel. Productions pour différentes tranches d\'âge — consultez le site pour les recommandations d\'âge. La réservation à l\'avance est fortement recommandée ; les productions populaires affichent complet rapidement, surtout le week-end.
+
+## Victoria Hall — Les concerts famille avec l\'OSR
+
+L\'Orchestre de la Suisse Romande propose une série de concerts famille dédiés au Victoria Hall — des concerts spécifiquement conçus pour initier les enfants à la musique orchestrale sans condescendance ni compromis. Ce ne sont pas des versions simplifiées des concerts adultes ; ce sont des événements soigneusement construits qui utilisent toutes les ressources d\'un orchestre de classe mondiale pour créer une expérience accessible aux jeunes auditeurs et véritablement musicale.
+
+Les concerts famille impliquent généralement un narrateur ou un présentateur qui contextualise la musique sans sur-expliquer, des notes de programme rédigées pour les lecteurs plus jeunes, et un répertoire choisi pour son attrait immédiat et son accessibilité. L\'acoustique du Victoria Hall — l\'une des meilleures d\'Europe — signifie que les enfants entendent la musique orchestrale comme elle devrait sonner.
+
+**Pratique :** Consultez le site de l\'OSR pour le calendrier de la série concerts famille. Réservation indispensable à l\'avance. Les enfants en dessous d\'un certain âge peuvent être admis gratuitement ou à tarif réduit — vérifiez la politique en vigueur lors de la réservation.
+
+## Les musées genevois — La culture bien faite
+
+Genève a une offre muséale inhabituellement riche pour les familles, et plusieurs institutions ont sérieusement investi pour rendre leurs collections accessibles aux jeunes visiteurs.
+
+**Muséum d\'Histoire Naturelle :** L\'un des plus grands musées d\'histoire naturelle de Suisse, avec des collections allant des squelettes de dinosaures aux animaux vivants en passant par les spécimens géologiques. La collection permanente est gratuite, ce qui en fait l\'une des meilleures expériences culturelles en termes de rapport qualité-prix pour les familles à Genève.
+
+**Musée d\'Art et d\'Histoire :** Le principal musée encyclopédique de Genève propose régulièrement des ateliers famille et des visites guidées conçus pour les enfants. Les collections couvrent de la préhistoire au XXe siècle, et le bâtiment lui-même — un grand palais Beaux-Arts rue Charles-Galland — est une expérience en soi.
+
+**Palais des Nations :** Le siège européen de l\'ONU propose des visites guidées ouvertes au public. Pour les familles avec des enfants plus âgés — à partir d\'environ 10 ans — c\'est une introduction unique aux institutions internationales qui font de Genève ce qu\'elle est.
+
+**Musée Ariana :** Le Musée suisse de la Céramique et du Verre, dans un beau bâtiment néo-Renaissance dans le parc Ariana près de l\'ONU. Particulièrement adapté aux familles qui souhaitent une expérience muséale plus calme et moins fréquentée.
+
+## Événements en plein air et saisonniers
+
+Le calendrier culturel genevois comprend une programmation extérieure et saisonnière significative, particulièrement adaptée aux familles.
+
+**Fêtes de Genève :** Le festival estival annuel de la ville fin juillet et début août comprend feux d\'artifice, concerts, attractions foraines et événements culturels répartis sur plusieurs jours. Gratuit, d\'une envergure considérable, et l\'une des grandes expériences estivales genevoises pour les familles.
+
+**Marchés de Noël :** Les marchés de Noël de Genève, concentrés autour de la Place de la Fusterie et de la Place du Rhône, comprennent une programmation culturelle aux côtés des étals commerciaux — concerts, spectacles et événements qui font de la période festive une expérience véritablement culturelle.
+
+**Cinéma en plein air :** Plusieurs événements de cinéma en plein air pendant l\'été, dont des projections dans les parcs et les espaces publics. La programmation famille est généralement incluse.
+
+## Conseils pratiques pour les familles
+
+**Réservation :** Les événements culturels famille de Genève — notamment à Am Stram Gram et aux concerts OSR famille — affichent complet rapidement, surtout pour les représentations du week-end. Réservez dès que la programmation est annoncée, généralement une saison à l\'avance.
+
+**Transport :** Les transports publics genevois sont excellents et gratuits pour les enfants de moins de 6 ans sur le réseau TPG. La ville est suffisamment compacte pour que la plupart des lieux culturels soient facilement accessibles en tram.
+
+**Calendrier :** La saison culturelle famille à Genève va de septembre à juin pour le théâtre et la musique classique. L\'été est plus calme institutionnellement mais riche en événements en plein air.
+
+**Accès de dernière minute :** Les membres KulturTonight reçoivent chaque soir à 21h00 un accès aux places non vendues dans les salles genevoises à –50%. Pour les événements famille avec disponibilités, c\'est la façon la plus économique d\'y assister spontanément.`
   }
 ]
