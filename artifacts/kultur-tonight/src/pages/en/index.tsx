@@ -37,7 +37,7 @@ const directionBoxes = [
     cta: "Get the weekly guide →",
     href: "#weekly-guide",
     external: false,
-    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=800&q=80')",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
   {
     label: "EDITORIAL",
@@ -46,7 +46,7 @@ const directionBoxes = [
     cta: "Read the blog →",
     href: "/en/blog/geneva/guides",
     external: false,
-    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80')",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1562329265-95a6d7a83440?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
   {
     label: "VENUES",
@@ -55,7 +55,7 @@ const directionBoxes = [
     cta: "Explore venues →",
     href: "/en/geneva/venues/",
     external: false,
-    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80')",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1658244274838-0f62b80187d5?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
 ];
 
