@@ -1,8 +1,7 @@
-import { Switch, Route, Router as WouterRouter, Redirect, useLocation } from "wouter";
+import { Switch, Route, Router as WouterRouter, Redirect } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { NewsletterPopup } from "@/components/NewsletterPopup";
 import NotFound from "@/pages/not-found";
 
 // English pages
@@ -79,16 +78,9 @@ import FrContactPage from "@/pages/fr/contact";
 
 const queryClient = new QueryClient();
 
-function PopupWrapper() {
-  const [location] = useLocation();
-  const lang: "en" | "fr" = location.startsWith("/fr") ? "fr" : "en";
-  return <NewsletterPopup lang={lang} />;
-}
-
 function Router() {
   return (
-    <>
-      <Switch>
+    <Switch>
         {/* Root redirect */}
         <Route path="/">
           <Redirect to="/en" />
@@ -175,9 +167,7 @@ function Router() {
         <Route path="/fr/geneve/" component={FrGenevePage} />
 
         <Route component={NotFound} />
-      </Switch>
-      <PopupWrapper />
-    </>
+    </Switch>
   );
 }
 

@@ -146,7 +146,7 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex items-start gap-4 max-w-md"
+              className="flex items-start gap-4 max-w-md mx-auto"
             >
               <div className="w-8 h-[1px] bg-gold-gradient mt-3 flex-shrink-0" />
               <div>
@@ -160,12 +160,12 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
             </motion.div>
           ) : (
             <form
-              className="flex flex-col gap-3 w-full"
+              className="flex flex-col gap-3 w-full items-center"
               onSubmit={handleSubmit}
               data-testid="form-newsletter"
             >
               {/* Row 1: first name + email */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-3 justify-center w-full">
                 <Input
                   type="text"
                   placeholder={`${t.firstNameLabel} — ${t.firstNamePlaceholder}`}
@@ -188,7 +188,7 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
               </div>
 
               {/* Row 2: language toggle */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60 font-sans">
                   {t.langLabel}:
                 </span>
@@ -219,7 +219,7 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
               <Button
                 type="submit"
                 disabled={status === "loading"}
-                className="bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-sans uppercase tracking-widest text-xs h-12 px-8 w-full sm:w-auto self-start disabled:opacity-60"
+                className="bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-sans uppercase tracking-widest text-xs h-12 px-8 w-full sm:w-auto mx-auto disabled:opacity-60"
                 data-testid="button-newsletter-submit"
               >
                 {status === "loading"
@@ -227,7 +227,7 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
                   : t.submitBtn}
               </Button>
 
-              <p className="text-[10px] text-muted-foreground/60 font-sans uppercase tracking-widest">
+              <p className="text-[10px] text-muted-foreground/60 font-sans uppercase tracking-widest text-center">
                 {t.disclaimer}
               </p>
             </form>
