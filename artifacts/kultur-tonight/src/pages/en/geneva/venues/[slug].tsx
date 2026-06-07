@@ -36,13 +36,12 @@ export default function VenueDetailPage() {
   }
 
   const relatedEvents = events.filter((e) => e.venue.slug === venue.slug);
-  const paragraphs = venue.description.split("\n\n").filter(Boolean);
 
   useSEO({
-    title: venue.seoTitle,
-    description: venue.seoDescription,
-    ogTitle: venue.ogTitle,
-    ogDescription: venue.ogDescription,
+    title: `${venue.name} — Geneva Cultural Venue | KulturTonight`,
+    description: venue.description,
+    ogTitle: `${venue.name} | KulturTonight Geneva`,
+    ogDescription: venue.description,
     canonical: `https://kulturtonight.com/en/geneva/venues/${venue.slug}`,
     jsonLd: venueSchema(venue),
   });
@@ -62,6 +61,7 @@ export default function VenueDetailPage() {
           />
         </div>
 
+        {/* Header */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl">
@@ -100,12 +100,52 @@ export default function VenueDetailPage() {
                 </a>
               </div>
 
+              {/* Long description */}
               <div className="space-y-6 mb-16">
-                {paragraphs.map((para, i) => (
-                  <p key={i} className="text-lg text-foreground/80 leading-relaxed font-sans">
-                    {para.trim()}
-                  </p>
-                ))}
+                <p className="text-lg text-foreground/80 leading-relaxed font-sans">
+                  {venue.longDescription}
+                </p>
+              </div>
+
+              {/* History */}
+              <div className="mb-12">
+                <h2
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "24px",
+                    color: "#E1C570",
+                    fontWeight: 400,
+                    marginBottom: "16px",
+                  }}
+                >
+                  History
+                </h2>
+                <p className="text-base text-foreground/75 leading-relaxed font-sans">
+                  {venue.history}
+                </p>
+              </div>
+
+              {/* Highlights */}
+              <div className="mb-16">
+                <h2
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "24px",
+                    color: "#E1C570",
+                    fontWeight: 400,
+                    marginBottom: "16px",
+                  }}
+                >
+                  What makes it exceptional
+                </h2>
+                <ul className="space-y-3">
+                  {venue.highlights.map((point, i) => (
+                    <li key={i} className="flex items-start gap-3 font-sans text-base text-foreground/75 leading-relaxed">
+                      <span style={{ color: "#E1C570", flexShrink: 0, marginTop: "2px" }}>•</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -140,10 +180,9 @@ export default function VenueDetailPage() {
         </div>
 
         <CTASection
-          title={`Get Tickets to ${venue.name}`}
-          subtitle="Get the Weekly Guide and never miss a performance at this legendary venue."
-          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
+          title={`Last-minute seats at ${venue.name} — released at 21:00 for KulturTonight members.`}
+          subtitle=""
+          primaryCta={{ text: "See tonight's availability →", href: "https://kulturtonight.ch/en/geneva/events/" }}
         />
 
         <div id="newsletter">

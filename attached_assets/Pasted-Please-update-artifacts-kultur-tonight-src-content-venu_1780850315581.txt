@@ -1,3 +1,10 @@
+Please update artifacts/kultur-tonight/src/content/venues.ts with the following changes:
+
+1. REMOVE the currentSeason field entirely from the Venue interface and all venue objects
+2. KEEP the history and highlights fields
+3. Replace all venue data with the content below — only verified, stable information
+
+Updated Venue interface:
 export interface Venue {
   slug: string
   name: string
@@ -248,3 +255,22 @@ export const venues: Venue[] = [
     featured: false
   }
 ]
+
+Also update the VenueDetail page at artifacts/kultur-tonight/src/pages/en/geneva/venues/[slug].tsx:
+
+1. Remove any currentSeason section if it exists
+2. Add HISTORY section below longDescription:
+   - Heading: "History" — Cormorant Garamond, 24px, gold color
+   - Body: venue.history
+
+3. Add HIGHLIGHTS section below history:
+   - Heading: "What makes it exceptional" — Cormorant Garamond, 24px, gold color
+   - Render venue.highlights as a bulleted list with gold bullet points (use • character in gold)
+
+4. Add CTA block at bottom of page before footer:
+   - Text: "Last-minute seats at [venue.name] — released at 21:00 for KulturTonight members."
+   - Button: "See tonight's availability →"
+   - Link: https://kulturtonight.ch/en/geneva/events/
+   - Style: use existing CTASection component
+
+Do not change venues.fr.ts or any other file.
