@@ -112,14 +112,26 @@ export function HomeHero() {
       aria-label={locale === "fr" ? "Section héro" : "Hero section"}
     >
       {/* ── Background image ─────────────────────────────────────────── */}
-      <img
-        src="/assets/hero/geneva-evening-theatre.png"
-        alt={c.imageAlt}
-        className="absolute inset-0 w-full h-full object-cover object-center"
-        loading="eager"
-        fetchPriority="high"
-        style={{ objectPosition: "65% center" }}
-      />
+      <picture>
+        <source
+          type="image/avif"
+          srcSet="/assets/hero/geneva-evening-theatre-768.avif 768w, /assets/hero/geneva-evening-theatre-1280.avif 1280w, /assets/hero/geneva-evening-theatre-1920.avif 1920w"
+          sizes="100vw"
+        />
+        <source
+          type="image/webp"
+          srcSet="/assets/hero/geneva-evening-theatre-768.webp 768w, /assets/hero/geneva-evening-theatre-1280.webp 1280w, /assets/hero/geneva-evening-theatre-1920.webp 1920w"
+          sizes="100vw"
+        />
+        <img
+          src="/assets/hero/geneva-evening-theatre-1280.webp"
+          alt={c.imageAlt}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          loading="eager"
+          fetchPriority="high"
+          style={{ objectPosition: "65% center" }}
+        />
+      </picture>
 
       {/* Desktop gradient — navy left, transparent right */}
       <div
