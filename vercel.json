@@ -1,5 +1,4 @@
 {
-  "rootDirectory": "artifacts/kultur-tonight",
   "buildCommand": "pnpm run build",
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install",
