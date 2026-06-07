@@ -203,25 +203,36 @@ export default function FrHomePage() {
         />
 
         {/* Featured Venues */}
-        <section className="py-24 bg-background" data-testid="featured-venues">
+        <section className="bg-background" style={{ paddingTop: "100px", paddingBottom: "96px" }} data-testid="featured-venues">
           <div className="container mx-auto px-4 md:px-6">
             <SectionHeading
               title="Les Lieux Emblématiques de Genève"
-              subtitle="D'une salle de concert du XIXe siècle aux clubs de jazz intimistes — les espaces qui définissent l'identité culturelle genevoise."
+              subtitle="D'une salle de concert du XIXe siècle aux clubs de jazz intimistes — les lieux qui définissent l'identité culturelle de Genève."
+              centered
             />
             <motion.div
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-5"
+              className="grid grid-cols-1 md:grid-cols-3 gap-4"
             >
               {featuredVenues.map((venue) => (
                 <motion.div key={venue.slug} variants={itemVariants} data-testid={`card-venue-${venue.slug}`}>
-                  <VenueCard venue={venue} />
+                  <div className="compact-venue h-full">
+                    <VenueCard venue={venue} />
+                  </div>
                 </motion.div>
               ))}
             </motion.div>
+            <div className="flex justify-end" style={{ marginTop: "24px" }}>
+              <Link
+                href="/fr/geneve/lieux/"
+                style={{ color: "#E1C570", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}
+              >
+                Explorer tous les lieux genevois →
+              </Link>
+            </div>
           </div>
         </section>
 

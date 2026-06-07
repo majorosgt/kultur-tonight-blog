@@ -40,7 +40,7 @@ export const venues: Venue[] = [
     capacity: 1600,
     description: 'Home of the Orchestre de la Suisse Romande, celebrated globally for its magnificent acoustics.',
     longDescription: "Built in 1894 and gifted to the city by a British diplomat, Victoria Hall is one of Europe's finest concert halls — celebrated as much for its breathtaking neo-baroque interior as for its extraordinary acoustics. It is the permanent home of the Orchestre de la Suisse Romande, and its stage has welcomed the greatest names in classical music for over a century. An evening here is not just a concert — it is Geneva at its most refined.",
-    image: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80',
     website: 'https://www.ville-geneve.ch/victoria-hall',
     categories: ['classical', 'concerts'],
     featured: true
