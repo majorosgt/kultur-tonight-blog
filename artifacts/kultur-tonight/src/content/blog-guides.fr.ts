@@ -67,7 +67,7 @@ Les saisons théâtrales à Genève vont de septembre à juin, avec la plupart d
 
 Conseils de réservation : le Grand Théâtre et la Comédie affichent complet sur les productions populaires des semaines à l\'avance. Le Théâtre de Carouge et le Léman offrent plus de disponibilités, mais se remplissent aussi vite pour les fortes productions. Le Galpon, avec sa petite jauge, peut se vendre très rapidement pour les spectacles qui font parler d\'eux.
 
-Accès de dernière minute : les membres KulturTonight reçoivent chaque soir à 21h00 un accès prioritaire aux places non vendues dans toutes les grandes salles genevoises, à –50% du prix d\'origine. Pour les soirées spontanées, c\'est la façon la plus fiable de voir du théâtre à Genève.`
+La clé d\'une saison théâtrale à Genève est simple : réservez la représentation du samedi soir à l\'avance, et laissez le reste ouvert. La ville récompense les spontanés autant que les planificateurs. Les membres KulturTonight reçoivent chaque soir un accès aux places non vendues dans toutes les grandes salles genevoises à –50%, publiées à 21h00. Une notification. Une décision. Le rideau se lève dans tous les cas.`
   },
   {
     slug: 'billets-theatre-pas-cher-geneve',
@@ -135,9 +135,13 @@ Le calendrier culturel genevois comprend un nombre significatif d\'événements 
 
 ## L\'approche KulturTonight
 
-KulturTonight est né d\'une observation simple : les institutions culturelles genevoises ont des places non vendues, et les habitants culturellement curieux de Genève rempliraient ces places s\'ils en étaient informés à temps et à un prix qui leur semblerait juste. Le modèle –50% de dernière minute est conçu pour rendre possibles les soirées culturelles spontanées — pour abaisser le seuil d\'engagement au point qu\'une soirée à l\'opéra un mardi devient une idée plausible plutôt qu\'une occasion planifiée.
+Les institutions culturelles genevoises remplissent leurs salles d\'une façon ou d\'une autre. La question est de savoir si vous êtes dans le fauteuil — et ce que vous avez payé pour y être.
 
-Les membres reçoivent chaque soir à 21h00 une notification avec les places disponibles pour ce soir-là. Sans obligation, sans minimum de présence — juste un accès prioritaire aux meilleures places de dernière minute de la scène culturelle genevoise.`
+KulturTonight est né d\'une observation simple : les meilleures salles de la ville ont des places non vendues chaque soir, et les gens qui les rempliraient ont juste besoin de le savoir à temps. Les membres reçoivent chaque soir à 21h00 une notification avec les places disponibles dans les grandes salles genevoises — opéra, théâtre, jazz, classique — à –50% du prix d\'origine.
+
+Sans obligation. Sans minimum de présence. Sans planification requise.
+
+Les scènes genevoises sont éclairées chaque soir de la saison. Ce soir pourrait en faire partie.`
   },
   {
     slug: 'musique-classique-geneve-guide',
@@ -199,7 +203,11 @@ Le Grand Théâtre accueille également des récitals des grandes voix de sa sai
 
 **Tarifs :** les billets plein tarif au Victoria Hall sont comparables aux grands orchestres européens. Des tarifs étudiants sont disponibles dans toutes les salles. Les membres KulturTonight accèdent aux places non vendues de dernière minute à –50%, publiées chaque soir à 21h00 — la façon la plus économique d\'assister spontanément.
 
-**Code vestimentaire :** le public genevois s\'habille davantage pour les concerts classiques que dans la plupart des villes européennes. Le décontracté chic convient partout ; la tenue formelle est bienvenue mais pas exigée.`
+**Code vestimentaire :** Le public genevois s\'habille davantage pour les concerts classiques que dans la plupart des villes européennes. Le décontracté chic convient partout ; la tenue formelle est bienvenue et semble juste. L\'occasion le mérite.
+
+Les membres KulturTonight accèdent aux places de dernière minute au Victoria Hall, au BFM et à la Salle Centrale à –50%, publiées chaque soir à 21h00. Dans une ville qui prend la musique aussi au sérieux, le prix d\'un billet ne devrait jamais être un obstacle.
+
+L\'OSR joue ce soir. La salle attend.`
   },
   {
     slug: 'scene-jazz-geneve-guide',
@@ -263,7 +271,9 @@ Les musiciens qui sont passés par le programme d\'enseignement de l\'AMR et se 
 
 **Tarifs :** l\'AMR est la grande salle culturelle la plus accessible de Genève. Les prix d\'entrée sont vraiment abordables. Le circuit des festivals varie — le Festival AMR propose des tarifs raisonnables ; les concerts de jazz à l\'Alhambra sont dans la fourchette moyenne.
 
-**Accès de dernière minute :** les membres KulturTonight reçoivent chaque soir à 21h00 un accès prioritaire aux places non vendues dans les salles de jazz genevoises, à –50%. Pour les soirées jazz spontanées, c\'est la façon la plus fiable de trouver des disponibilités.`
+**Accès de dernière minute :** Les membres KulturTonight reçoivent chaque soir un accès aux places non vendues dans les salles de jazz genevoises à –50%, publiées à 21h00. L\'AMR en particulier a souvent des disponibilités même les soirs chargés — et une décision de dernière minute d\'y aller est exactement la façon dont les meilleures soirées jazz se produisent.
+
+L\'AMR est ouvert ce soir. Il est ouvert presque tous les soirs. C\'est tout l\'enjeu.`
   },
   {
     slug: 'que-faire-geneve-ce-weekend',
@@ -329,7 +339,9 @@ Les concerts du dimanche après-midi — musique de chambre à la Salle Centrale
 
 La clé d\'un week-end culturel à Genève est la flexibilité combinée à un peu de planification à l\'avance. Réservez la représentation du samedi soir à l\'avance — les productions populaires affichent complet. Laissez la programmation du vendredi et du dimanche ouverte pour des décisions spontanées en fonction de ce qui est disponible.
 
-Les membres KulturTonight reçoivent chaque soir à 21h00 des notifications avec les places disponibles de dernière minute dans toutes les salles genevoises à –50%. Pour un week-end à Genève, s\'inscrire avant d\'arriver et consulter la notification du vendredi dès l\'atterrissage est la façon la plus fiable d\'accéder à la vie culturelle genevoise spontanément et au meilleur prix possible.`
+Les membres KulturTonight reçoivent chaque soir à 21h00 des notifications avec les places disponibles de dernière minute dans toutes les salles genevoises à –50%. Pour un week-end à Genève, inscrivez-vous avant d\'arriver et consultez la notification du vendredi dès l\'atterrissage. Le reste se fait tout seul.
+
+Genève est à son meilleur quand on la laisse vous surprendre.`
   },
   {
     slug: 'meilleur-opera-geneve',
@@ -387,7 +399,9 @@ L\'opéra contemporain est pris au sérieux à Genève. Le Grand Théâtre comma
 
 **Tenue vestimentaire :** Le public genevois s\'habille davantage que dans la plupart des villes européennes pour l\'opéra. Une tenue soignée est appropriée ; la tenue formelle est bienvenue mais pas exigée. L\'occasion se vit différemment quand on fait un effort, et le public genevois le comprend.
 
-**Comment y aller :** Le Grand Théâtre est sur la Place Neuve, au centre de Genève. Les lignes de tram 12 et 17 s\'arrêtent directement devant. Le BFM est près de Plainpalais, facilement accessible en tram.`
+Les membres KulturTonight accèdent aux places d\'opéra de dernière minute au Grand Théâtre et au BFM à –50%, publiées chaque soir à 21h00. Dans une ville dotée d\'une maison de cette qualité, le prix d\'un billet ne devrait jamais être un obstacle à la présence.
+
+La saison est longue. Le rideau se lève souvent. Il n\'y a aucune bonne raison de manquer cela.`
   },
   {
     slug: 'meilleures-salles-musique-live-geneve',
@@ -472,7 +486,9 @@ La bonne salle dépend entièrement de ce que vous voulez entendre :
 - **Musique de chambre et récitals :** Salle Centrale de la Madeleine
 - **Atmosphérique et expérimental :** Bâtiment des Forces Motrices
 
-Pour les soirées spontanées, les membres KulturTonight reçoivent chaque soir à 21h00 un accès aux places non vendues dans toutes les salles genevoises à –50%. La sélection change chaque soir — un soir ce seront des places restantes au Victoria Hall pour un concert OSR complet, un autre une soirée jazz de dernière minute à l\'AMR. Pour ceux qui veulent vivre la scène musicale genevoise sans planifier des semaines à l\'avance, c\'est l\'approche la plus fiable.`
+Pour les soirées spontanées, les membres KulturTonight reçoivent chaque soir un accès aux places non vendues dans toutes les salles genevoises à –50%, publiées à 21h00. Un soir au Victoria Hall. Un mardi à l\'AMR. Une nuit inattendue au BFM dont vous parlerez pendant des années.
+
+Les scènes de Genève sont éclairées. Il ne reste qu\'à choisir laquelle ce soir.`
   },
   {
     slug: 'sorties-culturelles-famille-geneve',
@@ -536,14 +552,16 @@ Le calendrier culturel genevois comprend une programmation extérieure et saison
 
 **Cinéma en plein air :** Plusieurs événements de cinéma en plein air pendant l\'été, dont des projections dans les parcs et les espaces publics. La programmation famille est généralement incluse.
 
-## Conseils pratiques pour les familles
+## Préparer une soirée culturelle en famille à Genève
 
-**Réservation :** Les événements culturels famille de Genève — notamment à Am Stram Gram et aux concerts OSR famille — affichent complet rapidement, surtout pour les représentations du week-end. Réservez dès que la programmation est annoncée, généralement une saison à l\'avance.
+Le calendrier culturel famille de Genève récompense la planification à l\'avance pour les grands événements — Am Stram Gram et les concerts OSR famille affichent complet rapidement, surtout le week-end. Réservez dès que la programmation est annoncée.
 
-**Transport :** Les transports publics genevois sont excellents et gratuits pour les enfants de moins de 6 ans sur le réseau TPG. La ville est suffisamment compacte pour que la plupart des lieux culturels soient facilement accessibles en tram.
+Pour tout le reste, le réseau de transports de la ville rend la spontanéité facile. Les trams relient efficacement les principaux lieux culturels, et les enfants de moins de 6 ans voyagent gratuitement sur le réseau TPG. La plupart des grandes salles sont à moins de vingt minutes du centre-ville.
 
-**Calendrier :** La saison culturelle famille à Genève va de septembre à juin pour le théâtre et la musique classique. L\'été est plus calme institutionnellement mais riche en événements en plein air.
+La saison va de septembre à juin pour le théâtre et la musique classique. L\'été apporte les festivals en plein air, le cinéma en plein air et les Fêtes de Genève — la grande célébration familiale de la ville fin juillet.
 
-**Accès de dernière minute :** Les membres KulturTonight reçoivent chaque soir à 21h00 un accès aux places non vendues dans les salles genevoises à –50%. Pour les événements famille avec disponibilités, c\'est la façon la plus économique d\'y assister spontanément.`
+Les membres KulturTonight reçoivent chaque soir un accès aux places non vendues pour les événements famille à –50%, publiées à 21h00. Pour un samedi après-midi inattendu dans une salle que vous n\'aviez pas prévu de visiter, c\'est ainsi que cela arrive.
+
+Le meilleur souvenir culturel qu\'un enfant puisse avoir est celui qu\'il ne savait pas qu\'il était en train de créer. Genève donne aux familles la chance d\'en créer plusieurs.`
   }
 ]

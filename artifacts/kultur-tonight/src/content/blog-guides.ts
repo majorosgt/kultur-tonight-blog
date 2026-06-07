@@ -91,7 +91,7 @@ Geneva's theatre seasons run from September to June, with most major productions
 
 Booking advice: the Grand Théâtre and the Comédie sell out popular productions weeks in advance. The Théâtre de Carouge and the Léman have more availability but also fill up for strong productions. Le Galpon, with its small capacity, can sell out very quickly for work that generates word of mouth.
 
-Last-minute access: KulturTonight members receive early access to unsold seats across all Geneva venues, released nightly at 21:00 at –50% of the original price. For spontaneous evenings, this is the most reliable way to attend.`
+The key to a Geneva theatre season is simple: book the Saturday night production in advance, and leave the rest open. The city rewards the spontaneous as much as the planned. KulturTonight members receive nightly access to unsold seats across all Geneva venues at –50%, released at 21:00. One notification. One decision. The curtain rises either way.`
   },
   {
     slug: 'how-to-get-cheap-theatre-tickets-geneva',
@@ -159,9 +159,13 @@ Geneva's cultural calendar includes a significant number of free events that are
 
 ## The KulturTonight Approach
 
-KulturTonight was founded on a simple observation: Geneva's cultural institutions have unsold seats, and Geneva's culturally curious residents would fill those seats if they knew about them in time and at a price that felt right. The –50% last-minute model is designed to make spontaneous cultural evenings possible — to lower the threshold of commitment enough that a Tuesday evening at the opera becomes a plausible idea rather than a planned occasion.
+Geneva's cultural institutions fill their houses one way or another. The question is whether you're in the seat — and what you paid for it.
 
-Members receive a nightly notification at 21:00 with that evening's available seats. No obligation, no minimum attendance — just early access to the best available last-minute seats in Geneva's cultural scene.`
+KulturTonight was built on a simple observation: the city's finest venues have unsold seats every night, and the people who would fill them just need to know in time. Members receive a nightly notification at 21:00 with that evening's available seats across Geneva's major venues — opera, theatre, jazz, classical — at –50% of the original price.
+
+No obligation. No minimum attendance. No planning required.
+
+Geneva's stages are lit every night of the season. Tonight could be one of them.`
   },
   {
     slug: 'classical-music-geneva-complete-guide',
@@ -225,7 +229,11 @@ The Grand Théâtre also hosts recitals by the leading voices of its current sea
 
 **Pricing:** Full-price tickets at Victoria Hall are comparable to major European orchestras. Student pricing is available at all venues. KulturTonight members access last-minute unsold seats at –50%, released nightly at 21:00 — the most cost-effective way to attend spontaneously.
 
-**What to wear:** Geneva audiences dress up for classical concerts more than in most European cities. Smart casual is appropriate everywhere; formal dress is welcome but not required.`
+**What to wear:** Geneva audiences dress up for classical concerts more than in most European cities. Smart casual is appropriate everywhere; formal dress is welcome and feels right. The occasion is worth it.
+
+KulturTonight members access last-minute seats at Victoria Hall, the BFM, and the Salle Centrale at –50%, released nightly at 21:00. For a city that takes music this seriously, the barrier to entry should never be the price of a ticket.
+
+The OSR is playing tonight. The hall is waiting.`
   },
   {
     slug: 'geneva-jazz-scene-complete-guide',
@@ -291,7 +299,9 @@ The musicians who have come through the AMR's education programme and establishe
 
 **Pricing:** The AMR is the most affordable major cultural venue in Geneva. Entry prices are genuinely accessible. The festival circuit varies — the AMR Festival offers reasonable pricing; Alhambra jazz concerts are mid-range.
 
-**Last-minute access:** KulturTonight members receive early access to unsold seats at Geneva jazz venues at –50%, released nightly at 21:00. For spontaneous jazz evenings, this is the most reliable way to find availability.`
+**Last-minute access:** KulturTonight members receive nightly access to unsold seats at Geneva jazz venues at –50%, released at 21:00. The AMR in particular often has availability even on strong nights — and a last-minute decision to attend is exactly how the best jazz evenings happen.
+
+The AMR is open tonight. It is open most nights. That is the point.`
   },
   {
     slug: 'things-to-do-geneva-this-weekend',
@@ -357,7 +367,9 @@ Sunday afternoon concerts — chamber music at the Salle Centrale de la Madelein
 
 The key to a Geneva cultural weekend is flexibility combined with some advance planning. Book the Saturday evening performance in advance — popular productions sell out. Leave the Friday and Sunday programming open for spontaneous decisions based on what is available.
 
-KulturTonight members receive nightly notifications at 21:00 with available last-minute seats across all Geneva venues at –50%. For a weekend visit, joining before you arrive and checking the Friday notification as soon as you land is the most reliable way to access Geneva's cultural life spontaneously and at the best possible price.`
+KulturTonight members receive nightly notifications at 21:00 with available last-minute seats across all Geneva venues at –50%. For a weekend in Geneva, join before you arrive and check the Friday notification as soon as you land. The rest takes care of itself.
+
+Geneva is at its best when you let it surprise you.`
   },
   {
     slug: 'best-opera-in-geneva',
@@ -417,7 +429,9 @@ Contemporary opera is taken seriously in Geneva. The Grand Théâtre commissions
 
 **Dress:** Geneva opera audiences dress up more than most European cities. Smart dress is appropriate; formal is welcome but not required. The occasion feels different when you make an effort, and Geneva audiences understand this.
 
-**Getting there:** The Grand Théâtre is on Place Neuve, central Geneva. Tram lines 12 and 17 stop directly outside. The BFM is near Plainpalais, easily reached by tram.`
+KulturTonight members access last-minute opera seats at the Grand Théâtre and BFM at –50%, released nightly at 21:00. For a city with a house of this quality, the barrier to attendance should never be the price of a ticket.
+
+The season is long. The curtain rises often. There is no good reason to miss it.`
   },
   {
     slug: 'best-live-music-venues-geneva',
@@ -504,7 +518,9 @@ The right venue depends entirely on what you want to hear:
 - **Chamber music and recitals:** Salle Centrale de la Madeleine
 - **Atmospheric and experimental:** Bâtiment des Forces Motrices
 
-For spontaneous evenings, KulturTonight members receive access to unsold seats across all Geneva venues at –50%, released nightly at 21:00. The selection changes every evening — one night it might be remaining seats at Victoria Hall for a sold-out OSR concert, another it might be a last-minute jazz evening at the AMR. For those who want to experience Geneva\'s music scene without planning weeks in advance, this is the most reliable approach.`
+For spontaneous evenings, KulturTonight members receive nightly access to unsold seats across all Geneva venues at –50%, released at 21:00. One evening at Victoria Hall. One Tuesday at the AMR. One unexpected night at the BFM that you will describe to people for years.
+
+Geneva's stages are lit. The only question is which one you choose tonight.`
   },
   {
     slug: 'family-cultural-events-geneva',
@@ -568,14 +584,16 @@ Geneva\'s cultural calendar includes significant outdoor and seasonal programmin
 
 **Open-air cinema:** Several outdoor cinema events during summer, including screenings in parks and public spaces. Family programming is typically included.
 
-## Practical Tips for Families
+## Planning a Family Cultural Evening in Geneva
 
-**Booking:** Geneva\'s family cultural events — particularly at Am Stram Gram and the OSR family concerts — sell out quickly, especially for weekend performances. Book as soon as programming is announced, typically a season in advance.
+Geneva's family cultural calendar rewards advance planning for the main events — Am Stram Gram and the OSR family concerts sell out quickly, particularly at weekends. Book as soon as programming is announced.
 
-**Transport:** Geneva\'s public transport is excellent and free for children under 6 on the TPG network. The city is compact enough that most cultural venues are easily reachable by tram.
+For everything else, the city's transport network makes spontaneity easy. Trams connect the main cultural venues efficiently, and children under 6 travel free on the TPG network. Most major venues are within twenty minutes of the city centre.
 
-**Timing:** The Geneva cultural season for families runs September to June for theatre and classical music. Summer is quieter institutionally but rich in outdoor events.
+The season runs September to June for theatre and classical music. Summer brings outdoor festivals, open-air cinema, and the Fêtes de Genève — the city's great family celebration in late July.
 
-**Last-minute access:** KulturTonight members receive access to unsold seats across Geneva venues at –50%, released nightly at 21:00. For family events with availability, this is the most cost-effective way to attend spontaneously.`
+KulturTonight members receive nightly access to unsold family event seats at –50%, released at 21:00. For an unexpected Saturday afternoon at a venue you hadn't planned on visiting, this is how it happens.
+
+The best cultural memory a child can have is the one they didn't know they were making. Geneva gives families the chance to make several.`
   }
 ]
