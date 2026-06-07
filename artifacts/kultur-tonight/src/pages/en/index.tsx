@@ -61,11 +61,16 @@ const directionBoxes = [
 
 export default function EnHomePage() {
   useSEO({
-    title: "KulturTonight | Geneva's Premium Cultural Discovery Platform",
-    description: "Discover the best theatre, concerts, and cultural events in Geneva. Last-minute tickets and curated guides for culturally curious explorers.",
+    title: "KulturTonight | Geneva Cultural Discovery & Last-Minute Tickets",
+    description: "Discover theatre, concerts, opera and jazz in Geneva. Last-minute seats at –50% for KulturTonight members. Nightly drops at 21:00.",
     ogTitle: "KulturTonight | Geneva Cultural Events & Tickets",
     ogDescription: "Your premium guide to Geneva's cultural scene — theatre, concerts, opera, jazz. Never miss a great performance.",
     canonical: "https://kulturtonight.com/en",
+    alternates: [
+      { lang: "en", url: "https://kulturtonight.com/en" },
+      { lang: "fr", url: "https://kulturtonight.com/fr" },
+      { lang: "x-default", url: "https://kulturtonight.com/en" },
+    ],
   });
 
   const featuredVenues = venues.filter(v =>
