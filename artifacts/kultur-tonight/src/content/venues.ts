@@ -85,7 +85,7 @@ export const venues: Venue[] = [
     capacity: 600,
     description: 'A magnificent 19th-century industrial building with exceptional acoustics and a unique atmosphere.',
     longDescription: "Few concert venues in Europe have the atmosphere of the Bâtiment des Forces Motrices. Built in 1886 as a hydraulic pumping station, its soaring iron-and-glass interior was repurposed as a performance space in the 1990s — and the transformation is extraordinary. The acoustics are exceptional, the sight lines intimate despite the scale, and the sense of occasion is unlike anywhere else in Geneva. Opera, chamber music, and experimental performance all find a natural home here.",
-    image: 'https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1520520731457-9283dd14aa66?w=800&q=80',
     website: 'https://www.bfm.ch',
     categories: ['opera', 'classical', 'contemporary'],
     featured: true

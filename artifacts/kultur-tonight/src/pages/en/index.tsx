@@ -124,8 +124,9 @@ export default function EnHomePage() {
                   >
                     {/* Image area */}
                     <div
-                      className="relative flex-shrink-0 h-[180px] md:h-[220px] group-hover:[filter:brightness(1.15)] transition-[filter] duration-300"
+                      className="direction-box-image relative flex-shrink-0 group-hover:[filter:brightness(1.15)] transition-[filter] duration-300"
                       style={{
+                        height: "220px",
                         background: box.imageBg,
                         backgroundSize: "cover",
                         backgroundPosition: "center",

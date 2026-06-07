@@ -123,10 +123,10 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-2xl"
+          className="mx-auto max-w-[560px]"
         >
           {/* Label */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-8 h-[1px] bg-gold-gradient" />
             <span className="text-[9px] uppercase tracking-[0.3em] text-primary font-sans">
               {t.label}
@@ -134,10 +134,10 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
           </div>
 
           {/* Heading + body */}
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-foreground mb-4 leading-tight">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-foreground mb-4 leading-tight text-center">
             {t.title}
           </h3>
-          <p className="text-muted-foreground font-sans text-base md:text-lg leading-relaxed mb-8 max-w-lg">
+          <p className="text-muted-foreground font-sans text-base md:text-lg leading-relaxed mb-8 text-center">
             {t.body}
           </p>
 
@@ -160,7 +160,7 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
             </motion.div>
           ) : (
             <form
-              className="flex flex-col gap-3 max-w-md"
+              className="flex flex-col gap-3 w-full"
               onSubmit={handleSubmit}
               data-testid="form-newsletter"
             >

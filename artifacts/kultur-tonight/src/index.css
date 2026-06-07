@@ -151,11 +151,16 @@
 
 /* Featured venues section heading — subtitle max-width override */
 .venues-heading-wrap p {
-  max-width: 720px !important;
+  max-width: 700px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center;
+  white-space: normal !important;
 }
+
+/* Direction box image area — height control */
+.direction-box-image { height: 220px; }
+@media (max-width: 768px) { .direction-box-image { height: 180px !important; } }
 
 /* Homepage compact venue cards — hide metadata without modifying VenueCard */
 .compact-venue [class~="bottom-3"][class~="right-3"] { display: none !important; }
