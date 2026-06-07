@@ -83,10 +83,53 @@ export default function FrBlogGenevaGuideArticlePage() {
     );
   }
 
+  const frToEnSlug: Record<string, string> = {
+    "meilleurs-theatres-geneve": "best-theatres-geneva",
+    "billets-theatre-pas-cher-geneve": "how-to-get-cheap-theatre-tickets-geneva",
+    "musique-classique-geneve-guide": "classical-music-geneva-complete-guide",
+    "scene-jazz-geneve-guide": "geneva-jazz-scene-complete-guide",
+    "que-faire-geneve-ce-weekend": "things-to-do-geneva-this-weekend",
+  };
+  const enSlug = frToEnSlug[slug] ?? slug;
+
   useSEO({
     title: guide.metaTitle ?? guide.title,
     description: guide.metaDescription ?? guide.subtitle,
     canonical: `https://kulturtonight.com/fr/blog/geneve/guides/${guide.slug}`,
+    alternates: [
+      { lang: "en", url: `https://kulturtonight.com/en/blog/geneva/guides/${enSlug}` },
+      { lang: "fr", url: `https://kulturtonight.com/fr/blog/geneve/guides/${slug}` },
+      { lang: "x-default", url: `https://kulturtonight.com/en/blog/geneva/guides/${enSlug}` },
+    ],
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: guide.title,
+      description: guide.metaDescription ?? guide.subtitle,
+      image: guide.image,
+      datePublished: guide.date,
+      dateModified: guide.date,
+      author: {
+        "@type": "Organization",
+        name: "KulturTonight Éditorial",
+        url: "https://kulturtonight.com",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "KulturTonight",
+        url: "https://kulturtonight.com",
+      },
+      url: `https://kulturtonight.com/fr/blog/geneve/guides/${guide.slug}`,
+      inLanguage: "fr",
+      about: {
+        "@type": "City",
+        name: "Genève",
+        containedInPlace: {
+          "@type": "Country",
+          name: "Suisse",
+        },
+      },
+    },
   });
 
   const related = blogGuidesFr.filter((g) => g.slug !== guide.slug).slice(0, 3);

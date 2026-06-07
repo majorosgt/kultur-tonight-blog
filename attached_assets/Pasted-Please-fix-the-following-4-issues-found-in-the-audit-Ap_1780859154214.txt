@@ -1,3 +1,8 @@
+Please fix the following 4 issues found in the audit. Apply all changes in one pass.
+
+## 1. REGENERATE SITEMAP.XML
+Replace the entire contents of public/sitemap.xml with a complete, correct sitemap covering all current routes in both EN and FR:
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -325,3 +330,167 @@
   </url>
 
 </urlset>
+
+## 2. ADD HREFLANG TO GUIDES PAGES
+Use the existing useSEO() hook which already supports alternates.
+
+In artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/index.tsx:
+Add to the useSEO() call:
+alternates: [
+  { hreflang: 'en', href: 'https://kulturtonight.com/en/blog/geneva/guides' },
+  { hreflang: 'fr', href: 'https://kulturtonight.com/fr/blog/geneve/guides' },
+  { hreflang: 'x-default', href: 'https://kulturtonight.com/en/blog/geneva/guides' }
+]
+
+In artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/index.tsx:
+Add to the useSEO() call:
+alternates: [
+  { hreflang: 'en', href: 'https://kulturtonight.com/en/blog/geneva/guides' },
+  { hreflang: 'fr', href: 'https://kulturtonight.com/fr/blog/geneve/guides' },
+  { hreflang: 'x-default', href: 'https://kulturtonight.com/en/blog/geneva/guides' }
+]
+
+In artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/[slug].tsx:
+Add dynamic alternates to the useSEO() call based on the current guide slug.
+Map EN slugs to FR slugs:
+const enToFrSlug: Record<string, string> = {
+  'best-theatres-geneva': 'meilleurs-theatres-geneve',
+  'how-to-get-cheap-theatre-tickets-geneva': 'billets-theatre-pas-cher-geneve',
+  'classical-music-geneva-complete-guide': 'musique-classique-geneve-guide',
+  'geneva-jazz-scene-complete-guide': 'scene-jazz-geneve-guide',
+  'things-to-do-geneva-this-weekend': 'que-faire-geneve-ce-weekend'
+}
+const frSlug = enToFrSlug[slug] || slug
+alternates: [
+  { hreflang: 'en', href: 'https://kulturtonight.com/en/blog/geneva/guides/' + slug },
+  { hreflang: 'fr', href: 'https://kulturtonight.com/fr/blog/geneve/guides/' + frSlug },
+  { hreflang: 'x-default', href: 'https://kulturtonight.com/en/blog/geneva/guides/' + slug }
+]
+
+In artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/[slug].tsx:
+Map FR slugs to EN slugs:
+const frToEnSlug: Record<string, string> = {
+  'meilleurs-theatres-geneve': 'best-theatres-geneva',
+  'billets-theatre-pas-cher-geneve': 'how-to-get-cheap-theatre-tickets-geneva',
+  'musique-classique-geneve-guide': 'classical-music-geneva-complete-guide',
+  'scene-jazz-geneve-guide': 'geneva-jazz-scene-complete-guide',
+  'que-faire-geneve-ce-weekend': 'things-to-do-geneva-this-weekend'
+}
+const enSlug = frToEnSlug[slug] || slug
+alternates: [
+  { hreflang: 'en', href: 'https://kulturtonight.com/en/blog/geneva/guides/' + enSlug },
+  { hreflang: 'fr', href: 'https://kulturtonight.com/fr/blog/geneve/guides/' + slug },
+  { hreflang: 'x-default', href: 'https://kulturtonight.com/en/blog/geneva/guides/' + enSlug }
+]
+
+## 3. ADD JSON-LD SCHEMA TO GUIDES PAGES
+Use the existing useSEO() hook which already supports jsonLd.
+
+In artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/index.tsx:
+Add to useSEO():
+jsonLd: {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Geneva Cultural Guides',
+  description: 'In-depth guides to theatre, classical music, jazz, and cultural life in Geneva.',
+  url: 'https://kulturtonight.com/en/blog/geneva/guides',
+  publisher: {
+    '@type': 'Organization',
+    name: 'KulturTonight',
+    url: 'https://kulturtonight.com'
+  }
+}
+
+In artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/index.tsx:
+Add to useSEO():
+jsonLd: {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Guides Culturels Genève',
+  description: 'Guides approfondis sur le théâtre, la musique classique, le jazz et la vie culturelle à Genève.',
+  url: 'https://kulturtonight.com/fr/blog/geneve/guides',
+  publisher: {
+    '@type': 'Organization',
+    name: 'KulturTonight',
+    url: 'https://kulturtonight.com'
+  }
+}
+
+In artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/[slug].tsx:
+Add dynamic BlogPosting schema to useSEO():
+jsonLd: {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: guide.title,
+  description: guide.metaDescription,
+  image: guide.image,
+  datePublished: guide.date,
+  dateModified: guide.date,
+  author: {
+    '@type': 'Organization',
+    name: 'KulturTonight Editorial',
+    url: 'https://kulturtonight.com'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'KulturTonight',
+    url: 'https://kulturtonight.com'
+  },
+  url: 'https://kulturtonight.com/en/blog/geneva/guides/' + guide.slug,
+  inLanguage: 'en',
+  about: {
+    '@type': 'City',
+    name: 'Geneva',
+    containedInPlace: {
+      '@type': 'Country',
+      name: 'Switzerland'
+    }
+  }
+}
+
+In artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/[slug].tsx:
+Same pattern with fr slug and inLanguage: 'fr':
+jsonLd: {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: guide.title,
+  description: guide.metaDescription,
+  image: guide.image,
+  datePublished: guide.date,
+  dateModified: guide.date,
+  author: {
+    '@type': 'Organization',
+    name: 'KulturTonight Éditorial',
+    url: 'https://kulturtonight.com'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'KulturTonight',
+    url: 'https://kulturtonight.com'
+  },
+  url: 'https://kulturtonight.com/fr/blog/geneve/guides/' + guide.slug,
+  inLanguage: 'fr',
+  about: {
+    '@type': 'City',
+    name: 'Genève',
+    containedInPlace: {
+      '@type': 'Country',
+      name: 'Suisse'
+    }
+  }
+}
+
+## 4. FIX HOMEPAGE EDITORIAL DIRECTION BOX LINK
+In artifacts/kultur-tonight/src/pages/en/index.tsx, find the EDITORIAL direction box.
+Change the link from:
+https://blog.kulturtonight.ch/en/geneva/
+To:
+/en/blog/geneva/guides
+
+In artifacts/kultur-tonight/src/pages/fr/index.tsx, find the EDITORIAL direction box.
+Change the link from:
+https://blog.kulturtonight.ch/fr/geneve/
+To:
+/fr/blog/geneve/guides
+
+Do not change anything else. When done confirm all 4 fixes applied with file names and line numbers changed.

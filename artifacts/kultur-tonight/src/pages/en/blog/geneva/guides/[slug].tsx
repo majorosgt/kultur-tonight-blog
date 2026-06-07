@@ -83,12 +83,55 @@ export default function BlogGenevaGuidesDetailPage() {
     );
   }
 
+  const enToFrSlug: Record<string, string> = {
+    "best-theatres-geneva": "meilleurs-theatres-geneve",
+    "how-to-get-cheap-theatre-tickets-geneva": "billets-theatre-pas-cher-geneve",
+    "classical-music-geneva-complete-guide": "musique-classique-geneve-guide",
+    "geneva-jazz-scene-complete-guide": "scene-jazz-geneve-guide",
+    "things-to-do-geneva-this-weekend": "que-faire-geneve-ce-weekend",
+  };
+  const frSlug = enToFrSlug[slug] ?? slug;
+
   useSEO({
     title: guide.metaTitle ?? guide.seoTitle,
     description: guide.metaDescription ?? guide.seoDescription,
     ogTitle: guide.ogTitle,
     ogDescription: guide.ogDescription,
     canonical: `https://kulturtonight.com/en/blog/geneva/guides/${guide.slug}`,
+    alternates: [
+      { lang: "en", url: `https://kulturtonight.com/en/blog/geneva/guides/${slug}` },
+      { lang: "fr", url: `https://kulturtonight.com/fr/blog/geneve/guides/${frSlug}` },
+      { lang: "x-default", url: `https://kulturtonight.com/en/blog/geneva/guides/${slug}` },
+    ],
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: guide.title,
+      description: guide.metaDescription ?? guide.seoDescription,
+      image: guide.image,
+      datePublished: guide.date,
+      dateModified: guide.date,
+      author: {
+        "@type": "Organization",
+        name: "KulturTonight Editorial",
+        url: "https://kulturtonight.com",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "KulturTonight",
+        url: "https://kulturtonight.com",
+      },
+      url: `https://kulturtonight.com/en/blog/geneva/guides/${guide.slug}`,
+      inLanguage: "en",
+      about: {
+        "@type": "City",
+        name: "Geneva",
+        containedInPlace: {
+          "@type": "Country",
+          name: "Switzerland",
+        },
+      },
+    },
   });
 
   const related = blogGuides.filter((g) => g.slug !== guide.slug).slice(0, 3);

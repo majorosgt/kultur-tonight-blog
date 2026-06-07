@@ -49,8 +49,8 @@ const directionBoxes = [
     headline: "Guides Culturels Genève",
     description: "Portraits de lieux, guides de la ville et sélections hebdomadaires",
     cta: "Lire le blog →",
-    href: "https://blog.kulturtonight.ch/en/geneva/",
-    external: true,
+    href: "/fr/blog/geneve/guides",
+    external: false,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80')",
   },
   {
