@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Ticket, Mail, BookOpen, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HomeHero } from "@/components/HomeHero";
@@ -23,7 +22,6 @@ const itemVariants = {
 
 const directionBoxes = [
   {
-    icon: Ticket,
     label: "TONIGHT",
     headline: "Tonight in Geneva",
     description: "Opera, jazz, theatre — last seats released at 21:00",
@@ -33,7 +31,6 @@ const directionBoxes = [
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80')",
   },
   {
-    icon: Mail,
     label: "WEEKLY GUIDE",
     headline: "The Friday Edit",
     description: "Geneva's finest cultural week, curated every Friday morning",
@@ -43,7 +40,6 @@ const directionBoxes = [
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=800&q=80')",
   },
   {
-    icon: BookOpen,
     label: "EDITORIAL",
     headline: "Geneva Cultural Guides",
     description: "Venue spotlights, city guides, and weekly picks",
@@ -53,7 +49,6 @@ const directionBoxes = [
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80')",
   },
   {
-    icon: MapPin,
     label: "VENUES",
     headline: "Geneva's Iconic Stages",
     description: "From Victoria Hall to the AMR Jazz Club — the spaces that define the city",

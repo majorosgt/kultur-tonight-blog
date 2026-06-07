@@ -164,6 +164,16 @@ function Router() {
         <Route path="/fr/a-propos" component={FrAboutPage} />
         <Route path="/fr/contact" component={FrContactPage} />
 
+        {/* Trailing slash aliases */}
+        <Route path="/en/" component={EnHomePage} />
+        <Route path="/en/geneva/" component={GenevaPage} />
+        <Route path="/en/geneva/events/" component={EventsListPage} />
+        <Route path="/en/geneva/venues/" component={VenuesListPage} />
+        <Route path="/en/blog/geneva/" component={BlogGenevaPage} />
+        <Route path="/en/blog/geneva/guides/" component={BlogGenevaGuidesPage} />
+        <Route path="/fr/" component={FrHomePage} />
+        <Route path="/fr/geneve/" component={FrGenevePage} />
+
         <Route component={NotFound} />
       </Switch>
       <PopupWrapper />

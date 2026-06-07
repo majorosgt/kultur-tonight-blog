@@ -11,7 +11,7 @@ export const venuesFr: Venue[] = [
     capacity: 1500,
     description: "La première scène lyrique de Genève, présentant opéra, ballet et danse de renommée mondiale.",
     longDescription: "Inauguré en 1879 sur la Place Neuve, le Grand Théâtre de Genève est la plus importante maison d'opéra de Suisse. Doté de sa propre troupe, il produit des spectacles lyriques, des ballets et des créations chorégraphiques contemporaines d'un niveau international. L'édifice néo-baroque — or et cramoisi à l'intérieur — est lui-même un spectacle avant même le lever de rideau.",
-    image: '/assets/venues/grand-theatre.jpg',
+    image: 'https://images.unsplash.com/photo-1580809361436-42a7ec204889?w=800&q=80',
     website: 'https://www.gtg.ch',
     categories: ['opera', 'ballet', 'dance', 'theatre'],
     featured: true
@@ -26,7 +26,7 @@ export const venuesFr: Venue[] = [
     capacity: 1600,
     description: "Demeure de l'Orchestre de la Suisse Romande, célèbre pour son acoustique exceptionnelle.",
     longDescription: "Construit en 1894 et offert à la ville par un diplomate britannique, le Victoria Hall est l'une des plus belles salles de concert d'Europe. Son acoustique extraordinaire en fait le cadre idéal pour l'Orchestre de la Suisse Romande, qui y réside en permanence. Une soirée au Victoria Hall, c'est Genève dans ce qu'elle a de plus raffiné.",
-    image: '/assets/venues/victoria-hall.jpg',
+    image: 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800&q=80',
     website: 'https://www.ville-geneve.ch/victoria-hall',
     categories: ['classical', 'concerts'],
     featured: true
@@ -71,7 +71,7 @@ export const venuesFr: Venue[] = [
     capacity: 600,
     description: "Un magnifique bâtiment industriel du XIXe siècle, à l'acoustique exceptionnelle et à l'atmosphère unique.",
     longDescription: "Peu de salles en Europe offrent l'atmosphère du Bâtiment des Forces Motrices. Construit en 1886 comme station de pompage hydraulique, cet espace fer et verre a été reconverti en lieu de spectacle dans les années 1990. L'acoustique y est remarquable et le sentiment d'être dans un endroit à part entière est incomparable à Genève.",
-    image: '/assets/venues/bfm.jpg',
+    image: 'https://images.unsplash.com/photo-1520520731457-9283dd14aa66?w=800&q=80',
     website: 'https://www.bfm.ch',
     categories: ['opera', 'classical', 'contemporary'],
     featured: true
