@@ -55,7 +55,7 @@ const directionBoxes = [
     cta: "Explore venues →",
     href: "/en/geneva/venues/",
     external: false,
-    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/victoriahall.jpeg')",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1778975144936-dce6d71e29fa?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
 ];
 
