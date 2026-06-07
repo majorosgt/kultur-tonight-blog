@@ -61,7 +61,7 @@ const directionBoxes = [
     cta: "Explorer les lieux →",
     href: "/fr/geneve/lieux/",
     external: false,
-    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1658244274838-0f62b80187d5?fm=jpg&q=80&w=800&auto=format&fit=crop')",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/images/victoriahall.jpeg')",
   },
 ];
 
