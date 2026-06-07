@@ -35,7 +35,6 @@ export default function FrBlogGenevaLieuxDetailPage() {
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
     canonical: `https://kulturtonight.ch/fr/blog/geneve/lieux/${article.slug}`,
-    noindex: true,
     alternates: buildAlternatesFr(`/fr/blog/geneve/lieux/${article.slug}`),
     jsonLd: blogArticleSchema(article, `/fr/blog/geneve/lieux/${article.slug}`),
   });

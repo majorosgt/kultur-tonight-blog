@@ -34,7 +34,6 @@ export default function BlogGenevaSeasonalDetailPage() {
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
     canonical: `https://kulturtonight.ch/en/blog/geneva/seasonal/${article.slug}`,
-    noindex: true,
     jsonLd: blogArticleSchema(article, `/en/blog/geneva/seasonal/${article.slug}`),
   });
 

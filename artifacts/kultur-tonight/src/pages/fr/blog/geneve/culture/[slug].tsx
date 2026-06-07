@@ -35,7 +35,6 @@ export default function FrBlogGenevaCultureDetailPage() {
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
     canonical: `https://kulturtonight.ch/fr/blog/geneve/culture/${article.slug}`,
-    noindex: true,
     alternates: buildAlternatesFr(`/fr/blog/geneve/culture/${article.slug}`),
     jsonLd: blogArticleSchema(article, `/fr/blog/geneve/culture/${article.slug}`),
   });

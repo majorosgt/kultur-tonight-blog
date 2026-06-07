@@ -35,7 +35,6 @@ export default function FrBlogGenevaCetteSemaineDetailPage() {
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
     canonical: `https://kulturtonight.ch/fr/blog/geneve/cette-semaine/${article.slug}`,
-    noindex: true,
     alternates: buildAlternatesFr(`/fr/blog/geneve/cette-semaine/${article.slug}`),
     jsonLd: blogArticleSchema(article, `/fr/blog/geneve/cette-semaine/${article.slug}`),
   });

@@ -35,7 +35,6 @@ export default function FrBlogGenevaEvenementsDetailPage() {
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
     canonical: `https://kulturtonight.ch/fr/blog/geneve/evenements/${article.slug}`,
-    noindex: true,
     alternates: buildAlternatesFr(`/fr/blog/geneve/evenements/${article.slug}`),
     jsonLd: blogArticleSchema(article, `/fr/blog/geneve/evenements/${article.slug}`),
   });

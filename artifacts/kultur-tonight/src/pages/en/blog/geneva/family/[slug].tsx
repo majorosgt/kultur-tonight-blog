@@ -34,7 +34,6 @@ export default function BlogGenevaFamilyDetailPage() {
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
     canonical: `https://kulturtonight.ch/en/blog/geneva/family/${article.slug}`,
-    noindex: true,
     jsonLd: blogArticleSchema(article, `/en/blog/geneva/family/${article.slug}`),
   });
 
