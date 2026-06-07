@@ -1,3 +1,61 @@
+Please make the following changes in one pass. Do not change anything not listed here.
+
+## 1. REMOVE NOINDEX FROM ABOUT AND CONTACT PAGES
+Find these 4 files and change noindex: true to noindex: false in the useSEO() call:
+- artifacts/kultur-tonight/src/pages/en/about.tsx
+- artifacts/kultur-tonight/src/pages/en/contact.tsx
+- artifacts/kultur-tonight/src/pages/fr/a-propos.tsx
+- artifacts/kultur-tonight/src/pages/fr/contact.tsx
+
+## 2. ADD HREFLANG TO ABOUT AND CONTACT PAGES
+
+en/about.tsx — add to useSEO():
+alternates: [
+ { hreflang: 'en', href: 'https://kulturtonight.ch/en/about' },
+ { hreflang: 'fr', href: 'https://kulturtonight.ch/fr/a-propos' },
+ { hreflang: 'x-default', href: 'https://kulturtonight.ch/en/about' }
+]
+
+en/contact.tsx — add to useSEO():
+alternates: [
+ { hreflang: 'en', href: 'https://kulturtonight.ch/en/contact' },
+ { hreflang: 'fr', href: 'https://kulturtonight.ch/fr/contact' },
+ { hreflang: 'x-default', href: 'https://kulturtonight.ch/en/contact' }
+]
+
+fr/a-propos.tsx — add to useSEO():
+alternates: [
+ { hreflang: 'en', href: 'https://kulturtonight.ch/en/about' },
+ { hreflang: 'fr', href: 'https://kulturtonight.ch/fr/a-propos' },
+ { hreflang: 'x-default', href: 'https://kulturtonight.ch/en/about' }
+]
+
+fr/contact.tsx — add to useSEO():
+alternates: [
+ { hreflang: 'en', href: 'https://kulturtonight.ch/en/contact' },
+ { hreflang: 'fr', href: 'https://kulturtonight.ch/fr/contact' },
+ { hreflang: 'x-default', href: 'https://kulturtonight.ch/en/contact' }
+]
+
+## 3. UPDATE ALL CANONICAL URLS FROM .COM TO .CH
+
+In artifacts/kultur-tonight/src/lib/seo.ts:
+Change the base URL from https://kulturtonight.com to https://kulturtonight.ch
+
+In artifacts/kultur-tonight/public/robots.txt:
+Change:
+Sitemap: https://kulturtonight.com/sitemap.xml
+To:
+Sitemap: https://kulturtonight.ch/sitemap.xml
+
+In artifacts/kultur-tonight/index.html:
+Change og:image from https://kulturtonight.com/opengraph.jpg to https://kulturtonight.ch/opengraph.jpg
+Change twitter:image from https://kulturtonight.com/opengraph.jpg to https://kulturtonight.ch/opengraph.jpg
+Change og:url from https://kulturtonight.com to https://kulturtonight.ch
+
+## 4. REGENERATE SITEMAP WITH .CH DOMAIN
+Replace the entire contents of public/sitemap.xml with the following:
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
        xmlns:xhtml="http://www.w3.org/1999/xhtml">
@@ -338,3 +396,5 @@
  </url>
 
 </urlset>
+
+When done, confirm all changes applied with exact file names and what was changed in each.

@@ -82,5 +82,5 @@ export function useSEO({ title, description, ogTitle, ogDescription, canonical, 
 }
 
 export function buildCanonical(path: string) {
-  return `https://kulturtonight.com${path}`;
+  return `https://kulturtonight.ch${path}`;
 }

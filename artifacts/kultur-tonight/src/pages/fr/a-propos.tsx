@@ -9,7 +9,12 @@ export default function AProposPage() {
     title: "À propos de KulturTonight — La boussole culturelle de Genève",
     description: "KulturTonight sélectionne les meilleures expériences culturelles de Genève — opéra, théâtre, jazz et musique classique.",
     canonical: "/fr/a-propos",
-    noindex: true,
+    noindex: false,
+    alternates: [
+      { lang: "en", url: "https://kulturtonight.ch/en/about" },
+      { lang: "fr", url: "https://kulturtonight.ch/fr/a-propos" },
+      { lang: "x-default", url: "https://kulturtonight.ch/en/about" },
+    ],
   });
 
   return (

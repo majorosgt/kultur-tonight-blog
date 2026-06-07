@@ -9,7 +9,12 @@ export default function AboutPage() {
     title: "About KulturTonight — Geneva's Cultural Compass",
     description: "KulturTonight curates the finest opera, theatre, jazz, and classical music experiences in Geneva, Switzerland.",
     canonical: "/en/about",
-    noindex: true,
+    noindex: false,
+    alternates: [
+      { lang: "en", url: "https://kulturtonight.ch/en/about" },
+      { lang: "fr", url: "https://kulturtonight.ch/fr/a-propos" },
+      { lang: "x-default", url: "https://kulturtonight.ch/en/about" },
+    ],
   });
 
   return (

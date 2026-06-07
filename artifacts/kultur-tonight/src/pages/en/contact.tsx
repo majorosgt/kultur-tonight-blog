@@ -10,7 +10,12 @@ export default function ContactPage() {
     title: "Contact KulturTonight — Get in Touch",
     description: "Contact the KulturTonight team — Geneva's cultural discovery platform for opera, theatre, jazz, and classical music.",
     canonical: "/en/contact",
-    noindex: true,
+    noindex: false,
+    alternates: [
+      { lang: "en", url: "https://kulturtonight.ch/en/contact" },
+      { lang: "fr", url: "https://kulturtonight.ch/fr/contact" },
+      { lang: "x-default", url: "https://kulturtonight.ch/en/contact" },
+    ],
   });
 
   return (
