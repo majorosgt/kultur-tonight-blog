@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { venueSchema } from "@/lib/schema";
+import { buildAlternates } from "@/lib/i18n";
 import { venues } from "@/content/venues";
 import { events } from "@/content/events";
 import { Badge } from "@/components/ui/badge";
@@ -42,8 +43,9 @@ export default function VenueDetailPage() {
     description: venue.description,
     ogTitle: `${venue.name} | KulturTonight Geneva`,
     ogDescription: venue.description,
-    canonical: `https://kulturtonight.com/en/geneva/venues/${venue.slug}`,
-    jsonLd: venueSchema(venue),
+    canonical: `https://kulturtonight.ch/en/geneva/venues/${venue.slug}`,
+    alternates: buildAlternates(`/en/geneva/venues/${venue.slug}`),
+    jsonLd: venueSchema(venue, `/en/geneva/venues/${venue.slug}`),
   });
 
   return (

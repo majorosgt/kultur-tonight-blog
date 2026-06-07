@@ -18,7 +18,7 @@ export default function FrBlogGenevaCeWeekendPage() {
   useSEO({
     title: "Que Faire à Genève ce Week-end — Sorties Culturelles | KulturTonight",
     description: "Le meilleur du théâtre, de l'opéra, des concerts et des événements culturels à Genève ce week-end. Sélectionné par l'équipe éditoriale de KulturTonight.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/ce-weekend",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/ce-weekend",
     alternates: buildAlternatesFr("/fr/blog/geneve/ce-weekend"),
   });
 

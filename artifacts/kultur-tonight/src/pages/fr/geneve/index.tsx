@@ -39,7 +39,7 @@ export default function FrGenevePage() {
     description: "Explorez la scène culturelle genevoise. Théâtre, concerts, opéra, jazz et plus — curatés pour les curieux de culture.",
     ogTitle: "Genève Culturelle | KulturTonight",
     ogDescription: "Votre porte d'entrée vers le cœur culturel de Genève — événements, lieux et guides.",
-    canonical: "https://kulturtonight.com/fr/geneve",
+    canonical: "https://kulturtonight.ch/fr/geneve",
     alternates: buildAlternatesFr("/fr/geneve"),
   });
 

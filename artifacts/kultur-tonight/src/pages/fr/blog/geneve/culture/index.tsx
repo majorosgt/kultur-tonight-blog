@@ -18,7 +18,7 @@ export default function FrBlogGenevaCulturePage() {
   useSEO({
     title: "Culture Genevoise — Essais et Réflexions | KulturTonight",
     description: "Essais, réflexions et lectures approfondies sur la vie culturelle genevoise — les idées, traditions et conversations qui façonnent l'identité artistique de la ville.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/culture",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/culture",
     alternates: buildAlternatesFr("/fr/blog/geneve/culture"),
   });
 

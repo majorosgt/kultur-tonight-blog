@@ -49,7 +49,7 @@ export default function FrEventsListPage() {
     description: "Retrouvez tous les événements culturels à Genève — théâtre, opéra, concerts, jazz et représentations familiales. Curatés par KulturTonight.",
     ogTitle: "Événements Culturels à Genève | KulturTonight",
     ogDescription: "Le programme complet des événements culturels à Genève en ce moment.",
-    canonical: "https://kulturtonight.com/fr/geneve/evenements",
+    canonical: "https://kulturtonight.ch/fr/geneve/evenements",
     alternates: buildAlternatesFr("/fr/geneve/evenements"),
   });
 

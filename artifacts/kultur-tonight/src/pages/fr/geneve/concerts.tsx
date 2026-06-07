@@ -40,7 +40,7 @@ export default function FrConcertsPage() {
     description: "Retrouvez les meilleurs concerts à Genève — classique, jazz, rock et musiques contemporaines dans les plus belles salles de la ville.",
     ogTitle: "Concerts à Genève | KulturTonight",
     ogDescription: "La musique live à Genève — symphonies, jazz et concerts contemporains.",
-    canonical: "https://kulturtonight.com/fr/geneve/concerts",
+    canonical: "https://kulturtonight.ch/fr/geneve/concerts",
     alternates: buildAlternatesFr("/fr/geneve/concerts"),
   });
 

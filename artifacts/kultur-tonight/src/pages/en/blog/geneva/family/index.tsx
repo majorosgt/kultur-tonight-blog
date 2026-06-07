@@ -17,7 +17,7 @@ export default function BlogGenevaFamilyPage() {
   useSEO({
     title: "Family Cultural Activities in Geneva | KulturTonight",
     description: "The best family-friendly cultural activities in Geneva — theatre, concerts, museum visits, and cultural experiences for children and parents to enjoy together.",
-    canonical: "https://kulturtonight.com/en/blog/geneva/family",
+    canonical: "https://kulturtonight.ch/en/blog/geneva/family",
   });
 
   return (

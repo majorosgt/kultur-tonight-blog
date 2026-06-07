@@ -29,7 +29,7 @@ export default function FamilyEventsPage() {
     description: "Discover the best family-friendly cultural activities, theatre, and concerts in Geneva. Perfect for weekends with children.",
     ogTitle: "Family Cultural Events in Geneva | KulturTonight",
     ogDescription: "Inspiring cultural experiences for the whole family in Geneva — theatre, concerts, and interactive events.",
-    canonical: "https://kulturtonight.com/en/geneva/family-events",
+    canonical: "https://kulturtonight.ch/en/geneva/family-events",
   });
 
   const familyEvents = events.filter((e) => e.category === "family");

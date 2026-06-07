@@ -17,7 +17,7 @@ export default function BlogGenevaThisWeekendPage() {
   useSEO({
     title: "What to Do in Geneva This Weekend — Cultural Picks | KulturTonight",
     description: "The best theatre, opera, concerts, and cultural events in Geneva this weekend. Curated by the KulturTonight editorial team.",
-    canonical: "https://kulturtonight.com/en/blog/geneva/this-weekend",
+    canonical: "https://kulturtonight.ch/en/blog/geneva/this-weekend",
   });
 
   return (

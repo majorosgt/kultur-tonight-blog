@@ -18,7 +18,7 @@ export default function FrBlogGenevaFamillePage() {
   useSEO({
     title: "Activités Culturelles en Famille à Genève | KulturTonight",
     description: "Les meilleures activités culturelles en famille à Genève — théâtre, concerts, visites de musées et expériences culturelles pour enfants et parents.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/famille",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/famille",
     alternates: buildAlternatesFr("/fr/blog/geneve/famille"),
   });
 

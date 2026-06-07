@@ -17,7 +17,7 @@ export default function BlogGenevaThisWeekPage() {
   useSEO({
     title: "What's On in Geneva This Week — Cultural Picks | KulturTonight",
     description: "The best theatre, opera, concerts, and cultural events in Geneva this week. Updated weekly by the KulturTonight editorial team.",
-    canonical: "https://kulturtonight.com/en/blog/geneva/this-week",
+    canonical: "https://kulturtonight.ch/en/blog/geneva/this-week",
   });
 
   return (

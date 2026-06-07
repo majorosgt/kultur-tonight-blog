@@ -38,7 +38,7 @@ export default function FrFamilyEventsPage() {
     description: "Découvrez les meilleures sorties culturelles en famille à Genève — spectacles, concerts et événements pour les enfants et les parents.",
     ogTitle: "Sorties en Famille à Genève | KulturTonight",
     ogDescription: "Art et spectacles inspirants pour toute la famille à Genève.",
-    canonical: "https://kulturtonight.com/fr/geneve/sorties-en-famille",
+    canonical: "https://kulturtonight.ch/fr/geneve/sorties-en-famille",
     alternates: buildAlternatesFr("/fr/geneve/sorties-en-famille"),
   });
 

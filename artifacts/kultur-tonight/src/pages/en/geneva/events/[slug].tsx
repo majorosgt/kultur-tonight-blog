@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { eventSchema } from "@/lib/schema";
+import { buildAlternates } from "@/lib/i18n";
 import { events } from "@/content/events";
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Ticket } from "lucide-react";
@@ -40,8 +41,9 @@ export default function EventDetailPage() {
     description: event.seoDescription,
     ogTitle: event.ogTitle,
     ogDescription: event.ogDescription,
-    canonical: `https://kulturtonight.com/en/geneva/events/${event.slug}`,
-    jsonLd: eventSchema(event),
+    canonical: `https://kulturtonight.ch/en/geneva/events/${event.slug}`,
+    alternates: buildAlternates(`/en/geneva/events/${event.slug}`),
+    jsonLd: eventSchema(event, `/en/geneva/events/${event.slug}`),
   });
 
   const relatedEvents = events

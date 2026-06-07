@@ -35,7 +35,7 @@ export default function VenuesListPage() {
     description: "Explore Geneva's finest cultural venues — from the Grand Théâtre to intimate jazz clubs. Find events and plan your visit.",
     ogTitle: "Cultural Venues in Geneva | KulturTonight",
     ogDescription: "Discover the stages, concert halls, and clubs that define Geneva's cultural identity.",
-    canonical: "https://kulturtonight.com/en/geneva/venues",
+    canonical: "https://kulturtonight.ch/en/geneva/venues",
   });
 
   return (

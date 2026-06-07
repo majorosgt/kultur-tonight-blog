@@ -4,7 +4,18 @@ import { Venue } from "../content/venues";
 import type { BlogArticle } from "../content/blog-guides";
 import { buildCanonical } from "./seo";
 
-export function articleSchema(guide: Guide) {
+const LOGO_URL = "https://kulturtonight.ch/assets/logo-mark.svg";
+
+const publisher = {
+  "@type": "Organization",
+  "name": "KulturTonight",
+  "logo": {
+    "@type": "ImageObject",
+    "url": LOGO_URL
+  }
+};
+
+export function articleSchema(guide: Guide, canonicalPath: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -15,17 +26,10 @@ export function articleSchema(guide: Guide) {
       "@type": "Organization",
       "name": "KulturTonight"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "KulturTonight",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://kulturtonight.com/logo.png"
-      }
-    },
+    "publisher": publisher,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": buildCanonical(`/en/blog/${guide.slug}`)
+      "@id": buildCanonical(canonicalPath)
     }
   };
 }
@@ -42,14 +46,7 @@ export function blogArticleSchema(article: BlogArticle, canonicalPath: string) {
       "@type": "Organization",
       "name": "KulturTonight"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "KulturTonight",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://kulturtonight.com/logo.png"
-      }
-    },
+    "publisher": publisher,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": buildCanonical(canonicalPath)
@@ -57,7 +54,7 @@ export function blogArticleSchema(article: BlogArticle, canonicalPath: string) {
   };
 }
 
-export function eventSchema(event: Event) {
+export function eventSchema(event: Event, canonicalPath: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Event",
@@ -77,18 +74,18 @@ export function eventSchema(event: Event) {
       "@type": "Offer",
       "priceCurrency": "CHF",
       "price": event.priceRange.split("-")[0],
-      "url": buildCanonical(`/en/geneva/events/${event.slug}`)
+      "url": buildCanonical(canonicalPath)
     }
   };
 }
 
-export function venueSchema(venue: Venue) {
+export function venueSchema(venue: Venue, canonicalPath: string) {
   return {
     "@context": "https://schema.org",
     "@type": venue.schemaType,
     "name": venue.name,
     "description": venue.description,
-    "url": buildCanonical(`/en/geneva/venues/${venue.slug}`),
+    "url": buildCanonical(canonicalPath),
     "address": {
       "@type": "PostalAddress",
       "streetAddress": venue.address.split(", ")[0],

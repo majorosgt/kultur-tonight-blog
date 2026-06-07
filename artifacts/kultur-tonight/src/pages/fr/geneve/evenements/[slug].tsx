@@ -41,9 +41,9 @@ export default function FrEventDetailPage() {
     description: event.seoDescription,
     ogTitle: event.ogTitle,
     ogDescription: event.ogDescription,
-    canonical: `https://kulturtonight.com/fr/geneve/evenements/${event.slug}`,
+    canonical: `https://kulturtonight.ch/fr/geneve/evenements/${event.slug}`,
     alternates: buildAlternatesFr(`/fr/geneve/evenements/${event.slug}`),
-    jsonLd: eventSchema(event),
+    jsonLd: eventSchema(event, `/fr/geneve/evenements/${event.slug}`),
   });
 
   const relatedEvents = eventsFr

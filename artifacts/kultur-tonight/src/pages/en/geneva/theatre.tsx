@@ -29,7 +29,7 @@ export default function TheatrePage() {
     description: "Explore the best theatre performances in Geneva. From Shakespeare to contemporary drama — discover Geneva's thriving theatre scene.",
     ogTitle: "Theatre in Geneva | KulturTonight",
     ogDescription: "The best theatre performances and venues in Geneva, curated for passionate audiences.",
-    canonical: "https://kulturtonight.com/en/geneva/theatre",
+    canonical: "https://kulturtonight.ch/en/geneva/theatre",
   });
 
   const theatreEvents = events.filter((e) => e.category === "theatre" || e.category === "opera");

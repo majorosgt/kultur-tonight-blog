@@ -27,7 +27,7 @@ export default function ThingsToDoPage() {
     description: "Discover the best cultural events, theatre, and concerts happening in Geneva this weekend. Curated by KulturTonight.",
     ogTitle: "Things to Do in Geneva This Weekend",
     ogDescription: "A curated guide to the best cultural events in Geneva this weekend.",
-    canonical: "https://kulturtonight.com/en/geneva/things-to-do-this-weekend",
+    canonical: "https://kulturtonight.ch/en/geneva/things-to-do-this-weekend",
   });
 
   const weekendEvents = events.filter((e) => e.date === "This Weekend");

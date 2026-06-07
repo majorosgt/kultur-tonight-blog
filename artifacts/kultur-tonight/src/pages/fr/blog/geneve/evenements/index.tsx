@@ -18,7 +18,7 @@ export default function FrBlogGenevaEvenementsPage() {
   useSEO({
     title: "Événements Culturels à Genève — Couverture Approfondie | KulturTonight",
     description: "Couverture approfondie des événements culturels les plus significatifs de Genève — premières, festivals et soirées marquantes au Grand Théâtre, Victoria Hall et au-delà.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/evenements",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/evenements",
     alternates: buildAlternatesFr("/fr/blog/geneve/evenements"),
   });
 

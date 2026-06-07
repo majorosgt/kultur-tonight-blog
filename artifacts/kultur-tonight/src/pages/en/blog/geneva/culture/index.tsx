@@ -17,7 +17,7 @@ export default function BlogGenevaCulturePage() {
   useSEO({
     title: "Geneva Culture — Essays and Reflections | KulturTonight",
     description: "Essays, reflections, and long reads on Geneva's cultural life — the ideas, traditions, and conversations that shape the city's artistic identity.",
-    canonical: "https://kulturtonight.com/en/blog/geneva/culture",
+    canonical: "https://kulturtonight.ch/en/blog/geneva/culture",
   });
 
   return (

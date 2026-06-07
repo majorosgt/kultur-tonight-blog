@@ -18,7 +18,7 @@ export default function FrBlogGenEvaCetteSemainePage() {
   useSEO({
     title: "Que Faire à Genève Cette Semaine — Sélection Culturelle | KulturTonight",
     description: "Le meilleur du théâtre, de l'opéra, des concerts et des événements culturels à Genève cette semaine. Sélection hebdomadaire par l'équipe éditoriale de KulturTonight.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/cette-semaine",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/cette-semaine",
     alternates: buildAlternatesFr("/fr/blog/geneve/cette-semaine"),
   });
 

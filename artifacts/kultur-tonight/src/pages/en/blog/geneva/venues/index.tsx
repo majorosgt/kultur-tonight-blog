@@ -17,7 +17,7 @@ export default function BlogGenevaVenuesPage() {
   useSEO({
     title: "Geneva Venue Spotlights — Cultural Places to Know | KulturTonight",
     description: "In-depth portraits of Geneva's most iconic cultural venues — Victoria Hall, Grand Théâtre, AMR Jazz Club, Théâtre du Léman and more.",
-    canonical: "https://kulturtonight.com/en/blog/geneva/venues",
+    canonical: "https://kulturtonight.ch/en/blog/geneva/venues",
   });
 
   return (

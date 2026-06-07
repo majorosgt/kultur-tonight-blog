@@ -38,7 +38,7 @@ export default function FrBlogPage() {
     description: "Guides culturels approfondis sur Genève — théâtre, concerts, sorties en famille et plus. Écrits par des passionnés de culture.",
     ogTitle: "KulturTonight Blog | Guides Culturels Genève",
     ogDescription: "Guides experts sur la culture genevoise — découvrez l'âme artistique de la ville à travers notre contenu éditorial.",
-    canonical: "https://kulturtonight.com/fr/blog",
+    canonical: "https://kulturtonight.ch/fr/blog",
     alternates: buildAlternatesFr("/fr/blog"),
   });
 

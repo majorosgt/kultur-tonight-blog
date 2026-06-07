@@ -24,7 +24,7 @@ export default function FrBlogGenevePage() {
   useSEO({
     title: "Blog Genève — Guides Culturels & Articles | KulturTonight",
     description: "Le hub éditorial complet de KulturTonight pour Genève — guides intemporels, portraits de lieux, sélections hebdomadaires, contenus saisonniers et essais culturels.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve",
     alternates: buildAlternatesFr("/fr/blog/geneve"),
   });
 

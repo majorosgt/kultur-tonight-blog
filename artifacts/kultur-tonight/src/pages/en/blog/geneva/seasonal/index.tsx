@@ -17,7 +17,7 @@ export default function BlogGenevaSeasonalPage() {
   useSEO({
     title: "Seasonal Cultural Guides for Geneva | KulturTonight",
     description: "What to see and do in Geneva, season by season — the best cultural events, festivals, and experiences at the Grand Théâtre, Victoria Hall, and throughout the year.",
-    canonical: "https://kulturtonight.com/en/blog/geneva/seasonal",
+    canonical: "https://kulturtonight.ch/en/blog/geneva/seasonal",
   });
 
   return (

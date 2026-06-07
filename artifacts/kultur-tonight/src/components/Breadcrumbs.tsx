@@ -15,7 +15,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
         "@type": "ListItem",
         "position": index + 1,
         "name": item.label,
-        "item": item.href ? `https://kulturtonight.com${item.href}` : undefined,
+        "item": item.href ? `https://kulturtonight.ch${item.href}` : undefined,
       })),
     };
 

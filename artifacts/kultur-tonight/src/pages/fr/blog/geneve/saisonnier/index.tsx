@@ -18,7 +18,7 @@ export default function FrBlogGenevaSaisonnierPage() {
   useSEO({
     title: "Guides Culturels Saisonniers de Genève | KulturTonight",
     description: "Ce qu'il faut voir et faire à Genève au fil des saisons — les meilleurs événements culturels, festivals et expériences tout au long de l'année.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/saisonnier",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/saisonnier",
     alternates: buildAlternatesFr("/fr/blog/geneve/saisonnier"),
   });
 

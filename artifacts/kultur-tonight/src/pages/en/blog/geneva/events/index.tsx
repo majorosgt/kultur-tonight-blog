@@ -17,7 +17,7 @@ export default function BlogGenevaEventArticlesPage() {
   useSEO({
     title: "Geneva Cultural Events — In-Depth Coverage | KulturTonight",
     description: "In-depth coverage of Geneva's most significant cultural events — premieres, festivals, and landmark evenings at the Grand Théâtre, Victoria Hall, and beyond.",
-    canonical: "https://kulturtonight.com/en/blog/geneva/events",
+    canonical: "https://kulturtonight.ch/en/blog/geneva/events",
   });
 
   return (

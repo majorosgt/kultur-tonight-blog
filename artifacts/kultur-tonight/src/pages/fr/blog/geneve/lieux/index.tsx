@@ -18,7 +18,7 @@ export default function FrBlogGenevaLieuxPage() {
   useSEO({
     title: "Portraits de Lieux Culturels à Genève | KulturTonight",
     description: "Portraits approfondis des lieux culturels les plus emblématiques de Genève — Victoria Hall, Grand Théâtre, AMR Jazz Club, Théâtre du Léman et bien d'autres.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/lieux",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/lieux",
     alternates: buildAlternatesFr("/fr/blog/geneve/lieux"),
   });
 

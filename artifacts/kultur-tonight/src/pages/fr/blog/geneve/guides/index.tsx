@@ -17,22 +17,22 @@ export default function FrBlogGenevaGuidesPage() {
   useSEO({
     title: "Guides Culturels Genève | KulturTonight Blog",
     description: "Guides approfondis sur le théâtre, la musique classique, le jazz et la vie culturelle à Genève — par des amateurs de culture.",
-    canonical: "https://kulturtonight.com/fr/blog/geneve/guides",
+    canonical: "https://kulturtonight.ch/fr/blog/geneve/guides",
     alternates: [
-      { lang: "en", url: "https://kulturtonight.com/en/blog/geneva/guides" },
-      { lang: "fr", url: "https://kulturtonight.com/fr/blog/geneve/guides" },
-      { lang: "x-default", url: "https://kulturtonight.com/en/blog/geneva/guides" },
+      { lang: "en", url: "https://kulturtonight.ch/en/blog/geneva/guides" },
+      { lang: "fr", url: "https://kulturtonight.ch/fr/blog/geneve/guides" },
+      { lang: "x-default", url: "https://kulturtonight.ch/en/blog/geneva/guides" },
     ],
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
       name: "Guides Culturels Genève",
       description: "Guides approfondis sur le théâtre, la musique classique, le jazz et la vie culturelle à Genève.",
-      url: "https://kulturtonight.com/fr/blog/geneve/guides",
+      url: "https://kulturtonight.ch/fr/blog/geneve/guides",
       publisher: {
         "@type": "Organization",
         name: "KulturTonight",
-        url: "https://kulturtonight.com",
+        url: "https://kulturtonight.ch",
       },
     },
   });

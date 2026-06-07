@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { articleSchema } from "@/lib/schema";
+import { buildAlternates } from "@/lib/i18n";
 import { guides } from "@/content/guides";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock } from "lucide-react";
@@ -39,8 +40,9 @@ export default function BlogDetailPage() {
     description: guide.seoDescription,
     ogTitle: guide.ogTitle,
     ogDescription: guide.ogDescription,
-    canonical: `https://kulturtonight.com/en/blog/${guide.slug}`,
-    jsonLd: articleSchema(guide),
+    canonical: `https://kulturtonight.ch/en/blog/${guide.slug}`,
+    alternates: buildAlternates(`/en/blog/${guide.slug}`),
+    jsonLd: articleSchema(guide, `/en/blog/${guide.slug}`),
   });
 
   const paragraphs = guide.body.split("\n\n").filter(Boolean);

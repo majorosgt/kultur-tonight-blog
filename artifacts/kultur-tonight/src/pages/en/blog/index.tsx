@@ -37,7 +37,7 @@ export default function BlogPage() {
     description: "In-depth cultural guides for Geneva — theatre, concerts, family events, and more. Written by passionate cultural insiders.",
     ogTitle: "KulturTonight Blog | Geneva Cultural Guides",
     ogDescription: "Expert cultural guides for Geneva — discover the city's artistic soul through our editorial content.",
-    canonical: "https://kulturtonight.com/en/blog",
+    canonical: "https://kulturtonight.ch/en/blog",
   });
 
   const featured = guides.slice(0, 3);

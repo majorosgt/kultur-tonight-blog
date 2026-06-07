@@ -29,7 +29,7 @@ export default function GenevaPage() {
     description: "Explore Geneva's vibrant cultural scene. Theatre, concerts, opera, jazz and more — curated for the culturally curious.",
     ogTitle: "Cultural Geneva | KulturTonight",
     ogDescription: "Your gateway to Geneva's cultural heartbeat — events, venues, and guides.",
-    canonical: "https://kulturtonight.com/en/geneva",
+    canonical: "https://kulturtonight.ch/en/geneva",
   });
 
   return (

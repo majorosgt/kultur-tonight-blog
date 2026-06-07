@@ -40,7 +40,7 @@ export default function EventsListPage() {
     description: "Browse all cultural events in Geneva — theatre, opera, concerts, jazz, and family performances. Curated by KulturTonight.",
     ogTitle: "Cultural Events in Geneva | KulturTonight",
     ogDescription: "The complete guide to cultural events happening in Geneva right now.",
-    canonical: "https://kulturtonight.com/en/geneva/events",
+    canonical: "https://kulturtonight.ch/en/geneva/events",
   });
 
   const filtered = activeFilter === "All"

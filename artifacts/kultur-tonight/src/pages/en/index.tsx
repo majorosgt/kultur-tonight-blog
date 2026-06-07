@@ -65,11 +65,11 @@ export default function EnHomePage() {
     description: "Discover theatre, concerts, opera and jazz in Geneva. Last-minute seats at –50% for KulturTonight members. Nightly drops at 21:00.",
     ogTitle: "KulturTonight | Geneva Cultural Events & Tickets",
     ogDescription: "Your premium guide to Geneva's cultural scene — theatre, concerts, opera, jazz. Never miss a great performance.",
-    canonical: "https://kulturtonight.com/en",
+    canonical: "https://kulturtonight.ch/en",
     alternates: [
-      { lang: "en", url: "https://kulturtonight.com/en" },
-      { lang: "fr", url: "https://kulturtonight.com/fr" },
-      { lang: "x-default", url: "https://kulturtonight.com/en" },
+      { lang: "en", url: "https://kulturtonight.ch/en" },
+      { lang: "fr", url: "https://kulturtonight.ch/fr" },
+      { lang: "x-default", url: "https://kulturtonight.ch/en" },
     ],
   });
 

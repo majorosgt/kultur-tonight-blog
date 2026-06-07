@@ -27,7 +27,7 @@ export default function BlogGenevaPage() {
   useSEO({
     title: "Geneva Blog — Cultural Guides & Articles | KulturTonight",
     description: "The complete KulturTonight editorial hub for Geneva — evergreen guides, venue spotlights, weekly picks, seasonal content, and cultural essays.",
-    canonical: "https://kulturtonight.com/en/blog/geneva",
+    canonical: "https://kulturtonight.ch/en/blog/geneva",
   });
 
   return (

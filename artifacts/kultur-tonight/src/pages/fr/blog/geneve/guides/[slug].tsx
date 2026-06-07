@@ -98,11 +98,11 @@ export default function FrBlogGenevaGuideArticlePage() {
   useSEO({
     title: guide.metaTitle ?? guide.title,
     description: guide.metaDescription ?? guide.subtitle,
-    canonical: `https://kulturtonight.com/fr/blog/geneve/guides/${guide.slug}`,
+    canonical: `https://kulturtonight.ch/fr/blog/geneve/guides/${guide.slug}`,
     alternates: [
-      { lang: "en", url: `https://kulturtonight.com/en/blog/geneva/guides/${enSlug}` },
-      { lang: "fr", url: `https://kulturtonight.com/fr/blog/geneve/guides/${slug}` },
-      { lang: "x-default", url: `https://kulturtonight.com/en/blog/geneva/guides/${enSlug}` },
+      { lang: "en", url: `https://kulturtonight.ch/en/blog/geneva/guides/${enSlug}` },
+      { lang: "fr", url: `https://kulturtonight.ch/fr/blog/geneve/guides/${slug}` },
+      { lang: "x-default", url: `https://kulturtonight.ch/en/blog/geneva/guides/${enSlug}` },
     ],
     jsonLd: {
       "@context": "https://schema.org",
@@ -115,14 +115,14 @@ export default function FrBlogGenevaGuideArticlePage() {
       author: {
         "@type": "Organization",
         name: "KulturTonight Éditorial",
-        url: "https://kulturtonight.com",
+        url: "https://kulturtonight.ch",
       },
       publisher: {
         "@type": "Organization",
         name: "KulturTonight",
-        url: "https://kulturtonight.com",
+        url: "https://kulturtonight.ch",
       },
-      url: `https://kulturtonight.com/fr/blog/geneve/guides/${guide.slug}`,
+      url: `https://kulturtonight.ch/fr/blog/geneve/guides/${guide.slug}`,
       inLanguage: "fr",
       about: {
         "@type": "City",

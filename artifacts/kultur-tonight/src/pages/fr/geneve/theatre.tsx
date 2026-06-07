@@ -38,7 +38,7 @@ export default function FrTheatrePage() {
     description: "Découvrez les meilleurs spectacles de théâtre à Genève. Productions contemporaines et classiques dans les plus grandes salles de la ville.",
     ogTitle: "Théâtre à Genève | KulturTonight",
     ogDescription: "Les meilleures pièces de théâtre à Genève — du Grand Théâtre aux scènes intimistes.",
-    canonical: "https://kulturtonight.com/fr/geneve/theatre",
+    canonical: "https://kulturtonight.ch/fr/geneve/theatre",
     alternates: buildAlternatesFr("/fr/geneve/theatre"),
   });
 

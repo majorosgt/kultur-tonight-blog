@@ -61,7 +61,7 @@ export function switchLocale(currentPath: string, to: Locale): string {
   return to === "fr" ? "/fr" : "/en";
 }
 
-const BASE = "https://kulturtonight.com";
+const BASE = "https://kulturtonight.ch";
 
 /** Build hreflang alternates from the canonical EN path */
 export function buildAlternates(enPath: string): Array<{ lang: string; url: string }> {

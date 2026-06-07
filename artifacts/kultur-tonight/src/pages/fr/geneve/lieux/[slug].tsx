@@ -43,9 +43,9 @@ export default function FrVenueDetailPage() {
     description: venue.description,
     ogTitle: `${venue.name} | KulturTonight Genève`,
     ogDescription: venue.description,
-    canonical: `https://kulturtonight.com/fr/geneve/lieux/${venue.slug}`,
+    canonical: `https://kulturtonight.ch/fr/geneve/lieux/${venue.slug}`,
     alternates: buildAlternatesFr(`/fr/geneve/lieux/${venue.slug}`),
-    jsonLd: venueSchema(venue),
+    jsonLd: venueSchema(venue, `/fr/geneve/lieux/${venue.slug}`),
   });
 
   return (

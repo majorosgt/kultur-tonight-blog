@@ -36,7 +36,7 @@ export default function FrVenuesListPage() {
     description: "Explorez les plus beaux lieux culturels de Genève — du Grand Théâtre aux clubs de jazz intimistes. Découvrez leur histoire et leur programmation.",
     ogTitle: "Lieux Culturels à Genève | KulturTonight",
     ogDescription: "Découvrez les scènes, salles de concert et clubs qui définissent l'identité culturelle de Genève.",
-    canonical: "https://kulturtonight.com/fr/geneve/lieux",
+    canonical: "https://kulturtonight.ch/fr/geneve/lieux",
     alternates: buildAlternatesFr("/fr/geneve/lieux"),
   });
 

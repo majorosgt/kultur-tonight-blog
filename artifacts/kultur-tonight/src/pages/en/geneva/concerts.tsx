@@ -29,7 +29,7 @@ export default function ConcertsPage() {
     description: "Discover the best live concerts in Geneva — from orchestral masterpieces at Victoria Hall to intimate jazz nights at AMR.",
     ogTitle: "Concerts in Geneva | KulturTonight",
     ogDescription: "The finest live music in Geneva, from classical symphonies to late-night jazz.",
-    canonical: "https://kulturtonight.com/en/geneva/concerts",
+    canonical: "https://kulturtonight.ch/en/geneva/concerts",
   });
 
   const concertEvents = events.filter((e) => e.category === "concerts" || e.category === "jazz");

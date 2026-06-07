@@ -40,9 +40,9 @@ export default function FrBlogDetailPage() {
     description: guide.seoDescription,
     ogTitle: guide.ogTitle,
     ogDescription: guide.ogDescription,
-    canonical: `https://kulturtonight.com/fr/blog/${guide.slug}`,
+    canonical: `https://kulturtonight.ch/fr/blog/${guide.slug}`,
     alternates: buildAlternatesFr(`/fr/blog/${guide.slug}`),
-    jsonLd: articleSchema(guide),
+    jsonLd: articleSchema(guide, `/fr/blog/${guide.slug}`),
   });
 
   const paragraphs = guide.body.split("\n\n").filter(Boolean);
