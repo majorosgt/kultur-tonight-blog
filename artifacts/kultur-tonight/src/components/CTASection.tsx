@@ -7,7 +7,7 @@ interface CTASectionProps {
   variant?: "hero" | "mid" | "footer-cta";
   title: string;
   subtitle: string;
-  primaryCta: { text: string; href: string };
+  primaryCta: { text: string; href: string; target?: string; rel?: string };
   secondaryCta?: { text: string; href: string };
   bgStyle?: CSSProperties;
 }
@@ -68,10 +68,17 @@ export function CTASection({ variant = "mid", title, subtitle, primaryCta, secon
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 w-full max-w-md mx-auto sm:max-w-none">
             <Button asChild size="lg" className="w-full sm:w-auto bg-gold-gradient text-black hover:opacity-90 border-none rounded-none font-sans uppercase tracking-widest text-sm px-10 h-14 relative overflow-hidden group">
-              <Link href={primaryCta.href}>
-                <span className="relative z-10">{primaryCta.text}</span>
-                <div className="absolute inset-0 -translate-x-full bg-white/20 skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
-              </Link>
+              {primaryCta.target ? (
+                <a href={primaryCta.href} target={primaryCta.target} rel={primaryCta.rel}>
+                  <span className="relative z-10">{primaryCta.text}</span>
+                  <div className="absolute inset-0 -translate-x-full bg-white/20 skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                </a>
+              ) : (
+                <Link href={primaryCta.href}>
+                  <span className="relative z-10">{primaryCta.text}</span>
+                  <div className="absolute inset-0 -translate-x-full bg-white/20 skew-x-12 group-hover:animate-[shimmer_1.5s_infinite]"></div>
+                </Link>
+              )}
             </Button>
             
             {secondaryCta && (

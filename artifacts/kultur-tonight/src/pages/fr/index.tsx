@@ -199,8 +199,8 @@ export default function FrHomePage() {
         <CTASection
           variant="hero"
           title="Le rideau se lève dans deux heures. Vous venez ?"
-          subtitle="KulturTonight révèle les places de dernière minute pour les spectacles les plus convoités de Genève — souvent quelques heures seulement avant le lever de rideau. Ne manquez plus jamais un chef-d'œuvre."
-          primaryCta={{ text: "Les événements de ce soir", href: "/fr/geneve/evenements" }}
+          subtitle="Les places les plus recherchées de Genève — disponibles à –50%, quelques heures avant le lever de rideau. L'accès anticipé ouvre bientôt. Soyez parmi les premiers."
+          primaryCta={{ text: "Les événements de ce soir", href: "https://www.kulturtonight.ch/fr", target: "_blank", rel: "noopener noreferrer" }}
           secondaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
           bgStyle={{
             background: "linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80')",

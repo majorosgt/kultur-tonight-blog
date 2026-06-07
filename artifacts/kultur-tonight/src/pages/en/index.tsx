@@ -197,8 +197,8 @@ export default function EnHomePage() {
         <CTASection
           variant="hero"
           title="The curtain rises in two hours. Are you in?"
-          subtitle="KulturTonight surfaces last-minute seats to Geneva's most coveted performances — often just hours before the curtain rises. Never miss a masterpiece again."
-          primaryCta={{ text: "Browse Tonight's Events", href: "/en/geneva/events" }}
+          subtitle="Geneva's most coveted seats — released at –50%, just hours before curtain. Early access opens soon. Be first in line."
+          primaryCta={{ text: "Browse Tonight's Events", href: "https://www.kulturtonight.ch/en", target: "_blank", rel: "noopener noreferrer" }}
           secondaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
           bgStyle={{
             background: "linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80')",
