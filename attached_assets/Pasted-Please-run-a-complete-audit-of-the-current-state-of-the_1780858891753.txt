@@ -1,0 +1,88 @@
+Please run a complete audit of the current state of the blog and content system and return a structured report covering all of the following:
+
+## 1. CONTENT FILES — EXISTENCE AND STATUS
+Check these files exist and report line count and status:
+- artifacts/kultur-tonight/src/content/venues.ts
+- artifacts/kultur-tonight/src/content/venues.fr.ts
+- artifacts/kultur-tonight/src/content/blog-guides.ts
+- artifacts/kultur-tonight/src/content/blog-guides.fr.ts
+
+For each file report:
+- Exists: yes/no
+- Line count
+- Number of items (venues or guides)
+- All slugs present
+
+## 2. BLOG PAGES — EXISTENCE AND STATUS
+Check these page files exist:
+- artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/index.tsx
+- artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/[slug].tsx
+- artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/index.tsx
+- artifacts/kultur-tonight/src/pages/fr/blog/geneve/guides/[slug].tsx
+
+For each report:
+- Exists: yes/no
+- What components it imports
+- What data it renders
+
+## 3. ROUTING — APP.TSX
+List ALL current routes in App.tsx in order. Flag any missing routes for:
+- /en/blog/geneva/guides
+- /en/blog/geneva/guides/:slug
+- /fr/blog/geneve/guides
+- /fr/blog/geneve/guides/:slug
+- /en/geneva/venues/:slug
+- /fr/geneve/lieux/:slug
+
+## 4. VENUE DETAIL PAGES
+Check these files exist and report their structure:
+- artifacts/kultur-tonight/src/pages/en/geneva/venues/[slug].tsx
+- artifacts/kultur-tonight/src/pages/fr/geneve/lieux/[slug].tsx
+
+For each report:
+- Exists: yes/no
+- Does it render: longDescription, history, highlights, CTA block
+- Does it import from venues.ts / venues.fr.ts correctly
+
+## 5. SEO AUDIT
+For each of these pages, report the current SEO implementation:
+- artifacts/kultur-tonight/src/pages/en/index.tsx (homepage)
+- artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/index.tsx
+- artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/[slug].tsx
+
+For each report:
+- Is there a <title> tag or helmet/head component?
+- Is there a meta description?
+- Is there a canonical URL?
+- Is there an hreflang tag pointing to FR version?
+- Is there JSON-LD schema markup?
+- Are h1, h2 tags used correctly?
+
+## 6. MISSING SEO ELEMENTS
+Report specifically:
+- Which pages are missing meta titles
+- Which pages are missing meta descriptions
+- Which pages are missing canonical URLs
+- Which pages are missing hreflang tags
+- Which pages are missing JSON-LD schema
+- Whether robots.txt exists and what it contains
+- Whether sitemap.xml exists and what it contains
+
+## 7. BLOG GUIDE ARTICLE STRUCTURE
+Open artifacts/kultur-tonight/src/pages/en/blog/geneva/guides/[slug].tsx and report:
+- How is the body text rendered? (dangerouslySetInnerHTML, split by newline, markdown parser, etc.)
+- Are ## headings converted to h2 elements?
+- Is there a gold color applied to h2 headings?
+- Is the CTA block rendered at the bottom?
+- Is NewsletterSignup rendered at the bottom?
+- Is there a hero image?
+
+## 8. NAVIGATION LINKS TO BLOG
+Check if the blog is linked from:
+- Main header navigation (Header.tsx)
+- Homepage direction boxes
+- Footer
+
+Report the exact href values used for blog links.
+
+Return the complete audit as a structured report with clear YES/NO answers and specific details for each item.
