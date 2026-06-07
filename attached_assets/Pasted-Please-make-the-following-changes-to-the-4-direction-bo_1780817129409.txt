@@ -1,0 +1,57 @@
+Please make the following changes to the 4 direction boxes section only in artifacts/kultur-tonight/src/pages/en/index.tsx and artifacts/kultur-tonight/src/pages/fr/index.tsx. Do not change anything else.
+
+## 1. REPLACE GRADIENTS WITH IMAGES
+Replace the gradient background in the top image area of each direction box with a real image + dark overlay. Use this pattern for each box:
+
+Box 1 TONIGHT:
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80')
+background-size: cover
+background-position: center
+
+Box 2 WEEKLY GUIDE:
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=800&q=80')
+background-size: cover
+background-position: center
+
+Box 3 EDITORIAL:
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80')
+background-size: cover
+background-position: center
+
+Box 4 VENUES:
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80')
+background-size: cover
+background-position: center
+
+## 2. IMAGE AREA HEIGHT
+Set the image area height to 220px minimum on desktop, 180px on mobile.
+
+## 3. ICON
+Keep the lucide-react icon centered in the image area, size 40px, white color, opacity 0.9.
+Add a subtle gold bottom border under the icon: 2px solid gold color token, width 32px, centered, margin-top 12px.
+
+## 4. HEADLINE SIZE
+Increase headline font size to 28px desktop, 22px mobile.
+Font: Cormorant Garamond, font-weight 400, white, line-height 1.2.
+
+## 5. GAP BETWEEN BOXES
+Set gap between the 4 boxes to 16px.
+
+## 6. TEXT AREA PADDING
+Set padding inside the text area (below image) to 24px on all sides.
+
+## 7. DESCRIPTION TEXT
+Font size: 15px, color: rgba(255,255,255,0.65), line-height 1.6.
+
+## 8. CTA LINK
+Font size: 12px, gold color, uppercase, letter-spacing 2px, margin-top 20px.
+Add a thin gold divider line above the CTA: 1px solid rgba(255,215,0,0.2), margin-bottom 16px.
+
+## 9. OVERALL BOX MIN HEIGHT
+Set minimum height of each complete box (image + text) to 420px.
+
+## 10. HOVER
+On hover: image area brightness increases to 1.15, transition 0.3s ease.
+Gold left border (3px) appears on the full box on hover.
+
+Do not change any other section or component.

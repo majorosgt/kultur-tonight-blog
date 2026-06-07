@@ -30,7 +30,7 @@ const directionBoxes = [
     cta: "Browse tonight's events →",
     href: "https://kulturtonight.ch/en/geneva/events/",
     external: true,
-    gradient: "linear-gradient(135deg, #1a0a02 0%, #3d1f00 100%)",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80')",
   },
   {
     icon: Mail,
@@ -40,7 +40,7 @@ const directionBoxes = [
     cta: "Get the weekly guide →",
     href: "#weekly-guide",
     external: false,
-    gradient: "linear-gradient(135deg, #020a1a 0%, #003d3d 100%)",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1512733596533-7b00ccf8ebaf?w=800&q=80')",
   },
   {
     icon: BookOpen,
@@ -50,7 +50,7 @@ const directionBoxes = [
     cta: "Read the blog →",
     href: "https://blog.kulturtonight.ch/en/geneva/",
     external: true,
-    gradient: "linear-gradient(135deg, #020a02 0%, #0d3d1a 100%)",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80')",
   },
   {
     icon: MapPin,
@@ -60,7 +60,7 @@ const directionBoxes = [
     cta: "Explore venues →",
     href: "/en/geneva/venues/",
     external: false,
-    gradient: "linear-gradient(135deg, #0a0214 0%, #1f003d 100%)",
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80')",
   },
 ];
 
@@ -107,15 +107,15 @@ export default function EnHomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
               className="grid grid-cols-2 lg:grid-cols-4"
-              style={{ gap: "1px" }}
+              style={{ gap: "16px" }}
             >
               {directionBoxes.map((box) => {
                 const Icon = box.icon;
                 const card = (
                   <div
-                    className="group relative overflow-hidden flex flex-col transition-all duration-300 hover:[filter:brightness(1.15)] cursor-pointer h-full"
+                    className="group relative overflow-hidden flex flex-col cursor-pointer h-full"
                     style={{
-                      minHeight: "380px",
+                      minHeight: "420px",
                       backgroundColor: "#080C18",
                       borderTop: "3px solid #E1C570",
                       borderLeft: "1px solid rgba(255,255,255,0.06)",
@@ -123,23 +123,28 @@ export default function EnHomePage() {
                       borderBottom: "1px solid rgba(255,255,255,0.06)",
                     }}
                   >
-                    {/* Gradient image area with icon */}
+                    {/* Image area with icon */}
                     <div
-                      className="relative flex items-center justify-center flex-shrink-0"
-                      style={{ height: "220px", background: box.gradient }}
+                      className="relative flex flex-col items-center justify-center flex-shrink-0 h-[180px] md:h-[220px] group-hover:[filter:brightness(1.15)] transition-[filter] duration-300"
+                      style={{
+                        background: box.imageBg,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
                     >
-                      <Icon size={48} style={{ color: "#E1C570", opacity: 0.8 }} />
+                      <Icon size={40} style={{ color: "white", opacity: 0.9 }} />
+                      <div style={{ width: "32px", height: "2px", backgroundColor: "#E1C570", marginTop: "12px" }} />
                     </div>
 
                     {/* Content area */}
-                    <div className="flex flex-col flex-grow" style={{ padding: "28px" }}>
+                    <div className="flex flex-col flex-grow" style={{ padding: "24px" }}>
                       <p style={{ color: "#E1C570", fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", fontWeight: 600, fontFamily: "Inter, sans-serif", marginBottom: "10px" }}>
                         {box.label}
                       </p>
                       <h3
                         style={{
                           fontFamily: "'Cormorant Garamond', serif",
-                          fontSize: "28px",
+                          fontSize: "clamp(22px, 2vw, 28px)",
                           color: "white",
                           fontWeight: 400,
                           lineHeight: 1.2,
@@ -149,11 +154,11 @@ export default function EnHomePage() {
                       >
                         {box.headline}
                       </h3>
-                      <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.7)", lineHeight: 1.6, flexGrow: 1, fontFamily: "Inter, sans-serif" }}>
+                      <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.65)", lineHeight: 1.6, flexGrow: 1, fontFamily: "Inter, sans-serif" }}>
                         {box.description}
                       </p>
                       <div style={{ marginTop: "20px" }}>
-                        <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: "16px" }}>
+                        <div style={{ borderTop: "1px solid rgba(255,215,0,0.2)", paddingTop: "16px" }}>
                           <span style={{ color: "#E1C570", fontSize: "12px", textTransform: "uppercase", letterSpacing: "2px", fontFamily: "Inter, sans-serif" }}>
                             {box.cta}
                           </span>
