@@ -37,13 +37,12 @@ export default function FrVenueDetailPage() {
   }
 
   const relatedEvents = eventsFr.filter((e) => e.venue.slug === venue.slug);
-  const paragraphs = venue.description.split("\n\n").filter(Boolean);
 
   useSEO({
-    title: venue.seoTitle,
-    description: venue.seoDescription,
-    ogTitle: venue.ogTitle,
-    ogDescription: venue.ogDescription,
+    title: `${venue.name} — Lieu culturel à Genève | KulturTonight`,
+    description: venue.description,
+    ogTitle: `${venue.name} | KulturTonight Genève`,
+    ogDescription: venue.description,
     canonical: `https://kulturtonight.com/fr/geneve/lieux/${venue.slug}`,
     alternates: buildAlternatesFr(`/fr/geneve/lieux/${venue.slug}`),
     jsonLd: venueSchema(venue),
@@ -64,6 +63,7 @@ export default function FrVenueDetailPage() {
           />
         </div>
 
+        {/* Header */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl">
@@ -102,12 +102,52 @@ export default function FrVenueDetailPage() {
                 </a>
               </div>
 
+              {/* Long description */}
               <div className="space-y-6 mb-16">
-                {paragraphs.map((para, i) => (
-                  <p key={i} className="text-lg text-foreground/80 leading-relaxed font-sans">
-                    {para.trim()}
-                  </p>
-                ))}
+                <p className="text-lg text-foreground/80 leading-relaxed font-sans">
+                  {venue.longDescription}
+                </p>
+              </div>
+
+              {/* Histoire */}
+              <div className="mb-12">
+                <h2
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "24px",
+                    color: "#E1C570",
+                    fontWeight: 400,
+                    marginBottom: "16px",
+                  }}
+                >
+                  Histoire
+                </h2>
+                <p className="text-base text-foreground/75 leading-relaxed font-sans">
+                  {venue.history}
+                </p>
+              </div>
+
+              {/* Ce qui le rend exceptionnel */}
+              <div className="mb-16">
+                <h2
+                  style={{
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontSize: "24px",
+                    color: "#E1C570",
+                    fontWeight: 400,
+                    marginBottom: "16px",
+                  }}
+                >
+                  Ce qui le rend exceptionnel
+                </h2>
+                <ul className="space-y-3">
+                  {venue.highlights.map((point, i) => (
+                    <li key={i} className="flex items-start gap-3 font-sans text-base text-foreground/75 leading-relaxed">
+                      <span style={{ color: "#E1C570", flexShrink: 0, marginTop: "2px" }}>•</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -142,10 +182,9 @@ export default function FrVenueDetailPage() {
         </div>
 
         <CTASection
-          title={`Billets pour ${venue.name}`}
-          subtitle="Recevez les meilleurs événements culturels des scènes les plus emblématiques de Genève, chaque semaine dans votre boîte mail."
-          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
+          title={`Des places de dernière minute à ${venue.name} — disponibles à 21h00 pour les membres KulturTonight.`}
+          subtitle=""
+          primaryCta={{ text: "Voir les disponibilités ce soir →", href: "https://kulturtonight.ch/fr/geneve/evenements/" }}
         />
 
         <div id="newsletter">
