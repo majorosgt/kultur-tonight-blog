@@ -111,10 +111,10 @@ export function NewsletterSignup({ variant = "weekly-guide" }: NewsletterSignupP
   return (
     <section
       id="weekly-guide"
-      className="relative py-24 overflow-hidden bg-[#0D1424]"
+      className="relative py-24 overflow-hidden"
+      style={{ backgroundColor: "#0d1117", borderTop: "1px solid rgba(255,215,0,0.15)" }}
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-primary/6 blur-[100px] rounded-full pointer-events-none" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gold-gradient opacity-20" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gold-gradient opacity-20" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

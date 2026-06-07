@@ -1,0 +1,50 @@
+Please make the following changes. Do not touch anything not listed here.
+
+## 1. HERO HEADLINE — FIX LINE BREAK
+In artifacts/kultur-tonight/src/pages/en/index.tsx and fr/index.tsx, find the hero headline and fix it to break on maximum 2 lines on desktop (viewport 1024px+).
+Add style: fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', lineHeight: '1.1', maxWidth: '600px' to the headline element.
+
+## 2. REMOVE ICONS FROM 4 DIRECTION BOXES
+In artifacts/kultur-tonight/src/pages/en/index.tsx and fr/index.tsx, remove the lucide-react icon and the gold divider line under the icon from all 4 direction boxes. Keep everything else exactly as is.
+
+## 3. DIRECTION BOX IMAGE AREA HEIGHT
+Increase the image area height of all 4 direction boxes to 220px on desktop, 180px on mobile.
+
+## 4. "THE CURTAIN RISES" SECTION — REPLACE DARK RED WITH IMAGE
+In artifacts/kultur-tonight/src/pages/en/index.tsx and fr/index.tsx, find the "The curtain rises in two hours" section. Replace the dark red/burgundy background with:
+background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80')
+background-size: cover
+background-position: center
+Keep all text and buttons exactly as they are.
+
+## 5. DIFFERENTIATE THE TWO NEWSLETTER SECTIONS
+Currently both "Every Friday morning" and "Get the Weekly Guide" sections have the same dark blue background. Fix:
+
+"Every Friday morning, 1,200 culturally curious Genevans open this email." section:
+- Add background image with dark overlay:
+background: linear-gradient(rgba(10,8,20,0.88), rgba(10,8,20,0.88)), url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1200&q=80')
+background-size: cover
+background-position: center top
+
+"Get the Weekly Geneva Culture Guide" form section:
+- Background: solid #0d1117 (very dark, slightly different from the navy above)
+- Add a subtle top border: 1px solid rgba(255,215,0,0.15)
+
+## 6. SUBTITLE LINE BREAK FIX — VENUES SECTION
+In artifacts/kultur-tonight/src/pages/en/index.tsx and fr/index.tsx, find the Geneva's Iconic Venues subtitle container and set:
+maxWidth: '720px'
+margin: '0 auto'
+textAlign: 'center'
+This must prevent the subtitle from breaking into more than 2 lines on desktop.
+
+## 7. "EXPLORE ALL GENEVA VENUES" LINK — CENTER ALIGN
+Change the "Explore all Geneva venues →" link from right-aligned to center-aligned below the 3 venue cards.
+Same for the FR version "Explorer tous les lieux genevois →"
+
+## 8. CTA BUTTON PRIORITY — CURTAIN RISES SECTION
+In the "The curtain rises" section, make these button style changes:
+- "BROWSE TONIGHT'S EVENTS": solid gold background (primary), dark text
+- "GET THE WEEKLY GUIDE": transparent background, gold border, gold text (secondary)
+This creates a clear visual hierarchy — tonight's events is the primary action.
+
+Do not change any other section, component, or file.

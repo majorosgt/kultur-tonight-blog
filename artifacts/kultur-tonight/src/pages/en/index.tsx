@@ -110,7 +110,6 @@ export default function EnHomePage() {
               style={{ gap: "16px" }}
             >
               {directionBoxes.map((box) => {
-                const Icon = box.icon;
                 const card = (
                   <div
                     className="group relative overflow-hidden flex flex-col cursor-pointer h-full"
@@ -123,18 +122,15 @@ export default function EnHomePage() {
                       borderBottom: "1px solid rgba(255,255,255,0.06)",
                     }}
                   >
-                    {/* Image area with icon */}
+                    {/* Image area */}
                     <div
-                      className="relative flex flex-col items-center justify-center flex-shrink-0 h-[180px] md:h-[220px] group-hover:[filter:brightness(1.15)] transition-[filter] duration-300"
+                      className="relative flex-shrink-0 h-[180px] md:h-[220px] group-hover:[filter:brightness(1.15)] transition-[filter] duration-300"
                       style={{
                         background: box.imageBg,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                       }}
-                    >
-                      <Icon size={40} style={{ color: "white", opacity: 0.9 }} />
-                      <div style={{ width: "32px", height: "2px", backgroundColor: "#E1C570", marginTop: "12px" }} />
-                    </div>
+                    />
 
                     {/* Content area */}
                     <div className="flex flex-col flex-grow" style={{ padding: "24px" }}>
@@ -201,8 +197,13 @@ export default function EnHomePage() {
           variant="hero"
           title="The curtain rises in two hours. Are you in?"
           subtitle="KulturTonight surfaces last-minute seats to Geneva's most coveted performances — often just hours before the curtain rises. Never miss a masterpiece again."
-          primaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Browse Tonight's Events", href: "/en/geneva/events" }}
+          primaryCta={{ text: "Browse Tonight's Events", href: "/en/geneva/events" }}
+          secondaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
+          bgStyle={{
+            background: "linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         />
 
         {/* Featured Venues */}
@@ -230,7 +231,7 @@ export default function EnHomePage() {
                 </motion.div>
               ))}
             </motion.div>
-            <div className="flex justify-end" style={{ marginTop: "24px" }}>
+            <div className="flex justify-center" style={{ marginTop: "24px" }}>
               <Link
                 href="/en/geneva/venues/"
                 style={{ color: "#E1C570", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}
@@ -247,6 +248,11 @@ export default function EnHomePage() {
           title="Every Friday morning, 1,200 culturally curious Genevans open this email."
           subtitle="The weekly Geneva Culture Guide — the finest events, described with the care they deserve. For those who live culture, not just consume it."
           primaryCta={{ text: "Get the weekly Geneva Culture Guide", href: "#weekly-guide" }}
+          bgStyle={{
+            background: "linear-gradient(rgba(10,8,20,0.88), rgba(10,8,20,0.88)), url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1200&q=80')",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+          }}
         />
 
         {/* Newsletter signup */}

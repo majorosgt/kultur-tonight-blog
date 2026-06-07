@@ -179,8 +179,8 @@ export function HomeHero() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.9, ease: "easeOut" }}
-            className="font-serif text-[clamp(2.6rem,6vw,5rem)] font-medium leading-[1.08] tracking-tight mb-6"
-            style={{ color: "#F8F5F0" }}
+            className="font-serif font-medium tracking-tight mb-6"
+            style={{ color: "#F8F5F0", fontSize: "clamp(2.5rem, 4vw, 3.5rem)", lineHeight: "1.1", maxWidth: "600px" }}
           >
             {lines.map((line, i) => {
               const words = line.split(" ");

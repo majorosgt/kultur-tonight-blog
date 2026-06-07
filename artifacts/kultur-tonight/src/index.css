@@ -151,7 +151,7 @@
 
 /* Featured venues section heading — subtitle max-width override */
 .venues-heading-wrap p {
-  max-width: 800px !important;
+  max-width: 720px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   text-align: center;

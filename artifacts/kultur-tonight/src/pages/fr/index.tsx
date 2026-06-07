@@ -112,7 +112,6 @@ export default function FrHomePage() {
               style={{ gap: "16px" }}
             >
               {directionBoxes.map((box) => {
-                const Icon = box.icon;
                 const card = (
                   <div
                     className="group relative overflow-hidden flex flex-col cursor-pointer h-full"
@@ -125,18 +124,15 @@ export default function FrHomePage() {
                       borderBottom: "1px solid rgba(255,255,255,0.06)",
                     }}
                   >
-                    {/* Image area with icon */}
+                    {/* Image area */}
                     <div
-                      className="relative flex flex-col items-center justify-center flex-shrink-0 h-[180px] md:h-[220px] group-hover:[filter:brightness(1.15)] transition-[filter] duration-300"
+                      className="relative flex-shrink-0 h-[180px] md:h-[220px] group-hover:[filter:brightness(1.15)] transition-[filter] duration-300"
                       style={{
                         background: box.imageBg,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                       }}
-                    >
-                      <Icon size={40} style={{ color: "white", opacity: 0.9 }} />
-                      <div style={{ width: "32px", height: "2px", backgroundColor: "#E1C570", marginTop: "12px" }} />
-                    </div>
+                    />
 
                     {/* Content area */}
                     <div className="flex flex-col flex-grow" style={{ padding: "24px" }}>
@@ -203,8 +199,13 @@ export default function FrHomePage() {
           variant="hero"
           title="Le rideau se lève dans deux heures. Vous venez ?"
           subtitle="KulturTonight révèle les places de dernière minute pour les spectacles les plus convoités de Genève — souvent quelques heures seulement avant le lever de rideau. Ne manquez plus jamais un chef-d'œuvre."
-          primaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
-          secondaryCta={{ text: "Les événements de ce soir", href: "/fr/geneve/evenements" }}
+          primaryCta={{ text: "Les événements de ce soir", href: "/fr/geneve/evenements" }}
+          secondaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
+          bgStyle={{
+            background: "linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         />
 
         {/* Featured Venues */}
@@ -232,7 +233,7 @@ export default function FrHomePage() {
                 </motion.div>
               ))}
             </motion.div>
-            <div className="flex justify-end" style={{ marginTop: "24px" }}>
+            <div className="flex justify-center" style={{ marginTop: "24px" }}>
               <Link
                 href="/fr/geneve/lieux/"
                 style={{ color: "#E1C570", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", fontFamily: "Inter, sans-serif" }}
@@ -249,6 +250,11 @@ export default function FrHomePage() {
           title="Chaque vendredi matin, 1 200 Genevois passionnés de culture ouvrent cet e-mail."
           subtitle="Le guide culturel hebdomadaire de Genève — les meilleurs événements, décrits avec le soin qu'ils méritent. Pour ceux qui vivent la culture, pas seulement qui la consomment."
           primaryCta={{ text: "Recevoir le guide culturel de Genève chaque semaine", href: "#weekly-guide" }}
+          bgStyle={{
+            background: "linear-gradient(rgba(10,8,20,0.88), rgba(10,8,20,0.88)), url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=1200&q=80')",
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+          }}
         />
 
         {/* Newsletter signup */}

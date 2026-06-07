@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { Link } from "wouter";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
@@ -8,9 +9,10 @@ interface CTASectionProps {
   subtitle: string;
   primaryCta: { text: string; href: string };
   secondaryCta?: { text: string; href: string };
+  bgStyle?: CSSProperties;
 }
 
-export function CTASection({ variant = "mid", title, subtitle, primaryCta, secondaryCta }: CTASectionProps) {
+export function CTASection({ variant = "mid", title, subtitle, primaryCta, secondaryCta, bgStyle }: CTASectionProps) {
   const getStyles = () => {
     switch (variant) {
       case "hero":
@@ -38,7 +40,7 @@ export function CTASection({ variant = "mid", title, subtitle, primaryCta, secon
   const styles = getStyles();
 
   return (
-    <section className={`${styles.container} ${styles.bg} border-y border-border relative`}>
+    <section className={`${styles.container} ${styles.bg} border-y border-border relative`} style={bgStyle}>
       {variant === "footer-cta" && (
         <>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
@@ -73,7 +75,7 @@ export function CTASection({ variant = "mid", title, subtitle, primaryCta, secon
             </Button>
             
             {secondaryCta && (
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-none border-primary/30 text-primary hover:bg-primary/5 hover:text-primary font-sans uppercase tracking-widest text-sm px-10 h-14 backdrop-blur-sm transition-all duration-300">
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-none border-[#E1C570]/70 text-[#E1C570] hover:bg-[#E1C570]/10 hover:text-[#E1C570] font-sans uppercase tracking-widest text-sm px-10 h-14 backdrop-blur-sm transition-all duration-300">
                 <Link href={secondaryCta.href}>{secondaryCta.text}</Link>
               </Button>
             )}
