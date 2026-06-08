@@ -1,0 +1,317 @@
+Please refactor the Events / Things to Do page in both English and French, following the KulturTonight blog brand voice.
+
+Strategic goal:
+The KulturTonight blog should become a premium Geneva culture SEO engine and editorial guide, not an event-ticketing marketplace. The page should not show individual event inventory, fake event cards, ticket prices, dates or “Tickets” CTAs. It should become an evergreen guide hub for people searching for cultural things to do in Geneva.
+
+Important brand voice:
+Write like a knowledgeable local friend with excellent taste — warm, confident, insider, never tourist-brochure, never a listings bot, never a discount site.
+Lead with atmosphere and cultural experience, not logistics.
+Use short, decisive English sentences.
+For French, do not translate literally. Rewrite naturally with a warmer, more sensory rhythm.
+Avoid generic travel clichés and avoid hard-sell language.
+
+Target pages:
+English:
+/en/geneva/events
+
+French:
+Use the existing French equivalent route if it exists. If the route is /fr/geneve/evenements or similar, update that page as well without breaking routing.
+
+ENGLISH VERSION
+
+Page positioning:
+Transform the English Events page from “Cultural Events in Geneva” into an evergreen SEO guide hub.
+
+H1:
+Things to Do in Geneva: Cultural Events, Festivals & Local Ideas
+
+Intro:
+Geneva rewards curiosity. Beyond the lake and the old town, the city has theatres, museums, concert halls, independent stages, family-friendly places and quiet cultural corners worth discovering. Start here for curated ideas, local context and cultural guides that help you choose where to go next.
+
+Guide card section title:
+Explore Geneva by Mood, Moment and Curiosity
+
+Guide cards:
+
+1. Label:
+WEEKEND GUIDE
+Title:
+Things to Do in Geneva This Weekend
+Description:
+A curated guide to cultural ideas for the weekend — theatre, exhibitions, concerts, family outings and places worth lingering in.
+CTA:
+Read guide →
+
+2. Label:
+FREE IDEAS
+Title:
+Free Cultural Things to Do in Geneva
+Description:
+Public art, museum moments, historic walks, open-air music and cultural places you can enjoy without planning too hard.
+CTA:
+Explore ideas →
+
+3. Label:
+MUSEUMS
+Title:
+Best Museums in Geneva
+Description:
+From art and history to science and international culture, Geneva’s museums offer more than a rainy-day backup plan.
+CTA:
+Read guide →
+
+4. Label:
+THEATRE
+Title:
+Best Theatres in Geneva
+Description:
+From the Grand Théâtre to intimate independent stages, discover where Geneva’s theatre scene comes alive.
+CTA:
+Read guide →
+
+5. Label:
+CLASSICAL MUSIC
+Title:
+Classical Music in Geneva
+Description:
+Where to hear orchestras, chamber music and recitals in some of the city’s most atmospheric halls.
+CTA:
+Read guide →
+
+6. Label:
+FAMILY CULTURE
+Title:
+Family-Friendly Cultural Activities
+Description:
+Museums, performances, workshops and gentle cultural outings designed for curious children and relaxed parents.
+CTA:
+View recommendations →
+
+7. Label:
+SEASONAL GUIDE
+Title:
+Geneva Cultural Calendar by Season
+Description:
+Summer festivals, winter traditions, spring exhibitions and autumn evenings — what to expect from Geneva’s cultural year.
+CTA:
+Explore the calendar →
+
+8. Label:
+RAINY DAY
+Title:
+Rainy Day Cultural Ideas in Geneva
+Description:
+Indoor places, quiet discoveries and cultural escapes for wet weekends, cold evenings and spontaneous city days.
+CTA:
+Read guide →
+
+SEO FAQ in English:
+
+FAQ title:
+Geneva Culture FAQ
+
+Questions and answers:
+
+1. What are the best cultural things to do in Geneva?
+Answer:
+Geneva is strongest when culture is approached as a mix of venues, neighbourhoods and moments. Start with the Grand Théâtre, Victoria Hall, the city’s museums, independent theatres, lakeside walks, seasonal festivals and smaller local spaces that give the city its rhythm.
+
+2. What can I do in Geneva this weekend?
+Answer:
+A good Geneva weekend can move from a museum visit to a concert, a theatre performance or a walk through the old town and Carouge. KulturTonight’s guides highlight cultural ideas that feel curated rather than comprehensive.
+
+3. Are there free cultural activities in Geneva?
+Answer:
+Yes. Geneva has public art, historic streets, free museum moments, cultural walks, open-air performances and neighbourhood discoveries that do not require a ticket. The best free ideas often depend on the season.
+
+4. What are the best cultural places to visit in Geneva when it rains?
+Answer:
+Museums, concert halls, theatres, galleries and covered historic passages are the best rainy-day cultural options in Geneva. Victoria Hall, the Grand Théâtre area and several museum districts are especially useful starting points.
+
+5. Where can families find cultural activities in Geneva?
+Answer:
+Families can explore museums, creative workshops, children’s performances, seasonal festivals and calm cultural walks. The best options are usually short, sensory and easy to combine with a café, park or lakeside stop.
+
+CTA section in English:
+Title:
+Get the Weekly Geneva Culture Guide
+
+Text:
+A concise cultural edit for Geneva — weekend ideas, venue stories, local guides and the kind of discoveries that make the city feel alive.
+
+Primary CTA:
+Get the Weekly Guide
+
+Secondary soft bridge CTA:
+Explore KulturTonight Club
+
+Bridge text:
+For selected cultural offers and early access, visit KulturTonight.
+
+Link:
+https://www.kulturtonight.ch/en
+
+
+FRENCH VERSION
+
+Important:
+Do not translate the English literally. Use natural French editorial rhythm. The tone should feel warmer and more sensory, but still premium, precise and not touristy.
+
+H1:
+Que faire à Genève : culture, sorties et idées locales
+
+Intro:
+Genève se découvre mieux quand on prend le temps de regarder au-delà des évidences. Théâtres, musées, salles de concert, scènes indépendantes, idées en famille, promenades culturelles et lieux discrets composent une ville plus riche qu’elle n’en a l’air. Cette page rassemble des guides choisis pour savoir où aller, quoi explorer et comment ressentir la ville autrement.
+
+Guide card section title:
+Explorer Genève selon l’envie du moment
+
+Guide cards:
+
+1. Label:
+CE WEEK-END
+Title:
+Que faire à Genève ce week-end
+Description:
+Une sélection d’idées culturelles pour le week-end — théâtre, expositions, concerts, sorties en famille et lieux où prendre le temps.
+CTA:
+Lire le guide →
+
+2. Label:
+IDÉES GRATUITES
+Title:
+Sorties culturelles gratuites à Genève
+Description:
+Art public, promenades historiques, musées, musique en plein air et lieux culturels à découvrir sans forcément réserver.
+CTA:
+Explorer les idées →
+
+3. Label:
+MUSÉES
+Title:
+Les meilleurs musées de Genève
+Description:
+Art, histoire, science, culture internationale — les musées genevois racontent la ville sous plusieurs angles.
+CTA:
+Lire le guide →
+
+4. Label:
+THÉÂTRE
+Title:
+Les meilleurs théâtres de Genève
+Description:
+Du Grand Théâtre aux scènes plus intimes, un guide pour comprendre où le théâtre genevois prend vie.
+CTA:
+Lire le guide →
+
+5. Label:
+MUSIQUE CLASSIQUE
+Title:
+Musique classique à Genève
+Description:
+Orchestres, récitals, musique de chambre et grandes salles — les lieux où écouter Genève autrement.
+CTA:
+Lire le guide →
+
+6. Label:
+EN FAMILLE
+Title:
+Sorties culturelles en famille
+Description:
+Musées, spectacles, ateliers et idées douces pour éveiller la curiosité des enfants sans compliquer la journée.
+CTA:
+Voir les idées →
+
+7. Label:
+SAISONS
+Title:
+Le calendrier culturel de Genève
+Description:
+Festivals d’été, traditions d’hiver, expositions de printemps et soirées d’automne — les temps forts culturels de l’année.
+CTA:
+Explorer le calendrier →
+
+8. Label:
+JOUR DE PLUIE
+Title:
+Idées culturelles quand il pleut à Genève
+Description:
+Musées, salles, galeries et refuges culturels pour les week-ends humides et les soirées spontanées.
+CTA:
+Lire le guide →
+
+SEO FAQ in French:
+
+FAQ title:
+Questions fréquentes sur la culture à Genève
+
+Questions and answers:
+
+1. Quelles sont les meilleures sorties culturelles à Genève ?
+Answer:
+Genève se prête particulièrement bien aux sorties qui mêlent lieux, quartiers et atmosphère. Le Grand Théâtre, Victoria Hall, les musées, les scènes indépendantes, les festivals saisonniers et les promenades culturelles offrent une belle première approche.
+
+2. Que faire à Genève ce week-end ?
+Answer:
+Un week-end à Genève peut commencer par une exposition, se poursuivre par un concert, une pièce de théâtre ou une promenade dans la vieille ville ou à Carouge. Les guides KulturTonight privilégient les idées choisies plutôt que les listes interminables.
+
+3. Existe-t-il des activités culturelles gratuites à Genève ?
+Answer:
+Oui. Genève propose de l’art public, des promenades historiques, certains moments de musées, des concerts en plein air et des découvertes de quartier accessibles sans billet. Les meilleures idées changent souvent avec la saison.
+
+4. Que faire à Genève quand il pleut ?
+Answer:
+Les musées, théâtres, salles de concert, galeries et passages couverts sont les meilleurs points de départ. Les quartiers autour du Grand Théâtre, de Victoria Hall et des grands musées permettent de composer facilement une sortie culturelle à l’abri.
+
+5. Où trouver des sorties culturelles en famille à Genève ?
+Answer:
+Les familles peuvent explorer des musées, ateliers créatifs, spectacles jeune public, festivals saisonniers et promenades culturelles courtes. Les meilleures sorties sont souvent simples, sensorielles et faciles à combiner avec une pause au bord du lac ou dans un café.
+
+CTA section in French:
+Title:
+Recevoir le guide culturel de Genève
+
+Text:
+Une sélection culturelle concise — idées du week-end, lieux à découvrir, histoires locales et inspirations pour mieux vivre Genève.
+
+Primary CTA:
+Recevoir le guide
+
+Secondary soft bridge CTA:
+Découvrir KulturTonight Club
+
+Bridge text:
+Pour certaines offres culturelles et un accès anticipé, découvrez KulturTonight.
+
+Link:
+https://www.kulturtonight.ch/fr
+
+
+UI / UX requirements:
+- Keep the current premium dark navy and gold identity.
+- Replace event cards with editorial guide cards.
+- No fake event inventory.
+- No fake prices.
+- No fake dates.
+- No “Tickets” CTA on this page.
+- Use “Read guide”, “Explore ideas”, “View recommendations” in English.
+- Use “Lire le guide”, “Explorer les idées”, “Voir les idées” in French.
+- Improve text contrast for readability.
+- Ensure card heights are consistent.
+- Keep the page elegant, editorial and easy to scan.
+
+SEO requirements:
+- Use one H1 per page.
+- Keep breadcrumbs.
+- Add or preserve canonical URLs.
+- Preserve EN/FR hreflang if already implemented.
+- Add FAQ schema for both English and French FAQ sections if the project supports structured data.
+- Add internal links to existing or planned guides where possible.
+- Ensure the build and prerender process still passes.
+
+Acceptance criteria:
+- The English and French pages are both updated.
+- The English and French copy are not literal translations but follow their respective language rhythm.
+- The page no longer looks like an event listing or ticketing inventory.
+- The page clearly functions as a Geneva culture / things-to-do SEO hub.
+- The build must pass.
