@@ -1,6 +1,6 @@
 {
   "buildCommand": "pnpm run build",
-  "outputDirectory": "dist/public",
+  "outputDirectory": "artifacts/kultur-tonight/dist/public",
   "installCommand": "pnpm install",
   "framework": null,
   "env": {
