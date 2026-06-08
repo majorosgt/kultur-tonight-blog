@@ -41,16 +41,18 @@ export function Header() {
   const navLinks =
     locale === "fr"
       ? [
-          { label: "Genève",      href: "/fr/geneve" },
-          { label: "Événements",  href: "/fr/geneve/evenements" },
-          { label: "Lieux",       href: "/fr/geneve/lieux" },
-          { label: "Blog",        href: "/fr/blog/geneve" },
+          { label: "Guides",          href: "/fr/blog/geneve/guides" },
+          { label: "Sorties",         href: "/fr/geneve/evenements" },
+          { label: "Lieux",           href: "/fr/geneve/lieux" },
+          { label: "Histoire locale", href: "/fr/blog/geneve/culture" },
+          { label: "Blog",            href: "/fr/blog/geneve" },
         ]
       : [
-          { label: "Geneva",  href: "/en/geneva" },
-          { label: "Events",  href: "/en/geneva/events" },
-          { label: "Venues",  href: "/en/geneva/venues" },
-          { label: "Blog",    href: "/en/blog/geneva" },
+          { label: "Guides",        href: "/en/blog/geneva/guides" },
+          { label: "Things to Do",  href: "/en/geneva/events" },
+          { label: "Venues",        href: "/en/geneva/venues" },
+          { label: "Local History", href: "/en/blog/geneva/culture" },
+          { label: "Blog",          href: "/en/blog/geneva" },
         ];
 
   const blogNavLinks =
@@ -72,8 +74,6 @@ export function Header() {
 
   const earlyAccessLabel = locale === "fr" ? "Recevoir le guide" : "Get the Weekly Guide";
   const joinLabel        = locale === "fr" ? "Recevoir le guide hebdomadaire" : "Get the Weekly Guide";
-  const tonightLabel     = locale === "fr" ? "Ce soir →" : "Tonight's Events →";
-  const tonightHref      = "https://www.kulturtonight.ch/fr";
   const blogHref         = locale === "fr" ? "/fr/blog/geneve" : "/en/blog/geneva";
   const cityHref         = locale === "fr" ? "/fr/geneve" : "/en/geneva";
   const cultureGuideLabel = locale === "fr" ? "Guide culturel de Genève" : "Geneva Culture Guide";
@@ -220,15 +220,6 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Tonight's Events — external homepage */}
-          <a
-            href={tonightHref}
-            className="flex items-center gap-1.5 text-xs font-sans tracking-widest uppercase font-medium px-4 py-2 bg-gold-gradient text-black hover:opacity-90 transition-opacity"
-            data-testid="button-tonight-events"
-          >
-            {tonightLabel}
-          </a>
-
           {/* Weekly guide CTA — scrolls to newsletter */}
           <Button
             onClick={scrollToNewsletter}
@@ -355,13 +346,6 @@ export function Header() {
                 transition={{ delay: 0.5 }}
                 className="pt-4 flex flex-col gap-3"
               >
-                <a
-                  href={tonightHref}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full bg-gold-gradient text-black font-sans text-sm font-medium tracking-widest uppercase h-12"
-                >
-                  {tonightLabel}
-                </a>
                 <Button
                   className="w-full bg-transparent text-foreground border border-border/60 rounded-none font-serif text-lg h-12"
                   onClick={() => {

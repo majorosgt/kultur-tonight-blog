@@ -1,7 +1,6 @@
 // Last updated: June 8, 2026
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Ticket, Mail, BookOpen, MapPin } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { HomeHero } from "@/components/HomeHero";
@@ -25,42 +24,38 @@ const itemVariants = {
 
 const directionBoxes = [
   {
-    icon: Ticket,
-    label: "CE SOIR",
-    headline: "Ce soir à Genève",
-    description: "Opéra, jazz, théâtre — dernières places à 21h00",
-    cta: "Voir les événements ce soir →",
-    href: "https://kulturtonight.ch/en/geneva/events/",
-    external: true,
+    label: "IDÉES DU WEEK-END",
+    headline: "Que faire ce week-end",
+    description: "Des idées culturelles choisies pour le week-end — expositions, concerts, théâtre, sorties en famille et lieux où prendre le temps.",
+    cta: "Explorer les idées →",
+    href: "/fr/geneve/que-faire-ce-weekend",
+    external: false,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80')",
   },
   {
-    icon: Mail,
-    label: "GUIDE HEBDOMADAIRE",
-    headline: "La Sélection du Vendredi",
-    description: "La meilleure semaine culturelle genevoise, chaque vendredi matin",
-    cta: "Recevoir le guide hebdomadaire →",
-    href: "#weekly-guide",
-    external: false,
-    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?fm=jpg&q=80&w=800&auto=format&fit=crop')",
-  },
-  {
-    icon: BookOpen,
-    label: "ÉDITORIAL",
-    headline: "Guides Culturels Genève",
-    description: "Portraits de lieux, guides de la ville et sélections hebdomadaires",
-    cta: "Lire le blog →",
+    label: "GUIDES",
+    headline: "Guides culturels de Genève",
+    description: "Des guides éditoriaux pour découvrir les théâtres, musées, salles de concert, quartiers et rythmes culturels de la ville.",
+    cta: "Lire les guides →",
     href: "/fr/blog/geneve/guides",
     external: false,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1562329265-95a6d7a83440?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
   {
-    icon: MapPin,
-    label: "LIEUX",
-    headline: "Les Scènes Iconiques de Genève",
-    description: "Du Victoria Hall à l'AMR Jazz Club — les lieux qui définissent la ville",
+    label: "HISTOIRE LOCALE",
+    headline: "Genève historique et cachée",
+    description: "Des histoires, des lieux et des recoins culturels pour regarder Genève au-delà des évidences.",
+    cta: "Découvrir les histoires →",
+    href: "/fr/blog/geneve/culture",
+    external: false,
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?fm=jpg&q=80&w=800&auto=format&fit=crop')",
+  },
+  {
+    label: "LIEUX CULTURELS",
+    headline: "Lieux culturels emblématiques",
+    description: "Des grandes salles historiques aux scènes indépendantes, explorez les lieux qui façonnent la vie culturelle genevoise.",
     cta: "Explorer les lieux →",
-    href: "/fr/geneve/lieux/",
+    href: "/fr/geneve/lieux",
     external: false,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1778975144936-dce6d71e29fa?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
@@ -68,10 +63,10 @@ const directionBoxes = [
 
 export default function FrHomePage() {
   useSEO({
-    title: "KulturTonight | La Plateforme Premium de Découverte Culturelle à Genève",
-    description: "Découvrez les meilleurs spectacles de théâtre, concerts et événements culturels à Genève. Billets de dernière minute et guides curatés pour les curieux de culture.",
-    ogTitle: "KulturTonight | Événements Culturels à Genève",
-    ogDescription: "Votre guide premium de la scène culturelle genevoise — théâtre, concerts, opéra, jazz. Ne manquez jamais un grand spectacle.",
+    title: "Guide culturel de Genève | KulturTonight",
+    description: "Découvrez les meilleures idées de sorties, les lieux culturels, les histoires locales et les inspirations du week-end à Genève — théâtre, concerts, musées et plus encore.",
+    ogTitle: "Guide culturel de Genève | KulturTonight",
+    ogDescription: "Votre guide premium de la scène culturelle genevoise — les meilleures sorties, lieux culturels, histoires locales et idées du week-end.",
     ogUrl: "https://kulturtonight.ch/fr",
     ogImage: "https://kulturtonight.ch/opengraph.jpg",
     twitterCard: "summary_large_image",
@@ -104,7 +99,7 @@ export default function FrHomePage() {
                   marginBottom: "20px",
                 }}
               >
-                Où voulez-vous aller ce soir ?
+                Que voulez-vous découvrir à Genève ?
               </h2>
               <div style={{ width: "60px", height: "2px", background: "#E1C570", margin: "0 auto" }} />
             </div>
@@ -200,12 +195,12 @@ export default function FrHomePage() {
           </div>
         </section>
 
-        {/* CTA — rideau */}
+        {/* CTA — culture guide */}
         <CTASection
           variant="hero"
-          title="Le rideau se lève dans deux heures. Vous venez ?"
-          subtitle="Les places les plus recherchées de Genève — disponibles à –50%, quelques heures avant le lever de rideau. L'accès anticipé ouvre bientôt. Soyez parmi les premiers."
-          primaryCta={{ text: "Les événements de ce soir", href: "https://www.kulturtonight.ch/fr", target: "_blank", rel: "noopener noreferrer" }}
+          title="Votre guide de la vie culturelle genevoise."
+          subtitle="Des lieux emblématiques aux idées du week-end — explorez les histoires, les endroits et les spectacles qui font la culture à Genève."
+          primaryCta={{ text: "Explorer les guides de Genève", href: "https://www.kulturtonight.ch/fr", target: "_blank", rel: "noopener noreferrer" }}
           secondaryCta={{ text: "Recevoir le guide hebdomadaire", href: "#weekly-guide" }}
           bgStyle={{
             background: "linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80')",

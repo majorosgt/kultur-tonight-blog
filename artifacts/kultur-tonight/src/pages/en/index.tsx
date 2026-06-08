@@ -23,38 +23,38 @@ const itemVariants = {
 
 const directionBoxes = [
   {
-    label: "THINGS TO DO",
-    headline: "Things to Do in Geneva",
-    description: "Opera, jazz, theatre and exhibitions — the best of the city's stages",
-    cta: "Explore things to do →",
-    href: "https://kulturtonight.ch/en/geneva/events/",
-    external: true,
+    label: "WEEKEND IDEAS",
+    headline: "Things to Do This Weekend",
+    description: "Curated cultural ideas for the weekend — exhibitions, concerts, theatre, family outings and places worth lingering in.",
+    cta: "Explore weekend ideas →",
+    href: "/en/geneva/things-to-do-this-weekend",
+    external: false,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80')",
   },
   {
-    label: "WEEKLY GUIDE",
-    headline: "The Friday Edit",
-    description: "Geneva's finest cultural week, curated every Friday morning",
-    cta: "Get the weekly guide →",
-    href: "#weekly-guide",
-    external: false,
-    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?fm=jpg&q=80&w=800&auto=format&fit=crop')",
-  },
-  {
-    label: "EDITORIAL",
+    label: "GUIDES",
     headline: "Geneva Cultural Guides",
-    description: "Venue spotlights, city guides, and weekly picks",
-    cta: "Read the blog →",
+    description: "Editorial guides to the city's theatres, museums, music venues, neighbourhoods and cultural rhythms.",
+    cta: "Read the guides →",
     href: "/en/blog/geneva/guides",
     external: false,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1562329265-95a6d7a83440?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
   {
+    label: "LOCAL HISTORY",
+    headline: "Historic & Hidden Geneva",
+    description: "Stories, places and cultural corners that reveal the city beyond the obvious landmarks.",
+    cta: "Discover local stories →",
+    href: "/en/blog/geneva/culture",
+    external: false,
+    imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?fm=jpg&q=80&w=800&auto=format&fit=crop')",
+  },
+  {
     label: "VENUES",
-    headline: "Geneva's Iconic Stages",
-    description: "From Victoria Hall to the AMR Jazz Club — the spaces that define the city",
+    headline: "Iconic Cultural Venues",
+    description: "From historic concert halls to independent stages, explore the places that shape Geneva's cultural life.",
     cta: "Explore venues →",
-    href: "/en/geneva/venues/",
+    href: "/en/geneva/venues",
     external: false,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1778975144936-dce6d71e29fa?fm=jpg&q=80&w=800&auto=format&fit=crop')",
   },
@@ -102,7 +102,7 @@ export default function EnHomePage() {
                   marginBottom: "20px",
                 }}
               >
-                Where would you like to explore in Geneva?
+                What would you like to discover in Geneva?
               </h2>
               <div style={{ width: "60px", height: "2px", background: "#E1C570", margin: "0 auto" }} />
             </div>
