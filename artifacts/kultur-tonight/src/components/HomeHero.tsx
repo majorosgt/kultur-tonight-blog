@@ -9,7 +9,7 @@ const copy = {
     eyebrow:    "Geneva Culture Guide",
     headline:   "Your next cultural\nnight out starts here",
     sub:        "Discover Geneva's best theatre, concerts, exhibitions and last-minute cultural experiences.",
-    primaryCta: { text: "Explore Events",        href: "/en/geneva/events" },
+    primaryCta: { text: "Explore Events",        href: "https://www.kulturtonight.ch/fr" },
     secondary:  { text: "Get the Weekly Guide",  href: "#weekly-guide" },
     categories: ["Theatre", "Concerts", "Exhibitions", "Dance"],
     valuePoints:[
@@ -23,7 +23,7 @@ const copy = {
     eyebrow:    "Guide culturel de Genève",
     headline:   "Votre prochaine soirée\nculturelle commence ici",
     sub:        "Découvrez les meilleurs théâtres, concerts, expositions et expériences culturelles de dernière minute à Genève.",
-    primaryCta: { text: "Explorer les événements",             href: "/fr/geneve/evenements" },
+    primaryCta: { text: "Explorer les événements",             href: "https://www.kulturtonight.ch/fr" },
     secondary:  { text: "Recevoir le guide hebdomadaire",      href: "#weekly-guide" },
     categories: ["Théâtre", "Concerts", "Expositions", "Danse"],
     valuePoints:[
@@ -240,7 +240,7 @@ export function HomeHero() {
                 filter: "blur(16px)",
               }}
             />
-            <Link
+            <a
               href={c.primaryCta.href}
               className="relative inline-flex items-center justify-center px-8 font-sans uppercase tracking-widest text-[11px] hover:opacity-90 transition-opacity duration-200 overflow-hidden"
               style={{
@@ -252,7 +252,7 @@ export function HomeHero() {
               data-testid="button-hero-primary-cta"
             >
               {c.primaryCta.text}
-            </Link>
+            </a>
             <Link
               href={c.secondary.href}
               className="relative inline-flex items-center justify-center px-8 font-sans uppercase tracking-widest text-[11px] hover:bg-white/5 transition-colors duration-200 backdrop-blur-sm"
