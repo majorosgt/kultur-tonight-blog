@@ -21,9 +21,9 @@ const copy = {
   },
   fr: {
     eyebrow:    "Guide culturel de Genève",
-    headline:   "Votre prochaine soirée\nculturelle commence ici",
-    sub:        "Découvrez les meilleurs théâtres, concerts, expositions et expériences culturelles de dernière minute à Genève.",
-    primaryCta: { text: "Explorer les événements",             href: "https://www.kulturtonight.ch/fr" },
+    headline:   "Guide culturel de Genève",
+    sub:        "Découvrez les meilleures idées de sorties, les lieux culturels, les histoires locales et les inspirations du week-end à Genève.",
+    primaryCta: { text: "Explorer les guides de Genève",       href: "https://www.kulturtonight.ch/fr" },
     secondary:  { text: "Recevoir le guide hebdomadaire",      href: "#weekly-guide" },
     categories: ["Théâtre", "Concerts", "Expositions", "Danse"],
     valuePoints:[

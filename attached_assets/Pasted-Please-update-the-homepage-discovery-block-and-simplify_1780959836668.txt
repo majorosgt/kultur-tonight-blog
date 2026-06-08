@@ -1,0 +1,185 @@
+Please update the homepage discovery block and simplify the header navigation in both English and French.
+
+Strategic goal:
+The KulturTonight blog should feel like a premium Geneva culture guide and SEO content engine, not an event-ticketing marketplace. Keep the experience elegant, local, editorial and easy to understand.
+
+Use the KulturTonight brand voice:
+- knowledgeable local friend with excellent taste
+- warm, confident, insider
+- never tourist-brochure
+- never a listings bot
+- never a discount site
+- lead with atmosphere and discovery, not logistics or urgency
+
+
+1. HOMEPAGE DISCOVERY BLOCK
+
+Current English heading:
+Where would you like to go tonight?
+
+Replace it with:
+
+ENGLISH — /en
+
+Section heading:
+What would you like to discover in Geneva?
+
+Please update the four cards so they match the new SEO/editorial positioning:
+
+Card 1:
+Label:
+WEEKEND IDEAS
+Title:
+Things to Do This Weekend
+Description:
+Curated cultural ideas for the weekend — exhibitions, concerts, theatre, family outings and places worth lingering in.
+CTA:
+Explore weekend ideas →
+
+Card 2:
+Label:
+GUIDES
+Title:
+Geneva Cultural Guides
+Description:
+Editorial guides to the city’s theatres, museums, music venues, neighbourhoods and cultural rhythms.
+CTA:
+Read the guides →
+
+Card 3:
+Label:
+LOCAL HISTORY
+Title:
+Historic & Hidden Geneva
+Description:
+Stories, places and cultural corners that reveal the city beyond the obvious landmarks.
+CTA:
+Discover local stories →
+
+Card 4:
+Label:
+VENUES
+Title:
+Iconic Cultural Venues
+Description:
+From historic concert halls to independent stages, explore the places that shape Geneva’s cultural life.
+CTA:
+Explore venues →
+
+
+FRENCH — existing French homepage route, likely /fr
+
+Current French equivalent heading should be replaced with:
+
+Section heading:
+Que voulez-vous découvrir à Genève ?
+
+Do not translate literally. Use natural French editorial rhythm.
+
+Card 1:
+Label:
+IDÉES DU WEEK-END
+Title:
+Que faire ce week-end
+Description:
+Des idées culturelles choisies pour le week-end — expositions, concerts, théâtre, sorties en famille et lieux où prendre le temps.
+CTA:
+Explorer les idées →
+
+Card 2:
+Label:
+GUIDES
+Title:
+Guides culturels de Genève
+Description:
+Des guides éditoriaux pour découvrir les théâtres, musées, salles de concert, quartiers et rythmes culturels de la ville.
+CTA:
+Lire les guides →
+
+Card 3:
+Label:
+HISTOIRE LOCALE
+Title:
+Genève historique et cachée
+Description:
+Des histoires, des lieux et des recoins culturels pour regarder Genève au-delà des évidences.
+CTA:
+Découvrir les histoires →
+
+Card 4:
+Label:
+LIEUX CULTURELS
+Title:
+Lieux culturels emblématiques
+Description:
+Des grandes salles historiques aux scènes indépendantes, explorez les lieux qui façonnent la vie culturelle genevoise.
+CTA:
+Explorer les lieux →
+
+
+2. HEADER NAVIGATION
+
+Please simplify the header navigation.
+
+The English header should use exactly these main menu items:
+
+Guides
+Things to Do
+Venues
+Local History
+Blog
+Weekly Guide
+
+The French header should use these equivalents:
+
+Guides
+Sorties
+Lieux
+Histoire locale
+Blog
+Guide hebdomadaire
+
+Important:
+- Keep the navigation simple and uncluttered.
+- Remove or de-emphasize “Tonight’s Events” from the primary blog navigation.
+- Remove duplicate or confusing items such as repeated “Geneva” labels if they make the header feel crowded.
+- Keep language switcher EN / FR.
+- Keep the KulturTonight logo.
+- The header should still link clearly to the main content areas.
+- If there is a primary CTA button in the header, use:
+  EN: Get the Weekly Guide
+  FR: Recevoir le guide
+- Do not use “Tickets” as a primary header CTA on the blog.
+
+
+3. UI / UX REQUIREMENTS
+
+- Keep the premium dark navy / gold visual identity.
+- Keep the layout elegant and editorial.
+- Ensure the new heading fits well on desktop and mobile.
+- Card titles and descriptions must remain readable on dark backgrounds.
+- Avoid overly urgent ticketing language in this homepage block: no “last seats”, “released at 21:00”, “–50%”, “tickets”, or fake event inventory language.
+- Keep spacing consistent between cards.
+- Ensure mobile order remains logical:
+  1. Things to Do This Weekend
+  2. Geneva Cultural Guides
+  3. Historic & Hidden Geneva
+  4. Iconic Cultural Venues
+
+
+4. SEO / TECHNICAL REQUIREMENTS
+
+- Do not break routing.
+- Do not break the French version.
+- Preserve prerendering.
+- Preserve sitemap and hreflang if already implemented.
+- Ensure the build passes.
+- Keep only one H1 per page. This discovery block heading should not become an H1 if the page hero already has one.
+
+
+Acceptance criteria:
+- English homepage shows: “What would you like to discover in Geneva?”
+- French homepage shows: “Que voulez-vous découvrir à Genève ?”
+- Header navigation is simplified in both languages.
+- The blog feels more like a Geneva culture guide and less like an event-ticketing page.
+- Build passes successfully.
