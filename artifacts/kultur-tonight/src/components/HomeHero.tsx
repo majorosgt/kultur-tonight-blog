@@ -7,9 +7,9 @@ import { detectLocale } from "@/lib/i18n";
 const copy = {
   en: {
     eyebrow:    "Geneva Culture Guide",
-    headline:   "Your next cultural\nnight out starts here",
-    sub:        "Discover Geneva's best theatre, concerts, exhibitions and last-minute cultural experiences.",
-    primaryCta: { text: "Explore Events",        href: "https://www.kulturtonight.ch/fr" },
+    headline:   "Geneva Culture Guide",
+    sub:        "Discover the best things to do, cultural places, local stories and weekend ideas in Geneva.",
+    primaryCta: { text: "Explore Geneva Guides", href: "https://www.kulturtonight.ch/fr" },
     secondary:  { text: "Get the Weekly Guide",  href: "#weekly-guide" },
     categories: ["Theatre", "Concerts", "Exhibitions", "Dance"],
     valuePoints:[

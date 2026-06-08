@@ -1,0 +1,117 @@
+Please refactor the Events page of the KulturTonight SEO blog.
+
+Strategic goal:
+The blog should function as a Geneva culture SEO engine and editorial guide, not as an event-ticketing marketplace. The Events page should no longer show individual event cards or ticket CTAs. It should become an evergreen “Things to Do in Geneva” guide hub that can rank on Google and internally link to KulturTonight content.
+
+Target page:
+English Events page, currently at:
+/en/geneva/events
+
+New positioning:
+Transform this page from “Cultural Events in Geneva” into:
+
+H1:
+Things to Do in Geneva: Cultural Events, Festivals & Local Ideas
+
+Intro copy:
+Discover Geneva’s cultural side through curated guides to theatres, museums, concerts, family activities, local festivals, seasonal highlights and hidden cultural places.
+
+Important:
+Remove the current individual event cards such as Swan Lake, Mahler’s Symphony, Hamlet, etc.
+Remove event-specific details such as exact dates, ticket prices, “From CHF”, “This Weekend” badges, and “Tickets” CTAs.
+This page should not look like an inventory of events.
+
+Replace the current event grid with editorial SEO guide cards.
+
+Suggested guide cards:
+1. Things to Do in Geneva This Weekend
+Description:
+A curated weekend guide to cultural ideas, exhibitions, concerts, theatre and family-friendly activities in Geneva.
+CTA:
+Read guide →
+
+2. Free Cultural Things to Do in Geneva
+Description:
+Museums, public art, historic walks, free concerts and cultural places you can enjoy without a ticket.
+CTA:
+Explore ideas →
+
+3. Best Museums in Geneva
+Description:
+A practical guide to Geneva’s most interesting museums, from art and history to science and international culture.
+CTA:
+Read guide →
+
+4. Best Theatres in Geneva
+Description:
+From Grand Théâtre de Genève to intimate independent stages, discover where to experience theatre in Geneva.
+CTA:
+Read guide →
+
+5. Classical Music in Geneva
+Description:
+Where to hear orchestras, chamber music, recitals and classical concerts in Geneva’s most beautiful halls.
+CTA:
+Read guide →
+
+6. Family-Friendly Cultural Activities
+Description:
+Cultural outings for families, including museums, performances, creative workshops and rainy-day ideas.
+CTA:
+View recommendations →
+
+7. Geneva Cultural Calendar by Season
+Description:
+What to expect throughout the year, from summer festivals and open-air concerts to winter cultural traditions.
+CTA:
+Explore the calendar →
+
+8. Rainy Day Cultural Ideas in Geneva
+Description:
+Indoor cultural places and activities for wet weekends, cold evenings and spontaneous city discoveries.
+CTA:
+Read guide →
+
+UI / UX requirements:
+- Keep the current premium dark navy / gold visual identity.
+- Replace event cards with guide cards.
+- Guide cards should have consistent height, strong readable titles, short descriptions and clear CTAs.
+- Use editorial labels such as GUIDE, WEEKEND, FREE, MUSEUMS, THEATRE, CLASSICAL MUSIC, FAMILY, SEASONAL.
+- Do not use “Tickets” as CTA text on this page.
+- Do not use fake availability, fake prices or fake dates.
+- Improve text contrast if necessary for readability.
+- The page should feel like an authoritative Geneva culture guide, not a temporary event listing.
+
+SEO requirements:
+- Keep or improve breadcrumbs.
+- Use the H1 exactly once.
+- Add an SEO-friendly intro section with enough text for Google to understand the page.
+- Add internal links from the guide cards to existing or planned article URLs where possible.
+- Add a “Popular Geneva Culture Guides” or “Related Guides” section below the grid.
+- Add an FAQ section near the bottom with these questions:
+
+FAQ:
+1. What are the best cultural things to do in Geneva?
+2. What can I do in Geneva this weekend?
+3. Are there free cultural activities in Geneva?
+4. What are the best cultural places to visit in Geneva when it rains?
+5. Where can families find cultural activities in Geneva?
+
+CTA strategy:
+- Keep one newsletter signup block near the bottom:
+  “Get the Weekly Geneva Culture Guide”
+- Add a soft bridge CTA to the main KulturTonight platform:
+  “For selected cultural offers and early access, visit KulturTonight.”
+  Link this to:
+  https://www.kulturtonight.ch/en
+
+Bilingual requirement:
+- Do not break the French version.
+- If the French page exists, either preserve the current French route or add equivalent French copy later, but do not remove routing.
+- Keep the existing build and prerender setup working.
+
+Acceptance criteria:
+- /en/geneva/events no longer displays individual fake event inventory.
+- No “Tickets” CTAs appear on the page.
+- The page clearly functions as a “Things to Do in Geneva” editorial guide hub.
+- The build must pass.

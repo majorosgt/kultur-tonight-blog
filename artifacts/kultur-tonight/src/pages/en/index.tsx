@@ -23,10 +23,10 @@ const itemVariants = {
 
 const directionBoxes = [
   {
-    label: "TONIGHT",
-    headline: "Tonight in Geneva",
-    description: "Opera, jazz, theatre — last seats released at 21:00",
-    cta: "Browse tonight's events →",
+    label: "THINGS TO DO",
+    headline: "Things to Do in Geneva",
+    description: "Opera, jazz, theatre and exhibitions — the best of the city's stages",
+    cta: "Explore things to do →",
     href: "https://kulturtonight.ch/en/geneva/events/",
     external: true,
     imageBg: "linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=800&q=80')",
@@ -62,10 +62,10 @@ const directionBoxes = [
 
 export default function EnHomePage() {
   useSEO({
-    title: "KulturTonight | Geneva Cultural Discovery & Last-Minute Tickets",
-    description: "Discover theatre, concerts, opera and jazz in Geneva. Last-minute seats at –50% for KulturTonight members. Nightly drops at 21:00.",
-    ogTitle: "KulturTonight | Geneva Cultural Events & Tickets",
-    ogDescription: "Your premium guide to Geneva's cultural scene — theatre, concerts, opera, jazz. Never miss a great performance.",
+    title: "Geneva Culture Guide | KulturTonight",
+    description: "Discover the best things to do, cultural places, local stories and weekend ideas in Geneva — theatre, concerts, opera, jazz and more.",
+    ogTitle: "Geneva Culture Guide | KulturTonight",
+    ogDescription: "Your premium guide to Geneva's cultural scene — the best things to do, cultural places, local stories and weekend ideas.",
     ogUrl: "https://kulturtonight.ch/en",
     ogImage: "https://kulturtonight.ch/opengraph.jpg",
     twitterCard: "summary_large_image",
@@ -102,7 +102,7 @@ export default function EnHomePage() {
                   marginBottom: "20px",
                 }}
               >
-                Where would you like to go tonight?
+                Where would you like to explore in Geneva?
               </h2>
               <div style={{ width: "60px", height: "2px", background: "#E1C570", margin: "0 auto" }} />
             </div>
@@ -198,12 +198,12 @@ export default function EnHomePage() {
           </div>
         </section>
 
-        {/* CTA — curtain rises */}
+        {/* CTA — culture guide */}
         <CTASection
           variant="hero"
-          title="The curtain rises in two hours. Are you in?"
-          subtitle="Geneva's most coveted seats — released at –50%, just hours before curtain. Early access opens soon. Be first in line."
-          primaryCta={{ text: "Browse Tonight's Events", href: "https://www.kulturtonight.ch/en", target: "_blank", rel: "noopener noreferrer" }}
+          title="Your guide to Geneva's cultural scene."
+          subtitle="From iconic venues to weekend ideas — explore the stories, places and performances that define culture in Geneva."
+          primaryCta={{ text: "Explore Geneva Guides", href: "https://www.kulturtonight.ch/en", target: "_blank", rel: "noopener noreferrer" }}
           secondaryCta={{ text: "Get the Weekly Guide", href: "#weekly-guide" }}
           bgStyle={{
             background: "linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80')",
