@@ -3,7 +3,6 @@
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install",
   "framework": null,
-  "nodeVersion": "22",
   "env": {
     "BASE_PATH": "/"
   }
