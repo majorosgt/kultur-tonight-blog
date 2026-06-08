@@ -42,6 +42,24 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          // Animation library — only loaded by pages that animate
+          if (id.includes("framer-motion")) return "vendor-framer";
+          // Radix UI primitives — shared by all shadcn components
+          if (id.includes("@radix-ui")) return "vendor-radix";
+          // TanStack Query
+          if (id.includes("@tanstack")) return "vendor-query";
+          // React core
+          if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) return "vendor-react";
+          // Lucide icons
+          if (id.includes("lucide-react")) return "vendor-lucide";
+          // Wouter router
+          if (id.includes("/wouter/")) return "vendor-wouter";
+        },
+      },
+    },
   },
   server: {
     port,

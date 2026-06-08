@@ -33,6 +33,10 @@ export default function BlogGenevaThisWeekendDetailPage() {
     description: article.seoDescription,
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
+    ogUrl: `https://kulturtonight.ch/en/blog/geneva/this-weekend/${article.slug}`,
+    ogImage: article.image,
+    twitterCard: "summary_large_image",
+    twitterImage: article.image,
     canonical: `https://kulturtonight.ch/en/blog/geneva/this-weekend/${article.slug}`,
     jsonLd: blogArticleSchema(article, `/en/blog/geneva/this-weekend/${article.slug}`),
   });

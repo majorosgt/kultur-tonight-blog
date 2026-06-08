@@ -1,3 +1,4 @@
+// Build: June 8, 2026
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Header } from "@/components/Header";
@@ -65,6 +66,10 @@ export default function EnHomePage() {
     description: "Discover theatre, concerts, opera and jazz in Geneva. Last-minute seats at –50% for KulturTonight members. Nightly drops at 21:00.",
     ogTitle: "KulturTonight | Geneva Cultural Events & Tickets",
     ogDescription: "Your premium guide to Geneva's cultural scene — theatre, concerts, opera, jazz. Never miss a great performance.",
+    ogUrl: "https://kulturtonight.ch/en",
+    ogImage: "https://kulturtonight.ch/opengraph.jpg",
+    twitterCard: "summary_large_image",
+    twitterImage: "https://kulturtonight.ch/opengraph.jpg",
     canonical: "https://kulturtonight.ch/en",
     alternates: [
       { lang: "en", url: "https://kulturtonight.ch/en" },

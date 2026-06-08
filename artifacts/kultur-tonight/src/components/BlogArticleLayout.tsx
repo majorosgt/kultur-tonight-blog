@@ -62,7 +62,7 @@ export function BlogArticleLayout({
   ctaTitle,
   ctaSubtitle,
 }: BlogArticleLayoutProps) {
-  const locale = article.lang;
+  const locale = article.lang as "en" | "fr";
   const byLabel = locale === "fr" ? "Par KulturTonight" : "By KulturTonight";
   const publishedLabel = locale === "fr" ? "Publié par" : "Published by";
   const editorial = locale === "fr" ? "KulturTonight Éditorial" : "KulturTonight Editorial";

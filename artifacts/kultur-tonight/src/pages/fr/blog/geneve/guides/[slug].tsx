@@ -98,6 +98,10 @@ export default function FrBlogGenevaGuideArticlePage() {
   useSEO({
     title: guide.metaTitle ?? guide.title,
     description: guide.metaDescription ?? guide.subtitle,
+    ogUrl: `https://kulturtonight.ch/fr/blog/geneve/guides/${guide.slug}`,
+    ogImage: guide.image,
+    twitterCard: "summary_large_image",
+    twitterImage: guide.image,
     canonical: `https://kulturtonight.ch/fr/blog/geneve/guides/${guide.slug}`,
     alternates: [
       { lang: "en", url: `https://kulturtonight.ch/en/blog/geneva/guides/${enSlug}` },

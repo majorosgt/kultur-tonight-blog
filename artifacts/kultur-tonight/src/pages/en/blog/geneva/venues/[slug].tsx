@@ -33,6 +33,10 @@ export default function BlogGenevaVenuesDetailPage() {
     description: article.seoDescription,
     ogTitle: article.ogTitle,
     ogDescription: article.ogDescription,
+    ogUrl: `https://kulturtonight.ch/en/blog/geneva/venues/${article.slug}`,
+    ogImage: article.image,
+    twitterCard: "summary_large_image",
+    twitterImage: article.image,
     canonical: `https://kulturtonight.ch/en/blog/geneva/venues/${article.slug}`,
     jsonLd: blogArticleSchema(article, `/en/blog/geneva/venues/${article.slug}`),
   });

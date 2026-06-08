@@ -1,3 +1,4 @@
+// Last updated: June 8, 2026
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { Ticket, Mail, BookOpen, MapPin } from "lucide-react";
@@ -71,6 +72,10 @@ export default function FrHomePage() {
     description: "Découvrez les meilleurs spectacles de théâtre, concerts et événements culturels à Genève. Billets de dernière minute et guides curatés pour les curieux de culture.",
     ogTitle: "KulturTonight | Événements Culturels à Genève",
     ogDescription: "Votre guide premium de la scène culturelle genevoise — théâtre, concerts, opéra, jazz. Ne manquez jamais un grand spectacle.",
+    ogUrl: "https://kulturtonight.ch/fr",
+    ogImage: "https://kulturtonight.ch/opengraph.jpg",
+    twitterCard: "summary_large_image",
+    twitterImage: "https://kulturtonight.ch/opengraph.jpg",
     canonical: "https://kulturtonight.ch/fr",
     alternates: buildAlternatesFr("/fr"),
   });

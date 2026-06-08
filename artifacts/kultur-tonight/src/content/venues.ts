@@ -2,6 +2,7 @@ export interface Venue {
   slug: string
   name: string
   type: string
+  schemaType?: string
   address: string
   city: string
   country: string

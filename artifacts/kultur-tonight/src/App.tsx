@@ -1,84 +1,85 @@
+import { lazy, Suspense } from "react";
 import { Switch, Route, Router as WouterRouter, Redirect } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
 
-// English pages
-import EnHomePage from "@/pages/en/index";
-import GenevaPage from "@/pages/en/geneva/index";
-import ThingsToDoPage from "@/pages/en/geneva/things-to-do-this-weekend";
-import TheatrePage from "@/pages/en/geneva/theatre";
-import ConcertsPage from "@/pages/en/geneva/concerts";
-import FamilyEventsPage from "@/pages/en/geneva/family-events";
-import VenuesListPage from "@/pages/en/geneva/venues/index";
-import VenueDetailPage from "@/pages/en/geneva/venues/[slug]";
-import EventsListPage from "@/pages/en/geneva/events/index";
-import EventDetailPage from "@/pages/en/geneva/events/[slug]";
-import BlogPage from "@/pages/en/blog/index";
-import BlogDetailPage from "@/pages/en/blog/[slug]";
+// English pages — lazy loaded for route-level code splitting
+const NotFound = lazy(() => import("@/pages/not-found"));
+const EnHomePage = lazy(() => import("@/pages/en/index"));
+const GenevaPage = lazy(() => import("@/pages/en/geneva/index"));
+const ThingsToDoPage = lazy(() => import("@/pages/en/geneva/things-to-do-this-weekend"));
+const TheatrePage = lazy(() => import("@/pages/en/geneva/theatre"));
+const ConcertsPage = lazy(() => import("@/pages/en/geneva/concerts"));
+const FamilyEventsPage = lazy(() => import("@/pages/en/geneva/family-events"));
+const VenuesListPage = lazy(() => import("@/pages/en/geneva/venues/index"));
+const VenueDetailPage = lazy(() => import("@/pages/en/geneva/venues/[slug]"));
+const EventsListPage = lazy(() => import("@/pages/en/geneva/events/index"));
+const EventDetailPage = lazy(() => import("@/pages/en/geneva/events/[slug]"));
+const BlogPage = lazy(() => import("@/pages/en/blog/index"));
+const BlogDetailPage = lazy(() => import("@/pages/en/blog/[slug]"));
 
 // English blog sub-pages
-import BlogGenevaPage from "@/pages/en/blog/geneva/index";
-import BlogGenevaGuidesPage from "@/pages/en/blog/geneva/guides/index";
-import BlogGenevaGuidesDetailPage from "@/pages/en/blog/geneva/guides/[slug]";
-import BlogGenevaVenuesPage from "@/pages/en/blog/geneva/venues/index";
-import BlogGenevaVenuesDetailPage from "@/pages/en/blog/geneva/venues/[slug]";
-import BlogGenevaThisWeekPage from "@/pages/en/blog/geneva/this-week/index";
-import BlogGenevaThisWeekDetailPage from "@/pages/en/blog/geneva/this-week/[slug]";
-import BlogGenevaThisWeekendPage from "@/pages/en/blog/geneva/this-weekend/index";
-import BlogGenevaThisWeekendDetailPage from "@/pages/en/blog/geneva/this-weekend/[slug]";
-import BlogGenevaEventArticlesPage from "@/pages/en/blog/geneva/events/index";
-import BlogGenevaEventArticleDetailPage from "@/pages/en/blog/geneva/events/[slug]";
-import BlogGenevaSeasonalPage from "@/pages/en/blog/geneva/seasonal/index";
-import BlogGenevaSeasonalDetailPage from "@/pages/en/blog/geneva/seasonal/[slug]";
-import BlogGenevaCulturePage from "@/pages/en/blog/geneva/culture/index";
-import BlogGenevaCultureDetailPage from "@/pages/en/blog/geneva/culture/[slug]";
-import BlogGenevaFamilyPage from "@/pages/en/blog/geneva/family/index";
-import BlogGenevaFamilyDetailPage from "@/pages/en/blog/geneva/family/[slug]";
+const BlogGenevaPage = lazy(() => import("@/pages/en/blog/geneva/index"));
+const BlogGenevaGuidesPage = lazy(() => import("@/pages/en/blog/geneva/guides/index"));
+const BlogGenevaGuidesDetailPage = lazy(() => import("@/pages/en/blog/geneva/guides/[slug]"));
+const BlogGenevaVenuesPage = lazy(() => import("@/pages/en/blog/geneva/venues/index"));
+const BlogGenevaVenuesDetailPage = lazy(() => import("@/pages/en/blog/geneva/venues/[slug]"));
+const BlogGenevaThisWeekPage = lazy(() => import("@/pages/en/blog/geneva/this-week/index"));
+const BlogGenevaThisWeekDetailPage = lazy(() => import("@/pages/en/blog/geneva/this-week/[slug]"));
+const BlogGenevaThisWeekendPage = lazy(() => import("@/pages/en/blog/geneva/this-weekend/index"));
+const BlogGenevaThisWeekendDetailPage = lazy(() => import("@/pages/en/blog/geneva/this-weekend/[slug]"));
+const BlogGenevaEventArticlesPage = lazy(() => import("@/pages/en/blog/geneva/events/index"));
+const BlogGenevaEventArticleDetailPage = lazy(() => import("@/pages/en/blog/geneva/events/[slug]"));
+const BlogGenevaSeasonalPage = lazy(() => import("@/pages/en/blog/geneva/seasonal/index"));
+const BlogGenevaSeasonalDetailPage = lazy(() => import("@/pages/en/blog/geneva/seasonal/[slug]"));
+const BlogGenevaCulturePage = lazy(() => import("@/pages/en/blog/geneva/culture/index"));
+const BlogGenevaCultureDetailPage = lazy(() => import("@/pages/en/blog/geneva/culture/[slug]"));
+const BlogGenevaFamilyPage = lazy(() => import("@/pages/en/blog/geneva/family/index"));
+const BlogGenevaFamilyDetailPage = lazy(() => import("@/pages/en/blog/geneva/family/[slug]"));
 
 // French pages
-import FrHomePage from "@/pages/fr/index";
-import FrGenevePage from "@/pages/fr/geneve/index";
-import FrThingsToDoPage from "@/pages/fr/geneve/que-faire-ce-weekend";
-import FrTheatrePage from "@/pages/fr/geneve/theatre";
-import FrConcertsPage from "@/pages/fr/geneve/concerts";
-import FrFamilyEventsPage from "@/pages/fr/geneve/sorties-en-famille";
-import FrVenuesListPage from "@/pages/fr/geneve/lieux/index";
-import FrVenueDetailPage from "@/pages/fr/geneve/lieux/[slug]";
-import FrEventsListPage from "@/pages/fr/geneve/evenements/index";
-import FrEventDetailPage from "@/pages/fr/geneve/evenements/[slug]";
-import FrBlogPage from "@/pages/fr/blog/index";
-import FrBlogDetailPage from "@/pages/fr/blog/[slug]";
+const FrHomePage = lazy(() => import("@/pages/fr/index"));
+const FrGenevePage = lazy(() => import("@/pages/fr/geneve/index"));
+const FrThingsToDoPage = lazy(() => import("@/pages/fr/geneve/que-faire-ce-weekend"));
+const FrTheatrePage = lazy(() => import("@/pages/fr/geneve/theatre"));
+const FrConcertsPage = lazy(() => import("@/pages/fr/geneve/concerts"));
+const FrFamilyEventsPage = lazy(() => import("@/pages/fr/geneve/sorties-en-famille"));
+const FrVenuesListPage = lazy(() => import("@/pages/fr/geneve/lieux/index"));
+const FrVenueDetailPage = lazy(() => import("@/pages/fr/geneve/lieux/[slug]"));
+const FrEventsListPage = lazy(() => import("@/pages/fr/geneve/evenements/index"));
+const FrEventDetailPage = lazy(() => import("@/pages/fr/geneve/evenements/[slug]"));
+const FrBlogPage = lazy(() => import("@/pages/fr/blog/index"));
+const FrBlogDetailPage = lazy(() => import("@/pages/fr/blog/[slug]"));
 
 // French blog sub-pages
-import FrBlogGenevePage from "@/pages/fr/blog/geneve/index";
-import FrBlogGenevaGuidesPage from "@/pages/fr/blog/geneve/guides/index";
-import FrBlogGenevaGuidesDetailPage from "@/pages/fr/blog/geneve/guides/[slug]";
-import FrBlogGenevaLieuxPage from "@/pages/fr/blog/geneve/lieux/index";
-import FrBlogGenevaLieuxDetailPage from "@/pages/fr/blog/geneve/lieux/[slug]";
-import FrBlogGenEvaCetteSemainePage from "@/pages/fr/blog/geneve/cette-semaine/index";
-import FrBlogGenevaCetteSemaineDetailPage from "@/pages/fr/blog/geneve/cette-semaine/[slug]";
-import FrBlogGenevaCeWeekendPage from "@/pages/fr/blog/geneve/ce-weekend/index";
-import FrBlogGenevaCeWeekendDetailPage from "@/pages/fr/blog/geneve/ce-weekend/[slug]";
-import FrBlogGenevaEvenementsPage from "@/pages/fr/blog/geneve/evenements/index";
-import FrBlogGenevaEvenementsDetailPage from "@/pages/fr/blog/geneve/evenements/[slug]";
-import FrBlogGenevaSaisonnierPage from "@/pages/fr/blog/geneve/saisonnier/index";
-import FrBlogGenevaSaisonnierDetailPage from "@/pages/fr/blog/geneve/saisonnier/[slug]";
-import FrBlogGenevaCulturePage from "@/pages/fr/blog/geneve/culture/index";
-import FrBlogGenevaCultureDetailPage from "@/pages/fr/blog/geneve/culture/[slug]";
-import FrBlogGenevaFamillePage from "@/pages/fr/blog/geneve/famille/index";
-import FrBlogGenevaFamilleDetailPage from "@/pages/fr/blog/geneve/famille/[slug]";
+const FrBlogGenevePage = lazy(() => import("@/pages/fr/blog/geneve/index"));
+const FrBlogGenevaGuidesPage = lazy(() => import("@/pages/fr/blog/geneve/guides/index"));
+const FrBlogGenevaGuidesDetailPage = lazy(() => import("@/pages/fr/blog/geneve/guides/[slug]"));
+const FrBlogGenevaLieuxPage = lazy(() => import("@/pages/fr/blog/geneve/lieux/index"));
+const FrBlogGenevaLieuxDetailPage = lazy(() => import("@/pages/fr/blog/geneve/lieux/[slug]"));
+const FrBlogGenEvaCetteSemainePage = lazy(() => import("@/pages/fr/blog/geneve/cette-semaine/index"));
+const FrBlogGenevaCetteSemaineDetailPage = lazy(() => import("@/pages/fr/blog/geneve/cette-semaine/[slug]"));
+const FrBlogGenevaCeWeekendPage = lazy(() => import("@/pages/fr/blog/geneve/ce-weekend/index"));
+const FrBlogGenevaCeWeekendDetailPage = lazy(() => import("@/pages/fr/blog/geneve/ce-weekend/[slug]"));
+const FrBlogGenevaEvenementsPage = lazy(() => import("@/pages/fr/blog/geneve/evenements/index"));
+const FrBlogGenevaEvenementsDetailPage = lazy(() => import("@/pages/fr/blog/geneve/evenements/[slug]"));
+const FrBlogGenevaSaisonnierPage = lazy(() => import("@/pages/fr/blog/geneve/saisonnier/index"));
+const FrBlogGenevaSaisonnierDetailPage = lazy(() => import("@/pages/fr/blog/geneve/saisonnier/[slug]"));
+const FrBlogGenevaCulturePage = lazy(() => import("@/pages/fr/blog/geneve/culture/index"));
+const FrBlogGenevaCultureDetailPage = lazy(() => import("@/pages/fr/blog/geneve/culture/[slug]"));
+const FrBlogGenevaFamillePage = lazy(() => import("@/pages/fr/blog/geneve/famille/index"));
+const FrBlogGenevaFamilleDetailPage = lazy(() => import("@/pages/fr/blog/geneve/famille/[slug]"));
 
 // Utility pages
-import EnAboutPage from "@/pages/en/about";
-import EnContactPage from "@/pages/en/contact";
-import FrAboutPage from "@/pages/fr/a-propos";
-import FrContactPage from "@/pages/fr/contact";
+const EnAboutPage = lazy(() => import("@/pages/en/about"));
+const EnContactPage = lazy(() => import("@/pages/en/contact"));
+const FrAboutPage = lazy(() => import("@/pages/fr/a-propos"));
+const FrContactPage = lazy(() => import("@/pages/fr/contact"));
 
 const queryClient = new QueryClient();
 
-function Router() {
+export function Router() {
   return (
     <Switch>
         {/* Root redirect */}
@@ -176,7 +177,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
-          <Router />
+          <Suspense fallback={<div className="min-h-screen bg-background" />}>
+            <Router />
+          </Suspense>
         </WouterRouter>
         <Toaster />
       </TooltipProvider>

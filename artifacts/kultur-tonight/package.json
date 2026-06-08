@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
-    "build": "vite build --config vite.config.ts",
+    "build": "vite build --config vite.config.ts && vite build --ssr src/entry-server.tsx --outDir dist/server --config vite.config.ts && node prerender.mjs",
+    "build:client": "vite build --config vite.config.ts",
+    "build:server": "vite build --ssr src/entry-server.tsx --outDir dist/server --config vite.config.ts",
+    "prerender": "node prerender.mjs",
     "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },

@@ -100,6 +100,10 @@ export default function BlogGenevaGuidesDetailPage() {
     description: guide.metaDescription ?? guide.seoDescription,
     ogTitle: guide.ogTitle,
     ogDescription: guide.ogDescription,
+    ogUrl: `https://kulturtonight.ch/en/blog/geneva/guides/${guide.slug}`,
+    ogImage: guide.image,
+    twitterCard: "summary_large_image",
+    twitterImage: guide.image,
     canonical: `https://kulturtonight.ch/en/blog/geneva/guides/${guide.slug}`,
     alternates: [
       { lang: "en", url: `https://kulturtonight.ch/en/blog/geneva/guides/${slug}` },
