@@ -60,7 +60,8 @@ export function eventSchema(event: Event, canonicalPath: string) {
     "@type": "Event",
     "name": event.title,
     "description": event.description,
-    "startDate": new Date().toISOString(),
+    "startDate": event.startDate,
+    ...(event.endDate ? { "endDate": event.endDate } : {}),
     "location": {
       "@type": "Place",
       "name": event.venue.name,

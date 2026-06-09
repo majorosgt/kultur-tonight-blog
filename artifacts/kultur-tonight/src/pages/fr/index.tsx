@@ -63,10 +63,10 @@ const directionBoxes = [
 
 export default function FrHomePage() {
   useSEO({
-    title: "Guide culturel de Genève | KulturTonight",
-    description: "Découvrez les meilleures idées de sorties, les lieux culturels, les histoires locales et les inspirations du week-end à Genève — théâtre, concerts, musées et plus encore.",
-    ogTitle: "Guide culturel de Genève | KulturTonight",
-    ogDescription: "Votre guide premium de la scène culturelle genevoise — les meilleures sorties, lieux culturels, histoires locales et idées du week-end.",
+    title: "KulturTonight | La Plateforme Premium de Découverte Culturelle à Genève",
+    description: "Découvrez les meilleurs spectacles de théâtre, concerts et événements culturels à Genève. Billets de dernière minute et guides curatés pour les curieux de culture.",
+    ogTitle: "KulturTonight | Événements Culturels à Genève",
+    ogDescription: "Votre guide premium de la scène culturelle genevoise — théâtre, concerts, opéra, jazz. Ne manquez jamais un grand spectacle.",
     ogUrl: "https://kulturtonight.ch/fr",
     ogImage: "https://kulturtonight.ch/opengraph.jpg",
     twitterCard: "summary_large_image",

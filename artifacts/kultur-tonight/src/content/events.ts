@@ -5,6 +5,8 @@ export interface Event {
   venue: { name: string; slug: string };
   date: string;
   time: string;
+  startDate: string;
+  endDate?: string;
   price: string;
   priceRange: string;
   description: string;
@@ -24,6 +26,8 @@ export const events: Event[] = [
     venue: { name: "Grand Théâtre de Genève", slug: "grand-theatre-de-geneve" },
     date: "This Weekend",
     time: "20:00",
+    startDate: "2026-06-13T20:00:00+02:00",
+    endDate: "2026-06-13T22:30:00+02:00",
     price: "From CHF 45",
     priceRange: "45-180",
     shortDescription: "A mesmerizing new production of Tchaikovsky's masterpiece.",
@@ -41,6 +45,8 @@ export const events: Event[] = [
     venue: { name: "Victoria Hall", slug: "victoria-hall" },
     date: "This Weekend",
     time: "19:30",
+    startDate: "2026-06-13T19:30:00+02:00",
+    endDate: "2026-06-13T21:30:00+02:00",
     price: "From CHF 30",
     priceRange: "30-120",
     shortDescription: "The Orchestre de la Suisse Romande performs Mahler's final completed symphony.",
@@ -58,6 +64,8 @@ export const events: Event[] = [
     venue: { name: "AMR Jazz Club", slug: "amr-jazz-club" },
     date: "Next Weekend",
     time: "21:30",
+    startDate: "2026-06-20T21:30:00+02:00",
+    endDate: "2026-06-20T23:30:00+02:00",
     price: "From CHF 25",
     priceRange: "25-40",
     shortDescription: "Late-night improvised jazz in Geneva's most intimate club.",
@@ -75,6 +83,8 @@ export const events: Event[] = [
     venue: { name: "Théâtre du Léman", slug: "theatre-du-leman" },
     date: "This Weekend",
     time: "20:00",
+    startDate: "2026-06-14T20:00:00+02:00",
+    endDate: "2026-06-14T22:15:00+02:00",
     price: "From CHF 50",
     priceRange: "50-140",
     shortDescription: "Shakespeare's classic reimagined for the modern era.",
@@ -92,6 +102,8 @@ export const events: Event[] = [
     venue: { name: "Alhambra Geneva", slug: "alhambra" },
     date: "Next Weekend",
     time: "19:00",
+    startDate: "2026-06-20T19:00:00+02:00",
+    endDate: "2026-06-20T22:00:00+02:00",
     price: "From CHF 35",
     priceRange: "35-65",
     shortDescription: "A showcase of Europe's rising indie rock bands.",
@@ -109,6 +121,8 @@ export const events: Event[] = [
     venue: { name: "Victoria Hall", slug: "victoria-hall" },
     date: "This Weekend",
     time: "14:00",
+    startDate: "2026-06-14T14:00:00+02:00",
+    endDate: "2026-06-14T15:00:00+02:00",
     price: "From CHF 15",
     priceRange: "15-45",
     shortDescription: "Prokofiev's enchanting musical tale for children.",
@@ -126,6 +140,8 @@ export const events: Event[] = [
     venue: { name: "Grand Théâtre de Genève", slug: "grand-theatre-de-geneve" },
     date: "Next Weekend",
     time: "20:30",
+    startDate: "2026-06-21T20:30:00+02:00",
+    endDate: "2026-06-21T22:30:00+02:00",
     price: "From CHF 60",
     priceRange: "60-200",
     shortDescription: "A powerful choral performance of Mozart's unfinished masterpiece.",
@@ -143,6 +159,8 @@ export const events: Event[] = [
     venue: { name: "Théâtre du Léman", slug: "theatre-du-leman" },
     date: "Next Weekend",
     time: "19:30",
+    startDate: "2026-06-21T19:30:00+02:00",
+    endDate: "2026-06-21T21:30:00+02:00",
     price: "From CHF 40",
     priceRange: "40-110",
     shortDescription: "Mind-bending magic and theatrical storytelling.",

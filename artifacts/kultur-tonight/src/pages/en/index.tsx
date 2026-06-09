@@ -62,10 +62,10 @@ const directionBoxes = [
 
 export default function EnHomePage() {
   useSEO({
-    title: "Geneva Culture Guide | KulturTonight",
-    description: "Discover the best things to do, cultural places, local stories and weekend ideas in Geneva — theatre, concerts, opera, jazz and more.",
-    ogTitle: "Geneva Culture Guide | KulturTonight",
-    ogDescription: "Your premium guide to Geneva's cultural scene — the best things to do, cultural places, local stories and weekend ideas.",
+    title: "KulturTonight | Geneva Cultural Discovery & Last-Minute Tickets",
+    description: "Discover theatre, concerts, opera and jazz in Geneva. Last-minute seats at –50% for KulturTonight members. Nightly drops at 21:00.",
+    ogTitle: "KulturTonight | Geneva Cultural Events & Tickets",
+    ogDescription: "Your premium guide to Geneva's cultural scene — theatre, concerts, opera, jazz. Never miss a great performance.",
     ogUrl: "https://kulturtonight.ch/en",
     ogImage: "https://kulturtonight.ch/opengraph.jpg",
     twitterCard: "summary_large_image",
