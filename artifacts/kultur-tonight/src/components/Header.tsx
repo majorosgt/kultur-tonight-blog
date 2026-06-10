@@ -53,6 +53,17 @@ export function Header() {
           { label: "Local Stories", href: "/en/blog/geneva/culture" },
         ];
 
+  // Highlight only the single most-specific nav item that matches the current path.
+  // A link matches when the path equals its href or sits beneath it (href + "/"),
+  // and the longest matching href wins so section roots don't stay lit on sub-pages.
+  const activeHref = navLinks
+    .filter((link) => location === link.href || location.startsWith(link.href + "/"))
+    .reduce<string | null>(
+      (best, link) => (best && best.length >= link.href.length ? best : link.href),
+      null,
+    );
+  const isActive = (href: string) => href === activeHref;
+
   const earlyAccessLabel = locale === "fr" ? "Recevoir le guide" : "Get the Weekly Guide";
   const joinLabel        = locale === "fr" ? "Recevoir le guide hebdomadaire" : "Get the Weekly Guide";
   const tonightLabel     = locale === "fr" ? "Événements ce soir →" : "Tonight's Events →";
@@ -149,12 +160,12 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={`relative whitespace-nowrap text-xs font-sans tracking-widest uppercase transition-colors group py-1 ${
-                location.startsWith(link.href) ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                isActive(link.href) ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
             >
               {link.label}
               <span className={`absolute bottom-0 left-0 h-[1px] bg-gold-gradient transition-all duration-300 ${
-                location.startsWith(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
               }`} />
             </Link>
           ))}
@@ -301,7 +312,7 @@ export function Header() {
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block text-4xl font-serif py-4 border-b border-border ${
-                      location.startsWith(link.href) ? "text-primary" : "text-foreground"
+                      isActive(link.href) ? "text-primary" : "text-foreground"
                     }`}
                   >
                     {link.label}
