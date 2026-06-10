@@ -19,7 +19,7 @@ export default function BlogGenevaCultureDetailPage() {
           <div className="text-center">
             <h1 className="text-3xl font-serif text-foreground mb-4">Article Not Found</h1>
             <Link href="/en/blog/geneva/culture" className="text-primary hover:underline">
-              Back to Culture
+              Back to Local Stories
             </Link>
           </div>
         </main>
@@ -56,10 +56,10 @@ export default function BlogGenevaCultureDetailPage() {
         ]}
         categoryLabel="Local Stories"
         backHref="/en/blog/geneva/culture"
-        backLabel="Back to Culture"
+        backLabel="Back to Local Stories"
         related={related}
         relatedHref={(s) => `/en/blog/geneva/culture/${s}`}
-        relatedTitle="More Cultural Essays"
+        relatedTitle="More Local Stories"
         relatedSubtitle="Continue exploring Geneva's cultural identity."
         ctaTitle="Discover Tonight in Geneva"
         ctaSubtitle="Find the best cultural events happening in Geneva right now."

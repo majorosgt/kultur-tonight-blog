@@ -61,7 +61,7 @@ export default function FrBlogGenevaCultureDetailPage() {
         backLabel="Retour à Culture"
         related={related}
         relatedHref={(s) => `/fr/blog/geneve/culture/${s}`}
-        relatedTitle="Plus d'Essais Culturels"
+        relatedTitle="Plus d'Histoires locales"
         relatedSubtitle="Continuez à explorer l'identité culturelle genevoise."
         ctaTitle="Découvrez Genève ce Soir"
         ctaSubtitle="Trouvez les meilleurs événements culturels à Genève en ce moment."
