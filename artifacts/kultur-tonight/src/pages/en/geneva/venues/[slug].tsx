@@ -3,15 +3,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { EventCard } from "@/components/EventCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { venueSchema } from "@/lib/schema";
 import { buildAlternates } from "@/lib/i18n";
 import { venues } from "@/content/venues";
-import { events } from "@/content/events";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, MapPin, Users } from "lucide-react";
 
@@ -36,8 +33,6 @@ export default function VenueDetailPage() {
     );
   }
 
-  const relatedEvents = events.filter((e) => e.venue.slug === venue.slug);
-
   useSEO({
     title: `${venue.name} — Geneva Cultural Venue | KulturTonight`,
     description: venue.description,
@@ -56,6 +51,15 @@ export default function VenueDetailPage() {
     <>
       <Header />
       <main className="pt-24">
+        <div className="w-full overflow-hidden">
+          <img
+            src={`/assets/hero/venues/${venue.slug}.png`}
+            alt={`${venue.name} — atmospheric interior view`}
+            className="w-full h-[280px] md:h-[420px] lg:h-[500px] object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
         <div className="container mx-auto px-4 md:px-6 py-8">
           <Breadcrumbs
             items={[
@@ -157,23 +161,11 @@ export default function VenueDetailPage() {
           </div>
         </section>
 
-        {relatedEvents.length > 0 && (
-          <section className="py-16 border-t border-border/30">
-            <div className="container mx-auto px-4 md:px-6">
-              <SectionHeading
-                title={`Upcoming at ${venue.name}`}
-                subtitle="Events taking place at this venue — don't miss them."
-              />
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                {relatedEvents.map((event) => (
-                  <div key={event.slug} data-testid={`card-event-${event.slug}`}>
-                    <EventCard event={event} />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+        <CTASection
+          title={`Upcoming at ${venue.name}`}
+          subtitle="Last-minute seats released at 21:00 for KulturTonight members."
+          primaryCta={{ text: "See tonight's availability →", href: "https://www.kulturtonight.ch/en", target: "_blank", rel: "noopener noreferrer" }}
+        />
 
         <div className="container mx-auto px-4 md:px-6 pb-8">
           <Link
@@ -185,12 +177,6 @@ export default function VenueDetailPage() {
             ← Back to all venues
           </Link>
         </div>
-
-        <CTASection
-          title={`Last-minute seats at ${venue.name} — released at 21:00 for KulturTonight members.`}
-          subtitle=""
-          primaryCta={{ text: "See tonight's availability →", href: "https://kulturtonight.ch/en/geneva/events/", target: "_blank", rel: "noopener noreferrer" }}
-        />
 
         <div id="newsletter">
           <NewsletterSignup variant="weekly-guide" />

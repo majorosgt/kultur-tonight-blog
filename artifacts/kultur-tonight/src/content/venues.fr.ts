@@ -96,7 +96,7 @@ export const venuesFr: Venue[] = [
   {
     slug: 'batiment-des-forces-motrices',
     name: 'Bâtiment des Forces Motrices',
-    type: 'Salle polyvalente',
+    type: 'Salle de concert',
     address: 'Place des Volontaires 2',
     city: 'Genève',
     country: 'Suisse',

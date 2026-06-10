@@ -1,0 +1,68 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "0M9io1usiTEtRgWum0c3y"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/local-stories.png"
+type = "image"
+title = "geneva-old-town-dusk"
+
+[[generated]]
+id = "antH02k_pIQ9LLaKPTzRN"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/grand-theatre-de-geneve.png"
+type = "image"
+title = "grand-theatre-de-geneve"
+
+[[generated]]
+id = "ASXu6KPuuWQtSGTRThmos"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/victoria-hall.png"
+type = "image"
+title = "victoria-hall"
+
+[[generated]]
+id = "_v-xKJ3e7Bs8YJzUftxfL"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/theatre-du-leman.png"
+type = "image"
+title = "theatre-du-leman"
+
+[[generated]]
+id = "vdMpFAIu1F1BcMK4zLgOD"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/comedie-de-geneve.png"
+type = "image"
+title = "comedie-de-geneve"
+
+[[generated]]
+id = "mp7I0Jj0f1-ae4XKaNyHo"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/batiment-des-forces-motrices.png"
+type = "image"
+title = "batiment-des-forces-motrices"
+
+[[generated]]
+id = "12L1lnZnvWXd6UHClK4NN"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/theatre-de-carouge.png"
+type = "image"
+title = "theatre-de-carouge"
+
+[[generated]]
+id = "0UIWeRAUKz4KSax5-4hOy"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/amr-jazz-club.png"
+type = "image"
+title = "amr-jazz-club"
+
+[[generated]]
+id = "4g3_rgDEdfcSpJGDmmpO0"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/theatre-du-galpon.png"
+type = "image"
+title = "theatre-du-galpon"
+
+[[generated]]
+id = "jRP0gw8-SH1V4GtGe3MDJ"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/salle-centrale-de-la-madeleine.png"
+type = "image"
+title = "salle-centrale-de-la-madeleine"
+
+[[generated]]
+id = "Ifz0UPE1WQ293mPy6j5cE"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/alhambra.png"
+type = "image"
+title = "alhambra"

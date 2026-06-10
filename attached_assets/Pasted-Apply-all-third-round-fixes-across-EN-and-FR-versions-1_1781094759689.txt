@@ -1,0 +1,92 @@
+Apply all third-round fixes across EN and FR versions.
+
+## 1. VENUE DETAIL PAGES — replace event cards with CTA + add hero images
+
+### Event cards removal:
+On ALL venue detail pages, remove the "Upcoming at [Venue]" section 
+entirely (the event cards with placeholder prices like "From CHF 30").
+
+Replace with a single CTA section:
+
+EN version:
+Heading: "Upcoming at [Venue Name]"
+Subtext: "Last-minute seats released at 21:00 for KulturTonight members."
+Button: "SEE TONIGHT'S AVAILABILITY →" 
+Button links to: https://www.kulturtonight.ch/en
+Style: gold filled button, same style as primary CTA buttons on the site.
+
+FR version:
+Heading: "À venir — [Venue Name]"
+Subtext: "Places en dernière minute disponibles à 21h00 pour les membres KulturTonight."
+Button: "VOIR LES DISPONIBILITÉS CE SOIR →"
+Button links to: https://www.kulturtonight.ch/en
+
+### Hero images — generate for each venue:
+Add a full-width hero image at the top of each venue detail page, 
+directly below the header, above the breadcrumb and content.
+
+Hero image specs: 1440×600px, dark atmospheric style, 
+consistent with the site's dark/gold aesthetic.
+
+Generate appropriate AI images for each venue:
+
+- Grand Théâtre de Genève: grand opera house interior, ornate gold 
+  and red, dramatic stage lighting
+- Victoria Hall: neo-baroque concert hall interior, warm wood tones, 
+  chandelier light
+- Théâtre du Léman: modern lakeside theatre exterior at dusk, 
+  Geneva lake in background
+- Comédie de Genève: intimate contemporary theatre interior, 
+  dark stage with dramatic spotlight
+- Bâtiment des Forces Motrices: industrial 19th-century building 
+  interior, stone arches, atmospheric lighting
+- Théâtre de Carouge: warm intimate theatre interior, bohemian 
+  character, red velvet
+- AMR Jazz Club: intimate jazz club interior, low lighting, 
+  stage with instruments
+- Théâtre du Galpon: raw experimental theatre space, bare brick, 
+  industrial feel
+- Salle Centrale de la Madeleine: historic downtown concert hall, 
+  chamber music atmosphere
+- Alhambra: large concert venue interior, mainstream stage, 
+  dramatic lighting
+
+## 2. LOCAL STORIES PAGE — fix duplicate heading and outdated subtitle
+
+On the Local Stories landing page (/en/blog/geneva/culture and FR equivalent):
+
+- Remove the second "Local Stories" section heading that appears 
+  below the H1 (the redundant subheading)
+- Change "1 long reads on Geneva's cultural identity" to:
+  "Stories from the city — one to start, more on the way."
+
+FR version:
+- Remove duplicate "Histoires locales" section heading
+- Change equivalent subtitle to:
+  "Des récits depuis la ville — un pour commencer, d'autres à venir."
+
+### Local Stories hero image:
+Add a hero image to the Local Stories landing page.
+Generate: atmospheric Geneva street scene at dusk, old town 
+architecture, warm golden light, cinematic mood.
+Same specs as venue heroes: full-width, below header, above breadcrumb.
+
+## 3. HOMEPAGE — BFM badge fix
+
+Find the BFM — Bâtiment des Forces Motrices venue card on the homepage 
+venue section.
+Change badge from "MULTI PURPOSE" to "CONCERT HALL"
+
+Also fix the same badge on the Venues listing page and on the 
+BFM venue detail page itself.
+
+Apply to both EN and FR versions.
+
+## RULES:
+- Do not change any URLs or routing
+- Do not change any other venue content or descriptions
+- Do not touch homepage hero, category pills, or other homepage sections
+- Do not change header navigation
+- Apply all changes to both EN and FR where applicable
+- Hero images should be generated/sourced — do not use placeholder 
+  colored rectangles

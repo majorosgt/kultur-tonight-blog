@@ -5,7 +5,6 @@ import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { BlogCard } from "@/components/BlogCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { blogCulture } from "@/content/blog-culture";
@@ -24,6 +23,15 @@ export default function BlogGenevaCulturePage() {
     <>
       <Header />
       <main className="pt-24">
+        <div className="w-full overflow-hidden">
+          <img
+            src="/assets/hero/local-stories.png"
+            alt="Geneva old town street at dusk, warm golden light"
+            className="w-full h-[280px] md:h-[420px] lg:h-[500px] object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
         <div className="container mx-auto px-4 md:px-6 py-8">
           <Breadcrumbs
             items={[
@@ -43,10 +51,15 @@ export default function BlogGenevaCulturePage() {
             </p>
           </div>
 
-          <SectionHeading
-            title="Local Stories"
-            subtitle={`${blogCulture.length} long reads on Geneva's cultural identity.`}
-          />
+          <div className="mb-12">
+            <div className="flex items-center gap-4 mb-5">
+              <div className="w-8 h-[1px] bg-gold-gradient" />
+              <div className="w-1 h-1 rounded-full bg-primary/60" />
+            </div>
+            <p className="text-muted-foreground font-sans text-base md:text-lg leading-relaxed max-w-xl">
+              Stories from the city — one to start, more on the way.
+            </p>
+          </div>
 
           <motion.div
             variants={containerVariants}
