@@ -91,10 +91,6 @@ export default function BlogDetailPage() {
                 <span className="text-foreground/60">By KulturTonight</span>
               </div>
 
-              <div className="aspect-[16/7] w-full bg-gradient-to-br from-secondary via-[#1a0a14] to-background mb-12 border border-border/30 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              </div>
-
               <p className="text-xl text-foreground/90 leading-relaxed mb-10 font-serif italic border-l-2 border-primary pl-6">
                 {guide.excerpt}
               </p>

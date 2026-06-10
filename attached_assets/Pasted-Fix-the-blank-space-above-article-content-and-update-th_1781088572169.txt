@@ -1,0 +1,76 @@
+Fix the blank space above article content, and update the footer on all pages (EN and FR).
+
+## 1. ARTICLE PAGE — fix blank space above content
+
+On article/story pages, a large empty space appears above the article 
+content below the header.
+
+Fix on all article pages in both EN and FR versions.
+Find and remove the empty div, padding, margin, or spacer element 
+creating the blank space. The article content should start close to 
+the header with normal spacing only.
+
+Do not change article content, typography, or any other styling.
+
+## 2. FOOTER — replace on all EN pages
+
+Replace the current footer with this 4-column structure:
+
+Column 1 — EXPLORE GENEVA:
+- Theatre in Geneva
+- Concerts
+- Family Events
+- This Weekend
+
+Column 2 — VENUES & EVENTS:
+- All Venues → links to /en/geneva/venues (or current venues page URL)
+- All Events → links to https://www.kulturtonight.ch/en
+- Geneva Guide → links to current Culture Guide page
+
+Column 3 — EDITORIAL:
+- Culture Guide → links to current Culture Guide page
+- City Guides → links to current Guides page
+- Weekly Guide → links to newsletter signup / weekly guide page
+
+Column 4 — CONNECT:
+- About
+- Contact
+- Instagram icon → existing Instagram link
+- Facebook icon → existing Facebook link
+
+## 3. FOOTER — replace on all FR pages
+
+Replace the current FR footer with the same 4-column structure in French:
+
+Column 1 — EXPLORER GENÈVE:
+- Théâtre à Genève
+- Concerts
+- Sorties en famille
+- Ce week-end
+
+Column 2 — LIEUX & ÉVÉNEMENTS:
+- Tous les lieux → links to /fr/geneve/lieux (or current FR venues page URL)
+- Tous les événements → links to https://www.kulturtonight.ch/en
+- Guide Genève → links to current FR Culture Guide page
+
+Column 3 — ÉDITORIAL:
+- Guide Culturel → links to current FR Culture Guide page
+- Guides de la ville → links to current FR Guides page
+- Guide hebdomadaire → links to newsletter signup / weekly guide page
+
+Column 4 — CONTACT:
+- À propos
+- Contact
+- Instagram icon → existing Instagram link
+- Facebook icon → existing Facebook link
+
+## RULES:
+- "All Events" and "Tous les événements" must link to 
+  https://www.kulturtonight.ch/en exactly
+- Do not change header navigation
+- Do not change any page content outside the footer
+- Do not change article content
+- Apply footer changes via the shared footer component so it 
+  updates all pages at once
+- Maintain existing footer visual style (dark background, gold 
+  column headers, same typography)

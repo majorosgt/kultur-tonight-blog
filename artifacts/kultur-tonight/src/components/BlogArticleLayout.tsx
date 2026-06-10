@@ -9,17 +9,6 @@ import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { BlogCard } from "@/components/BlogCard";
 import type { BlogArticle } from "@/content/blog-guides";
 
-const HERO_PHOTOS: Record<string, string> = {
-  guides:        "https://images.unsplash.com/photo-1507676184212-d0330a151f96?q=80&w=1600&auto=format&fit=crop",
-  venues:        "https://images.unsplash.com/photo-1503095396549-807759245b35?q=80&w=1600&auto=format&fit=crop",
-  "this-week":   "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1600&auto=format&fit=crop",
-  "this-weekend":"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1600&auto=format&fit=crop",
-  events:        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop",
-  seasonal:      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1600&auto=format&fit=crop",
-  culture:       "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1600&auto=format&fit=crop",
-  family:        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
-};
-
 interface BreadcrumbItem {
   label: string;
   href?: string;
@@ -68,7 +57,6 @@ export function BlogArticleLayout({
   const editorial = locale === "fr" ? "KulturTonight Éditorial" : "KulturTonight Editorial";
   const minLabel = locale === "fr" ? "min de lecture" : "min read";
 
-  const heroPhoto = HERO_PHOTOS[article.category] ?? HERO_PHOTOS.guides;
   const paragraphs = article.body.split("\n\n").filter(Boolean);
 
   return (
@@ -76,19 +64,6 @@ export function BlogArticleLayout({
       {/* Breadcrumbs */}
       <div className="container mx-auto px-4 md:px-6 py-8">
         <Breadcrumbs items={breadcrumbs} />
-      </div>
-
-      {/* Hero image — full width */}
-      <div className="w-full aspect-[21/9] relative overflow-hidden bg-[#0D1424]">
-        <img
-          src={heroPhoto}
-          alt={article.title}
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-          loading="eager"
-          decoding="async"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
       </div>
 
       {/* Article */}

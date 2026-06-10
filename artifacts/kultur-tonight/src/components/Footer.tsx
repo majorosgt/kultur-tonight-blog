@@ -2,6 +2,8 @@ import { Link, useLocation } from "wouter";
 import { Instagram, Facebook } from "lucide-react";
 import { detectLocale } from "@/lib/i18n";
 
+type FooterLink = { label: string; href: string; external?: boolean };
+
 export function Footer() {
   const [location] = useLocation();
   const locale = detectLocale(location);
@@ -19,36 +21,36 @@ export function Footer() {
   const col3Heading  = isFr ? "Éditorial" : "Editorial";
   const col4Heading  = isFr ? "Contact" : "Connect";
 
-  const col1Links = isFr
+  const col1Links: FooterLink[] = isFr
     ? [
-        { label: "Théâtre",             href: "/fr/geneve/theatre" },
+        { label: "Théâtre à Genève",    href: "/fr/geneve/theatre" },
         { label: "Concerts",            href: "/fr/geneve/concerts" },
         { label: "Sorties en famille",  href: "/fr/geneve/sorties-en-famille" },
         { label: "Ce week-end",         href: "/fr/geneve/que-faire-ce-weekend" },
       ]
     : [
-        { label: "Theatre",      href: "/en/geneva/theatre" },
-        { label: "Concerts",     href: "/en/geneva/concerts" },
-        { label: "Family Events",href: "/en/geneva/family-events" },
-        { label: "This Weekend", href: "/en/geneva/things-to-do-this-weekend" },
+        { label: "Theatre in Geneva", href: "/en/geneva/theatre" },
+        { label: "Concerts",          href: "/en/geneva/concerts" },
+        { label: "Family Events",     href: "/en/geneva/family-events" },
+        { label: "This Weekend",      href: "/en/geneva/things-to-do-this-weekend" },
       ];
 
-  const col2Links = isFr
+  const col2Links: FooterLink[] = isFr
     ? [
         { label: "Tous les lieux",      href: "/fr/geneve/lieux" },
-        { label: "Tous les événements", href: "/fr/geneve/evenements" },
-        { label: "Guide de Genève",     href: "/fr/blog/geneve" },
+        { label: "Tous les événements", href: "https://www.kulturtonight.ch/en", external: true },
+        { label: "Guide Genève",        href: "/fr/blog/geneve" },
       ]
     : [
         { label: "All Venues",   href: "/en/geneva/venues" },
-        { label: "All Events",   href: "/en/geneva/events" },
+        { label: "All Events",   href: "https://www.kulturtonight.ch/en", external: true },
         { label: "Geneva Guide", href: "/en/blog/geneva" },
       ];
 
-  const col3Links = isFr
+  const col3Links: FooterLink[] = isFr
     ? [
-        { label: "Guide Culturel", href: "/fr/blog/geneve" },
-        { label: "Guides ville",  href: "/fr/blog/geneve/guides" },
+        { label: "Guide Culturel",     href: "/fr/blog/geneve" },
+        { label: "Guides de la ville", href: "/fr/blog/geneve/guides" },
       ]
     : [
         { label: "Culture Guide", href: "/en/blog/geneva" },
@@ -62,6 +64,20 @@ export function Footer() {
 
   const igLabel = isFr ? "KulturTonight sur Instagram" : "KulturTonight on Instagram";
   const fbLabel = isFr ? "KulturTonight sur Facebook"  : "KulturTonight on Facebook";
+
+  const linkClass =
+    "text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans";
+
+  const renderLink = (l: FooterLink) =>
+    l.external ? (
+      <a href={l.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+        {l.label}
+      </a>
+    ) : (
+      <Link href={l.href} className={linkClass}>
+        {l.label}
+      </Link>
+    );
 
   const scrollToNewsletter = () => {
     const el = document.getElementById("weekly-guide");
@@ -96,10 +112,10 @@ export function Footer() {
 
         {/* ── Link columns ───────────────────────────────────────────── */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
+          {/* Columns 1 & 2 */}
           {[
             { heading: col1Heading, links: col1Links },
             { heading: col2Heading, links: col2Links },
-            { heading: col3Heading, links: col3Links },
           ].map(({ heading, links }) => (
             <div key={heading}>
               <h4 className="text-[9px] uppercase tracking-[0.3em] text-primary font-sans mb-5">
@@ -107,48 +123,47 @@ export function Footer() {
               </h4>
               <ul className="space-y-3">
                 {links.map((l) => (
-                  <li key={l.href + l.label}>
-                    <Link
-                      href={l.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans"
-                    >
-                      {l.label}
-                    </Link>
-                  </li>
+                  <li key={l.href + l.label}>{renderLink(l)}</li>
                 ))}
               </ul>
             </div>
           ))}
 
-          {/* Connect column */}
+          {/* Column 3 — Editorial (+ Weekly Guide) */}
+          <div>
+            <h4 className="text-[9px] uppercase tracking-[0.3em] text-primary font-sans mb-5">
+              {col3Heading}
+            </h4>
+            <ul className="space-y-3">
+              {col3Links.map((l) => (
+                <li key={l.href + l.label}>{renderLink(l)}</li>
+              ))}
+              <li>
+                <button
+                  onClick={scrollToNewsletter}
+                  className={`${linkClass} text-left`}
+                >
+                  {weeklyLabel}
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4 — Connect */}
           <div>
             <h4 className="text-[9px] uppercase tracking-[0.3em] text-primary font-sans mb-5">
               {col4Heading}
             </h4>
             <ul className="space-y-3 mb-6">
               <li>
-                <Link
-                  href={aboutHref}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans"
-                >
+                <Link href={aboutHref} className={linkClass}>
                   {aboutLabel}
                 </Link>
               </li>
               <li>
-                <Link
-                  href={contactHref}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans"
-                >
+                <Link href={contactHref} className={linkClass}>
                   Contact
                 </Link>
-              </li>
-              <li>
-                <button
-                  onClick={scrollToNewsletter}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 font-sans text-left"
-                >
-                  {weeklyLabel}
-                </button>
               </li>
             </ul>
             {/* Social icons */}
