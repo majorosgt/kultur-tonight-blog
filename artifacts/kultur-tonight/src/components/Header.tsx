@@ -75,6 +75,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href={locale === "fr" ? "/fr" : "/en"}
+            onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-3 group relative"
             aria-label="KulturTonight — home"
           >
@@ -245,7 +246,15 @@ export function Header() {
             className="fixed inset-0 bg-[#080C18]/95 backdrop-blur-2xl z-40 md:hidden flex flex-col justify-center px-8"
           >
             {/* Mobile logo */}
-            <div className="absolute top-6 left-8 flex items-center gap-3">
+            <Link
+              href={locale === "fr" ? "/fr" : "/en"}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.scrollTo(0, 0);
+              }}
+              className="absolute top-6 left-8 flex items-center gap-3"
+              aria-label="KulturTonight — home"
+            >
               <img
                 src="/kulturtonight-logo.png"
                 alt="KulturTonight"
@@ -253,7 +262,7 @@ export function Header() {
                 className="h-8 w-auto"
               />
               <span className="font-serif text-lg font-bold text-foreground">KulturTonight</span>
-            </div>
+            </Link>
 
             {/* Mobile language switcher */}
             <div className="absolute top-7 right-16 flex items-center gap-2 text-xs font-sans tracking-widest uppercase">
