@@ -79,11 +79,10 @@ export function Header() {
             aria-label="KulturTonight — home"
           >
             <img
-              src="/assets/logo-mark.svg"
-              alt="KulturTonight theater arch mark"
-              width={28}
-              height={28}
-              className="flex-shrink-0 transition-opacity duration-300 group-hover:opacity-80"
+              src="/kulturtonight-logo.png"
+              alt="KulturTonight"
+              height={36}
+              className="h-9 w-auto flex-shrink-0 transition-opacity duration-300 group-hover:opacity-80"
             />
             <span className="font-serif text-xl font-bold tracking-tight text-foreground transition-colors relative z-10">
               KulturTonight
@@ -248,10 +247,10 @@ export function Header() {
             {/* Mobile logo */}
             <div className="absolute top-6 left-8 flex items-center gap-3">
               <img
-                src="/assets/logo-mark.svg"
-                alt="KulturTonight theater arch mark"
-                width={24}
-                height={24}
+                src="/kulturtonight-logo.png"
+                alt="KulturTonight"
+                height={32}
+                className="h-8 w-auto"
               />
               <span className="font-serif text-lg font-bold text-foreground">KulturTonight</span>
             </div>
