@@ -52,7 +52,6 @@ export default function FrBlogGenevaCetteSemaineDetailPage() {
         article={article}
         breadcrumbs={[
           { label: "KulturTonight", href: "/fr" },
-          { label: "Blog", href: "/fr/blog" },
           { label: "Genève", href: "/fr/blog/geneve" },
           { label: "Cette Semaine", href: "/fr/blog/geneve/cette-semaine" },
           { label: article.title },

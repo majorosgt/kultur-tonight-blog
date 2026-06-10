@@ -3,22 +3,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
-import { CategoryNav } from "@/components/CategoryNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideHubCard, type GuideHubCardData } from "@/components/GuideHubCard";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternates } from "@/lib/i18n";
-
-const navCategories = [
-  { label: "All Geneva", href: "/en/geneva" },
-  { label: "This Weekend", href: "/en/geneva/things-to-do-this-weekend" },
-  { label: "Theatre", href: "/en/geneva/theatre" },
-  { label: "Concerts", href: "/en/geneva/concerts" },
-  { label: "Family", href: "/en/geneva/family-events" },
-  { label: "Venues", href: "/en/geneva/venues" },
-];
 
 const guideCards: GuideHubCardData[] = [
   {
@@ -150,7 +140,6 @@ export default function EventsListPage() {
     <>
       <Header />
       <main className="pt-24">
-        <CategoryNav categories={navCategories} />
 
         <div className="container mx-auto px-4 md:px-6 py-8">
           <Breadcrumbs

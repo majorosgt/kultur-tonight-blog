@@ -56,7 +56,7 @@ export default function BlogDetailPage() {
           <Breadcrumbs
             items={[
               { label: "KulturTonight", href: "/en" },
-              { label: "Blog", href: "/en/blog" },
+              { label: "Geneva", href: "/en/blog/geneva" },
               { label: guide.title },
             ]}
           />

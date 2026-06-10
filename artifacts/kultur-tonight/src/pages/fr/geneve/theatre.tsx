@@ -4,22 +4,12 @@ import { Footer } from "@/components/Footer";
 import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { EventCard } from "@/components/EventCard";
-import { CategoryNav } from "@/components/CategoryNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
 import { eventsFr } from "@/content/events.fr";
-
-const categories = [
-  { label: "Tout Genève",  href: "/fr/geneve" },
-  { label: "Ce Week-end", href: "/fr/geneve/que-faire-ce-weekend" },
-  { label: "Théâtre",     href: "/fr/geneve/theatre", active: true },
-  { label: "Concerts",    href: "/fr/geneve/concerts" },
-  { label: "Famille",     href: "/fr/geneve/sorties-en-famille" },
-  { label: "Lieux",       href: "/fr/geneve/lieux" },
-];
 
 const containerVariants = {
   hidden:  { opacity: 0 },
@@ -46,7 +36,6 @@ export default function FrTheatrePage() {
     <>
       <Header />
       <main className="pt-24">
-        <CategoryNav categories={categories} />
 
         <div className="container mx-auto px-4 md:px-6 py-8">
           <Breadcrumbs

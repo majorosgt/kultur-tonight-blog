@@ -38,7 +38,6 @@ export default function BlogGenevaPage() {
           <Breadcrumbs
             items={[
               { label: "KulturTonight", href: "/en" },
-              { label: "Blog", href: "/en/blog" },
               { label: "Geneva" },
             ]}
           />
@@ -46,7 +45,7 @@ export default function BlogGenevaPage() {
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Geneva Editorial
+              Geneva Culture Guide
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Everything we write about Geneva's cultural life — from timeless guides and venue portraits to weekly picks and seasonal round-ups.
@@ -76,7 +75,7 @@ export default function BlogGenevaPage() {
             </div>
           </div>
 
-          <SectionHeading title="Editorial Sections" subtitle="Browse all eight content categories." />
+          <SectionHeading title="What Would You Like to Discover?" subtitle="Eight ways into Geneva's cultural life" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
             {categories.map((cat) => (

@@ -52,7 +52,7 @@ export default function FrBlogPage() {
           <Breadcrumbs
             items={[
               { label: "KulturTonight", href: "/fr" },
-              { label: "Blog" },
+              { label: "Genève" },
             ]}
           />
 

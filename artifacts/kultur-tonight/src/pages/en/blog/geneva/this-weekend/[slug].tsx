@@ -50,7 +50,6 @@ export default function BlogGenevaThisWeekendDetailPage() {
         article={article}
         breadcrumbs={[
           { label: "KulturTonight", href: "/en" },
-          { label: "Blog", href: "/en/blog" },
           { label: "Geneva", href: "/en/blog/geneva" },
           { label: "This Weekend", href: "/en/blog/geneva/this-weekend" },
           { label: article.title },

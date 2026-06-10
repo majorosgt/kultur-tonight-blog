@@ -52,7 +52,6 @@ export default function FrBlogGenevaSaisonnierDetailPage() {
         article={article}
         breadcrumbs={[
           { label: "KulturTonight", href: "/fr" },
-          { label: "Blog", href: "/fr/blog" },
           { label: "Genève", href: "/fr/blog/geneve" },
           { label: "Guides Saisonniers", href: "/fr/blog/geneve/saisonnier" },
           { label: article.title },

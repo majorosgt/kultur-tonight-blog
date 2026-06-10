@@ -6,22 +6,12 @@ import { CTASection } from "@/components/CTASection";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { EventCard } from "@/components/EventCard";
 import { VenueCard } from "@/components/VenueCard";
-import { CategoryNav } from "@/components/CategoryNav";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { events } from "@/content/events";
 import { venues } from "@/content/venues";
-
-const categories = [
-  { label: "All Geneva", href: "/en/geneva", active: true },
-  { label: "This Weekend", href: "/en/geneva/things-to-do-this-weekend" },
-  { label: "Theatre", href: "/en/geneva/theatre" },
-  { label: "Concerts", href: "/en/geneva/concerts" },
-  { label: "Family", href: "/en/geneva/family-events" },
-  { label: "Venues", href: "/en/geneva/venues" },
-];
 
 export default function GenevaPage() {
   useSEO({
@@ -45,7 +35,6 @@ export default function GenevaPage() {
           secondaryCtaHref="/en/geneva/events"
         />
 
-        <CategoryNav categories={categories} />
 
         <div className="container mx-auto px-4 md:px-6 pt-8">
           <Breadcrumbs

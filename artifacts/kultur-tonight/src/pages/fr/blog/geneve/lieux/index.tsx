@@ -30,7 +30,6 @@ export default function FrBlogGenevaLieuxPage() {
           <Breadcrumbs
             items={[
               { label: "KulturTonight", href: "/fr" },
-              { label: "Blog", href: "/fr/blog" },
               { label: "Genève", href: "/fr/blog/geneve" },
               { label: "Portraits de Lieux" },
             ]}

@@ -28,7 +28,6 @@ export default function BlogGenevaFamilyPage() {
           <Breadcrumbs
             items={[
               { label: "KulturTonight", href: "/en" },
-              { label: "Blog", href: "/en/blog" },
               { label: "Geneva", href: "/en/blog/geneva" },
               { label: "Family" },
             ]}

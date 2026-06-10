@@ -52,7 +52,6 @@ export default function FrBlogGenevaFamilleDetailPage() {
         article={article}
         breadcrumbs={[
           { label: "KulturTonight", href: "/fr" },
-          { label: "Blog", href: "/fr/blog" },
           { label: "Genève", href: "/fr/blog/geneve" },
           { label: "En Famille", href: "/fr/blog/geneve/famille" },
           { label: article.title },

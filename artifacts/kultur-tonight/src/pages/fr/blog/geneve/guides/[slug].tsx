@@ -149,7 +149,6 @@ export default function FrBlogGenevaGuideArticlePage() {
           <Breadcrumbs
             items={[
               { label: "KulturTonight", href: "/fr" },
-              { label: "Blog", href: "/fr/blog" },
               { label: "Genève", href: "/fr/blog/geneve" },
               { label: "Guides", href: "/fr/blog/geneve/guides" },
               { label: guide.title },

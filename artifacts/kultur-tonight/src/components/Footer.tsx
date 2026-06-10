@@ -51,7 +51,7 @@ export function Footer() {
         { label: "Guides ville",  href: "/fr/blog/geneve/guides" },
       ]
     : [
-        { label: "Culture Blog",  href: "/en/blog/geneva/culture" },
+        { label: "Culture Guide", href: "/en/blog/geneva" },
         { label: "City Guides",   href: "/en/blog/geneva/guides" },
       ];
 
