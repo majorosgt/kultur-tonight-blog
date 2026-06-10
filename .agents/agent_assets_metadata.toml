@@ -66,3 +66,21 @@ id = "Ifz0UPE1WQ293mPy6j5cE"
 uri = "file://artifacts/kultur-tonight/public/assets/hero/venues/alhambra.png"
 type = "image"
 title = "alhambra"
+
+[[generated]]
+id = "lefyDh6gzbtasSM02LYbg"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/culture-guide.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "XFctqm7EAf3d9euUswYic"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/things-to-do.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "_3ipiE77SFC8ez2Cbdy3g"
+uri = "file://artifacts/kultur-tonight/public/assets/hero/venues.png"
+type = "image"
+title = "generated_image"
