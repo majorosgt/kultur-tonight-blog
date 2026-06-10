@@ -13,7 +13,7 @@ export function Header() {
   const cityDropdownRef = useRef<HTMLDivElement>(null);
 
   const locale = detectLocale(location);
-  const isOnBlog = location.includes("/blog/");
+  const [weeklyHover, setWeeklyHover] = useState(false);
 
   const scrollToNewsletter = () => {
     const el = document.getElementById("weekly-guide");
@@ -41,44 +41,23 @@ export function Header() {
   const navLinks =
     locale === "fr"
       ? [
-          { label: "Guides",          href: "/fr/blog/geneve/guides" },
-          { label: "Sorties",         href: "/fr/geneve/evenements" },
-          { label: "Lieux",           href: "/fr/geneve/lieux" },
+          { label: "Culture Guide",     href: "/fr/blog/geneve" },
+          { label: "Sorties",           href: "/fr/geneve/evenements" },
+          { label: "Lieux",             href: "/fr/geneve/lieux" },
           { label: "Histoires locales", href: "/fr/blog/geneve/culture" },
-          { label: "Guides",          href: "/fr/blog/geneve" },
         ]
       : [
-          { label: "Guides",        href: "/en/blog/geneva/guides" },
+          { label: "Culture Guide", href: "/en/blog/geneva" },
           { label: "Things to Do",  href: "/en/geneva/events" },
           { label: "Venues",        href: "/en/geneva/venues" },
           { label: "Local Stories", href: "/en/blog/geneva/culture" },
-          { label: "Guides",        href: "/en/blog/geneva" },
-        ];
-
-  const blogNavLinks =
-    locale === "fr"
-      ? [
-          { label: "Guides",         href: "/fr/blog/geneve/guides" },
-          { label: "Lieux",          href: "/fr/blog/geneve/lieux" },
-          { label: "Cette Semaine",  href: "/fr/blog/geneve/cette-semaine" },
-          { label: "Saisonnier",     href: "/fr/blog/geneve/saisonnier" },
-          { label: "Culture",        href: "/fr/blog/geneve/culture" },
-        ]
-      : [
-          { label: "Guides",       href: "/en/blog/geneva/guides" },
-          { label: "Venues",       href: "/en/blog/geneva/venues" },
-          { label: "This Week",    href: "/en/blog/geneva/this-week" },
-          { label: "Seasonal",     href: "/en/blog/geneva/seasonal" },
-          { label: "Culture",      href: "/en/blog/geneva/culture" },
         ];
 
   const earlyAccessLabel = locale === "fr" ? "Recevoir le guide" : "Get the Weekly Guide";
   const joinLabel        = locale === "fr" ? "Recevoir le guide hebdomadaire" : "Get the Weekly Guide";
   const tonightLabel     = locale === "fr" ? "Événements ce soir →" : "Tonight's Events →";
   const tonightHref      = "https://www.kulturtonight.ch/fr";
-  const blogHref         = locale === "fr" ? "/fr/blog/geneve" : "/en/blog/geneva";
   const cityHref         = locale === "fr" ? "/fr/geneve" : "/en/geneva";
-  const cultureGuideLabel = locale === "fr" ? "Guide culturel de Genève" : "Geneva Culture Guide";
 
   const enPath = switchLocale(location, "en");
   const frPath = switchLocale(location, "fr");
@@ -161,18 +140,6 @@ export function Header() {
               )}
             </AnimatePresence>
           </div>
-
-          {/* Descriptor — hidden on mobile, links to blog/geneva */}
-          <span className="hidden xl:flex items-center gap-3">
-            <span className="w-px h-4 bg-border/60" aria-hidden="true" />
-            <Link
-              href={blogHref}
-              className="text-[11px] uppercase tracking-[0.22em] font-sans hover:opacity-100 transition-opacity"
-              style={{ color: "#E1C570", opacity: 0.85 }}
-            >
-              {cultureGuideLabel}
-            </Link>
-          </span>
         </div>
 
         {/* Desktop Nav */}
@@ -181,7 +148,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`relative text-xs font-sans tracking-widest uppercase transition-colors group py-1 ${
+              className={`relative whitespace-nowrap text-xs font-sans tracking-widest uppercase transition-colors group py-1 ${
                 location.startsWith(link.href) ? "text-primary" : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -222,23 +189,39 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Tonight's Events — external homepage */}
+          {/* Tonight's Events — matches hero PRIMARY button */}
           <a
             href={tonightHref}
-            className="flex items-center gap-1.5 text-xs font-sans tracking-widest uppercase font-medium px-4 py-2 bg-gold-gradient text-black hover:opacity-90 transition-opacity"
+            className="relative inline-flex items-center justify-center px-8 font-sans uppercase tracking-widest text-[11px] hover:opacity-90 transition-opacity duration-200 overflow-hidden"
+            style={{
+              height: "52px",
+              background:
+                "linear-gradient(91.54deg, rgba(201,147,39,0.8) -14.78%, #E1C570 52.55%, rgba(201,163,39,0.8) 80.74%, rgba(201,134,39,0.8) 114.58%)",
+              color: "#121212",
+            }}
             data-testid="button-tonight-events"
           >
             {tonightLabel}
           </a>
 
-          {/* Weekly guide CTA — scrolls to newsletter */}
-          <Button
+          {/* Weekly guide CTA — matches hero SECONDARY button, with gold fill on hover */}
+          <button
             onClick={scrollToNewsletter}
-            className="bg-transparent text-foreground border border-border/60 hover:border-primary/60 hover:text-primary rounded-none font-sans font-medium tracking-widest uppercase text-xs px-4 py-5"
+            onMouseEnter={() => setWeeklyHover(true)}
+            onMouseLeave={() => setWeeklyHover(false)}
+            className="relative inline-flex items-center justify-center px-8 font-sans uppercase tracking-widest text-[11px] transition-colors duration-200 backdrop-blur-sm"
+            style={{
+              height: "52px",
+              border: "1px solid #E1C570",
+              background: weeklyHover
+                ? "linear-gradient(91.54deg, rgba(201,147,39,0.8) -14.78%, #E1C570 52.55%, rgba(201,163,39,0.8) 80.74%, rgba(201,134,39,0.8) 114.58%)"
+                : "transparent",
+              color: weeklyHover ? "#121212" : "#F8F5F0",
+            }}
             data-testid="button-early-access-header"
           >
             <span className="relative z-10">{earlyAccessLabel}</span>
-          </Button>
+          </button>
         </nav>
 
         {/* Mobile Toggle */}
@@ -251,39 +234,6 @@ export function Header() {
           {mobileMenuOpen ? <X size={28} className="text-primary" /> : <Menu size={28} />}
         </button>
       </div>
-
-      {/* Blog sub-nav — shown only on /blog/ routes */}
-      <AnimatePresence>
-        {isOnBlog && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="hidden md:block border-t border-border/20 bg-[#080C18]/60 backdrop-blur-sm"
-          >
-            <div className="container mx-auto px-4 md:px-6 flex items-center gap-8 py-2">
-              <span className="text-[10px] uppercase tracking-[0.2em] font-sans text-muted-foreground/50 mr-2">
-                {locale === "fr" ? "Blog" : "Blog"}
-              </span>
-              {blogNavLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative text-[11px] font-sans tracking-widest uppercase transition-colors group py-1 ${
-                    location.startsWith(link.href) ? "text-primary" : "text-muted-foreground/70 hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                  <span className={`absolute bottom-0 left-0 h-[1px] bg-gold-gradient transition-all duration-300 ${
-                    location.startsWith(link.href) ? "w-full" : "w-0 group-hover:w-full"
-                  }`} />
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* Mobile Nav */}
       <AnimatePresence>
