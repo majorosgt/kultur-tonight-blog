@@ -47,7 +47,7 @@ export function Footer() {
 
   const col3Links = isFr
     ? [
-        { label: "Blog culturel", href: "/fr/blog/geneve/culture" },
+        { label: "Guide Culturel", href: "/fr/blog/geneve" },
         { label: "Guides ville",  href: "/fr/blog/geneve/guides" },
       ]
     : [

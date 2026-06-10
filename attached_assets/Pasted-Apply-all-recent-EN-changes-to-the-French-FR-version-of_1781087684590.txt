@@ -1,0 +1,65 @@
+Apply all recent EN changes to the French (FR) version of the site. 
+Mirror every change exactly — adapt to French language and conventions, 
+do not translate literally.
+
+## 1. HEADER NAVIGATION — FR labels
+
+Update FR header nav items:
+- Change "Blog" → "Guides"
+- Change "Histoires locales" (if showing as "Local History" or similar) → "Histoires locales"
+- Final FR nav order: Culture Guide | Sorties | Lieux | Histoires locales
+
+## 2. SECONDARY NAV — remove from all FR pages
+
+Remove the secondary navigation bar below the main header on every FR page 
+(the row with items like GENÈVE | CE WEEK-END | THÉÂTRE | CONCERTS | FAMILLE | LIEUX).
+Remove completely, do not replace.
+
+## 3. BREADCRUMBS — fix on all FR pages
+
+Remove "BLOG" from every FR breadcrumb trail.
+Correct pattern: KULTURTONIGHT › GENÈVE › [NOM DE LA PAGE]
+Apply to all FR pages.
+
+## 4. CULTURE GUIDE PAGE (FR) — text changes
+
+- Change H1 from current title to "Guide Culturel — Genève"
+- Find section titled "Editorial Sections" or equivalent:
+  - Change section title to "Que souhaitez-vous découvrir ?"
+  - Change subtitle to "Huit façons d'explorer la vie culturelle de Genève"
+- Do not remove or move any content in this section
+
+## 5. FOOTER — update on all FR pages
+
+In the footer EDITORIAL column:
+- Change "Culture Blog" or "Blog Culturel" → "Guide Culturel"
+- Update link to point to the FR Culture Guide page (/fr/blog/geneve or equivalent)
+
+Apply to every FR page (shared footer component).
+
+## 6. GUIDE TITLE — brand voice fix (FR)
+
+Find the FR guide card and article equivalent of 
+"How to Get Cheap Theatre Tickets in Geneva"
+
+Change to:
+"Le théâtre à Genève en dernière minute — comment voir plus pour moins"
+
+Change everywhere it appears: guide card, article H1, page title, 
+meta title, breadcrumb, and any internal links. URL unchanged.
+
+## 7. HEADER CTA BUTTONS (FR) — visual style fix
+
+Apply the same button style fixes as done on the EN version:
+- "Événements ce soir →" button: solid gold fill, dark text, uppercase
+  (match the hero primary button style exactly)
+- "Recevoir le guide" button: transparent background, gold border, 
+  light text, uppercase — on hover: solid gold fill
+  (copy exact className from the EN header buttons)
+
+## RULES:
+- Mirror all EN changes — adapt language, do not translate literally
+- Do not change any URLs or routing
+- Do not modify EN pages
+- Do not touch the homepage
+- French conventions: use "Genève" not "Geneva", "Théâtre" with accents, etc.

@@ -43,14 +43,14 @@ export default function FrBlogGenevePage() {
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Éditorial Genève
+              Guide Culturel — Genève
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Tout ce que nous écrivons sur la vie culturelle genevoise — guides intemporels, portraits de lieux, sélections de la semaine et bilans saisonniers.
             </p>
           </div>
 
-          <SectionHeading title="Rubriques Éditoriales" subtitle="Parcourez les huit sections de contenu." />
+          <SectionHeading title="Que souhaitez-vous découvrir ?" subtitle="Huit façons d'explorer la vie culturelle de Genève" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
             {categories.map((cat) => (
