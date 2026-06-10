@@ -16,7 +16,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Que faire à Genève ce week-end",
     description:
       "Une sélection d'idées culturelles pour le week-end — théâtre, expositions, concerts, sorties en famille et lieux où prendre le temps.",
-    cta: "Lire le guide →",
+    cta: "EXPLORER →",
     href: "/fr/blog/geneve/ce-weekend",
   },
   {
@@ -24,7 +24,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Sorties culturelles gratuites à Genève",
     description:
       "Art public, promenades historiques, musées, musique en plein air et lieux culturels à découvrir sans forcément réserver.",
-    cta: "Explorer les idées →",
+    cta: "EXPLORER →",
     href: "/fr/blog/geneve/culture",
   },
   {
@@ -32,7 +32,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Les meilleurs musées de Genève",
     description:
       "Art, histoire, science, culture internationale — les musées genevois racontent la ville sous plusieurs angles.",
-    cta: "Lire le guide →",
+    cta: "EXPLORER →",
     href: "/fr/blog/geneve/guides",
   },
   {
@@ -40,7 +40,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Les meilleurs théâtres de Genève",
     description:
       "Du Grand Théâtre aux scènes plus intimes, un guide pour comprendre où le théâtre genevois prend vie.",
-    cta: "Lire le guide →",
+    cta: "EXPLORER →",
     href: "/fr/geneve/theatre",
   },
   {
@@ -48,7 +48,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Musique classique à Genève",
     description:
       "Orchestres, récitals, musique de chambre et grandes salles — les lieux où écouter Genève autrement.",
-    cta: "Lire le guide →",
+    cta: "EXPLORER →",
     href: "/fr/geneve/concerts",
   },
   {
@@ -56,7 +56,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Sorties culturelles en famille",
     description:
       "Musées, spectacles, ateliers et idées douces pour éveiller la curiosité des enfants sans compliquer la journée.",
-    cta: "Voir les idées →",
+    cta: "EXPLORER →",
     href: "/fr/blog/geneve/famille",
   },
   {
@@ -64,7 +64,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Le calendrier culturel de Genève",
     description:
       "Festivals d'été, traditions d'hiver, expositions de printemps et soirées d'automne — les temps forts culturels de l'année.",
-    cta: "Explorer le calendrier →",
+    cta: "EXPLORER →",
     href: "/fr/blog/geneve/saisonnier",
   },
   {
@@ -72,7 +72,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Idées culturelles quand il pleut à Genève",
     description:
       "Musées, salles, galeries et refuges culturels pour les week-ends humides et les soirées spontanées.",
-    cta: "Lire le guide →",
+    cta: "EXPLORER →",
     href: "/fr/blog/geneve/guides",
   },
 ];

@@ -16,7 +16,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Things to Do in Geneva This Weekend",
     description:
       "A curated guide to cultural ideas for the weekend — theatre, exhibitions, concerts, family outings and places worth lingering in.",
-    cta: "Read guide →",
+    cta: "EXPLORE →",
     href: "/en/blog/geneva/this-weekend",
   },
   {
@@ -24,7 +24,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Free Cultural Things to Do in Geneva",
     description:
       "Public art, museum moments, historic walks, open-air music and cultural places you can enjoy without planning too hard.",
-    cta: "Explore ideas →",
+    cta: "EXPLORE →",
     href: "/en/blog/geneva/culture",
   },
   {
@@ -32,7 +32,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Best Museums in Geneva",
     description:
       "From art and history to science and international culture, Geneva's museums offer more than a rainy-day backup plan.",
-    cta: "Read guide →",
+    cta: "EXPLORE →",
     href: "/en/blog/geneva/guides",
   },
   {
@@ -40,7 +40,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Best Theatres in Geneva",
     description:
       "From the Grand Théâtre to intimate independent stages, discover where Geneva's theatre scene comes alive.",
-    cta: "Read guide →",
+    cta: "EXPLORE →",
     href: "/en/geneva/theatre",
   },
   {
@@ -48,7 +48,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Classical Music in Geneva",
     description:
       "Where to hear orchestras, chamber music and recitals in some of the city's most atmospheric halls.",
-    cta: "Read guide →",
+    cta: "EXPLORE →",
     href: "/en/geneva/concerts",
   },
   {
@@ -56,7 +56,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Family-Friendly Cultural Activities",
     description:
       "Museums, performances, workshops and gentle cultural outings designed for curious children and relaxed parents.",
-    cta: "View recommendations →",
+    cta: "EXPLORE →",
     href: "/en/blog/geneva/family",
   },
   {
@@ -64,7 +64,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Geneva Cultural Calendar by Season",
     description:
       "Summer festivals, winter traditions, spring exhibitions and autumn evenings — what to expect from Geneva's cultural year.",
-    cta: "Explore the calendar →",
+    cta: "EXPLORE →",
     href: "/en/blog/geneva/seasonal",
   },
   {
@@ -72,7 +72,7 @@ const guideCards: GuideHubCardData[] = [
     title: "Rainy Day Cultural Ideas in Geneva",
     description:
       "Indoor places, quiet discoveries and cultural escapes for wet weekends, cold evenings and spontaneous city days.",
-    cta: "Read guide →",
+    cta: "EXPLORE →",
     href: "/en/blog/geneva/guides",
   },
 ];

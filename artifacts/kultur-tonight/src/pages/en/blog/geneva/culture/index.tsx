@@ -29,22 +29,22 @@ export default function BlogGenevaCulturePage() {
             items={[
               { label: "KulturTonight", href: "/en" },
               { label: "Geneva", href: "/en/blog/geneva" },
-              { label: "Culture" },
+              { label: "Local Stories" },
             ]}
           />
 
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Culture
+              Local Stories
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Essays and reflections on Geneva's cultural life — the ideas, traditions, and conversations that animate the city's artistic scene.
+              Stories, essays and reflections on the people, places and culture that make Geneva worth knowing.
             </p>
           </div>
 
           <SectionHeading
-            title="Cultural Essays"
+            title="Local Stories"
             subtitle={`${blogCulture.length} long reads on Geneva's cultural identity.`}
           />
 

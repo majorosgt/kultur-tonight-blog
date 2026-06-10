@@ -41,8 +41,13 @@ interface BlogCardProps {
 
 export function BlogCard({ article, href }: BlogCardProps) {
   const photo = CATEGORY_PHOTOS[article.category] ?? CATEGORY_PHOTOS.guides;
-  const categoryLabel = CATEGORY_LABELS[article.category] ?? article.category;
   const locale = article.lang;
+  const categoryLabel =
+    article.category === "culture"
+      ? locale === "fr"
+        ? "Histoires locales"
+        : "Local Stories"
+      : CATEGORY_LABELS[article.category] ?? article.category;
   const readLabel = locale === "fr" ? "Lire →" : "Read →";
   const minLabel  = locale === "fr" ? "min" : "min";
 

@@ -51,10 +51,10 @@ export default function BlogGenevaCultureDetailPage() {
         breadcrumbs={[
           { label: "KulturTonight", href: "/en" },
           { label: "Geneva", href: "/en/blog/geneva" },
-          { label: "Culture", href: "/en/blog/geneva/culture" },
+          { label: "Local Stories", href: "/en/blog/geneva/culture" },
           { label: article.title },
         ]}
-        categoryLabel="Culture"
+        categoryLabel="Local Stories"
         backHref="/en/blog/geneva/culture"
         backLabel="Back to Culture"
         related={related}

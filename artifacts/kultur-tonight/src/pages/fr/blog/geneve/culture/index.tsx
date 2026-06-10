@@ -31,22 +31,22 @@ export default function FrBlogGenevaCulturePage() {
             items={[
               { label: "KulturTonight", href: "/fr" },
               { label: "Genève", href: "/fr/blog/geneve" },
-              { label: "Culture" },
+              { label: "Histoires locales" },
             ]}
           />
 
           <div className="max-w-3xl mt-8 mb-16">
             <div className="w-12 h-1 bg-gold-gradient mb-6" />
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">
-              Culture
+              Histoires locales
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Essais et réflexions sur la vie culturelle genevoise — les idées, traditions et conversations qui animent la scène artistique de la ville.
+              Récits, essais et réflexions sur les gens, les lieux et la culture qui font de Genève une ville unique.
             </p>
           </div>
 
           <SectionHeading
-            title="Essais Culturels"
+            title="Histoires locales"
             subtitle={`${blogCultureFr.length} lectures approfondies sur l'identité culturelle genevoise.`}
           />
 

@@ -1,0 +1,79 @@
+Apply all second-round fixes to both EN and FR versions of the site.
+
+## 1. THINGS TO DO — CTA button text unification (EN and FR)
+
+### EN:
+Find all action/CTA buttons on the Things to Do page cards.
+Currently they show different texts: "READ GUIDE →", "EXPLORE IDEAS →", 
+"VIEW RECOMMENDATIONS →", "EXPLORE THE CALENDAR →"
+
+Change ALL of them to: "EXPLORE →"
+
+### FR:
+Same fix on the FR Things to Do (Sorties) page.
+Change all card CTA buttons to: "EXPLORER →"
+
+## 2. FOOTER — wire up EXPLORE GENEVA column links (EN and FR)
+
+### EN footer — EXPLORE GENEVA column:
+- "Theatre in Geneva" → links to /en/blog/geneva/things-to-do/theatre 
+  (or closest existing theatre page URL)
+- "Concerts" → links to /en/blog/geneva/things-to-do/classical-music
+  (or closest existing concerts/classical page URL)
+- "Family Events" → links to /en/blog/geneva/things-to-do/family
+  (or closest existing family page URL)  
+- "This Weekend" → links to /en/blog/geneva/things-to-do/this-weekend
+  (or closest existing this-weekend page URL)
+
+If any of these target pages do not exist yet, link to the Things to Do 
+main page (/en/blog/geneva/things-to-do) as fallback.
+
+### FR footer — EXPLORER GENÈVE column:
+- "Théâtre à Genève" → links to FR equivalent
+- "Concerts" → links to FR equivalent
+- "Sorties en famille" → links to FR equivalent
+- "Ce week-end" → links to FR equivalent
+
+Same fallback rule: if FR page doesn't exist, link to 
+/fr/blog/geneve/sorties
+
+## 3. LOCAL STORIES — rename "Culture" section (EN and FR)
+
+### EN:
+- Culture landing page H1: "Culture" → "Local Stories"
+- Subtitle: change to "Stories, essays and reflections on the people, 
+  places and culture that make Geneva worth knowing."
+- Section title "Cultural Essays" → "Local Stories"
+- Breadcrumb last item: "CULTURE" → "LOCAL STORIES"
+- Article card category badge: "CULTURE" → "LOCAL STORIES"
+- Article page category badge: "CULTURE" → "LOCAL STORIES"
+- Article breadcrumb: GENEVA › CULTURE › [title] → 
+  GENEVA › LOCAL STORIES › [title]
+
+### FR:
+- Culture landing page H1: "Culture" → "Histoires locales"
+- Subtitle: "Récits, essais et réflexions sur les gens, les lieux 
+  et la culture qui font de Genève une ville unique."
+- Section title → "Histoires locales"
+- Breadcrumb: "CULTURE" → "HISTOIRES LOCALES"
+- Article card badge: "CULTURE" → "HISTOIRES LOCALES"
+- Article page badge: "CULTURE" → "HISTOIRES LOCALES"
+
+## 4. LOCAL STORIES — menu link fix (EN and FR)
+
+### EN:
+Check what URL the "Local Stories" header nav item currently links to.
+If it links to /culture or any non-local-stories URL, update it to 
+link to the Culture/Local Stories landing page 
+(/en/blog/geneva/culture or the correct existing URL).
+
+### FR:
+Same check and fix for "Histoires locales" nav item in FR header.
+
+## RULES:
+- Do not change any URLs or routing
+- Do not change article content
+- Do not change page layouts or visual design
+- Do not touch the homepage
+- Apply all changes via shared components where possible
+- EN and FR must be in sync after this change set
