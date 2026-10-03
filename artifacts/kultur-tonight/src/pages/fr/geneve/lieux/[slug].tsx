@@ -96,7 +96,7 @@ export default function FrVenueDetailPage() {
                 </span>
                 <span className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-primary" aria-hidden="true" />
-                  Capacité : {venue.capacity.toLocaleString("fr-CH")}
+                  {venue.capacity > 0 ? `Capacité : ${venue.capacity.toLocaleString("fr-CH")}` : null}
                 </span>
                 <a
                   href={venue.website}
