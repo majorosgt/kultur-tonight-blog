@@ -11,6 +11,20 @@ import { blogGuides } from "@/content/blog-guides";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock } from "lucide-react";
 
+
+function renderInline(text: string, keyPrefix: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, j) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+    return (
+      <Link key={`${keyPrefix}-${j}`} href={match[2]} className="text-[#E1C570] hover:underline">
+        {match[1]}
+      </Link>
+    );
+  });
+}
+
 function renderBody(body: string) {
   const blocks = body.split("\n\n").filter(Boolean);
   return blocks.map((block, i) => {
@@ -56,7 +70,7 @@ function renderBody(body: string) {
 
     return (
       <p key={i} className="text-lg text-foreground/80 leading-relaxed font-sans mb-4">
-        {trimmed}
+        {renderInline(trimmed, String(i))}
       </p>
     );
   });

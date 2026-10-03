@@ -8,7 +8,7 @@ export const blogGuidesFr: BlogGuide[] = [
     category: 'guides',
     city: 'geneva',
     lang: 'fr',
-    date: '2026-06-07',
+    date: '2026-10-03',
     readTime: 6,
     image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80',
     metaTitle: 'Les meilleurs théâtres de Genève — Guide insider | KulturTonight',
@@ -19,55 +19,31 @@ export const blogGuidesFr: BlogGuide[] = [
     ogDescription: 'Du Grand Théâtre au Galpon — un guide des meilleures scènes genevoises, écrit par des amateurs de culture qui les connaissent de l\'intérieur.',
     ctaText: 'Voir les spectacles de théâtre ce soir à Genève →',
     ctaUrl: 'https://kulturtonight.ch/fr/geneve/evenements/',
-    body: `Genève n\'est pas la première ville qui vient à l\'esprit quand on parle de théâtre européen. Paris, Londres, Berlin — ce sont ces noms qui dominent la conversation. Pourtant, passer une saison à fréquenter les scènes genevoises, c\'est découvrir quelque chose que ces grandes capitales n\'ont pas toujours : un théâtre sérieux sans se prendre au sérieux, aventureux sans être inaccessible, ancré dans la conviction que le spectacle vivant compte vraiment.
+    body: `Genève a une grande scène, une maison de répertoire, un théâtre commercial au bord du lac, et des petites salles. C'est la réponse. Le Grand Théâtre fait l'opéra et le ballet. La Comédie de Genève fait le contemporain. Le Théâtre du Léman prend les grandes tournées. Carouge, Saint-Gervais, le Galpon et le Pitoëff sont les salles sous 500 places.
 
-Le paysage théâtral de la ville est étonnamment riche pour sa taille. Genève compte environ 200 000 habitants — moins qu\'un arrondissement parisien — et pourtant elle fait vivre un Grand Théâtre, une institution contemporaine de premier plan, un théâtre de quartier aimé depuis des décennies, un laboratoire d\'expérimentation, et des dizaines de compagnies, le tout à un niveau d\'exigence constant. Pour comprendre pourquoi, il faut comprendre Genève elle-même : une ville de diplomates, de fonctionnaires internationaux, de financiers et d\'universitaires venus de partout, qui ont apporté avec eux leurs exigences culturelles.
+## Les grandes salles
 
-## Grand Théâtre de Genève — Le centre de tout
+Le [Grand Théâtre de Genève](/fr/geneve/lieux/grand-theatre-de-geneve) est sur la place Neuve. Environ 1 500 places. Opéra, ballet, et la compagnie de la maison. Un samedi ici est la soirée formelle de la ville.
 
-Toute conversation sur le théâtre genevois commence et finit au Grand Théâtre, sur la Place Neuve. Depuis 1879, ce monument néo-baroque est l\'âme lyrique et chorégraphique de la ville — mais c\'est aussi, à son meilleur, une institution théâtrale à part entière. Les moyens de production sont parmi les plus élevés d\'Europe, et la programmation des dernières saisons a su tenir ensemble répertoire classique et créations contemporaines audacieuses qui ont attiré l\'attention de la critique du continent entier.
+La [Comédie de Genève](/fr/geneve/lieux/comedie-de-geneve) est au boulevard des Philosophes. Environ 500 places. Théâtre européen contemporain, souvent en coproduction. C'est la maison à réserver si la soirée doit être une pièce, pas un spectacle.
 
-Ce qui distingue le Grand Théâtre des maisons comparables, c\'est son Ballet du Grand Théâtre — l\'une des meilleures compagnies de danse d\'Europe, capable de produire des soirées qui rivalisent avec ce qu\'on voit à l\'Opéra de Paris ou au Sadler\'s Wells. Si vous ne voyez qu\'un seul spectacle à Genève, et que ce spectacle est au Grand Théâtre, vous repartirez en comprenant pourquoi cette ville prend la culture au sérieux.
+Le [Théâtre du Léman](/fr/geneve/lieux/theatre-du-leman) est au quai du Mont-Blanc. Environ 1 300 places. Comédies musicales en tournée, seuls en scène, saison commerciale. Le lac est dehors. Le programme n'est pas celui du Grand Théâtre.
 
-Le bâtiment lui-même mérite une visite avant même que le rideau ne se lève. Arrivez tôt, trouvez votre place, levez les yeux — le lustre, les feuilles d\'or, le velours cramoisi — et accordez-vous le plaisir d\'être dans un endroit qui a été conçu, depuis le premier coup de pierre, pour faire d\'une soirée une occasion.
+## Les petites salles
 
-*À savoir : réservez à l\'avance pour les productions populaires. Le guichet ouvre 90 minutes avant le spectacle. Des places de dernière minute sont souvent disponibles — les membres KulturTonight y accèdent en avant-première à –50%.*
+Le [Théâtre de Carouge](/fr/geneve/lieux/theatre-de-carouge) est à la rue Ancienne. Environ 300 places. Une maison de répertoire, un public fidèle, dans l'ancien quartier sarde.
 
-## Comédie de Genève — Là où le théâtre devient sérieux
+Le [Théâtre Saint-Gervais](/fr/geneve/lieux/theatre-saint-gervais) est au 5, rue du Temple, à cinq minutes de Cornavin. Deux salles, 160 et 60 places. Écritures nouvelles et performance. Sandrine Kuster le dirige depuis 2018-2019.
 
-Si le Grand Théâtre est l\'établissement lyrique de Genève, la Comédie de Genève en est la conscience théâtrale. Installée dans un beau bâtiment du début du XXe siècle joliment restauré à Plainpalais, la Comédie produit depuis des décennies un travail intellectuellement rigoureux, formellement aventureux, profondément connecté à la conversation théâtrale européenne au sens large.
+Le [Théâtre du Galpon](/fr/geneve/lieux/theatre-du-galpon) est à la rue du Vieux-Billard. Environ 150 places. La salle expérimentale. Le [Théâtre Pitoëff](/fr/geneve/lieux/theatre-pitoeff) est au premier étage de la maison communale de Plainpalais, 52, rue de Carouge. La ville le prête aux compagnies genevoises pour des résidences. Elle ne publie pas de jauge.
 
-La programmation privilégie la dramaturgie contemporaine — nouvelles écritures, nouvelles formes, un travail qui refuse de rester sagement assis dans son fauteuil en attendant l\'entracte. Les coproductions avec la Schaubühne Berlin, le Théâtre de la Ville à Paris et les grandes institutions belges font que le public genevois voit régulièrement des spectacles qui ouvrent simultanément dans trois autres villes européennes. La Comédie n\'est pas pour tout le monde, et elle ne prétend pas l\'être. Mais pour ceux qui veulent un théâtre qui leur demande quelque chose, c\'est l\'adresse indispensable.
+Pour les enfants, le [Théâtre Am Stram Gram](/fr/geneve/lieux/theatre-am-stram-gram), route de Frontenex, a une salle principale de 337 places. C'est un théâtre, pas un atelier avec un rideau.
 
-Un conseil pratique : les productions de la Comédie se vendent rapidement, surtout quand le bouche-à-oreille a précédé la première. Réservez tôt, ou guettez les disponibilités de dernière minute.
+## Si la soirée n'est pas une pièce
 
-## Théâtre de Carouge — L\'âme du quartier
+Le [Bâtiment des Forces Motrices](/fr/geneve/lieux/batiment-des-forces-motrices) est la halle industrielle de la place des Volontaires. L'opéra et la musique de chambre y passent. Ce n'est pas un théâtre de répertoire, et c'est la salle dont on parle quand on dit que le bâtiment fait le spectacle.
 
-Franchissez la frontière entre Genève et Carouge — cette petite ville anciennement indépendante, aux rues plus larges, aux cafés plus détendus, à l\'atmosphère décidément plus italienne que suisse — et vous trouverez le Théâtre de Carouge rue Ancienne. Fondé en 1958, c\'est l\'un des théâtres en activité continue les plus anciens de Suisse romande, et il a mérité sa longévité par une philosophie de programmation d\'une simplicité trompeuse : les meilleures pièces, dans les meilleures productions, pour un public traité en adulte intelligent.
-
-La salle de 300 places est assez intime pour que le spectacle vienne à vous — il n\'y a nulle part où se cacher, ni pour les acteurs ni pour le public, et les meilleures soirées ici ont une qualité d\'attention partagée que les grandes salles atteignent rarement. Le théâtre a un public fidèle et multigénérationnel — des gens qui viennent depuis des décennies et ont des opinions sur chaque production — ce qui lui confère une chaleur qui n\'appartient qu\'à lui.
-
-Si vous passez une soirée à Carouge — et vous devriez ; le quartier mérite qu\'on le flâne — associez votre sortie au théâtre à un dîner dans l\'un des restaurants de la rue Ancienne. Le rythme d\'une soirée carougeoise, théâtre compris, est l\'une des choses discrètement parfaites de Genève.
-
-## Théâtre du Léman — L\'échelle et le spectacle
-
-Tout le théâtre n\'est pas intime et exigeant. Une ville a parfois besoin d\'une scène assez grande pour accueillir le grand spectacle en tournée, la comédie musicale francophone, le show comique qui remplit 1 300 fauteuils un mardi soir. Le Théâtre du Léman, sur le Quai du Mont-Blanc avec le lac devant et les Alpes derrière, est cette scène.
-
-Depuis son ouverture en 1991, le Léman est devenu la première scène commerciale de Genève — les productions qui naissent à Paris, tournent en Europe francophone, et arrivent à Genève dans le cadre de leur étape suisse. Le bâtiment est moderne et fonctionnel, la programmation délibérément large, et l\'emplacement au bord du lac fait qu\'une soirée ici ressemble, par une nuit claire, à quelque chose qui approche le luxe.
-
-## Théâtre du Galpon — Le laboratoire
-
-La culture théâtrale de chaque ville dépend autant de ses marges que de son centre. Le Galpon, dans un entrepôt reconverti en bordure de Plainpalais, est l\'endroit où les marges genevoises sont les plus productives. La programmation est délibérément exigeante — théâtre physique, nouvelles écritures, performance interdisciplinaire — et l\'espace se transforme entièrement pour chaque production, si bien qu\'assister deux fois au Galpon n\'est jamais tout à fait la même expérience.
-
-Le public qui vient régulièrement est parmi le plus engagé de Genève — des gens qui comprennent que ce type de travail demande une participation active. Le Galpon ne produit pas des soirées confortables. Il produit des soirées nécessaires. Si vous voulez comprendre où va le théâtre genevois, pas seulement d\'où il vient, c\'est ici qu\'il faut regarder.
-
-## Comment profiter au mieux de la scène théâtrale genevoise
-
-Les saisons théâtrales à Genève vont de septembre à juin, avec la plupart des grandes productions qui ouvrent en automne et après les fêtes de Noël. L\'été est plus calme, même si la saison des festivals en plein air offre des alternatives.
-
-Conseils de réservation : le Grand Théâtre et la Comédie affichent complet sur les productions populaires des semaines à l\'avance. Le Théâtre de Carouge et le Léman offrent plus de disponibilités, mais se remplissent aussi vite pour les fortes productions. Le Galpon, avec sa petite jauge, peut se vendre très rapidement pour les spectacles qui font parler d\'eux.
-
-La clé d\'une saison théâtrale à Genève est simple : réservez la représentation du samedi soir à l\'avance, et laissez le reste ouvert. La ville récompense les spontanés autant que les planificateurs. Les membres KulturTonight reçoivent chaque soir un accès aux places non vendues dans toutes les grandes salles genevoises à –50%, publiées à 21h00. Une notification. Une décision. Le rideau se lève dans tous les cas.`
+Les places de dernière minute, quand une maison les sort, sont sur KulturTonight à 21 h. Ce guide n'invente pas le programme de la semaine.`
   },
   {
     slug: 'billets-theatre-pas-cher-geneve',
