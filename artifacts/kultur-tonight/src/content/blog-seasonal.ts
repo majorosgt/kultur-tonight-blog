@@ -1,6 +1,49 @@
 import type { BlogArticle } from "./blog-guides";
 
-export const blogSeasonal: BlogArticle[] = [
+export const blogSeasonal: BlogArticle[
+  {
+    slug: "romandie-autumn-winter-festivals-2026",
+    title: "Autumn festivals in Suisse romande",
+    subtitle: "Cattle down from the alp, the last of the harvest, and the Escalade in December",
+    category: "seasonal",
+    city: "geneva",
+    lang: "en",
+    date: "2026-10-03",
+    readTime: 6,
+    image: "/assets/hero/geneva-evening-theatre.png",
+    body: `Suisse romande keeps its year with the land, not the theatre season. The bells come down the mountain, the last grapes are pressed, and Geneva closes December in seventeenth-century dress. Some of these return every year in the same month. The ones below with a day are the 2026 dates a tourism office or a paper has published.
+
+## This quarter, with a date
+
+Nyon holds the Fête de la vigne on 2 and 3 October, on the place du château. The same weekend, Cortaillod in Neuchâtel marks the end of the harvest, and Semsales in Fribourg brings more than 700 head of cattle down for the désalpe, 2–4 October. Albeuve, also Fribourg, runs its fair and désalpe on 3 and 4 October.
+
+The following weekend is Romainmôtier. Les Sonnailles, 9–11 October, is an autumn fair and a market in cowbells. Cheyres, on the lake of Neuchâtel, keeps its vendanges from 9 to 11 October.
+
+Fully, in the Valais, is the chestnut weekend: the Fête de la Châtaigne, 17 and 18 October, a market of about 300 stands at the foot of the Chavalard. Bulle then opens the Comptoir gruérien, 22 October to 1 November, at Espace Gruyère. In November, Vinea at Sierre is 13 and 14 November.
+
+Geneva's own date is later. The Escalade runs from Friday 11 to Sunday 13 December 2026, in the old town and the Parc des Bastions. The Compagnie de 1602 leads it. The city lists it as free. The detailed timetable is still with 1602.ch.
+
+## Every year, by month
+
+The désalpe is mid-September to mid-October. Gruyère, the Valais and the Vaud Jura each have their own Sunday. The date moves with the grass.
+
+The vendanges sit in the last week of September and the first of October, along La Côte, Lavaux, the Neuchâtel shore and the Valais.
+
+Bénichon is a September feast in Fribourg villages: cuchaule, mustard, a long table. It is not one fair. It is the parish celebration, and each village sets its own Sunday.
+
+October is chestnut and brisolée country in the Valais. Fully is the large one. Smaller villages roast chestnuts the same month.
+
+November brings Saint-Martin, and the first Christmas markets. Montreux, Lausanne, Fribourg and Geneva light theirs from late November into December. The Escalade is the fixed Geneva night, around 12 December.
+
+Members can still take a last-minute seat at a hall the same evening, at –50%, released at 21:00. The fair is the other way to spend it.`,
+    ctaText: "See tonight's events →",
+    ctaUrl: "https://www.kulturtonight.ch/en",
+    seoTitle: "Autumn festivals in Suisse romande, 2026 | KulturTonight",
+    seoDescription: "Désalpe, vendanges and the Escalade: dated autumn and winter festivals across Suisse romande, and the months they return.",
+    ogTitle: "Autumn festivals in Suisse romande",
+    ogDescription: "Cattle, harvest and the Escalade. Dated for late 2026, and the months they return.",
+  },
+] = [
   {
     slug: "summer-geneva-cultural-calendar-2026",
     title: "Summer in Geneva: The Cultural Calendar for June–August 2026",
