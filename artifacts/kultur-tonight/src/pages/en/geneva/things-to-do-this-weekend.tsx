@@ -43,10 +43,10 @@ export default function ThingsToDoPage() {
               Things to Do in Geneva This Weekend
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-4">
-              Geneva's cultural scene comes alive as the weekend approaches. From intimate jazz clubs to grand theatrical productions, the city offers an unparalleled array of artistic experiences.
+              Saturday 3 and Sunday 4 October. Two listings are confirmed: Mozart's Requiem at Victoria Hall at 19:30, and La Colonie de Vacances at L'Usine at 20:00.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Below, we highlight the most anticipated performances and events this weekend. Tickets often sell out fast, so booking early is highly recommended.
+              Only shows with a published listing are on the cards. Price is shown only when the source gives one. The live last-minute list is on KulturTonight.
             </p>
           </div>
 

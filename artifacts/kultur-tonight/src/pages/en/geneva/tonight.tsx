@@ -34,7 +34,7 @@ export default function TonightPage() {
             <p className="text-xs uppercase tracking-widest text-[#E1C570] mb-4">Tonight, not this weekend</p>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">Tonight in Geneva</h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-4">
-              This page does not invent a programme. A show is tonight only if the venue still has it on the board. KulturTonight releases selected last-minute seats at 21:00. The weekend guide is for planning. This is for the evening you are already in.
+              Saturday 3 October, confirmed listings: Mozart Requiem at Victoria Hall, 19:30, and La Colonie de Vacances at L'Usine, 20:00. KulturTonight releases selected last-minute seats at 21:00. A show is on this page only if a box office still lists it.
             </p>
             <a href="https://www.kulturtonight.ch/en" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-sans text-[#E1C570] hover:gap-3 transition-all duration-300">
               See tonight's events →
