@@ -43,12 +43,14 @@ export function Header() {
       ? [
           { label: "Culture Guide",     href: "/fr/blog/geneve" },
           { label: "Sorties",           href: "/fr/geneve/evenements" },
+          { label: "Cette semaine",     href: "/fr/blog/geneve/cette-semaine" },
           { label: "Lieux",             href: "/fr/geneve/lieux" },
           { label: "Histoires locales", href: "/fr/blog/geneve/culture" },
         ]
       : [
           { label: "Culture Guide", href: "/en/blog/geneva" },
           { label: "Things to Do",  href: "/en/geneva/events" },
+          { label: "This Week",     href: "/en/blog/geneva/this-week" },
           { label: "Venues",        href: "/en/geneva/venues" },
           { label: "Local Stories", href: "/en/blog/geneva/culture" },
         ];
