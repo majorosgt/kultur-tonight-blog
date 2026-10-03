@@ -46,7 +46,7 @@ export default function BlogGenevaThisWeekPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {events.filter((event) => event.startDate >= "2026-10-05" && event.startDate <= "2026-10-12" && !isPastEvent(event)).map((event) => (
+            {events.filter((event) => event.startDate <= "2026-10-15" && (event.endDate || event.startDate) >= "2026-10-04" && !isPastEvent(event)).map((event) => (
               <div key={event.slug}><EventCard event={event} /></div>
             ))}
           </div>

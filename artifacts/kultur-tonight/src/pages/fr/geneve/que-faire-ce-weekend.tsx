@@ -76,6 +76,13 @@ export default function FrThingsToDoPage() {
           </motion.div>
         </div>
 
+
+          <SectionHeading title="Jusqu'au 15 octobre" subtitle="Les foires de saison encore en cours, au-delà de ce week-end." />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {eventsFr.filter((event) => event.category === "festivals" && !isPastEvent(event) && event.startDate <= "2026-10-15").map((event) => (
+              <div key={event.slug}><EventCard event={event} /></div>
+            ))}
+          </div>
         <CTASection
           title="Ne manquez aucun événement culturel"
           subtitle="Une sélection de théâtres, concerts, expositions et expériences culturelles de dernière minute — envoyée chaque semaine dans votre boîte mail."
