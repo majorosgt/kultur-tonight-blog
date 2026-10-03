@@ -4,7 +4,7 @@ export const blogThisWeek: BlogArticle[] = [
   {
     slug: "this-week-geneva-october-5-11-2026",
     title: "This Week in Geneva: 5–11 October 2026",
-    subtitle: 'A Finnish night, Modeselektor, and a gala.', Victoria Hall, L'Usine",
+    subtitle: 'A Finnish night, Modeselektor, and a gala.',
     category: "this-week",
     city: "geneva",
     lang: "en",

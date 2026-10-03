@@ -4,7 +4,7 @@ export const blogThisWeekFr: BlogArticle[] = [
   {
     slug: "this-week-geneva-october-5-11-2026",
     title: "Cette semaine à Genève : 5–11 octobre 2026",
-    subtitle: 'Une nuit finlandaise, Modeselektor, et un gala.', Victoria Hall, Usine",
+    subtitle: 'Une nuit finlandaise, Modeselektor, et un gala.',
     category: "this-week",
     city: "geneva",
     lang: "fr",
