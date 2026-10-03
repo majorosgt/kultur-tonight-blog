@@ -227,6 +227,7 @@ export default function EventsListPage() {
             >
               Explore KulturTonight Club →
             </a>
+            <a href="/en/geneva/events/archive" className="mt-6 block text-xs uppercase tracking-widest text-muted-foreground hover:text-[#E1C570]">Past events</a>
           </div>
         </section>
 

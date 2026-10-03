@@ -10,6 +10,7 @@ import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { blogThisWeek } from "@/content/blog-this-week";
 import { EventCard } from "@/components/EventCard";
+import { isPastEvent } from "@/lib/event-status";
 import { events } from "@/content/events";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
@@ -45,7 +46,7 @@ export default function BlogGenevaThisWeekPage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {events.filter((event) => event.startDate >= "2026-10-05" && event.startDate <= "2026-10-12").map((event) => (
+            {events.filter((event) => event.startDate >= "2026-10-05" && event.startDate <= "2026-10-12" && !isPastEvent(event)).map((event) => (
               <div key={event.slug}><EventCard event={event} /></div>
             ))}
           </div>

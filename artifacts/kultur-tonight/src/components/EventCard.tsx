@@ -3,6 +3,7 @@ import { Event } from "../content/events";
 import { motion } from "framer-motion";
 import { Calendar, Clock, MapPin, Ticket } from "lucide-react";
 import { detectLocale, localizeCategory } from "@/lib/i18n";
+import { formatEventDay, isPastEvent } from "@/lib/event-status";
 
 /* ─── Unsplash photos by category ─────────────────────────────────────── */
 const categoryPhotos: Record<string, string> = {
@@ -60,6 +61,8 @@ export function EventCard({ event }: { event: Event }) {
   const city          = locale === "fr" ? "Genève" : "Geneva";
   const ticketsLabel  = locale === "fr" ? "Billets" : "Tickets";
   const displayCat    = localizeCategory(event.category, locale);
+  const past          = isPastEvent(event);
+  const dateLabel     = past ? `${formatEventDay(event, locale)} · ${locale === "fr" ? "Passé" : "Past"}` : event.date;
   const photo         = event.image.startsWith("/") || event.image.startsWith("http") ? event.image : getPhoto(event.category);
   const overlay       = getOverlay(event.category);
 
@@ -100,7 +103,7 @@ export function EventCard({ event }: { event: Event }) {
           <div className="absolute top-3.5 right-3.5 z-10">
             <span className="inline-flex items-center gap-1.5 text-[9px] font-sans uppercase tracking-[0.15em] text-foreground/90 bg-[#080C18]/80 backdrop-blur-sm border border-border/50 px-2.5 py-1.5 leading-none">
               <Calendar size={9} className="text-primary flex-shrink-0" aria-hidden="true" />
-              {event.date}
+              {dateLabel}
             </span>
           </div>
 

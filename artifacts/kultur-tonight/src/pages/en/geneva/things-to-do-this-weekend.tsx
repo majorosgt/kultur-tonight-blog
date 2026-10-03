@@ -8,6 +8,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
+import { isPastEvent } from "@/lib/event-status";
 import { events } from "@/content/events";
 import { venues } from "@/content/venues";
 
@@ -20,7 +21,7 @@ export default function ThingsToDoPage() {
     canonical: "https://kulturtonight.ch/en/geneva/things-to-do-this-weekend",
   });
 
-  const weekendEvents = events.filter((e) => e.date === "This Weekend");
+  const weekendEvents = events.filter((e) => e.date === "This Weekend" && !isPastEvent(e));
   const weekendVenues = venues.slice(0, 3);
 
   return (

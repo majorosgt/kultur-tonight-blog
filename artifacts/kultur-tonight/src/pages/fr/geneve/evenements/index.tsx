@@ -234,7 +234,7 @@ export default function FrEventsListPage() {
         <div id="newsletter">
           <NewsletterSignup variant="weekly-guide" />
         </div>
-      </main>
+      <div class="container mx-auto px-4 md:px-6 pb-10 text-center"><a href="/fr/geneve/evenements/archives" class="text-xs uppercase tracking-widest text-muted-foreground">Événements passés</a></div></main>
       <Footer />
       <MobileStickyCTA />
     </>

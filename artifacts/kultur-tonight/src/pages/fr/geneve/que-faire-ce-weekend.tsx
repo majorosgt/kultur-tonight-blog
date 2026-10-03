@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
+import { isPastEvent } from "@/lib/event-status";
 import { eventsFr } from "@/content/events.fr";
 
 const containerVariants = {
@@ -21,7 +22,7 @@ const itemVariants = {
 };
 
 export default function FrThingsToDoPage() {
-  const weekendEvents = eventsFr.filter((e) => e.date === "Ce week-end");
+  const weekendEvents = eventsFr.filter((e) => e.date === "Ce week-end" && !isPastEvent(e));
 
   useSEO({
     title: "Que Faire à Genève ce Week-end | KulturTonight",
