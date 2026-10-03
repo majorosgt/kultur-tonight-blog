@@ -4,6 +4,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
+import { EventCard } from "@/components/EventCard";
+import { eventsFr } from "@/content/events.fr";
 
 const rooms = [
   { name: "Grand Théâtre de Genève", note: "Dernière Minute, en général une heure avant le lever de rideau.", href: "/fr/geneve/lieux/grand-theatre-de-geneve" },
@@ -39,6 +41,13 @@ export default function CeSoirPage() {
             <a href="https://www.kulturtonight.ch/fr" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-sans text-[#E1C570] hover:gap-3 transition-all duration-300">
               Voir les événements de ce soir →
             </a>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {eventsFr.filter((event) => event.startDate.startsWith("2026-10-03")).map((event) => (
+              <div key={event.slug}>
+                <EventCard event={event} />
+              </div>
+            ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-20">
             {rooms.map((room) => (
