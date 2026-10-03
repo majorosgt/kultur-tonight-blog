@@ -230,5 +230,28 @@ export const venuesFr: Venue[] = [
     website: 'https://www.alhambra-geneve.ch',
     categories: ['concerts', 'pop', 'rock', 'world-music'],
     featured: false
+  },
+  {
+    slug: 'arena-geneve',
+    name: 'Arena Genève',
+    type: 'Aréna',
+    address: 'Route des Batailleux 3, Le Grand-Saconnex',
+    city: 'Genève',
+    country: 'Suisse',
+    capacity: 9500,
+    description: "La grande salle couverte de Genève, dans le complexe Palexpo, pour les tournées, l'humour et les spectacles de grand format.",
+    longDescription: "L'Arena Genève est la salle qui manquait à la ville jusqu'en 1995 : un volume assez grand pour les tournées qui passaient autrefois au-dessus de Genève, entre Paris, Lyon et Zurich. Elle est dans Palexpo, au Grand-Saconnex, à deux pas de l'aéroport et de la gare, ce qui explique précisément pourquoi le circuit international s'y arrête. La salle a ouvert le 1er novembre 1995 avec Johnny Hallyday, après dix mois de chantier. Depuis, elle accueille les concerts, les soirées d'humour et les spectacles qui dépassent les 900 places de l'Alhambra et n'ont pas leur place dans une maison d'opéra — Elton John, Céline Dion, Muse, Indochine, Gad Elmaleh, Notre-Dame de Paris, Cirque du Soleil, Disney on Ice. La configuration change avec le spectacle. Les gradins fixes comptent 3 537 sièges, le parterre ajoute 2 000 m², et un concert debout peut monter à environ 9 500 places. Le site officiel avance près de 250 000 spectateurs par an. Une soirée ici n'est pas intime. C'est Genève à l'échelle d'une tournée européenne.",
+    history: "L'Arena Genève, aussi appelée Geneva Arena et autrefois SEG Geneva Arena, a ouvert le 1er novembre 1995 au sein du complexe Palexpo, au Grand-Saconnex. Elle a été construite en dix mois pour donner à la région lémanique une salle à l'échelle des grandes arénas européennes. Le concert d'ouverture était celui de Johnny Hallyday. Le bâtiment appartient au canton de Genève, sur le site Palexpo exploité par Palexpo SA. L'historique officiel cite 2 175 représentations et environ 250 000 spectateurs par an.",
+    highlights: [
+      "Ouverture le 1er novembre 1995 avec Johnny Hallyday, après dix mois de chantier",
+      "Dans Palexpo, au Grand-Saconnex, à côté de l'aéroport et de la gare",
+      "Environ 9 500 places en configuration concert ; 3 537 sièges fixes et 2 000 m² de parterre",
+      "L'étape des tournées trop grandes pour l'Alhambra et hors de propos au Grand Théâtre",
+      "Concerts, humour, comédies musicales et spectacles sur glace — environ 250 000 spectateurs par an"
+    ],
+    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&q=80',
+    website: 'https://geneva-arena.ch',
+    categories: ['concerts', 'pop', 'rock'],
+    featured: true
   }
 ]
