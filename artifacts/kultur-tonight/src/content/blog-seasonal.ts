@@ -1,6 +1,6 @@
 import type { BlogArticle } from "./blog-guides";
 
-export const blogSeasonal: BlogArticle[
+export const blogSeasonal: BlogArticle[] = [
   {
     slug: "romandie-autumn-winter-festivals-2026",
     title: "Autumn festivals in Suisse romande",
@@ -43,7 +43,6 @@ Members can still take a last-minute seat in a hall the same evening, at –50%,
     ogTitle: "Autumn festivals in Suisse romande",
     ogDescription: "Cattle, harvest and the Escalade. Dated for late 2026, and the months they return.",
   },
-] = [
   {
     slug: "summer-geneva-cultural-calendar-2026",
     title: "Summer in Geneva: The Cultural Calendar for June–August 2026",
