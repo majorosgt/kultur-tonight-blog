@@ -52,7 +52,7 @@ export default function FrThingsToDoPage() {
               Que Faire à Genève ce Week-end
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Les meilleures sorties culturelles à Genève ce week-end — spectacles à ne pas manquer, sélectionnés avec soin par nos experts.
+              Samedi 3 et dimanche 4 octobre. Deux affiches confirmées : le Requiem de Mozart au Victoria Hall à 19 h 30, et La Colonie de Vacances à l'Usine à 20 h. Le prix n'est indiqué que si la source le publie.
             </p>
           </div>
 

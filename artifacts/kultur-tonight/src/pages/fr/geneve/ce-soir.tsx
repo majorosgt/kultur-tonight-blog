@@ -34,7 +34,7 @@ export default function CeSoirPage() {
             <p className="text-xs uppercase tracking-widest text-[#E1C570] mb-4">Ce soir, pas ce week-end</p>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-foreground mb-6">Ce soir à Genève</h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-4">
-              Cette page n'invente pas un programme. Un spectacle est « ce soir » seulement s'il est encore à l'affiche. KulturTonight sort une sélection de places dernière minute à 21 h. Le guide du week-end sert à prévoir. Ici, c'est pour la soirée déjà commencée.
+              Samedi 3 octobre, affiches confirmées : Requiem de Mozart au Victoria Hall, 19 h 30, et La Colonie de Vacances à l'Usine, 20 h. KulturTonight sort une sélection de places dernière minute à 21 h. Un spectacle n'est ici que si une billetterie l'affiche encore.
             </p>
             <a href="https://www.kulturtonight.ch/fr" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-sans text-[#E1C570] hover:gap-3 transition-all duration-300">
               Voir les événements de ce soir →
