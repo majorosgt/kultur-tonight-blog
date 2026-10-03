@@ -11,31 +11,31 @@ export const blogSeasonal: BlogArticle[
     date: "2026-10-03",
     readTime: 6,
     image: "/assets/hero/geneva-evening-theatre.png",
-    body: `Suisse romande keeps its year with the land, not the theatre season. The bells come down the mountain, the last grapes are pressed, and Geneva closes December in seventeenth-century dress. Some of these return every year in the same month. The ones below with a day are the 2026 dates a tourism office or a paper has published.
+    body: `October in Suisse romande smells of woodsmoke and cold milk. The herds are coming down. The last presses are turning. Geneva waits until December to put on seventeenth-century clothes. This is the other cultural calendar, the one that does not sit in a hall.
 
-## This quarter, with a date
+## The Sundays that are already dated
 
-Nyon holds the Fête de la vigne on 2 and 3 October, on the place du château. The same weekend, Cortaillod in Neuchâtel marks the end of the harvest, and Semsales in Fribourg brings more than 700 head of cattle down for the désalpe, 2–4 October. Albeuve, also Fribourg, runs its fair and désalpe on 3 and 4 October.
+Nyon keeps the Fête de la vigne on 2 and 3 October, on the place du château: a blind tasting, a walking rally, the castle square given over to the new wine. The same weekend, Cortaillod closes the Neuchâtel harvest with a cortège through the old village. In Fribourg, Semsales brings more than 700 head down from 2 to 4 October, with a patois mass on the Sunday. Albeuve runs its fair and désalpe on 3 and 4 October. The first herd passes at 9.
 
-The following weekend is Romainmôtier. Les Sonnailles, 9–11 October, is an autumn fair and a market in cowbells. Cheyres, on the lake of Neuchâtel, keeps its vendanges from 9 to 11 October.
+The next weekend is for bells. Les Sonnailles at Romainmôtier, 9–11 October, is an autumn fair and a market in cowbells. Cheyres, on the lake of Neuchâtel, keeps its own vendanges those same days: a bal, a fanfare, the village after the secateurs are put away.
 
-Fully, in the Valais, is the chestnut weekend: the Fête de la Châtaigne, 17 and 18 October, a market of about 300 stands at the foot of the Chavalard. Bulle then opens the Comptoir gruérien, 22 October to 1 November, at Espace Gruyère. In November, Vinea at Sierre is 13 and 14 November.
+Fully is the chestnut capital for a weekend. The Fête de la Châtaigne, 17 and 18 October, draws a market of about 300 stands to the foot of the Chavalard. Bulle then opens the Comptoir gruérien, 22 October to 1 November, eleven days of fondue and local craft at Espace Gruyère. Vinea at Sierre, 13 and 14 November, is the wine salon that follows.
 
-Geneva's own date is later. The Escalade runs from Friday 11 to Sunday 13 December 2026, in the old town and the Parc des Bastions. The Compagnie de 1602 leads it. The city lists it as free. The detailed timetable is still with 1602.ch.
+Geneva's night is later, and it is the one the city keeps for itself. The Escalade runs from 11 to 13 December 2026, old town and Parc des Bastions, led by the Compagnie de 1602. The city lists it as free. The soup, the drums, the chocolate cauldron: that is the weekend.
 
-## Every year, by month
+## What returns, without a fixed day
 
-The désalpe is mid-September to mid-October. Gruyère, the Valais and the Vaud Jura each have their own Sunday. The date moves with the grass.
+The désalpe runs from mid-September to mid-October. Gruyère, the Valais and the Vaud Jura each pick a Sunday. The grass decides, not the calendar.
 
-The vendanges sit in the last week of September and the first of October, along La Côte, Lavaux, the Neuchâtel shore and the Valais.
+Vendanges occupy the last week of September and the first of October, on La Côte, in Lavaux, along the Neuchâtel shore and in the Valais.
 
-Bénichon is a September feast in Fribourg villages: cuchaule, mustard, a long table. It is not one fair. It is the parish celebration, and each village sets its own Sunday.
+Bénichon is September in Fribourg. Not one fair. A parish feast: cuchaule, mustard, a long table, and a Sunday chosen by the village.
 
-October is chestnut and brisolée country in the Valais. Fully is the large one. Smaller villages roast chestnuts the same month.
+October in the Valais is chestnut and brisolée. Fully is the large gathering. Smaller villages roast the same month.
 
-November brings Saint-Martin, and the first Christmas markets. Montreux, Lausanne, Fribourg and Geneva light theirs from late November into December. The Escalade is the fixed Geneva night, around 12 December.
+November brings Saint-Martin, then the markets. Montreux, Lausanne, Fribourg and Geneva light theirs from late November into December. The Escalade sits around 12 December, every year.
 
-Members can still take a last-minute seat at a hall the same evening, at –50%, released at 21:00. The fair is the other way to spend it.`,
+Members can still take a last-minute seat in a hall the same evening, at –50%, released at 21:00. The fair is the other way to spend the night.`,
     ctaText: "See tonight's events →",
     ctaUrl: "https://www.kulturtonight.ch/en",
     seoTitle: "Autumn festivals in Suisse romande, 2026 | KulturTonight",
