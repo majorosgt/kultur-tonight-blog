@@ -11,31 +11,31 @@ export const blogSeasonalFr: BlogArticle[
     date: "2026-10-03",
     readTime: 6,
     image: "/assets/hero/geneva-evening-theatre.png",
-    body: `La Suisse romande tient son année avec la terre, pas avec la saison des théâtres. Les cloches descendent de l'alpage, le dernier raisin est pressé, et Genève ferme décembre en habit du XVIIe siècle. Certaines reviennent chaque année, le même mois. Celles qui ont un jour ci-dessous sont les dates 2026 qu'un office du tourisme ou un journal a publiées.
+    body: `Octobre en Suisse romande sent le feu de bois et le lait froid. Les troupeaux descendent. Les derniers pressoirs tournent. Genève attend décembre pour revêtir l'habit du XVIIe siècle. C'est l'autre calendrier culturel, celui qui ne tient pas dans une salle.
 
-## Ce trimestre, avec une date
+## Les dimanches déjà datés
 
-Nyon tient la Fête de la vigne les 2 et 3 octobre, sur la place du château. Le même week-end, Cortaillod, à Neuchâtel, marque la fin des vendanges, et Semsales, à Fribourg, fait descendre plus de 700 têtes pour la désalpe, du 2 au 4 octobre. Albeuve, aussi Fribourg, a sa foire et sa désalpe les 3 et 4 octobre.
+Nyon garde la Fête de la vigne les 2 et 3 octobre, sur la place du château : une dégustation à l'aveugle, un rallye à pied, la place livrée au vin nouveau. Le même week-end, Cortaillod ferme les vendanges neuchâteloises par un cortège dans le vieux village. À Fribourg, Semsales fait descendre plus de 700 têtes du 2 au 4 octobre, avec une messe en patois le dimanche. Albeuve a sa foire et sa désalpe les 3 et 4 octobre. Le premier troupeau passe à 9 h.
 
-Le week-end suivant, Romainmôtier. Les Sonnailles, du 9 au 11 octobre, sont une foire d'automne et un marché aux sonnailles. Cheyres, au bord du lac de Neuchâtel, garde ses vendanges du 9 au 11 octobre.
+Le week-end d'après est aux cloches. Les Sonnailles à Romainmôtier, du 9 au 11 octobre, sont une foire d'automne et un marché aux sonnailles. Cheyres, au bord du lac de Neuchâtel, garde ses vendanges ces mêmes jours : un bal, une fanfare, le village après les sécateurs.
 
-Fully, en Valais, est le week-end de la châtaigne : la Fête de la Châtaigne, les 17 et 18 octobre, un marché d'environ 300 stands au pied du Chavalard. Bulle ouvre ensuite le Comptoir gruérien, du 22 octobre au 1er novembre, à Espace Gruyère. En novembre, Vinea à Sierre tombe les 13 et 14.
+Fully est la capitale de la châtaigne le temps d'un week-end. La Fête de la Châtaigne, les 17 et 18 octobre, pose un marché d'environ 300 stands au pied du Chavalard. Bulle ouvre ensuite le Comptoir gruérien, du 22 octobre au 1er novembre, onze jours de fondue et de savoir-faire à Espace Gruyère. Vinea à Sierre, les 13 et 14 novembre, est le salon du vin qui suit.
 
-La date genevoise est plus tard. L'Escalade va du vendredi 11 au dimanche 13 décembre 2026, dans la vieille ville et au parc des Bastions. La Compagnie de 1602 la mène. La ville l'affiche gratuite. L'horaire détaillé reste sur 1602.ch.
+La nuit genevoise vient plus tard, et la ville se la garde. L'Escalade va du 11 au 13 décembre 2026, vieille ville et parc des Bastions, menée par la Compagnie de 1602. La ville l'affiche gratuite. La soupe, les tambours, le chaudron de chocolat : c'est ce week-end-là.
 
-## Chaque année, par mois
+## Ce qui revient, sans jour fixe
 
-La désalpe va de la mi-septembre à la mi-octobre. La Gruyère, le Valais et le Jura vaudois ont chacun leur dimanche. La date suit l'herbe.
+La désalpe court de la mi-septembre à la mi-octobre. La Gruyère, le Valais et le Jura vaudois choisissent chacun un dimanche. L'herbe décide, pas le calendrier.
 
-Les vendanges tiennent la dernière semaine de septembre et la première d'octobre, le long de La Côte, de Lavaux, du littoral neuchâtelois et du Valais.
+Les vendanges tiennent la dernière semaine de septembre et la première d'octobre, sur La Côte, à Lavaux, le long du littoral neuchâtelois et en Valais.
 
-La Bénichon est une fête de septembre dans les villages fribourgeois : cuchaule, moutarde, une longue table. Ce n'est pas une seule foire. C'est la fête de la paroisse, et chaque village fixe son dimanche.
+La Bénichon est septembre à Fribourg. Pas une foire. Une fête de paroisse : cuchaule, moutarde, une longue table, et un dimanche que le village fixe.
 
-Octobre est le mois de la châtaigne et de la brisolée en Valais. Fully est la grande. Les plus petits villages grillent les châtaignes le même mois.
+Octobre en Valais est châtaigne et brisolée. Fully est le grand rassemblement. Les plus petits villages grillent le même mois.
 
-Novembre amène la Saint-Martin, et les premiers marchés de Noël. Montreux, Lausanne, Fribourg et Genève allument les leurs de la fin novembre à décembre. L'Escalade est la nuit fixe de Genève, autour du 12 décembre.
+Novembre amène la Saint-Martin, puis les marchés. Montreux, Lausanne, Fribourg et Genève allument les leurs de la fin novembre à décembre. L'Escalade se tient autour du 12 décembre, chaque année.
 
-Les membres peuvent encore prendre une place de dernière minute dans une salle, le même soir, à –50 %, sortie à 21 h. La foire est l'autre façon de le passer.`,
+Les membres peuvent encore prendre une place de dernière minute dans une salle, le même soir, à –50 %, sortie à 21 h. La foire est l'autre façon de passer la nuit.`,
     ctaText: "Voir les événements de ce soir →",
     ctaUrl: "https://www.kulturtonight.ch/fr",
     seoTitle: "Fêtes d'automne en Suisse romande, 2026 | KulturTonight",
