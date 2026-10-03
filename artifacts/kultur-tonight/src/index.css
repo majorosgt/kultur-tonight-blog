@@ -107,11 +107,11 @@
 }
 
 .bg-gold-gradient {
-  background: linear-gradient(91.54deg, rgba(201,147,39,0.8) -14.78%, #E1C570 52.55%, rgba(201,163,39,0.8) 80.74%, rgba(201,134,39,0.8) 114.58%);
+  background: linear-gradient(135deg, #B8861F, #E8B84B, #F5C842);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(91.54deg, rgba(201,147,39,0.8) -14.78%, #E1C570 52.55%, rgba(201,163,39,0.8) 80.74%, rgba(201,134,39,0.8) 114.58%);
+  background: linear-gradient(135deg, #B8861F, #E8B84B, #F5C842);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
