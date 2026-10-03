@@ -44,7 +44,7 @@ export default function FrBlogGenEvaCetteSemainePage() {
               Cette Semaine à Genève
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Une nuit finlandaise au Victoria Hall, Modeselektor à l'Alhambra, et un gala Pavarotti samedi. La semaine du 5 au 11 octobre, sur les scènes qui comptent.
+              Octobre à Genève a ce calme particulier, juste avant que les salles se remplissent. Cette semaine, le calme ne tient pas : une nuit finlandaise au Victoria Hall, Modeselektor à l'Alhambra, et un gala Pavarotti samedi.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
