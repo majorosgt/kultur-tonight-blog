@@ -42,7 +42,7 @@ export default function BlogGenevaThisWeekPage() {
               This Week in Geneva
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              5–11 October. Cards below are listings a box office or the OSR has published. The June picks are gone.
+              A Finnish night at Victoria Hall, Modeselektor at the Alhambra, and a Pavarotti gala on Saturday. The week of 5–11 October, on the stages that matter.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
