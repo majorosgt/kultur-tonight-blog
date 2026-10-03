@@ -9,6 +9,8 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { blogThisWeek } from "@/content/blog-this-week";
+import { EventCard } from "@/components/EventCard";
+import { events } from "@/content/events";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
 const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
@@ -39,8 +41,13 @@ export default function BlogGenevaThisWeekPage() {
               This Week in Geneva
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Our editors' picks for the most compelling cultural experiences in Geneva this week — theatre, opera, jazz, and more.
+              5–11 October. Cards below are listings a box office or the OSR has published. The June picks are gone.
             </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {events.filter((event) => event.startDate >= "2026-10-05" && event.startDate <= "2026-10-12").map((event) => (
+              <div key={event.slug}><EventCard event={event} /></div>
+            ))}
           </div>
 
           <SectionHeading
