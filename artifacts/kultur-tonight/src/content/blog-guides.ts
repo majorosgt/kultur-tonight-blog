@@ -30,7 +30,7 @@ export const blogGuides: BlogGuide[] = [
     category: 'guides',
     city: 'geneva',
     lang: 'en',
-    date: '2026-06-07',
+    date: '2026-10-03',
     readTime: 6,
     image: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=1200&q=80',
     metaTitle: 'Best Theatres in Geneva — The Insider Guide | KulturTonight',
@@ -41,57 +41,31 @@ export const blogGuides: BlogGuide[] = [
     ogDescription: 'A curated guide to Geneva\'s finest theatrical venues, written by cultural insiders.',
     ctaText: 'See tonight\'s theatre events in Geneva →',
     ctaUrl: 'https://kulturtonight.ch/en/geneva/events/',
-    body: `Geneva is not the first city that comes to mind when people talk about European theatre. Paris, London, Berlin — these are the names that dominate the conversation. But spend a season attending theatre in Geneva and you begin to understand that this small city on the lake has something those larger capitals sometimes lack: a theatre culture that is serious without being self-important, adventurous without being inaccessible, and deeply rooted in the conviction that live performance matters.
+    body: `Geneva has a large stage, a repertory house, a commercial theatre on the lake, and a set of small rooms. That is the answer. The Grand Théâtre does opera and ballet. The Comédie de Genève does contemporary work. The Théâtre du Léman takes the big touring shows. Carouge, Saint-Gervais, the Galpon and the Pitoëff are the rooms under 500 seats.
 
-The city's theatrical landscape is unusually rich for its size. Geneva has around 200,000 inhabitants — less than a single arrondissement of Paris — yet it sustains a Grand Théâtre, a major contemporary theatre, a beloved neighbourhood institution, an experimental laboratory, and dozens of smaller companies, all operating at a high level simultaneously. Understanding why requires understanding Geneva itself: a city of diplomats, NGO workers, financiers, and academics who arrive from across the world and bring their cultural expectations with them.
+## The large rooms
 
-## Grand Théâtre de Genève — The Heart of It All
+The [Grand Théâtre de Genève](/en/geneva/venues/grand-theatre-de-geneve) is on Place Neuve. About 1,500 seats. Opera, ballet, and the house company. A Saturday there is the city's formal night.
 
-The conversation about Geneva theatre begins and ends with the Grand Théâtre on Place Neuve. Since 1879, this neo-baroque monument has been the city's operatic and balletic soul — but it is also, at its best, a genuinely theatrical institution. The production values are consistently among the highest in Europe, and the programming in recent seasons has balanced the canonical repertoire with bold new commissions that have drawn attention from critics across the continent.
+The [Comédie de Genève](/en/geneva/venues/comedie-de-geneve) is on Boulevard des Philosophes. About 500 seats. Contemporary European theatre, often a co-production. It is the house to book if the evening has to be a play, not a spectacle.
 
-What distinguishes the Grand Théâtre from comparable houses is its Ballet du Grand Théâtre — one of the finest dance companies in Europe, capable of producing evenings that rival anything you would see at the Paris Opéra or Sadler's Wells. If you attend only one performance in Geneva, and that performance is at the Grand Théâtre, you will leave understanding why this city takes culture seriously.
+The [Théâtre du Léman](/en/geneva/venues/theatre-du-leman) is on Quai du Mont-Blanc. About 1,300 seats. Touring musicals, one-person shows, the commercial season. The lake is outside. The programme is not the Grand Théâtre's.
 
-The building itself rewards a visit even before the curtain rises. Arrive early, find your seat, and look up — the chandelier, the gold leaf, the crimson velvet — and allow yourself the pleasure of being somewhere that was designed, from the first stone, to make an evening feel like an occasion.
+## The small rooms
 
-*Practical: Book well in advance for popular productions. The box office opens 90 minutes before performance. Student and last-minute tickets are often available — KulturTonight members get early access to unsold seats at –50%.*
+The [Théâtre de Carouge](/en/geneva/venues/theatre-de-carouge) is on Rue Ancienne. About 300 seats. A repertory house with a loyal public, in the old Sardinian quarter.
 
-## Comédie de Genève — Where Theatre Gets Serious
+The [Théâtre Saint-Gervais](/en/geneva/venues/theatre-saint-gervais) is at Rue du Temple 5, five minutes from Cornavin. Two rooms, 160 and 60 seats. New writing and performance. Sandrine Kuster has directed it since 2018–19.
 
-If the Grand Théâtre is Geneva's operatic establishment, the Comédie de Genève is its theatrical conscience. Located in a beautifully restored early 20th-century building in Plainpalais, the Comédie has spent decades producing work that is intellectually rigorous, formally adventurous, and deeply connected to the broader European theatre conversation.
+The [Théâtre du Galpon](/en/geneva/venues/theatre-du-galpon) is on Rue du Vieux-Billard. About 150 seats. The experimental room. The [Théâtre Pitoëff](/en/geneva/venues/theatre-pitoeff) is on the first floor of the Plainpalais town hall, Rue de Carouge 52. The city lends it to Geneva companies for residencies. It does not publish a seat count.
 
-The programming favours contemporary dramaturgy — new writing, new forms, work that refuses to sit quietly in its seat and wait for the interval. Co-productions with the Schaubühne Berlin, the Théâtre de la Ville in Paris, and major Belgian institutions mean that Geneva audiences regularly see work that is simultaneously opening in three other European cities. The Comédie is not for everyone, and it does not pretend to be. But for those who want theatre that asks something of its audience, it is essential.
+For children, the [Théâtre Am Stram Gram](/en/geneva/venues/theatre-am-stram-gram) on Route de Frontenex has a main hall of 337 seats. It is a theatre, not a workshop with a curtain.
 
-A practical note: the Comédie's productions often sell out quickly, particularly when the work has already been seen in Paris or Berlin and word of mouth has preceded it to Geneva. Book early, or watch for last-minute availability.
+## If the night is not a play
 
-## Théâtre de Carouge — The Soul of the Neighbourhood
+The [Bâtiment des Forces Motrices](/en/geneva/venues/batiment-des-forces-motrices) is the industrial hall on Place des Volontaires. Opera and chamber turn up there. It is not a theatre in the repertory sense, and it is the room people mean when they say the building is the show.
 
-Cross the border from Geneva proper into Carouge — that small, self-possessed former Sardinian city with wider streets, better cafés, and a distinct sense of not quite being Swiss — and you find the Théâtre de Carouge on the Rue Ancienne. Founded in 1958, it is one of the oldest continuously operating theatres in French-speaking Switzerland, and it has earned its longevity through a programming philosophy that is deceptively simple: the best plays, the best productions, for an audience that deserves to be taken seriously.
-
-The 300-seat house is intimate enough that the performance comes to you — there is nowhere to hide, for the actors or the audience, and the best evenings here have a quality of shared attention that larger venues rarely achieve. The theatre has a loyal, multigenerational audience — people who have been coming for decades and have opinions about every production — which gives it a warmth that is entirely its own.
-
-If you visit Carouge for an evening — and you should; the neighbourhood repays exploration — combine your theatre visit with dinner at one of the Rue Ancienne restaurants beforehand. The pacing of a Carouge evening, theatre included, is one of Geneva's quietly perfect things.
-
-## Théâtre du Léman — Scale and Spectacle
-
-Not all theatre is intimate and demanding. Sometimes a city needs a stage large enough to host the touring spectacular, the French-language musical, the comedy show that fills 1,300 seats on a Tuesday. The Théâtre du Léman, on the Quai du Mont-Blanc with the lake outside and the Alps beyond, is that stage.
-
-Since opening in 1991, the Léman has been Geneva's primary venue for large-scale commercial theatre — the productions that originate in Paris, tour francophone Europe, and arrive in Geneva as part of their Swiss leg. The building is modern and functional, the programming is deliberately broad, and the lakefront location makes an evening here feel, on a clear night, like something approaching luxury.
-
-The Léman is also where Geneva goes for its annual doses of Molière and Racine in major new productions — the kind of classical theatre that requires a large stage, a large cast, and a large budget. These evenings are not always adventurous, but they are reliably accomplished.
-
-## Théâtre du Galpon — The Laboratory
-
-Every city's theatre culture depends on its margins as much as its centre. Le Galpon, in a converted warehouse on the edge of Plainpalais, is where Geneva's theatrical margins are at their most productive. The programming is deliberately challenging — physical theatre, new writing, interdisciplinary performance — and the space transforms completely for each production, so attending Le Galpon twice is never quite the same experience.
-
-The audiences who come regularly are among the most engaged in Geneva — people who understand that this kind of work requires active participation. Le Galpon does not produce comfortable evenings. It produces necessary ones. If you want to understand where Geneva's theatre is going, not just where it has been, this is where you look.
-
-## How to Get the Most from Geneva's Theatre Scene
-
-Geneva's theatre seasons run from September to June, with most major productions opening in autumn and after the Christmas break. Summer is quieter, though the open-air festival season provides alternatives.
-
-Booking advice: the Grand Théâtre and the Comédie sell out popular productions weeks in advance. The Théâtre de Carouge and the Léman have more availability but also fill up for strong productions. Le Galpon, with its small capacity, can sell out very quickly for work that generates word of mouth.
-
-The key to a Geneva theatre season is simple: book the Saturday night production in advance, and leave the rest open. The city rewards the spontaneous as much as the planned. KulturTonight members receive nightly access to unsold seats across all Geneva venues at –50%, released at 21:00. One notification. One decision. The curtain rises either way.`
+Last-minute seats, when a house releases them, are on KulturTonight at 21:00. This guide does not invent a week's programme.`
   },
   {
     slug: 'how-to-get-cheap-theatre-tickets-geneva',
