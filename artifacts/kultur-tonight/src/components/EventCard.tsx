@@ -64,7 +64,6 @@ export function EventCard({ event }: { event: Event }) {
   const past          = isPastEvent(event);
   const dateLabel     = past ? `${formatEventDay(event, locale)} · ${locale === "fr" ? "Passé" : "Past"}` : event.date;
   const photo         = event.image.startsWith("/") || event.image.startsWith("http") ? event.image : getPhoto(event.category);
-  const overlay       = getOverlay(event.category);
 
   const altText =
     locale === "fr"
@@ -83,14 +82,12 @@ export function EventCard({ event }: { event: Event }) {
           <img
             src={photo}
             alt={altText}
-            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-[1.03] transition-all duration-700"
+            className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-[1.03] transition-transform duration-700"
             loading="lazy"
             decoding="async"
           />
-          {/* gradient bottom-to-top */}
-          <div className={`absolute inset-0 bg-gradient-to-t ${overlay}`} />
-          {/* subtle vignette */}
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500" />
+          {/* short bottom fade so the chips stay readable; the photo stays full colour */}
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/35 to-transparent" />
 
           {/* Category tag — top left */}
           <div className="absolute top-3.5 left-3.5 z-10">
