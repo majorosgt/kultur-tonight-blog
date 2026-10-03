@@ -12,6 +12,22 @@ import { buildAlternates } from "@/lib/i18n";
 
 const guideCards: GuideHubCardData[] = [
   {
+    label: "Tonight",
+    title: "Tonight in Geneva",
+    description:
+      "Same-day seats, not a weekend plan. The live list is on KulturTonight. These are the rooms that still release tickets on the day.",
+    cta: "EXPLORE →",
+    href: "/en/geneva/tonight",
+  },
+  {
+    label: "Date Night",
+    title: "A Date Night in Geneva",
+    description:
+      "Two seats, one evening. Victoria Hall, the BFM, Chat Noir in Carouge — a performance, not a lake walk.",
+    cta: "EXPLORE →",
+    href: "/en/geneva/date-night",
+  },
+  {
     label: "Weekend Guide",
     title: "Things to Do in Geneva This Weekend",
     description:

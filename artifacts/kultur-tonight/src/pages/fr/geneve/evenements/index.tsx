@@ -12,6 +12,22 @@ import { buildAlternatesFr } from "@/lib/i18n";
 
 const guideCards: GuideHubCardData[] = [
   {
+    label: "Ce soir",
+    title: "Ce soir à Genève",
+    description:
+      "Les places du jour, pas un plan de week-end. La liste vivante est sur KulturTonight. Voici les salles qui sortent encore des billets le jour même.",
+    cta: "EXPLORER →",
+    href: "/fr/geneve/ce-soir",
+  },
+  {
+    label: "À deux",
+    title: "Une sortie à deux à Genève",
+    description:
+      "Deux places, une soirée. Victoria Hall, le BFM, le Chat Noir à Carouge — un spectacle, pas une promenade au bord du lac.",
+    cta: "EXPLORER →",
+    href: "/fr/geneve/sortie-a-deux",
+  },
+  {
     label: "Ce week-end",
     title: "Que faire à Genève ce week-end",
     description:
