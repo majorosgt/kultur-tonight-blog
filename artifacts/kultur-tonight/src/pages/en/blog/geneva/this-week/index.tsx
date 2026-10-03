@@ -42,7 +42,7 @@ export default function BlogGenevaThisWeekPage() {
               This Week in Geneva
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              A Finnish night at Victoria Hall, Modeselektor at the Alhambra, and a Pavarotti gala on Saturday. The week of 5–11 October, on the stages that matter.
+              October in Geneva has a particular quiet before the halls fill. This week the quiet does not last: a Finnish night at Victoria Hall, Modeselektor in the Alhambra, and a Pavarotti gala on Saturday.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
