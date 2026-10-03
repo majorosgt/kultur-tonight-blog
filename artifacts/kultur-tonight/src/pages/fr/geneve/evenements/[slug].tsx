@@ -11,6 +11,7 @@ import { useSEO } from "@/lib/seo";
 import { eventSchema } from "@/lib/schema";
 import { buildAlternatesFr } from "@/lib/i18n";
 import { eventsFr } from "@/content/events.fr";
+import { formatEventDay, isPastEvent } from "@/lib/event-status";
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Ticket } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -37,7 +38,7 @@ export default function FrEventDetailPage() {
   }
 
   useSEO({
-    title: event.seoTitle,
+    title: isPastEvent(event) ? `${event.seoTitle} · ${formatEventDay(event, "fr")}` : event.seoTitle,
     description: event.seoDescription,
     ogTitle: event.ogTitle,
     ogDescription: event.ogDescription,
@@ -72,7 +73,10 @@ export default function FrEventDetailPage() {
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-4xl">
-              <div className="mb-4">
+              {isPastEvent(event) && (
+              <p className="text-sm uppercase tracking-widest text-[#E1C570] mb-4">Ce spectacle a eu lieu le {formatEventDay(event, "fr")}.</p>
+            )}
+            <div className="mb-4">
                 <Badge
                   variant="outline"
                   className="bg-transparent text-primary border-primary/30 uppercase tracking-widest text-[10px] font-sans rounded-none"

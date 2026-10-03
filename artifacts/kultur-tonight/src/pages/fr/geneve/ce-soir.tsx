@@ -6,6 +6,7 @@ import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { EventCard } from "@/components/EventCard";
 import { eventsFr } from "@/content/events.fr";
+import { isPastEvent } from "@/lib/event-status";
 
 const rooms = [
   { name: "Grand Théâtre de Genève", note: "Dernière Minute, en général une heure avant le lever de rideau.", href: "/fr/geneve/lieux/grand-theatre-de-geneve" },
@@ -43,7 +44,7 @@ export default function CeSoirPage() {
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {eventsFr.filter((event) => event.startDate.startsWith("2026-10-03")).map((event) => (
+            {eventsFr.filter((event) => event.startDate.startsWith("2026-10-03") && !isPastEvent(event)).map((event) => (
               <div key={event.slug}>
                 <EventCard event={event} />
               </div>

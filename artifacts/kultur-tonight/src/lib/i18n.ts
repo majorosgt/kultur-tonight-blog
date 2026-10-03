@@ -9,6 +9,7 @@ const SEGMENTS: Array<{ en: string; fr: string; dynamic?: boolean }> = [
   { en: "/en/geneva/venues/",                   fr: "/fr/geneve/lieux/",          dynamic: true },
   { en: "/en/geneva/events/",                   fr: "/fr/geneve/evenements/",     dynamic: true },
   { en: "/en/geneva/venues",                    fr: "/fr/geneve/lieux" },
+  { en: "/en/geneva/events/archive",           fr: "/fr/geneve/evenements/archives" },
   { en: "/en/geneva/events",                    fr: "/fr/geneve/evenements" },
   { en: "/en/geneva/theatre",                   fr: "/fr/geneve/theatre" },
   { en: "/en/geneva/concerts",                  fr: "/fr/geneve/concerts" },

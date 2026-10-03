@@ -17,6 +17,7 @@ const DateNightPage = lazy(() => import("@/pages/en/geneva/date-night"));
 const VenuesListPage = lazy(() => import("@/pages/en/geneva/venues/index"));
 const VenueDetailPage = lazy(() => import("@/pages/en/geneva/venues/[slug]"));
 const EventsListPage = lazy(() => import("@/pages/en/geneva/events/index"));
+const EventsArchivePage = lazy(() => import("@/pages/en/geneva/events/archive"));
 const EventDetailPage = lazy(() => import("@/pages/en/geneva/events/[slug]"));
 const BlogPage = lazy(() => import("@/pages/en/blog/index"));
 const BlogDetailPage = lazy(() => import("@/pages/en/blog/[slug]"));
@@ -52,6 +53,7 @@ const FrDateNightPage = lazy(() => import("@/pages/fr/geneve/sortie-a-deux"));
 const FrVenuesListPage = lazy(() => import("@/pages/fr/geneve/lieux/index"));
 const FrVenueDetailPage = lazy(() => import("@/pages/fr/geneve/lieux/[slug]"));
 const FrEventsListPage = lazy(() => import("@/pages/fr/geneve/evenements/index"));
+const FrEventsArchivePage = lazy(() => import("@/pages/fr/geneve/evenements/archives"));
 const FrEventDetailPage = lazy(() => import("@/pages/fr/geneve/evenements/[slug]"));
 const FrBlogPage = lazy(() => import("@/pages/fr/blog/index"));
 const FrBlogDetailPage = lazy(() => import("@/pages/fr/blog/[slug]"));
@@ -102,6 +104,7 @@ export function Router() {
         <Route path="/en/geneva/date-night" component={DateNightPage} />
         <Route path="/en/geneva/venues" component={VenuesListPage} />
         <Route path="/en/geneva/venues/:slug" component={VenueDetailPage} />
+        <Route path="/en/geneva/events/archive" component={EventsArchivePage} />
         <Route path="/en/geneva/events" component={EventsListPage} />
         <Route path="/en/geneva/events/:slug" component={EventDetailPage} />
 
@@ -139,6 +142,7 @@ export function Router() {
         <Route path="/fr/geneve/sortie-a-deux" component={FrDateNightPage} />
         <Route path="/fr/geneve/lieux" component={FrVenuesListPage} />
         <Route path="/fr/geneve/lieux/:slug" component={FrVenueDetailPage} />
+        <Route path="/fr/geneve/evenements/archives" component={FrEventsArchivePage} />
         <Route path="/fr/geneve/evenements" component={FrEventsListPage} />
         <Route path="/fr/geneve/evenements/:slug" component={FrEventDetailPage} />
 

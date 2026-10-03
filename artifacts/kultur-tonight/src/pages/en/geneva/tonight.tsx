@@ -6,6 +6,7 @@ import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { EventCard } from "@/components/EventCard";
 import { events } from "@/content/events";
+import { isPastEvent } from "@/lib/event-status";
 
 const rooms = [
   { name: "Grand Théâtre de Genève", note: "Dernière Minute, usually the hour before curtain.", href: "/en/geneva/venues/grand-theatre-de-geneve" },
@@ -43,7 +44,7 @@ export default function TonightPage() {
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {events.filter((event) => event.startDate.startsWith("2026-10-03")).map((event) => (
+            {events.filter((event) => event.startDate.startsWith("2026-10-03") && !isPastEvent(event)).map((event) => (
               <div key={event.slug}>
                 <EventCard event={event} />
               </div>

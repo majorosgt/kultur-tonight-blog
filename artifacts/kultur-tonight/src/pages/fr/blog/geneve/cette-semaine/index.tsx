@@ -11,6 +11,7 @@ import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
 import { blogThisWeekFr } from "@/content/blog-this-week.fr";
 import { EventCard } from "@/components/EventCard";
+import { isPastEvent } from "@/lib/event-status";
 import { eventsFr } from "@/content/events.fr";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
@@ -47,7 +48,7 @@ export default function FrBlogGenEvaCetteSemainePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {eventsFr.filter((event) => event.startDate >= "2026-10-05" && event.startDate <= "2026-10-12").map((event) => (
+            {eventsFr.filter((event) => event.startDate >= "2026-10-05" && event.startDate <= "2026-10-12" && !isPastEvent(event)).map((event) => (
               <div key={event.slug}><EventCard event={event} /></div>
             ))}
           </div>
