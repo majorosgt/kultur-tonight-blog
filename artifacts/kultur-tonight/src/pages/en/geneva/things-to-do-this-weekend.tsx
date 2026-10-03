@@ -63,7 +63,14 @@ export default function ThingsToDoPage() {
             ))}
           </div>
 
-          <SectionHeading
+          
+          <SectionHeading title="Through 15 October" subtitle="Seasonal fairs still on, beyond this weekend." />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {events.filter((event) => event.category === "festivals" && !isPastEvent(event) && event.startDate <= "2026-10-15").map((event) => (
+              <div key={event.slug}><EventCard event={event} /></div>
+            ))}
+          </div>
+<SectionHeading
             title="Top Venues This Weekend"
             subtitle="The stages hosting Geneva's most memorable moments."
           />

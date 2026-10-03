@@ -9,7 +9,8 @@ export function eventDay(event: Event): string {
 }
 
 export function isPastEvent(event: Event, today = zurichToday()): boolean {
-  return eventDay(event) < today;
+  const end = event.endDate ? event.endDate.slice(0, 10) : eventDay(event);
+  return end < today;
 }
 
 export function formatEventDay(event: Event, locale: "en" | "fr"): string {
