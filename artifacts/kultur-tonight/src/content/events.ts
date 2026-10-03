@@ -90,7 +90,7 @@ export const events: Event[] = [
     seoDescription: "Hommage à Pavarotti, Victoria Hall, Saturday 10 October 2026 at 20:00, from CHF 109.55.",
     ogTitle: "Hommage à Pavarotti | Victoria Hall",
     ogDescription: "10 October, 20:00, from CHF 109.55."
-  }
+  },
 
   {
     slug: "electron-modeselektor-alhambra",

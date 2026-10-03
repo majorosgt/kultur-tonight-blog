@@ -72,7 +72,7 @@ export const eventsFr: Event[] = [
     seoDescription: "Hommage à Pavarotti, Victoria Hall, samedi 10 octobre 2026 à 20 h, dès 109.55 CHF.",
     ogTitle: "Hommage à Pavarotti | Victoria Hall",
     ogDescription: "10 octobre, 20 h, dès 109.55 CHF."
-  }
+  },
 
   {
     slug: "electron-modeselektor-alhambra",
