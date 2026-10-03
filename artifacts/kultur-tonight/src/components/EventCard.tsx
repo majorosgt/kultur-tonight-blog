@@ -60,7 +60,7 @@ export function EventCard({ event }: { event: Event }) {
   const city          = locale === "fr" ? "Genève" : "Geneva";
   const ticketsLabel  = locale === "fr" ? "Billets" : "Tickets";
   const displayCat    = localizeCategory(event.category, locale);
-  const photo         = getPhoto(event.category);
+  const photo         = event.image.startsWith("/") || event.image.startsWith("http") ? event.image : getPhoto(event.category);
   const overlay       = getOverlay(event.category);
 
   const altText =
