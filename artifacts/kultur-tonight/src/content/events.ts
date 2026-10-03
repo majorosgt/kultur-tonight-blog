@@ -91,4 +91,78 @@ export const events: Event[] = [
     ogTitle: "Hommage à Pavarotti | Victoria Hall",
     ogDescription: "10 October, 20:00, from CHF 109.55."
   }
+
+  {
+    slug: "electron-modeselektor-alhambra",
+    title: "Electron: Modeselektor Classics",
+    category: "concerts",
+    venue: { name: "Alhambra", slug: "alhambra" },
+    date: "Tuesday 6 October",
+    time: "19:00",
+    startDate: "2026-10-06T19:00:00+02:00",
+    price: "",
+    priceRange: "",
+    shortDescription: "Tuesday 6 October, 19:00, Alhambra. Modeselektor Classics Live, with Noria Lilt.",
+    description: "Eventfrog lists Electron: Modeselektor Classics Live + Noria Lilt at the Alhambra on Tuesday 6 October 2026 at 19:00. The listing consulted did not publish a price.",
+    image: "concerts",
+    seoTitle: "Modeselektor Classics at Alhambra, Geneva",
+    seoDescription: "Electron festival: Modeselektor Classics Live at the Alhambra, Tuesday 6 October 2026 at 19:00.",
+    ogTitle: "Modeselektor Classics | Alhambra",
+    ogDescription: "Tuesday 6 October, 19:00, Alhambra."
+  },
+  {
+    slug: "danyl-usine",
+    title: "Danyl",
+    category: "concerts",
+    venue: { name: "L'Usine", slug: "usine" },
+    date: "Thursday 8 October",
+    time: "20:00",
+    startDate: "2026-10-08T20:00:00+02:00",
+    price: "",
+    priceRange: "",
+    shortDescription: "Thursday 8 October, 20:00, Le Rez at L'Usine.",
+    description: "Eventfrog lists Danyl at Le Rez, L'Usine, on Thursday 8 October 2026 at 20:00. The listing consulted did not publish a price.",
+    image: "concerts",
+    seoTitle: "Danyl at L'Usine, Geneva",
+    seoDescription: "Danyl at L'Usine, Thursday 8 October 2026 at 20:00.",
+    ogTitle: "Danyl | L'Usine",
+    ogDescription: "Thursday 8 October, 20:00, L'Usine."
+  },
+  {
+    slug: "octobre-rose-victoria-hall",
+    title: "Concert Octobre Rose",
+    category: "concerts",
+    venue: { name: "Victoria Hall", slug: "victoria-hall" },
+    date: "Sunday 11 October",
+    time: "17:00",
+    startDate: "2026-10-11T17:00:00+02:00",
+    price: "",
+    priceRange: "",
+    shortDescription: "Sunday 11 October, 17:00, Victoria Hall. Listed by the City of Geneva box office.",
+    description: "The City of Geneva cultural box office lists Concert Octobre Rose at Victoria Hall on Sunday 11 October 2026 at 17:00. The listing consulted did not publish a price.",
+    image: "concerts",
+    seoTitle: "Concert Octobre Rose at Victoria Hall, Geneva",
+    seoDescription: "Concert Octobre Rose at Victoria Hall, Sunday 11 October 2026 at 17:00.",
+    ogTitle: "Concert Octobre Rose | Victoria Hall",
+    ogDescription: "Sunday 11 October, 17:00, Victoria Hall."
+  },
+  {
+    slug: "yaima-alhambra",
+    title: "YAIMA Autumn Tour",
+    category: "concerts",
+    venue: { name: "Alhambra", slug: "alhambra" },
+    date: "Sunday 11 October",
+    time: "19:30",
+    startDate: "2026-10-11T19:30:00+02:00",
+    price: "",
+    priceRange: "",
+    shortDescription: "Sunday 11 October, 19:30, Alhambra.",
+    description: "Eventfrog lists YAIMA Autumn Tour 2026 at the Alhambra on Sunday 11 October 2026 at 19:30. The listing consulted did not publish a price.",
+    image: "concerts",
+    seoTitle: "YAIMA at Alhambra, Geneva",
+    seoDescription: "YAIMA Autumn Tour at the Alhambra, Sunday 11 October 2026 at 19:30.",
+    ogTitle: "YAIMA | Alhambra",
+    ogDescription: "Sunday 11 October, 19:30, Alhambra."
+  }
+
 ];

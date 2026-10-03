@@ -10,6 +10,8 @@ import { MobileStickyCTA } from "@/components/MobileStickyCTA";
 import { useSEO } from "@/lib/seo";
 import { buildAlternatesFr } from "@/lib/i18n";
 import { blogThisWeekFr } from "@/content/blog-this-week.fr";
+import { EventCard } from "@/components/EventCard";
+import { eventsFr } from "@/content/events.fr";
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } };
 const itemVariants = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } };
@@ -41,8 +43,13 @@ export default function FrBlogGenEvaCetteSemainePage() {
               Cette Semaine à Genève
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Les sélections de nos éditeurs pour les expériences culturelles les plus captivantes à Genève cette semaine — théâtre, opéra, jazz et plus encore.
+              Du 5 au 11 octobre. Les cartes reprennent ce qu'une billetterie ou l'OSR a publié. La sélection de juin est retirée.
             </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {eventsFr.filter((event) => event.startDate >= "2026-10-05" && event.startDate <= "2026-10-12").map((event) => (
+              <div key={event.slug}><EventCard event={event} /></div>
+            ))}
           </div>
 
           <SectionHeading
