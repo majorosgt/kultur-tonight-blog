@@ -163,9 +163,7 @@ export const events: Event[] = [
     seoDescription: "YAIMA Autumn Tour at the Alhambra, Sunday 11 October 2026 at 19:30.",
     ogTitle: "YAIMA | Alhambra",
     ogDescription: "Sunday 11 October, 19:30, Alhambra."
-  }
-
-
+  },
   {
     slug: "desalpe-semsales",
     title: "Désalpe de Semsales",
