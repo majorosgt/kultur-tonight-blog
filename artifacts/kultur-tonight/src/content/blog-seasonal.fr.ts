@@ -1,6 +1,6 @@
 import type { BlogArticle } from "./blog-guides";
 
-export const blogSeasonalFr: BlogArticle[
+export const blogSeasonalFr: BlogArticle[] = [
   {
     slug: "fetes-automne-suisse-romande-2026",
     title: "Les fêtes d'automne en Suisse romande",
@@ -43,7 +43,6 @@ Les membres peuvent encore prendre une place de dernière minute dans une salle,
     ogTitle: "Les fêtes d'automne en Suisse romande",
     ogDescription: "Sonnailles, vendanges et Escalade. Daté pour fin 2026, et les mois du retour.",
   },
-] = [
   {
     slug: "ete-geneve-calendrier-culturel-2026",
     title: "L'Été à Genève : le Calendrier Culturel de Juin à Août 2026",
