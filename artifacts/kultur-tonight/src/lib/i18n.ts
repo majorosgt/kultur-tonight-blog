@@ -4,6 +4,8 @@ export type Locale = "en" | "fr";
 const SEGMENTS: Array<{ en: string; fr: string; dynamic?: boolean }> = [
   { en: "/en/geneva/things-to-do-this-weekend", fr: "/fr/geneve/que-faire-ce-weekend" },
   { en: "/en/geneva/family-events",             fr: "/fr/geneve/sorties-en-famille" },
+  { en: "/en/geneva/tonight",                   fr: "/fr/geneve/ce-soir" },
+  { en: "/en/geneva/date-night",                fr: "/fr/geneve/sortie-a-deux" },
   { en: "/en/geneva/venues/",                   fr: "/fr/geneve/lieux/",          dynamic: true },
   { en: "/en/geneva/events/",                   fr: "/fr/geneve/evenements/",     dynamic: true },
   { en: "/en/geneva/venues",                    fr: "/fr/geneve/lieux" },

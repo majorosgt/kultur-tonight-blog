@@ -12,6 +12,8 @@ const ThingsToDoPage = lazy(() => import("@/pages/en/geneva/things-to-do-this-we
 const TheatrePage = lazy(() => import("@/pages/en/geneva/theatre"));
 const ConcertsPage = lazy(() => import("@/pages/en/geneva/concerts"));
 const FamilyEventsPage = lazy(() => import("@/pages/en/geneva/family-events"));
+const TonightPage = lazy(() => import("@/pages/en/geneva/tonight"));
+const DateNightPage = lazy(() => import("@/pages/en/geneva/date-night"));
 const VenuesListPage = lazy(() => import("@/pages/en/geneva/venues/index"));
 const VenueDetailPage = lazy(() => import("@/pages/en/geneva/venues/[slug]"));
 const EventsListPage = lazy(() => import("@/pages/en/geneva/events/index"));
@@ -45,6 +47,8 @@ const FrThingsToDoPage = lazy(() => import("@/pages/fr/geneve/que-faire-ce-weeke
 const FrTheatrePage = lazy(() => import("@/pages/fr/geneve/theatre"));
 const FrConcertsPage = lazy(() => import("@/pages/fr/geneve/concerts"));
 const FrFamilyEventsPage = lazy(() => import("@/pages/fr/geneve/sorties-en-famille"));
+const FrTonightPage = lazy(() => import("@/pages/fr/geneve/ce-soir"));
+const FrDateNightPage = lazy(() => import("@/pages/fr/geneve/sortie-a-deux"));
 const FrVenuesListPage = lazy(() => import("@/pages/fr/geneve/lieux/index"));
 const FrVenueDetailPage = lazy(() => import("@/pages/fr/geneve/lieux/[slug]"));
 const FrEventsListPage = lazy(() => import("@/pages/fr/geneve/evenements/index"));
@@ -94,6 +98,8 @@ export function Router() {
         <Route path="/en/geneva/theatre" component={TheatrePage} />
         <Route path="/en/geneva/concerts" component={ConcertsPage} />
         <Route path="/en/geneva/family-events" component={FamilyEventsPage} />
+        <Route path="/en/geneva/tonight" component={TonightPage} />
+        <Route path="/en/geneva/date-night" component={DateNightPage} />
         <Route path="/en/geneva/venues" component={VenuesListPage} />
         <Route path="/en/geneva/venues/:slug" component={VenueDetailPage} />
         <Route path="/en/geneva/events" component={EventsListPage} />
@@ -129,6 +135,8 @@ export function Router() {
         <Route path="/fr/geneve/theatre" component={FrTheatrePage} />
         <Route path="/fr/geneve/concerts" component={FrConcertsPage} />
         <Route path="/fr/geneve/sorties-en-famille" component={FrFamilyEventsPage} />
+        <Route path="/fr/geneve/ce-soir" component={FrTonightPage} />
+        <Route path="/fr/geneve/sortie-a-deux" component={FrDateNightPage} />
         <Route path="/fr/geneve/lieux" component={FrVenuesListPage} />
         <Route path="/fr/geneve/lieux/:slug" component={FrVenueDetailPage} />
         <Route path="/fr/geneve/evenements" component={FrEventsListPage} />
