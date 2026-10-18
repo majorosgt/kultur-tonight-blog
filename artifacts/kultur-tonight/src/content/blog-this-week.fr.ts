@@ -2,6 +2,42 @@ import type { BlogArticle } from "./blog-guides";
 
 export const blogThisWeekFr: BlogArticle[] = [
   {
+    slug: "this-week-geneva-october-19-november-1-2026",
+    title: "Cette semaine à Genève : 19 octobre – 1er novembre 2026",
+    subtitle: "Frisell à l'Alhambra, une finale mondiale d'impro, et la Neuvième de Beethoven.",
+    category: "this-week",
+    city: "geneva",
+    lang: "fr",
+    date: "2026-10-19",
+    readTime: 3,
+    image: "/assets/hero/geneva-evening-theatre.png",
+    body: `Deux semaines, et la fin d'octobre a une forme : du jazz dans la grande salle, une finale d'impro dans l'ancienne usine électrique, et l'heure qui recule le dimanche.
+
+## Avant le week-end
+
+Jeudi 22 octobre, le Big Band des Eaux-Vives joue Echoes of the Messengers à l'Alhambra à 20 h 30, avec le danseur de claquettes Daniel Leveillé. Vendredi, Benjamin Epps, Sebb Bash et DJ Stresh prennent le Rez de l'Usine dès 20 h.
+
+## Samedi 24 octobre
+
+Le 32e Mondial d'Impro se termine au BFM à 20 h : les deux dernières équipes, et le public vote. Rounhaa joue à l'Alhambra à 20 h. À l'AMR, Rob Mazurek et Chad Taylor, le Chicago Underground Duo, commencent à 21 h. JetLag Gang ouvre PTR à 23 h.
+
+## Dimanche 25 octobre
+
+Ton Koopman dirige la Neuvième de Beethoven au Victoria Hall à 17 h, l'OSR aux côtés de la Haute école de musique. La billetterie l'annonce épuisé. Boudchart joue au BFM à 19 h.
+
+## La semaine suivante
+
+Mardi 27, le trio de Bill Frisell à l'Alhambra, 20 h 30, invité par l'AMR. Mercredi 28, Dirty Three dans la même salle à 19 h 30. Menace chorale se joue à la Comédie du 27 au 31 octobre. Vendredi 30, le GIFF ouvre et Le Petit Prince commence au Théâtre de Carouge. Samedi 31, l'OSR joue La Famille Addams en direct sur le film au Victoria Hall, 17 h. Dimanche 1er novembre, le Sabbathsong Klezmer Band à l'Alhambra, 17 h.
+
+Seules les affiches publiées sont ici. Le prix n'est indiqué que si la source le publie.`,
+    ctaText: "Voir les événements de ce soir à Genève →",
+    ctaUrl: "https://www.kulturtonight.ch/fr",
+    seoTitle: "Cette semaine à Genève : 19 octobre – 1er novembre 2026 | KulturTonight",
+    seoDescription: "Affiches confirmées à Genève du 19 octobre au 1er novembre 2026 : Bill Frisell et Dirty Three à l'Alhambra, la finale du Mondial d'Impro au BFM, la Neuvième au Victoria Hall, le GIFF.",
+    ogTitle: "Cette semaine à Genève : 19 octobre – 1er novembre 2026",
+    ogDescription: "Affiches confirmées à l'Alhambra, au BFM, à l'AMR et au Victoria Hall.",
+  },
+  {
     slug: "this-week-geneva-october-5-11-2026",
     title: "Cette semaine à Genève : 5–11 octobre 2026",
     subtitle: 'Une nuit finlandaise, Modeselektor, et un gala.',
