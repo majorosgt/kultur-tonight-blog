@@ -42,11 +42,11 @@ export default function BlogGenevaThisWeekPage() {
               This Week in Geneva
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              October in Geneva has a particular quiet before the halls fill. This week the quiet does not last: a Finnish night at Victoria Hall, Modeselektor in the Alhambra, and a Pavarotti gala on Saturday.
+              19 October to 1 November. Jazz carries the fortnight: the Big Band des Eaux-Vives and Bill Frisell at the Alhambra, the Chicago Underground Duo at the AMR. Between them, the Mondial d'Impro final at the BFM, Beethoven's Ninth at Victoria Hall, Dirty Three, and the GIFF opening on 30 October.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {events.filter((event) => event.startDate <= "2026-10-15" && (event.endDate || event.startDate) >= "2026-10-04" && !isPastEvent(event)).map((event) => (
+            {events.filter((event) => event.startDate.slice(0, 10) <= "2026-11-01" && (event.endDate || event.startDate).slice(0, 10) >= "2026-10-19" && !isPastEvent(event)).map((event) => (
               <div key={event.slug}><EventCard event={event} /></div>
             ))}
           </div>

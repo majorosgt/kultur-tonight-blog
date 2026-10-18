@@ -44,11 +44,11 @@ export default function FrBlogGenEvaCetteSemainePage() {
               Cette Semaine à Genève
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Octobre à Genève a ce calme particulier, juste avant que les salles se remplissent. Cette semaine, le calme ne tient pas : une nuit finlandaise au Victoria Hall, Modeselektor à l'Alhambra, et un gala Pavarotti samedi.
+              Du 19 octobre au 1er novembre. Le jazz tient la quinzaine : le Big Band des Eaux-Vives et Bill Frisell à l'Alhambra, le Chicago Underground Duo à l'AMR. Entre les deux, la finale du Mondial d'Impro au BFM, la Neuvième de Beethoven au Victoria Hall, Dirty Three, et l'ouverture du GIFF le 30 octobre.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {eventsFr.filter((event) => event.startDate <= "2026-10-15" && (event.endDate || event.startDate) >= "2026-10-04" && !isPastEvent(event)).map((event) => (
+            {eventsFr.filter((event) => event.startDate.slice(0, 10) <= "2026-11-01" && (event.endDate || event.startDate).slice(0, 10) >= "2026-10-19" && !isPastEvent(event)).map((event) => (
               <div key={event.slug}><EventCard event={event} /></div>
             ))}
           </div>

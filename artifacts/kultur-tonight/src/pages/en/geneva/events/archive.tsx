@@ -14,7 +14,7 @@ export default function EventsArchivePage() {
     description: "Archive of cultural events in Geneva. Listings stay online after the date, with the day in the title.",
     canonical: "https://blog.kulturtonight.ch/en/geneva/events/archive",
   });
-  const past = events.filter(isPastEvent).sort((a, b) => b.startDate.localeCompare(a.startDate));
+  const past = events.filter((event) => isPastEvent(event)).sort((a, b) => b.startDate.localeCompare(a.startDate));
   return (
     <>
       <Header />

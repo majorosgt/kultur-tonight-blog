@@ -22,7 +22,8 @@ const itemVariants = {
 };
 
 export default function FrThingsToDoPage() {
-  const weekendEvents = eventsFr.filter((e) => e.date === "Ce week-end" && !isPastEvent(e));
+  // Fenêtre du week-end : samedi 24 et dimanche 25 octobre 2026 (Europe/Zurich).
+  const weekendEvents = eventsFr.filter((e) => e.startDate.slice(0, 10) >= "2026-10-24" && e.startDate.slice(0, 10) <= "2026-10-25" && !isPastEvent(e));
 
   useSEO({
     title: "Que Faire à Genève ce Week-end | KulturTonight",
@@ -53,7 +54,7 @@ export default function FrThingsToDoPage() {
               Que Faire à Genève ce Week-end
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Samedi 3 et dimanche 4 octobre. Deux affiches confirmées : le Requiem de Mozart au Victoria Hall à 19 h 30, et La Colonie de Vacances à l'Usine à 20 h. Le prix n'est indiqué que si la source le publie.
+              Samedi 24 et dimanche 25 octobre. Samedi, la finale du 32e Mondial d'Impro au BFM à 20 h, Rounhaa à l'Alhambra, le Chicago Underground Duo à l'AMR à 21 h, et JetLag Gang à PTR dès 23 h. Dimanche, Ton Koopman dirige la Neuvième de Beethoven au Victoria Hall à 17 h, et Boudchart joue au BFM à 19 h. On recule d'une heure dans la nuit de samedi à dimanche. Le prix n'est indiqué que si la source le publie.
             </p>
           </div>
 
@@ -77,9 +78,9 @@ export default function FrThingsToDoPage() {
         </div>
 
 
-          <SectionHeading title="Jusqu'au 15 octobre" subtitle="Les foires de saison encore en cours, au-delà de ce week-end." />
+          <SectionHeading title="Festivals jusqu'au 1er novembre" subtitle="Les festivals qui ouvrent avant le 1er novembre, au-delà de ce week-end." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {eventsFr.filter((event) => event.category === "festivals" && !isPastEvent(event) && event.startDate <= "2026-10-15").map((event) => (
+            {eventsFr.filter((event) => event.category === "festivals" && !isPastEvent(event) && event.startDate.slice(0, 10) <= "2026-11-01").map((event) => (
               <div key={event.slug}><EventCard event={event} /></div>
             ))}
           </div>
