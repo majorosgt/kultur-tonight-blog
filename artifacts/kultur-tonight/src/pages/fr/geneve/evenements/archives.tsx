@@ -14,7 +14,7 @@ export default function FrEventsArchivePage() {
     description: "Archives des événements culturels à Genève. La page reste en ligne après la date, avec le jour dans le titre.",
     canonical: "https://blog.kulturtonight.ch/fr/geneve/evenements/archives",
   });
-  const past = eventsFr.filter(isPastEvent).sort((a, b) => b.startDate.localeCompare(a.startDate));
+  const past = eventsFr.filter((event) => isPastEvent(event)).sort((a, b) => b.startDate.localeCompare(a.startDate));
   return (
     <>
       <Header />
