@@ -21,7 +21,8 @@ export default function ThingsToDoPage() {
     canonical: "https://kulturtonight.ch/en/geneva/things-to-do-this-weekend",
   });
 
-  const weekendEvents = events.filter((e) => e.date === "This Weekend" && !isPastEvent(e));
+  // Weekend window: Saturday 24 and Sunday 25 October 2026 (Europe/Zurich).
+  const weekendEvents = events.filter((e) => e.startDate.slice(0, 10) >= "2026-10-24" && e.startDate.slice(0, 10) <= "2026-10-25" && !isPastEvent(e));
   const weekendVenues = venues.slice(0, 3);
 
   return (
@@ -44,7 +45,7 @@ export default function ThingsToDoPage() {
               Things to Do in Geneva This Weekend
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-4">
-              Saturday 3 and Sunday 4 October. Two listings are confirmed: Mozart's Requiem at Victoria Hall at 19:30, and La Colonie de Vacances at L'Usine at 20:00.
+              Saturday 24 and Sunday 25 October. Saturday has the final of the 32nd Mondial d'Impro at the BFM at 20:00, Rounhaa at the Alhambra, the Chicago Underground Duo at the AMR at 21:00, and JetLag Gang at PTR from 23:00. Sunday, Ton Koopman conducts Beethoven's Ninth at Victoria Hall at 17:00, and Boudchart plays the BFM at 19:00. Clocks go back one hour in the early hours of Sunday.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Only shows with a published listing are on the cards. Price is shown only when the source gives one. The live last-minute list is on KulturTonight.
@@ -64,9 +65,9 @@ export default function ThingsToDoPage() {
           </div>
 
           
-          <SectionHeading title="Through 15 October" subtitle="Seasonal fairs still on, beyond this weekend." />
+          <SectionHeading title="Festivals through 1 November" subtitle="Festivals opening before 1 November, beyond this weekend." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {events.filter((event) => event.category === "festivals" && !isPastEvent(event) && event.startDate <= "2026-10-15").map((event) => (
+            {events.filter((event) => event.category === "festivals" && !isPastEvent(event) && event.startDate.slice(0, 10) <= "2026-11-01").map((event) => (
               <div key={event.slug}><EventCard event={event} /></div>
             ))}
           </div>
